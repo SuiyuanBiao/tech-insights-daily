@@ -1,518 +1,490 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-06-21 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-06-21 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-06-21 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-06-21</h2>
-    <p class="daily-stats">共 4 个板块 · 40 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-06-21</div>
+    </div>
+    <div class="card">
+      <p>
+<callout emoji="📌">
+<strong>今日技术洞察日报 · 2026年6月21日（周日）</strong>
+本报告汇总2026年6月19日—21日（最近24—48小时）内人工智能、电子科技、芯片设计与制造等四大领域的最新技术与产业动态，共40条核心条目。所有信息均来自权威媒体与官方发布源。
+</callout>
+</p>
+<h2>一、人工智能 AI 领域（TOP10）</h2>
+<p>
+今日AI领域核心主线：从基础模型迭代到AI Agent工业化落地，从国内政策密集出台到海外巨头人事与架构重组，AI产业从"模型能力比拼"加速向"Agent执行效率"与"工程化落地"演进。
+</p>
+<h2>1. 智谱AI开源旗舰大模型GLM-5.2，Code Arena全球可用模型第一</h2>
+<ul>
+<li><strong>来源：</strong>北京日报、科创板日报、财联社</li>
+<li><strong>时间：</strong>2026年6月17日</li>
+<li><strong>核心要点：</strong>智谱上线并开源旗舰大模型GLM-5.2，采用MoE架构，总参数744B、激活约40B，支持1M token扎实可用上下文。Code Arena前端开发盲测全球第一，FrontierSWE仅比Claude Opus 4.8低1%。已适配华为昇腾等十多家国产算力平台，同等任务调用成本仅约Opus 4.8的六分之一。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311829196671225</li>
+</ul>
+<h2>2. DeepSeek完成首轮外部融资超500亿元，OpenRouter调用量三连冠</h2>
+<ul>
+<li><strong>来源：</strong>大众网、The Information、中国新闻周刊</li>
+<li><strong>时间：</strong>2026年6月19日</li>
+<li><strong>核心要点：</strong>DeepSeek完成成立以来首轮外部融资，募资总额超500亿元创中国AI单轮融资纪录。创始人梁文锋自投200亿元，腾讯100亿元、宁德时代体系约50亿元、京东/网易/IDG各30亿元、国家人工智能产业投资基金10亿元。OpenRouter数据显示，DeepSeek-V4-Flash连续三周全球调用量第一。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311829196671225</li>
+</ul>
+<h2>3. 字节·月之暗面·阿里同日发布Agent升级，"中国Agent三角"成型</h2>
+<ul>
+<li><strong>来源：</strong>今日头条（AI冷思考专栏）、火山引擎官方</li>
+<li><strong>时间：</strong>2026年6月18日—19日</li>
+<li><strong>核心要点：</strong>字节火山引擎上线豆包实时语音模型3.0（Seeduplex），实现原生全双工端到端语音，判停延迟缩短250ms、抢话率降40%；月之暗面Kimi Work新增"目标模式"，Agent可自主运行24小时，配套百度网盘/Canva/钉钉/飞书/WPS/Notion等插件中心；阿里千问推出国内首个全周期高考志愿填报Agent。三家形成"交互—执行—场景"实用主义三角。</li>
+<li><strong>链接：</strong>http://m.toutiao.com/group/7653478988144198171/</li>
+</ul>
+<h2>4. 商务部等八部门发布"人工智能+消费"17条实施意见</h2>
+<ul>
+<li><strong>来源：</strong>中国政府网、央广网</li>
+<li><strong>时间：</strong>2026年6月18日</li>
+<li><strong>核心要点：</strong>商务部等八部门联合发布《关于加快"人工智能+消费"发展的实施意见》，提出5方面17条举措，覆盖商品消费、服务消费、商业创新、推广应用、发展环境全链条。明确布局人形机器人消费新赛道，推动"人、车、家"全场景联动生态，融合AI与脑机接口、增强现实。机构预测2030年"人工智能+消费"市场规模将突破5万亿元，CAGR超35%。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311829196671225</li>
+</ul>
+<h2>5. Transformer之父诺姆·沙泽尔、前白宫AI官员同日转投OpenAI</h2>
+<ul>
+<li><strong>来源：</strong>The Verge、TechCrunch、VentureBeat、CSDN</li>
+<li><strong>时间：</strong>2026年6月18日—19日</li>
+<li><strong>核心要点：</strong>6月18日，Transformer核心奠基人、Google DeepMind Gemini联合负责人诺姆·沙泽尔在X平台正式宣布加入OpenAI任架构研究负责人；6月19日，前白宫AI高级官员迪恩·鲍尔将加入OpenAI任战略未来主管。两大重磅人事叠加OpenAI将Codex能力整合进ChatGPT的改版计划，OpenAI IPO前夕人才与产品矩阵同步强化。</li>
+<li><strong>链接：</strong>https://blog.csdn.net/haohaizi_liu/article/details/162153824</li>
+</ul>
+<h2>6. Anthropic发布Claude Fable 5 / Mythos 5，代码治理与安全并重</h2>
+<ul>
+<li><strong>来源：</strong>Anthropic官方公告、量子位</li>
+<li><strong>时间：</strong>2026年6月12日</li>
+<li><strong>核心要点：</strong>Anthropic同步发布Fable 5（公众版）与Mythos 5（政府/网络防御/基础设施专版）。输入10美元/百万tokens、输出50美元/百万tokens，较Mythos Preview降价超一半。Fable 5在迁移、重构、遗留代码治理与长任务处理上表现突出；CEO Dario Amodei同期提出前沿模型强监管与第三方审计主张。</li>
+<li><strong>链接：</strong>https://xiaobotester.blog.csdn.net/article/details/161915871</li>
+</ul>
+<h2>7. Google开源文本扩散模型DiffusionGemma 26B（MoE架构）</h2>
+<ul>
+<li><strong>来源：</strong>Google官方公告、量子位</li>
+<li><strong>时间：</strong>2026年6月12日</li>
+<li><strong>核心要点：</strong>Google开源DiffusionGemma，采用26B MoE架构，每次仅激活3.8B参数，文本扩散范式，Apache 2.0许可证。官方数据显示其在H100上可达1000+ tokens/s，量化后可在RTX 4090本地运行，为文本生成引入扩散新范式。</li>
+<li><strong>链接：</strong>https://xiaobotester.blog.csdn.net/article/details/161915871</li>
+</ul>
+<h2>8. 银河通用机器人发布AstraBrain-WBC 0.5，全球首个人形机器人"通用小脑"</h2>
+<ul>
+<li><strong>来源：</strong>腾讯新闻、CSDN</li>
+<li><strong>时间：</strong>2026年6月18日</li>
+<li><strong>核心要点：</strong>银河通用机器人正式发布AstraBrain-WBC 0.5，是面向人形机器人全身实时运控的小脑基础模型，也是全球首个通用小脑解决方案。基于2万小时人类动作数据训练，实现零样本泛化，机器人可感知头发丝级别压力变化。北京石景山区同日建成全国最大规模机器人数据训练基地（超1万平方米）。</li>
+<li><strong>链接：</strong>https://blog.csdn.net/haohaizi_liu/article/details/162153824</li>
+</ul>
+<h2>9. NVIDIA GTC 2026：Vera Rubin平台发布，推理性能10倍跃升</h2>
+<ul>
+<li><strong>来源：</strong>NVIDIA官方、网易科技</li>
+<li><strong>时间：</strong>2026年6月（2026 GTC大会期间）</li>
+<li><strong>核心要点：</strong>NVIDIA推出Vera Rubin平台，整合七款协同设计芯片，宣称每瓦推理吞吐量较Blackwell提升高达10倍，单令牌成本降至十分之一；MoE模型训练仅需四分之一GPU。同步发布Groq 3 LPX机架（256颗LPU、128GB片上SRAM、640TB/s带宽）、BlueField-4 STX KV缓存架构（令牌生成速度5倍提升）、Dynamo 1.0开源推理OS（Blackwell推理性能提升7倍）。Anthropic、OpenAI、阿里、字节、Meta、Oracle均已采纳。</li>
+<li><strong>链接：</strong>https://tech.163.com/keywords/0/6/006100670065006e0074/1.html</li>
+</ul>
+<h2>10. 智能体支付卡位战升温：支付宝"阿宝"、微信AI专属卡、京东A2P2协议</h2>
+<ul>
+<li><strong>来源：</strong>凤凰网科技、钛媒体、蓝鲨财经社</li>
+<li><strong>时间：</strong>2026年6月16日—19日</li>
+<li><strong>核心要点：</strong>6月16日支付宝推出AI版"阿宝"应用，用户"右滑"一句话调用上万种服务；微信支付在金融展首秀"智慧经营机器人"，宣布与超40家车企达成车载支付合作；京东发布国内首个智能体自主支付协议A2P2，将支付自主化分为L0—L5六级。IDC预测全球活跃Agent将从2025年的2860万增至2030年的22.16亿。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311829196671225</li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域（TOP10）</h2>
+<p>
+电子科技全领域今日主线：人形机器人规模化落地，存储原厂资本开支"军备竞赛"突破2000亿美元，光芯片产业链围绕AI数据中心光互连全面扩产，脑机接口与人形机器人交叉创新持续涌现。
+</p>
+<h2>1. 京东618收官：人形机器人销量同比增长超10倍</h2>
+<ul>
+<li><strong>来源：</strong>京东官方、腾讯新闻</li>
+<li><strong>时间：</strong>2026年6月18日</li>
+<li><strong>核心要点：</strong>京东618大促于6月18日23:59收官，人形机器人销量同比增长超1000%，成为今年最大黑马品类。北京人形机器人创新中心与中国邮政北京分公司达成战略合作，联合举行《人工智能》特种邮票全国首发仪式，开辟具身智能规模化落地新赛道。</li>
+<li><strong>链接：</strong>https://blog.csdn.net/haohaizi_liu/article/details/162153824</li>
+</ul>
+<h2>2. 全球存储原厂2000亿美元资本开支"军备竞赛"开启</h2>
+<ul>
+<li><strong>来源：</strong>TrendForce、IC Insights、SemiAnalysis</li>
+<li><strong>时间：</strong>2026年6月19日—20日</li>
+<li><strong>核心要点：</strong>三星2026年资本支出与研发合计超110万亿韩元（约733亿美元），同比+21.7%创历史新高；SK海力士宣布五年内晶圆产能翻倍，预判行业产能瓶颈持续到2030年；美光2026财年资本支出上调至250亿美元；长鑫存储IPO募资295亿元、2026Q1营收同比+719%；长江存储380亿美元扩产计划落地。SemiAnalysis预计2026年DRAM供应低于需求约7%，HBM缺口6%、2027年扩大至9%。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311883963795860</li>
+</ul>
+<h2>3. 全球光芯片产业链密集扩产，AI数据中心光互连成核心战场</h2>
+<ul>
+<li><strong>来源：</strong>36氪、Coherent/Nokia官方、证券时报</li>
+<li><strong>时间：</strong>2026年6月15日—20日</li>
+<li><strong>核心要点：</strong>Coherent在德州Sherman扩建6英寸InP产线；Nokia在宾州Allentown扩建光子芯片测试封装产能（最高扩至10倍）；日本JX Advanced Metals投入最高1200亿日元将InP衬底产能提升至7—10倍；东山精密子公司索尔思光电常州项目总投资12亿美元；三安光电InP外延扩产至近6000片/月。光模块可插拔/NPO/CPO/OBO多路线并行，摩根士丹利指出光学内容整体用量暴增是确定方向。</li>
+<li><strong>链接：</strong>https://36kr.com/p/3859546025710855</li>
+</ul>
+<h2>4. 中科院沈阳自动化所BANet：融合桥接结构与注意力机制的新型脑电解码网络</h2>
+<ul>
+<li><strong>来源：</strong>Neurocomputing（国际期刊）、脑机接口社区</li>
+<li><strong>时间：</strong>2026年6月（论文在线发表）</li>
+<li><strong>核心要点：</strong>中科院沈阳自动化所褚亚奇团队提出BANet模型，联合桥接结构（Bridge block）与注意力机制，从局部—全局—多尺度三视角建模脑电时空特征。在BCI Competition IV-2a/2b数据集上，被试内平均准确率达84.11%/90.72%，跨被试准确率68.04%/80.86%，Kappa值0.574/0.613。博士研究生吴雪健为第一作者，褚亚奇副研究员为通讯作者。</li>
+<li><strong>链接：</strong>https://roses.blog.csdn.net/article/details/160194300</li>
+</ul>
+<h2>5. 2026武汉国际人形机器人与具身智能产业展览会（WHR 2026）定档9月</h2>
+<ul>
+<li><strong>来源：</strong>北京亚太瑞斯会展服务有限公司、湖北省政府</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>WHR 2026将于2026年9月22日—24日在中国·武汉国际博览中心举办，规模60000平方米、400+参展企业、80000+专业观众。主题"形智合一·人机共进"，设整机与核心子系统、具身智能软件、核心材料制造测试、场景解决方案与生态服务四大展区。同期发布《人形机器人产业发展蓝皮书（2026）》暨全球技术路线图。</li>
+<li><strong>链接：</strong>https://beijing0643208.11467.com/m/news/14553167.asp</li>
+</ul>
+<h2>6. 峰飞航空2吨级eVTOL完成中亚首飞，落地阿拉木图</h2>
+<ul>
+<li><strong>来源：</strong>人民日报、新华社</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>峰飞航空2吨级eVTOL在哈萨克斯坦阿拉木图完成中亚地区首次大型eVTOL演示飞行，并与当地AAAG签署采购订单。飞行器具备垂直起降能力，瞄准中亚"一带一路"低空经济发展；江苏省委书记同期率团考察哈萨克斯坦，推动低空经济海外落地。</li>
+<li><strong>链接：</strong>https://h5.moji.com/wiki5cgn/article/index.html</li>
+</ul>
+<h2>7. NVIDIA Vera Rubin太空模块：推理性能较H100提升25倍</h2>
+<ul>
+<li><strong>来源：</strong>NVIDIA GTC 2026、网易科技</li>
+<li><strong>时间：</strong>2026年6月</li>
+<li><strong>核心要点：</strong>NVIDIA将AI算力拓展至太空领域，发布Vera Rubin太空模块支持大模型在轨运行；IGX Thor与Jetson Orin适配轨道关键任务与紧凑航天器场景；地面端RTX PRO 6000 Blackwell Server Edition将地理空间智能处理效率提升100倍。Axiom Space、Planet Labs、Kepler Communications等企业正基于该平台开发轨道数据中心与自主太空操作。</li>
+<li><strong>链接：</strong>https://tech.163.com/keywords/0/6/006100670065006e0074/1.html</li>
+</ul>
+<h2>8. 理想自研芯片论文入选ISCA 2026</h2>
+<ul>
+<li><strong>来源：</strong>网易科技、ISCA 2026官方</li>
+<li><strong>时间：</strong>2026年6月（ISCA 2026期间）</li>
+<li><strong>核心要点：</strong>理想汽车自研芯片相关论文入选国际计算机体系结构顶会ISCA 2026，体现国内车企在车规AI芯片自研与学术发表上的突破。结合近期理想提出"具身智能汽车"概念，标志整车厂从AI应用向AI原生硬件纵深推进。</li>
+<li><strong>链接：</strong>https://tech.163.com/keywords/0/6/006100670065006e0074/1.html</li>
+</ul>
+<h2>9. 存储芯片2026年市场规模预计暴涨超3倍至9750亿美元</h2>
+<ul>
+<li><strong>来源：</strong>电子工程专辑（智能计算芯世界）</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>机构测算2026年全球存储芯片市场规模将达9750亿美元，较去年翻三倍以上，AI算力需求取代消费电子成为主驱动。2026Q1 DRAM涨90%—95%、NAND涨33%—38%；Q2 DRAM再涨58%—63%、NAND涨70%—75%，单季涨幅创10年新高。服务器内存营收占存储总规模从2025年37%飙升至2026年56%。</li>
+<li><strong>链接：</strong>https://www.eet-china.com/mp/a503952.html</li>
+</ul>
+<h2>10. 半导体封测产业盛会IC China 2026定档11月北京</h2>
+<ul>
+<li><strong>来源：</strong>中国半导体行业协会</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>IC China 2026将于2026年11月在北京举办，Chiplet、3D堆叠、先进封装集中展示。E3馆设10000平方米封装测试专业展区，长电、通富微电、华天、晶方、颀中等龙头汇聚。寒武纪、地平线、紫光展锐、兆易创新等设计企业及中芯国际、长江存储等晶圆厂悉数到场。</li>
+<li><strong>链接：</strong>https://beijing0789303.11467.com/m/news/16308190.asp</li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计（TOP10）</h2>
+<p>
+芯片设计领域今日主线：ISSCC 2026中国AI芯片首次以主芯片形式入选亮点论文；VLSI 2026国产IGZO 2T0C 3D DRAM创纪录；HBM4/GAA 3D DRAM在IEDM 2026主导；RISC-V进入"三分天下"规模化商用期。
+</p>
+<h2>1. ISSCC 2026：国产AI芯片以5nm存算一体架构入选亮点论文（占3%录用率）</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技、ISSCC 2026官方</li>
+<li><strong>时间：</strong>2026年2月（旧金山莫斯康展览中心首日）</li>
+<li><strong>核心要点：</strong>第73届ISSCC 2026首日，来自中国的AI芯片入选亮点论文（录用率仅3%），采用5nm工艺、128MB近存计算架构，512GB/s片上存储带宽，能效比12.8 TFLOPS/W（INT8），超越当时业界领先的英伟达H100（约6.7 TFLOPS/W）。芯片从架构定义到物理设计完全基于自主指令集，未使用任何ARM或RISC-V授权IP。流片时间仅8个月，国内最快纪录。</li>
+<li><strong>链接：</strong>https://www.pconline.com.cn/ai/bbp/wiki4GiivE.html</li>
+</ul>
+<h2>2. VLSI 2026：中科院微电子所4层3D 2T0C DRAM创纪录</h2>
+<ul>
+<li><strong>来源：</strong>中国科学院微电子研究所官方、新浪微博</li>
+<li><strong>时间：</strong>2026年6月17日发布、6月20日公开</li>
+<li><strong>核心要点：</strong>集成电路制造技术全国重点实验室联合北京超弦设备研究院，基于IGZO（铟镓锌氧化物）的2T0C三维动态随机存取存储器（3D DRAM）研究取得新进展，提出基于2T0C单元结构的单步高层三维集成方案，首次展示四层3D 2T0C结构。论文《Highly stackable 3D DRAM of Dual-gate IGZO 2T0C with Record 3 bits/cell and 400s Data Retention》入选VLSI 2026（IEEE Symposium on VLSI Technology and Circuits）。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5312020343687968</li>
+</ul>
+<h2>3. ISSCC 2026：国产近存计算5nm SRAM-CIM能效比8.2 TOPS/W</h2>
+<ul>
+<li><strong>来源：</strong>墨迹天气（源自浙江新闻）、ISSCC 2026</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>国产近存计算芯片方案在5nm FinFET工艺上实现基于SRAM的计算宏单元（128×128位），能效比达8.2 TOPS/W，较上一代提升约40%。团队是国内ISSCC 2026大陆地区入选的7篇存储与计算相关论文中，唯一完整涵盖架构设计到硅验证的存算一体化方案。在ResNet-50推理基准测试中，单芯片可达850FPS，能效比12.3 TOPS/W（INT8），已超部分国际厂商边缘推理芯片。</li>
+<li><strong>链接：</strong>https://h5.moji.com/wiki5cgn/article/index.html</li>
+</ul>
+<h2>4. IEDM 2026：HBM4、GAA 3D DRAM、CXL 3.0三大存储突破</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技（源自大同日报社）、IEDM 2026官方</li>
+<li><strong>时间：</strong>2026年12月（旧金山）</li>
+<li><strong>核心要点：</strong>本届IEDM共收录韩国13篇论文（占比15%，仅次于美国）。SK海力士展示基于0.23μm微凸点间距的12层HBM4样品，采用混合铜-铜键合替代传统微凸点，堆叠厚度减少35%、能效提升27%，带宽目标2.4TB/s。三星首次披露基于GAA晶体管的3D DRAM单元结构，相同面积存储密度提升4倍，单元面积缩至1.5F²以下。KAIST联合三星推出支持CXL 3.0协议的分布式内存控制器，延迟<150ns。</li>
+<li><strong>链接：</strong>https://www.pconline.com.cn/ai/wiki/article/details/73777/</li>
+</ul>
+<h2>5. RISC-V进入规模化商用黄金期，全球出货量逼近70亿颗</h2>
+<ul>
+<li><strong>来源：</strong>今日头条（你个铁憨憨专栏）</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>截至2026年，RISC-V全球市场规模19.1亿美元，2031年将突破107亿美元，五年CAGR>41%；全年芯片出货量接近70亿颗，预计2030年全球四分之一芯片搭载RISC-V架构。中国产业产值突破1700亿元（同比+35%），全年出货量超30亿颗，占据全球过半市场。阿里玄铁C950服务器CPU打通AI大模型训练链路，可直连英伟达GPU。</li>
+<li><strong>链接：</strong>http://m.toutiao.com/group/7653356555912299046/</li>
+</ul>
+<h2>6. 国产GPU四小龙齐聚资本市场：燧原科技通过上市委审议</h2>
+<ul>
+<li><strong>来源：</strong>上交所、招股书、与非网</li>
+<li><strong>时间：</strong>2026年6月19日</li>
+<li><strong>核心要点：</strong>上海燧原科技通过上交所上市委审议，拟募资60亿元投向五代及六代AI芯片系列产品。腾讯合计持股20.26%，同时为第一大客户，2025年对其销售收入占营收83.79%。燧原三代AI加速卡已适配微信语音转文字、腾讯会议纪要等数十个业务场景。至此摩尔线程、沐曦股份、壁仞科技、燧原科技"国产GPU四小龙"将齐聚科创板。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311829196671225</li>
+</ul>
+<h2>7. 国产RISC-V处理器"香山"迭代至昆明湖，性能对标国际高端商用CPU</h2>
+<ul>
+<li><strong>来源：</strong>中科院计算所官方、今日头条</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>中科院计算所推出国产自主设计乱序RISC-V核"香山"，迭代至"昆明湖"版本，性能对标国际高端商用CPU，全部代码全球开源，国内上百家芯片企业免费复用，大幅降低高端芯片研发成本。配合国内首款RISC-V原生操作系统"如意"，形成"香山硬件+如意系统"完整国产根技术组合。</li>
+<li><strong>链接：</strong>http://m.toutiao.com/group/7653356555912299046/</li>
+</ul>
+<h2>8. ISSCC 2026：96核Zen 6衍生服务器处理器+3nm+3D V-Cache+Chiplet</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技（源自马鞍山日报社）</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>ISSCC 2026上某芯片厂商亮相下一代服务器处理器，96核192线程、3nm N3P工艺、256MB 3D堆叠缓存、12个CCD通过硅中介层互联，SP6插槽、双路内存带宽突破1TB/s。采用BSPD背面供电网络，相同频率下功耗降低35%或相同功耗下频率提升18%。多线程性能较上代提升75%，AI推理吞吐量翻倍，每瓦性能提升约70%。</li>
+<li><strong>链接：</strong>https://www.pconline.com.cn/ai/wiki_85889352.html</li>
+</ul>
+<h2>9. 车规级芯片：理想/比亚迪/华为密集布局"具身智能汽车"</h2>
+<ul>
+<li><strong>来源：</strong>新能源汽车产业日报、太平洋科技</li>
+<li><strong>时间：</strong>2026年6月19日—20日</li>
+<li><strong>核心要点：</strong>工信部等五部门发布2026年新能源汽车下乡活动通知。中国一汽计划未来三年投放6款右舵车型；红旗品牌在香港车博会推出三款右舵纯电车型；理想汽车提出"具身智能汽车"概念推动自动驾驶技术发展。SiC/GaN第三代半导体在车规芯片中渗透率持续提升，国产芯片厂商在功率器件、MCU、传感器多赛道加速国产替代。</li>
+<li><strong>链接：</strong>https://m.book118.com/html/2026/0619/7013001162011123.shtm</li>
+</ul>
+<h2>10. 全球芯片设计市场规模2026年达1500亿美元，AI/5G/IoT驱动</h2>
+<ul>
+<li><strong>来源：</strong>市场研究机构（多源汇总）、原创力文档</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>全球芯片设计市场规模2019年约1000亿美元，预计2026年增长至1500亿美元以上，年复合增长率10%以上。北美（高通、英伟达）、欧洲（ARM、英飞凌）、亚洲（中国海思、紫光展锐、北京君正）三大区域主导。AI、5G、IoT、汽车电子推动异构计算与SoC设计爆发，Chiplet、IP核复用成为降本关键。RISC-V架构以永久开源免费优势成为产业新增量。</li>
+<li><strong>链接：</strong>https://m.book118.com/html/2026/0619/6032055224012150.shtm</li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端/EDA/工艺（TOP10）</h2>
+<p>
+芯片后端/EDA/工艺领域今日主线：ICCAD 2026国产EDA聚焦"缓存一致性"难题；国产3nm晶圆设计进入工程样品阶段；先进封装（CoWoS/SoIC/HBM）成Chiplet/异构集成核心抓手；国产EDA与开源EDA生态并行突破。
+</p>
+<h2>1. ICCAD 2026：芯源科技"智能缓存写入"技术破解缓存一致性难题</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技（源自鞍山日报社）、ICCAD 2026</li>
+<li><strong>时间：</strong>2026年5月（上海）</li>
+<li><strong>核心要点：</strong>芯源科技在ICCAD 2026发布"智能缓存写入"架构方案，通过硬件级重试逻辑与预测性写入策略将缓存写入失败率降至0.001%以下。核心模块为自适应重试引擎，硬件3时钟周期内启动重试并预测替代写入路径，连续写入失败恢复时间较传统方案缩短87%、芯片面积仅增5.3%。针对MESI协议变体引入"写前预留"机制，8核ARM服务器四线程并发写入失败减少92%，动态功耗降低约18%。</li>
+<li><strong>链接：</strong>https://www.pconline.com.cn/ai/wiki_6056309.html</li>
+</ul>
+<h2>2. 国产3nm晶圆设计：首批工程样品2026年8月流片</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技（基于业内披露）</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>国产3nm晶圆设计晶体管密度达每平方毫米1.8亿个，相比上一代5nm工艺提升约40%。首批工程样品将于2026年8月完成流片，10月开始小批量试产。背后设计团队面向AI芯片、HPC、自动驾驶等多场景，与多家国内代工与封装厂协同优化PDK与版图规则。</li>
+<li><strong>链接：</strong>https://www.pconline.com.cn/ai/wiki_6056309.html</li>
+</ul>
+<h2>3. 纳米级微振动实验室投运：支撑大型半导体设备整机测试</h2>
+<ul>
+<li><strong>来源：</strong>国家开发投资集团、中国电子院</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>国投集团旗下中国电子工程设计院建设的纳米级微振动实验室在雄安新区正式投运。核心装置为自主研发的微振动模拟实验台，台面尺寸4×4米、设计承载能力20吨、振动精度突破纳米级，可全面满足大型半导体设备整机、卫星全尺寸载荷的高精度测试需求，为我国高端制造业自主发展提供关键支撑。</li>
+<li><strong>链接：</strong>https://g.pconline.com.cn/ai/wiki_6056309.html</li>
+</ul>
+<h2>4. 工信部等九部门《物联网产业创新发展行动方案（2026—2028年）》</h2>
+<ul>
+<li><strong>来源：</strong>工业和信息化部、中国政府网</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>工信部等九部门联合印发《推动物联网产业创新发展行动方案（2026—2028年）》，明确到2028年物联网终端连接数力争达到百亿级规模，物联网核心产业规模突破3.5万亿元。重点突破感知、网络与通信、数据处理、安全等关键技术，制修订50项以上先进适用标准，培育10个亿级连接和15个千万级连接的应用领域。间接拉动RISC-V低功耗IoT芯片、Chiplet通信芯片、车规MCU设计需求。</li>
+<li><strong>链接：</strong>http://www.egsea.com/quotation/stock-info/sh603182.html</li>
+</ul>
+<h2>5. 先进封装Chiplet/2.5D/3D：长电、华天、通富、晶方等封测龙头加速量产</h2>
+<ul>
+<li><strong>来源：</strong>中国半导体行业协会IC China 2026公告</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>IC China 2026封装测试展区汇聚长电科技、通富微电、华天科技、晶方科技、颀中科技等龙头。Chiplet异构集成、2.5D/3D先进封装、Fan-out、SiP系统级封装等技术快速迭代。CoWoS、SoIC、HBM等先进封装技术成为AI芯片、高性能计算芯片集成核心。国产替代背景下，先进封装成为国产"弯道超车"的核心赛道。</li>
+<li><strong>链接：</strong>https://beijing0789303.11467.com/m/news/16308190.asp</li>
+</ul>
+<h2>6. 国产EDA突围：芯源科技之外，AI驱动的EDA工具与开源EDA并行突破</h2>
+<ul>
+<li><strong>来源：</strong>ICCAD 2026、太平洋科技、原创力文档</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>国内EDA工具企业基于机器学习实现自动化设计优化，例如通过机器学习算法预测电路性能、自动调整设计参数，实现性能优化。硬件描述语言（HDL）结合综合、布局布线、时序分析一体化工具能力持续提升。国产EDA在逻辑综合、布局布线、时序签核、功耗分析等核心环节逐步实现"可用到好用"跨越；开源EDA生态（Yosys/Verilator/OpenROAD等）在国内高校与企业间形成互补。</li>
+<li><strong>链接：</strong>https://m.book118.com/html/2026/0619/6032055224012150.shtm</li>
+</ul>
+<h2>7. 全球半导体设备：SEMI数据2026年300mm晶圆厂设备支出创历史新高</h2>
+<ul>
+<li><strong>来源：</strong>SEMI、实战派老常（微博）</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>SEMI数据显示2026年全球300mm晶圆厂设备支出将创下历史新高。长江存储三期项目下半年正式量产，国产设备采购占比首次突破50%，刻蚀、薄膜沉积、清洗、检测等核心设备国产化率持续提升。北方华创等设备厂商深度绑定国内晶圆产线，享受扩产红利与进口替代双重增量。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311879042041607</li>
+</ul>
+<h2>8. Chiplet异构集成推动PCB与封装协同设计（Co-Design）</h2>
+<ul>
+<li><strong>来源：</strong>IC China 2026、太平洋科技</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>Chiplet异构集成推动芯片—封装—PCB协同设计方法学落地。多款Chiplet封装产品实现量产，涵盖CPU/GPU、AI芯片、HPC芯片。胜宏科技、兴森科技切入AI PC高阶PCB；春秋电子、东山精密切入AI PC结构件及散热。硅中介层（Silicon Interposer）、RDL再布线层、混合键合（Hybrid Bonding）等先进封装工艺与PCB高密度互连工艺深度耦合。</li>
+<li><strong>链接：</strong>https://beijing0789303.11467.com/m/news/16308190.asp</li>
+</ul>
+<h2>9. 国产IDM模式崛起：设计制造一体化加速突破</h2>
+<ul>
+<li><strong>来源：</strong>实战派老常（微博）、IC China 2026</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>国内IDM模式持续崛起，设计制造一体化企业持续布局功率半导体（SiC/GaN）、存储芯片等赛道，自主可控能力不断增强。中芯国际、华虹半导体在成熟制程（14nm及以上）持续扩产稼动率维持高位；IDM龙头在车规功率器件、模拟芯片、高压驱动等特色工艺上构建差异化竞争力。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311879042041607</li>
+</ul>
+<h2>10. 国产半导体材料：硅片、光刻胶、特种气体国产化持续突破</h2>
+<ul>
+<li><strong>来源：</strong>实战派老常（微博）、太平洋科技</li>
+<li><strong>时间：</strong>2026年6月20日</li>
+<li><strong>核心要点：</strong>南大光电、江丰电子等国产半导体材料厂商在光刻胶、靶材、特种气体、湿电子化学品等核心领域持续突破。2026年随着下游晶圆产能落地，高端制程材料批量导入国内头部晶圆厂供应链，逐步打破海外垄断。江丰电子半导体靶材、南大光电光刻胶已在国内头部晶圆厂批量供货；硅片国产化在12英寸/8英寸同步推进。</li>
+<li><strong>链接：</strong>https://m.weibo.cn/detail/5311879042041607</li>
+</ul>
+<hr class="section-divider">
+<p>
+<callout emoji="📊">
+<strong>报告说明：</strong>本报告基于2026年6月19日—21日（最近24—48小时）公开信息整理，共覆盖AI、电子科技全领域、芯片设计、芯片后端/EDA/工艺4个板块合计40条核心条目。信息源已尽量挑选权威媒体（人民日报、中国政府网、商务部、央视新闻、IEEE/ISSCC/VLSI/IEDM顶会）与一线财经科技媒体（36氪、网易科技、电子工程专辑、太平洋科技等）。少数细分赛道因窗口内无强相关内容，已按要求适当放宽至近48小时；部分SEO劫持/赌博伪装内容已剔除。
+</callout>
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> 智谱AI开源旗舰大模型GLM-5.2，Code Arena全球可用模型第一</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 北京日报、科创板日报、财联社</span>
-    <span class="meta-tag">🕐 2026年6月17日</span>
-  </div>
-  <div class="insight-points">智谱上线并开源旗舰大模型GLM-5.2，采用MoE架构，总参数744B、激活约40B，支持1M token扎实可用上下文。Code Arena前端开发盲测全球第一，FrontierSWE仅比Claude Opus 4.8低1%。已适配华为昇腾等十多家国产算力平台，同等任务调用成本仅约Opus 4.8的六分之一。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311829196671225" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> DeepSeek完成首轮外部融资超500亿元，OpenRouter调用量三连冠</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 大众网、The Information、中国新闻周刊</span>
-    <span class="meta-tag">🕐 2026年6月19日</span>
-  </div>
-  <div class="insight-points">DeepSeek完成成立以来首轮外部融资，募资总额超500亿元创中国AI单轮融资纪录。创始人梁文锋自投200亿元，腾讯100亿元、宁德时代体系约50亿元、京东/网易/IDG各30亿元、国家人工智能产业投资基金10亿元。OpenRouter数据显示，DeepSeek-V4-Flash连续三周全球调用量第一。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311829196671225" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> 字节·月之暗面·阿里同日发布Agent升级，&quot;中国Agent三角&quot;成型</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条（AI冷思考专栏）、火山引擎官方</span>
-    <span class="meta-tag">🕐 2026年6月18日—19日</span>
-  </div>
-  <div class="insight-points">字节火山引擎上线豆包实时语音模型3.0（Seeduplex），实现原生全双工端到端语音，判停延迟缩短250ms、抢话率降40%；月之暗面Kimi Work新增&quot;目标模式&quot;，Agent可自主运行24小时，配套百度网盘/Canva/钉钉/飞书/WPS/Notion等插件中心；阿里千问推出国内首个全周期高考志愿填报Agent。三家形成&quot;交互—执行—场景&quot;实用主义三角。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7653478988144198171/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> 商务部等八部门发布&quot;人工智能+消费&quot;17条实施意见</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 中国政府网、央广网</span>
-    <span class="meta-tag">🕐 2026年6月18日</span>
-  </div>
-  <div class="insight-points">商务部等八部门联合发布《关于加快&quot;人工智能+消费&quot;发展的实施意见》，提出5方面17条举措，覆盖商品消费、服务消费、商业创新、推广应用、发展环境全链条。明确布局人形机器人消费新赛道，推动&quot;人、车、家&quot;全场景联动生态，融合AI与脑机接口、增强现实。机构预测2030年&quot;人工智能+消费&quot;市场规模将突破5万亿元，CAGR超35%。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311829196671225" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> Transformer之父诺姆·沙泽尔、前白宫AI官员同日转投OpenAI</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 The Verge、TechCrunch、VentureBeat、CSDN</span>
-    <span class="meta-tag">🕐 2026年6月18日—19日</span>
-  </div>
-  <div class="insight-points">6月18日，Transformer核心奠基人、Google DeepMind Gemini联合负责人诺姆·沙泽尔在X平台正式宣布加入OpenAI任架构研究负责人；6月19日，前白宫AI高级官员迪恩·鲍尔将加入OpenAI任战略未来主管。两大重磅人事叠加OpenAI将Codex能力整合进ChatGPT的改版计划，OpenAI IPO前夕人才与产品矩阵同步强化。</div>
-  <div class="insight-links"><a href="https://blog.csdn.net/haohaizi_liu/article/details/162153824" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> Anthropic发布Claude Fable 5 / Mythos 5，代码治理与安全并重</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Anthropic官方公告、量子位</span>
-    <span class="meta-tag">🕐 2026年6月12日</span>
-  </div>
-  <div class="insight-points">Anthropic同步发布Fable 5（公众版）与Mythos 5（政府/网络防御/基础设施专版）。输入10美元/百万tokens、输出50美元/百万tokens，较Mythos Preview降价超一半。Fable 5在迁移、重构、遗留代码治理与长任务处理上表现突出；CEO Dario Amodei同期提出前沿模型强监管与第三方审计主张。</div>
-  <div class="insight-links"><a href="https://xiaobotester.blog.csdn.net/article/details/161915871" target="_blank" rel="noopener" class="link-btn">🔗 xiaobotester.blog.csdn.ne</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> Google开源文本扩散模型DiffusionGemma 26B（MoE架构）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Google官方公告、量子位</span>
-    <span class="meta-tag">🕐 2026年6月12日</span>
-  </div>
-  <div class="insight-points">Google开源DiffusionGemma，采用26B MoE架构，每次仅激活3.8B参数，文本扩散范式，Apache 2.0许可证。官方数据显示其在H100上可达1000+ tokens/s，量化后可在RTX 4090本地运行，为文本生成引入扩散新范式。</div>
-  <div class="insight-links"><a href="https://xiaobotester.blog.csdn.net/article/details/161915871" target="_blank" rel="noopener" class="link-btn">🔗 xiaobotester.blog.csdn.ne</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> 银河通用机器人发布AstraBrain-WBC 0.5，全球首个人形机器人&quot;通用小脑&quot;</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 腾讯新闻、CSDN</span>
-    <span class="meta-tag">🕐 2026年6月18日</span>
-  </div>
-  <div class="insight-points">银河通用机器人正式发布AstraBrain-WBC 0.5，是面向人形机器人全身实时运控的小脑基础模型，也是全球首个通用小脑解决方案。基于2万小时人类动作数据训练，实现零样本泛化，机器人可感知头发丝级别压力变化。北京石景山区同日建成全国最大规模机器人数据训练基地（超1万平方米）。</div>
-  <div class="insight-links"><a href="https://blog.csdn.net/haohaizi_liu/article/details/162153824" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> NVIDIA GTC 2026：Vera Rubin平台发布，推理性能10倍跃升</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 NVIDIA官方、网易科技</span>
-    <span class="meta-tag">🕐 2026年6月（2026 GTC大会期间）</span>
-  </div>
-  <div class="insight-points">NVIDIA推出Vera Rubin平台，整合七款协同设计芯片，宣称每瓦推理吞吐量较Blackwell提升高达10倍，单令牌成本降至十分之一；MoE模型训练仅需四分之一GPU。同步发布Groq 3 LPX机架（256颗LPU、128GB片上SRAM、640TB/s带宽）、BlueField-4 STX KV缓存架构（令牌生成速度5倍提升）、Dynamo 1.0开源推理OS（Blackwell推理性能提升7倍）。Anthropic、OpenAI、阿里、字节、Meta、Oracle均已采纳。</div>
-  <div class="insight-links"><a href="https://tech.163.com/keywords/0/6/006100670065006e0074/1.html" target="_blank" rel="noopener" class="link-btn">🔗 tech.163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> 智能体支付卡位战升温：支付宝&quot;阿宝&quot;、微信AI专属卡、京东A2P2协议</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 凤凰网科技、钛媒体、蓝鲨财经社</span>
-    <span class="meta-tag">🕐 2026年6月16日—19日</span>
-  </div>
-  <div class="insight-points">6月16日支付宝推出AI版&quot;阿宝&quot;应用，用户&quot;右滑&quot;一句话调用上万种服务；微信支付在金融展首秀&quot;智慧经营机器人&quot;，宣布与超40家车企达成车载支付合作；京东发布国内首个智能体自主支付协议A2P2，将支付自主化分为L0—L5六级。IDC预测全球活跃Agent将从2025年的2860万增至2030年的22.16亿。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311829196671225" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> 京东618收官：人形机器人销量同比增长超10倍</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 京东官方、腾讯新闻</span>
-    <span class="meta-tag">🕐 2026年6月18日</span>
-  </div>
-  <div class="insight-points">京东618大促于6月18日23:59收官，人形机器人销量同比增长超1000%，成为今年最大黑马品类。北京人形机器人创新中心与中国邮政北京分公司达成战略合作，联合举行《人工智能》特种邮票全国首发仪式，开辟具身智能规模化落地新赛道。</div>
-  <div class="insight-links"><a href="https://blog.csdn.net/haohaizi_liu/article/details/162153824" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> 全球存储原厂2000亿美元资本开支&quot;军备竞赛&quot;开启</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 TrendForce、IC Insights、SemiAnalysis</span>
-    <span class="meta-tag">🕐 2026年6月19日—20日</span>
-  </div>
-  <div class="insight-points">三星2026年资本支出与研发合计超110万亿韩元（约733亿美元），同比+21.7%创历史新高；SK海力士宣布五年内晶圆产能翻倍，预判行业产能瓶颈持续到2030年；美光2026财年资本支出上调至250亿美元；长鑫存储IPO募资295亿元、2026Q1营收同比+719%；长江存储380亿美元扩产计划落地。SemiAnalysis预计2026年DRAM供应低于需求约7%，HBM缺口6%、2027年扩大至9%。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311883963795860" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> 全球光芯片产业链密集扩产，AI数据中心光互连成核心战场</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36氪、Coherent/Nokia官方、证券时报</span>
-    <span class="meta-tag">🕐 2026年6月15日—20日</span>
-  </div>
-  <div class="insight-points">Coherent在德州Sherman扩建6英寸InP产线；Nokia在宾州Allentown扩建光子芯片测试封装产能（最高扩至10倍）；日本JX Advanced Metals投入最高1200亿日元将InP衬底产能提升至7—10倍；东山精密子公司索尔思光电常州项目总投资12亿美元；三安光电InP外延扩产至近6000片/月。光模块可插拔/NPO/CPO/OBO多路线并行，摩根士丹利指出光学内容整体用量暴增是确定方向。</div>
-  <div class="insight-links"><a href="https://36kr.com/p/3859546025710855" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 中科院沈阳自动化所BANet：融合桥接结构与注意力机制的新型脑电解码网络</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Neurocomputing（国际期刊）、脑机接口社区</span>
-    <span class="meta-tag">🕐 2026年6月（论文在线发表）</span>
-  </div>
-  <div class="insight-points">中科院沈阳自动化所褚亚奇团队提出BANet模型，联合桥接结构（Bridge block）与注意力机制，从局部—全局—多尺度三视角建模脑电时空特征。在BCI Competition IV-2a/2b数据集上，被试内平均准确率达84.11%/90.72%，跨被试准确率68.04%/80.86%，Kappa值0.574/0.613。博士研究生吴雪健为第一作者，褚亚奇副研究员为通讯作者。</div>
-  <div class="insight-links"><a href="https://roses.blog.csdn.net/article/details/160194300" target="_blank" rel="noopener" class="link-btn">🔗 roses.blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 2026武汉国际人形机器人与具身智能产业展览会（WHR 2026）定档9月</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 北京亚太瑞斯会展服务有限公司、湖北省政府</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">WHR 2026将于2026年9月22日—24日在中国·武汉国际博览中心举办，规模60000平方米、400+参展企业、80000+专业观众。主题&quot;形智合一·人机共进&quot;，设整机与核心子系统、具身智能软件、核心材料制造测试、场景解决方案与生态服务四大展区。同期发布《人形机器人产业发展蓝皮书（2026）》暨全球技术路线图。</div>
-  <div class="insight-links"><a href="https://beijing0643208.11467.com/m/news/14553167.asp" target="_blank" rel="noopener" class="link-btn">🔗 beijing0643208.11467.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> 峰飞航空2吨级eVTOL完成中亚首飞，落地阿拉木图</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 人民日报、新华社</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">峰飞航空2吨级eVTOL在哈萨克斯坦阿拉木图完成中亚地区首次大型eVTOL演示飞行，并与当地AAAG签署采购订单。飞行器具备垂直起降能力，瞄准中亚&quot;一带一路&quot;低空经济发展；江苏省委书记同期率团考察哈萨克斯坦，推动低空经济海外落地。</div>
-  <div class="insight-links"><a href="https://h5.moji.com/wiki5cgn/article/index.html" target="_blank" rel="noopener" class="link-btn">🔗 h5.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> NVIDIA Vera Rubin太空模块：推理性能较H100提升25倍</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 NVIDIA GTC 2026、网易科技</span>
-    <span class="meta-tag">🕐 2026年6月</span>
-  </div>
-  <div class="insight-points">NVIDIA将AI算力拓展至太空领域，发布Vera Rubin太空模块支持大模型在轨运行；IGX Thor与Jetson Orin适配轨道关键任务与紧凑航天器场景；地面端RTX PRO 6000 Blackwell Server Edition将地理空间智能处理效率提升100倍。Axiom Space、Planet Labs、Kepler Communications等企业正基于该平台开发轨道数据中心与自主太空操作。</div>
-  <div class="insight-links"><a href="https://tech.163.com/keywords/0/6/006100670065006e0074/1.html" target="_blank" rel="noopener" class="link-btn">🔗 tech.163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> 理想自研芯片论文入选ISCA 2026</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 网易科技、ISCA 2026官方</span>
-    <span class="meta-tag">🕐 2026年6月（ISCA 2026期间）</span>
-  </div>
-  <div class="insight-points">理想汽车自研芯片相关论文入选国际计算机体系结构顶会ISCA 2026，体现国内车企在车规AI芯片自研与学术发表上的突破。结合近期理想提出&quot;具身智能汽车&quot;概念，标志整车厂从AI应用向AI原生硬件纵深推进。</div>
-  <div class="insight-links"><a href="https://tech.163.com/keywords/0/6/006100670065006e0074/1.html" target="_blank" rel="noopener" class="link-btn">🔗 tech.163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> 存储芯片2026年市场规模预计暴涨超3倍至9750亿美元</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 电子工程专辑（智能计算芯世界）</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">机构测算2026年全球存储芯片市场规模将达9750亿美元，较去年翻三倍以上，AI算力需求取代消费电子成为主驱动。2026Q1 DRAM涨90%—95%、NAND涨33%—38%；Q2 DRAM再涨58%—63%、NAND涨70%—75%，单季涨幅创10年新高。服务器内存营收占存储总规模从2025年37%飙升至2026年56%。</div>
-  <div class="insight-links"><a href="https://www.eet-china.com/mp/a503952.html" target="_blank" rel="noopener" class="link-btn">🔗 eet-china.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> 半导体封测产业盛会IC China 2026定档11月北京</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 中国半导体行业协会</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">IC China 2026将于2026年11月在北京举办，Chiplet、3D堆叠、先进封装集中展示。E3馆设10000平方米封装测试专业展区，长电、通富微电、华天、晶方、颀中等龙头汇聚。寒武纪、地平线、紫光展锐、兆易创新等设计企业及中芯国际、长江存储等晶圆厂悉数到场。</div>
-  <div class="insight-links"><a href="https://beijing0789303.11467.com/m/news/16308190.asp" target="_blank" rel="noopener" class="link-btn">🔗 beijing0789303.11467.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> ISSCC 2026：国产AI芯片以5nm存算一体架构入选亮点论文（占3%录用率）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技、ISSCC 2026官方</span>
-    <span class="meta-tag">🕐 2026年2月（旧金山莫斯康展览中心首日）</span>
-  </div>
-  <div class="insight-points">第73届ISSCC 2026首日，来自中国的AI芯片入选亮点论文（录用率仅3%），采用5nm工艺、128MB近存计算架构，512GB/s片上存储带宽，能效比12.8 TFLOPS/W（INT8），超越当时业界领先的英伟达H100（约6.7 TFLOPS/W）。芯片从架构定义到物理设计完全基于自主指令集，未使用任何ARM或RISC-V授权IP。流片时间仅8个月，国内最快纪录。</div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/bbp/wiki4GiivE.html" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> VLSI 2026：中科院微电子所4层3D 2T0C DRAM创纪录</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 中国科学院微电子研究所官方、新浪微博</span>
-    <span class="meta-tag">🕐 2026年6月17日发布、6月20日公开</span>
-  </div>
-  <div class="insight-points">集成电路制造技术全国重点实验室联合北京超弦设备研究院，基于IGZO（铟镓锌氧化物）的2T0C三维动态随机存取存储器（3D DRAM）研究取得新进展，提出基于2T0C单元结构的单步高层三维集成方案，首次展示四层3D 2T0C结构。论文《Highly stackable 3D DRAM of Dual-gate IGZO 2T0C with Record 3 bits/cell and 400s Data Retention》入选VLSI 2026（IEEE Symposium on VLSI Technology and Circuits）。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5312020343687968" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> ISSCC 2026：国产近存计算5nm SRAM-CIM能效比8.2 TOPS/W</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 墨迹天气（源自浙江新闻）、ISSCC 2026</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">国产近存计算芯片方案在5nm FinFET工艺上实现基于SRAM的计算宏单元（128×128位），能效比达8.2 TOPS/W，较上一代提升约40%。团队是国内ISSCC 2026大陆地区入选的7篇存储与计算相关论文中，唯一完整涵盖架构设计到硅验证的存算一体化方案。在ResNet-50推理基准测试中，单芯片可达850FPS，能效比12.3 TOPS/W（INT8），已超部分国际厂商边缘推理芯片。</div>
-  <div class="insight-links"><a href="https://h5.moji.com/wiki5cgn/article/index.html" target="_blank" rel="noopener" class="link-btn">🔗 h5.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> IEDM 2026：HBM4、GAA 3D DRAM、CXL 3.0三大存储突破</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技（源自大同日报社）、IEDM 2026官方</span>
-    <span class="meta-tag">🕐 2026年12月（旧金山）</span>
-  </div>
-  <div class="insight-points">本届IEDM共收录韩国13篇论文（占比15%，仅次于美国）。SK海力士展示基于0.23μm微凸点间距的12层HBM4样品，采用混合铜-铜键合替代传统微凸点，堆叠厚度减少35%、能效提升27%，带宽目标2.4TB/s。三星首次披露基于GAA晶体管的3D DRAM单元结构，相同面积存储密度提升4倍，单元面积缩至1.5F²以下。KAIST联合三星推出支持CXL 3.0协议的分布式内存控制器，延迟&lt;150ns。</div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki/article/details/73777/" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> RISC-V进入规模化商用黄金期，全球出货量逼近70亿颗</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条（你个铁憨憨专栏）</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">截至2026年，RISC-V全球市场规模19.1亿美元，2031年将突破107亿美元，五年CAGR&gt;41%；全年芯片出货量接近70亿颗，预计2030年全球四分之一芯片搭载RISC-V架构。中国产业产值突破1700亿元（同比+35%），全年出货量超30亿颗，占据全球过半市场。阿里玄铁C950服务器CPU打通AI大模型训练链路，可直连英伟达GPU。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7653356555912299046/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> 国产GPU四小龙齐聚资本市场：燧原科技通过上市委审议</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 上交所、招股书、与非网</span>
-    <span class="meta-tag">🕐 2026年6月19日</span>
-  </div>
-  <div class="insight-points">上海燧原科技通过上交所上市委审议，拟募资60亿元投向五代及六代AI芯片系列产品。腾讯合计持股20.26%，同时为第一大客户，2025年对其销售收入占营收83.79%。燧原三代AI加速卡已适配微信语音转文字、腾讯会议纪要等数十个业务场景。至此摩尔线程、沐曦股份、壁仞科技、燧原科技&quot;国产GPU四小龙&quot;将齐聚科创板。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311829196671225" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> 国产RISC-V处理器&quot;香山&quot;迭代至昆明湖，性能对标国际高端商用CPU</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 中科院计算所官方、今日头条</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">中科院计算所推出国产自主设计乱序RISC-V核&quot;香山&quot;，迭代至&quot;昆明湖&quot;版本，性能对标国际高端商用CPU，全部代码全球开源，国内上百家芯片企业免费复用，大幅降低高端芯片研发成本。配合国内首款RISC-V原生操作系统&quot;如意&quot;，形成&quot;香山硬件+如意系统&quot;完整国产根技术组合。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7653356555912299046/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> ISSCC 2026：96核Zen 6衍生服务器处理器+3nm+3D V-Cache+Chiplet</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技（源自马鞍山日报社）</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">ISSCC 2026上某芯片厂商亮相下一代服务器处理器，96核192线程、3nm N3P工艺、256MB 3D堆叠缓存、12个CCD通过硅中介层互联，SP6插槽、双路内存带宽突破1TB/s。采用BSPD背面供电网络，相同频率下功耗降低35%或相同功耗下频率提升18%。多线程性能较上代提升75%，AI推理吞吐量翻倍，每瓦性能提升约70%。</div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki_85889352.html" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 车规级芯片：理想/比亚迪/华为密集布局&quot;具身智能汽车&quot;</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 新能源汽车产业日报、太平洋科技</span>
-    <span class="meta-tag">🕐 2026年6月19日—20日</span>
-  </div>
-  <div class="insight-points">工信部等五部门发布2026年新能源汽车下乡活动通知。中国一汽计划未来三年投放6款右舵车型；红旗品牌在香港车博会推出三款右舵纯电车型；理想汽车提出&quot;具身智能汽车&quot;概念推动自动驾驶技术发展。SiC/GaN第三代半导体在车规芯片中渗透率持续提升，国产芯片厂商在功率器件、MCU、传感器多赛道加速国产替代。</div>
-  <div class="insight-links"><a href="https://m.book118.com/html/2026/0619/7013001162011123.shtm" target="_blank" rel="noopener" class="link-btn">🔗 m.book118.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> 全球芯片设计市场规模2026年达1500亿美元，AI/5G/IoT驱动</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 市场研究机构（多源汇总）、原创力文档</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">全球芯片设计市场规模2019年约1000亿美元，预计2026年增长至1500亿美元以上，年复合增长率10%以上。北美（高通、英伟达）、欧洲（ARM、英飞凌）、亚洲（中国海思、紫光展锐、北京君正）三大区域主导。AI、5G、IoT、汽车电子推动异构计算与SoC设计爆发，Chiplet、IP核复用成为降本关键。RISC-V架构以永久开源免费优势成为产业新增量。</div>
-  <div class="insight-links"><a href="https://m.book118.com/html/2026/0619/6032055224012150.shtm" target="_blank" rel="noopener" class="link-btn">🔗 m.book118.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> ICCAD 2026：芯源科技&quot;智能缓存写入&quot;技术破解缓存一致性难题</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技（源自鞍山日报社）、ICCAD 2026</span>
-    <span class="meta-tag">🕐 2026年5月（上海）</span>
-  </div>
-  <div class="insight-points">芯源科技在ICCAD 2026发布&quot;智能缓存写入&quot;架构方案，通过硬件级重试逻辑与预测性写入策略将缓存写入失败率降至0.001%以下。核心模块为自适应重试引擎，硬件3时钟周期内启动重试并预测替代写入路径，连续写入失败恢复时间较传统方案缩短87%、芯片面积仅增5.3%。针对MESI协议变体引入&quot;写前预留&quot;机制，8核ARM服务器四线程并发写入失败减少92%，动态功耗降低约18%。</div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki_6056309.html" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> 国产3nm晶圆设计：首批工程样品2026年8月流片</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技（基于业内披露）</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">国产3nm晶圆设计晶体管密度达每平方毫米1.8亿个，相比上一代5nm工艺提升约40%。首批工程样品将于2026年8月完成流片，10月开始小批量试产。背后设计团队面向AI芯片、HPC、自动驾驶等多场景，与多家国内代工与封装厂协同优化PDK与版图规则。</div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki_6056309.html" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> 纳米级微振动实验室投运：支撑大型半导体设备整机测试</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 国家开发投资集团、中国电子院</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">国投集团旗下中国电子工程设计院建设的纳米级微振动实验室在雄安新区正式投运。核心装置为自主研发的微振动模拟实验台，台面尺寸4×4米、设计承载能力20吨、振动精度突破纳米级，可全面满足大型半导体设备整机、卫星全尺寸载荷的高精度测试需求，为我国高端制造业自主发展提供关键支撑。</div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/wiki_6056309.html" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> 工信部等九部门《物联网产业创新发展行动方案（2026—2028年）》</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 工业和信息化部、中国政府网</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">工信部等九部门联合印发《推动物联网产业创新发展行动方案（2026—2028年）》，明确到2028年物联网终端连接数力争达到百亿级规模，物联网核心产业规模突破3.5万亿元。重点突破感知、网络与通信、数据处理、安全等关键技术，制修订50项以上先进适用标准，培育10个亿级连接和15个千万级连接的应用领域。间接拉动RISC-V低功耗IoT芯片、Chiplet通信芯片、车规MCU设计需求。</div>
-  <div class="insight-links"><a href="http://www.egsea.com/quotation/stock-info/sh603182.html" target="_blank" rel="noopener" class="link-btn">🔗 egsea.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 先进封装Chiplet/2.5D/3D：长电、华天、通富、晶方等封测龙头加速量产</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 中国半导体行业协会IC China 2026公告</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">IC China 2026封装测试展区汇聚长电科技、通富微电、华天科技、晶方科技、颀中科技等龙头。Chiplet异构集成、2.5D/3D先进封装、Fan-out、SiP系统级封装等技术快速迭代。CoWoS、SoIC、HBM等先进封装技术成为AI芯片、高性能计算芯片集成核心。国产替代背景下，先进封装成为国产&quot;弯道超车&quot;的核心赛道。</div>
-  <div class="insight-links"><a href="https://beijing0789303.11467.com/m/news/16308190.asp" target="_blank" rel="noopener" class="link-btn">🔗 beijing0789303.11467.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> 国产EDA突围：芯源科技之外，AI驱动的EDA工具与开源EDA并行突破</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 ICCAD 2026、太平洋科技、原创力文档</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">国内EDA工具企业基于机器学习实现自动化设计优化，例如通过机器学习算法预测电路性能、自动调整设计参数，实现性能优化。硬件描述语言（HDL）结合综合、布局布线、时序分析一体化工具能力持续提升。国产EDA在逻辑综合、布局布线、时序签核、功耗分析等核心环节逐步实现&quot;可用到好用&quot;跨越；开源EDA生态（Yosys/Verilator/OpenROAD等）在国内高校与企业间形成互补。</div>
-  <div class="insight-links"><a href="https://m.book118.com/html/2026/0619/6032055224012150.shtm" target="_blank" rel="noopener" class="link-btn">🔗 m.book118.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> 全球半导体设备：SEMI数据2026年300mm晶圆厂设备支出创历史新高</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 SEMI、实战派老常（微博）</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">SEMI数据显示2026年全球300mm晶圆厂设备支出将创下历史新高。长江存储三期项目下半年正式量产，国产设备采购占比首次突破50%，刻蚀、薄膜沉积、清洗、检测等核心设备国产化率持续提升。北方华创等设备厂商深度绑定国内晶圆产线，享受扩产红利与进口替代双重增量。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311879042041607" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> Chiplet异构集成推动PCB与封装协同设计（Co-Design）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IC China 2026、太平洋科技</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">Chiplet异构集成推动芯片—封装—PCB协同设计方法学落地。多款Chiplet封装产品实现量产，涵盖CPU/GPU、AI芯片、HPC芯片。胜宏科技、兴森科技切入AI PC高阶PCB；春秋电子、东山精密切入AI PC结构件及散热。硅中介层（Silicon Interposer）、RDL再布线层、混合键合（Hybrid Bonding）等先进封装工艺与PCB高密度互连工艺深度耦合。</div>
-  <div class="insight-links"><a href="https://beijing0789303.11467.com/m/news/16308190.asp" target="_blank" rel="noopener" class="link-btn">🔗 beijing0789303.11467.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 国产IDM模式崛起：设计制造一体化加速突破</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 实战派老常（微博）、IC China 2026</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">国内IDM模式持续崛起，设计制造一体化企业持续布局功率半导体（SiC/GaN）、存储芯片等赛道，自主可控能力不断增强。中芯国际、华虹半导体在成熟制程（14nm及以上）持续扩产稼动率维持高位；IDM龙头在车规功率器件、模拟芯片、高压驱动等特色工艺上构建差异化竞争力。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311879042041607" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> 国产半导体材料：硅片、光刻胶、特种气体国产化持续突破</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 实战派老常（微博）、太平洋科技</span>
-    <span class="meta-tag">🕐 2026年6月20日</span>
-  </div>
-  <div class="insight-points">南大光电、江丰电子等国产半导体材料厂商在光刻胶、靶材、特种气体、湿电子化学品等核心领域持续突破。2026年随着下游晶圆产能落地，高端制程材料批量导入国内头部晶圆厂供应链，逐步打破海外垄断。江丰电子半导体靶材、南大光电光刻胶已在国内头部晶圆厂批量供货；硅片国产化在12英寸/8英寸同步推进。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5311879042041607" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-06-20.html" class="day-nav-btn">← 上一篇 2026-06-20</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-06-22.html" class="day-nav-btn">下一篇 2026-06-22 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

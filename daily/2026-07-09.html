@@ -1,638 +1,639 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-07-09 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-07-09 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-07-09 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-07-09</h2>
-    <p class="daily-stats">共 5 个板块 · 50 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-07-09</div>
+    </div>
+    <div class="card">
+      <h2>【技术洞察】2026-07-09</h2>
+<p>
+> 时间窗口：2026-07-08 \~ 2026-07-09（最近24小时，部分放宽至近48小时）
+> 编制时间：2026-07-09
+> 共5个板块，每板块TOP10
+</p>
+<hr class="section-divider">
+<h2>一、人工智能 AI 领域（TOP10）</h2>
+<p>
+<strong>概述：</strong> 本日AI领域最重磅事件为OpenAI GPT-5.6系列全球发布（Sol/Terra/Luna三档全球可用+ChatGPT Work智能体平台）、GPT-Live全双工语音模型首发、Meta Iris自研AI芯片9月量产+2026 7GW/2027 14GW算力路线、Meta"超级感知"AI眼镜曝光、蚂蚁灵波开源LingBot-World 2.0实时世界模型、阶跃星辰7月13日发布AI智能体手机、Diraq 8比特硅量子芯片Nature论文、AMD Zen 6 EPYC Venice 7月22日发布、EeroQ电子氦量子芯片强耦合突破。
+</p>
+<h3>1. OpenAI GPT-5.6系列全球发布——Sol/Terra/Luna三档+ChatGPT Work智能体平台</h3>
+<ul>
+<li><strong>标题：</strong> GPT-5.6: Frontier intelligence that scales with your ambition</li>
+<li><strong>来源：</strong> OpenAI官方 / 新华网 / 新浪财经</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 7月9日OpenAI正式推出GPT-5.6系列，包括旗舰Sol（5/30美元/M）、均衡Terra（2.5/15）、轻量Luna（1/6）三档。新增"max"推理力度+"ultra"子智能体模式（默认4个Agent、最高16个并行）。ChatGPT Work智能体平台同步上线，可跨Slack/Gmail/Drive数小时连续工作，处理研究+文档+表格+演示+网页等多模态产物。定价明确：Free/Go用户可使用Terra，Plus/Pro/Business/Enterprise可选Sol+Terra+Luna。Sol 24小时内向全球付费用户开放，Terra/Luna向免费用户开放。</li>
+<li><strong>链接：</strong><a href="https://openai.com/index/gpt-5-6/" target="_blank">https://openai.com/index/gpt-5-6/</a></li>
+<li><strong>链接：</strong><a href="http://www.xinhuanet.com/20260710/74a4edded29942f8b0f02ac483a7a76f/c.html" target="_blank">http://www.xinhuanet.com/20260710/74a4edded29942f8b0f02ac483a7a76f/c.html</a></li>
+</ul>
+<h3>2. ChatGPT Work智能体平台——长时数小时跨应用连续执行</h3>
+<ul>
+<li><strong>标题：</strong> ChatGPT Work: 智能体可在你的应用和文件中持续处理项目数小时</li>
+<li><strong>来源：</strong> OpenAI官方 / ChatGPT Release Notes</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> ChatGPT Work是为长时、多步骤任务设计的智能体：可研究分析信息、跨已连接应用和文件工作、生成完整文档/电子表格/演示/报告/Sites。可跟踪进度、回答问题、变更方向、批准重要动作。支持Scheduled Tasks（一次性/重复/触发器/监视变更）。付费计划（Pro/Pro Lite/Enterprise/Edu）首批开通，Plus/Business后续推出。Plugin Directory取代App Directory，支持打包技能/应用/模板。</li>
+<li><strong>链接：</strong><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank">https://help.openai.com/en/articles/6825453-chatgpt-release-notes</a></li>
+</ul>
+<h3>3. GPT-Live全双工语音模型——同声传译+可中断自然对话</h3>
+<ul>
+<li><strong>标题：</strong> GPT-Live 全双工语音模型：支持同声传译和实时打断</li>
+<li><strong>来源：</strong> OpenAI官方 / Showmetech</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> OpenAI发布GPT-Live新一代全双工语音模型，驱动ChatGPT语音模式。核心创新：full-duplex架构——同时听+说，用户可中途打断，AI发出"嗯"或"是的"等注意信号。GPT-Live-1（付费用户）+GPT-Live-1-mini（免费用户）本周全球iOS/Android/Web上线。直播演示英语↔日语同声传译。暂不支持视频/屏幕共享（保留旧语音模式）。GPT-Live是OpenAI首款将"语音+实时理解"作为独立模型的产品。</li>
+<li><strong>链接：</strong><a href="https://en.showmetech.com.br/openai-releases-gpt-5-6-sol-terra-luna/" target="_blank">https://en.showmetech.com.br/openai-releases-gpt-5-6-sol-terra-luna/</a></li>
+</ul>
+<h3>4. Meta自研AI芯片Iris 9月量产——2026 7GW算力/2027翻倍14GW</h3>
+<ul>
+<li><strong>标题：</strong> Meta Iris AI芯片9月量产：2026 7GW算力，2027翻倍至14GW</li>
+<li><strong>来源：</strong> 路透社 / 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 7月9日路透社曝光Meta内部备忘录：代号"Iris"自研AI芯片将于2026年9月正式量产，耗时5年、几经波折的MTIA芯片项目终于交卷。流片后缺陷测试仅用6周无重大问题——数据中心级AI芯片罕见速度。设计哲学：不做通用GPU替代品，针对自家业务（Facebook/Instagram推荐/审核/Feed/广告/AI助手）量身定制。Iris在Meta自有业务负载上的能效远超通用GPU。Meta 2026年建成7GW AI算力集群，2027年翻倍至14GW，2026年AI基础设施投入最高1450亿美元。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660723847259243018/" target="_blank">http://m.toutiao.com/group/7660723847259243018/</a></li>
+</ul>
+<h3>5. Meta"超级感知"AI眼镜曝光——持续录音+LED指示灯保持关闭引争议</h3>
+<ul>
+<li><strong>标题：</strong> Meta秘密研发"超级感知"AI眼镜：每秒拍照+持续录音+隐私争议</li>
+<li><strong>来源：</strong> 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 7月9日The Information披露：Meta秘密研发"超级感知"AI眼镜，可持续录音并每秒拍照提取元数据供Meta AI查询。关键隐私争议：LED指示灯拟保持关闭。设备定位Ray-Ban Meta的下一代，2026年9月发布。叠加Meta Iris芯片+Llama 4模型+Meta AI应用，Meta构建"端-边-云"完整AI生态闭环。智能眼镜竞争升级：与苹果Vision Pro、谷歌AR眼镜形成新一代计算平台之争。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank">http://m.toutiao.com/group/7660668159103386146/</a></li>
+</ul>
+<h3>6. 蚂蚁灵波开源LingBot-World 2.0——14B实时世界模型</h3>
+<ul>
+<li><strong>标题：</strong> 蚂蚁灵波LingBot-World 2.0开源：14B权重720p/60fps低延迟交互</li>
+<li><strong>来源：</strong> 蚂蚁灵波 / 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 蚂蚁灵波开源LingBot-World 2.0实时世界模型：14B权重实现720p/60fps低延迟交互，支持具身智能训练与自动驾驶仿真。模型可作为具身智能+自动驾驶的"世界模拟器"，让机器人在仿真环境中学习物理交互规律，显著降低真实世界训练数据采集成本。LingBot-World 2.0与6-7月发布的LingBot-VA 2.0（基于自回归架构从头预训练，融合因果预训练、语义分词器、MoE架构与Foresight Reasoning）形成"具身原生"完整技术栈。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank">http://m.toutiao.com/group/7660668159103386146/</a></li>
+</ul>
+<h3>7. 阶跃星辰7月13日发布AI智能体手机——全球首款Agent手机</h3>
+<ul>
+<li><strong>标题：</strong> 阶跃星辰7月13日发布全新终端品牌、智能体系统、全球首款AI智能体手机</li>
+<li><strong>来源：</strong> 凤凰网科技 / 财联社</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 阶跃星辰将于7月13日19:00召开"阶跃终端品牌暨新一代智能体战略发布会"，将正式发布AI终端品牌、智能体系统及全球首款AI智能体手机（由A股华勤技术代工）。Step 3.7 Flash等基座模型海外评测第一梯队，国内60%头部手机品牌已合作，模型装机量超4200万台。Agent正式从云端向终端迁移，"端-边-云"协同AI计算新范式。</li>
+<li><strong>链接：</strong><a href="https://tech.ifeng.com/c/8udwLWkdGyG" target="_blank">https://tech.ifeng.com/c/8udwLWkdGyG</a></li>
+</ul>
+<h3>8. Diraq硅量子芯片在imec 300mm CMOS产线8比特阵列——Nature论文</h3>
+<ul>
+<li><strong>标题：</strong> Diraq硅量子比特在imec 300mm CMOS产线达到8比特阵列</li>
+<li><strong>来源：</strong> Nature / Quantum Zeitgeist</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Diraq报道在imec 300mm CMOS foundry产线上成功运行完整8比特硅量子比特阵列，论文发表于Nature。从2到8比特阵列扩展用时不到一年，关键性能指标（相干性、控制质量）保持。意义：证明硅量子比特可使用现有CMOS工艺规模化生产，无需为量子芯片重建制造基础设施。Andrew Dzurak（CEO）：每比特成本目标<1美元。路线图：2029年达数千比特，2031年超100万比特。"这是量子计算工业化路径。"</li>
+<li><strong>链接：</strong><a href="https://quantumzeitgeist.com/diraq-8-silicon-qubit-fidelity/" target="_blank">https://quantumzeitgeist.com/diraq-8-silicon-qubit-fidelity/</a></li>
+</ul>
+<h3>9. AMD Zen 6 EPYC Venice 7月22日发布——256核/PCIe 6.0/Helios AI机架</h3>
+<ul>
+<li><strong>标题：</strong> AMD Zen 6 EPYC Venice 7月22日发布：256核/PCIe 6.0/16通道MRDIMM</li>
+<li><strong>来源：</strong> AMD CTO / HotHardware</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> AMD CTO Mark Papermaster在RAISE Summit 2026确认：Zen 6 EPYC Venice CPU将于7月22-23日Advancing AI活动发布。Venice被传为多代最强服务器CPU：单插槽最高256核、16通道12.8 Gbps MRDIMM、PCIe 6.0扩展。Venice将作为Helios AI机架平台CPU基础，与NVIDIA Blackwell Ultra和Rubin NVL72直接竞争。AMD宣称整机架Venice比NVIDIA Vera CPU快3.3倍（基于Grace外推）。同期Olympic Ridge（消费级Zen 6）可能因CCD供应不足延迟。</li>
+<li><strong>链接：</strong><a href="https://hothardware.com/news/amd-zen6-venice-this-month" target="_blank">https://hothardware.com/news/amd-zen6-venice-this-month</a></li>
+</ul>
+<h3>10. EeroQ电子氦量子比特强耦合突破——新型超导量子架构验证</h3>
+<ul>
+<li><strong>标题：</strong> EeroQ电子氦量子比特与微波光子强耦合突破</li>
+<li><strong>来源：</strong> Phys.org / Enginerds综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> EeroQ Corporation报道单电子氦量子比特与单微波光子强耦合——这一长期被理论化但缺乏实验验证的"电子氦"量子比特架构取得关键里程碑。意义：电子氦量子比特结合超流氦超长相干时间+CMOS风格可扩展架构。Quantum Motion/CIC nanoGUNE团队同期推出业界标准MOS工艺硅自旋量子比特超紧凑读出传感器。Oak Ridge国家实验室+Cleveland Clinic+IBM用量子计算机计算9种FLiBe分子构型（核聚变相关材料）。NSA物理科学实验室+陆军DEVCOM启动QuantumEAGLe。</li>
+<li><strong>链接：</strong><a href="https://www.enginerds.com/insights/Emerging Technologies/Quantum computing" target="_blank">https://www.enginerds.com/insights/Emerging%20Technologies/Quantum%20computing</a></li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域（TOP10）</h2>
+<p>
+<strong>概述：</strong> 本日泛电子科技领域最重大事件包括：Diraq硅量子芯片Nature论文（CMOS 8比特阵列）、EeroQ电子氦量子比特强耦合突破、九章四号光量子计算原型机、FLiBe量子计算、Advantech+StereoLabs GMSL双目视觉+机器人、6G多地试点运行、Meta Iris量产+Meta"超级感知"AI眼镜、AMD Zen 6 Venice 7/22发布、TSMC Nanjing 7nm ASIL-D汽车订单、宇树科技73天过审科创板。
+</p>
+<h3>1. Diraq硅量子芯片imec 300mm CMOS 8比特阵列——Nature论文</h3>
+<ul>
+<li><strong>标题：</strong> Diraq硅量子比特imec 300mm CMOS产线达8比特阵列：实用量子计算工业路径</li>
+<li><strong>来源：</strong> Nature / Quantum Zeitgeist</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Diraq在imec 300mm CMOS foundry产线成功运行完整8比特硅量子比特阵列，论文发表于Nature。意义：硅量子比特可使用现有CMOS工艺规模化生产，无需重建制造基础设施。性能指标（相干性、控制质量）在2→8比特扩展中保持。Andrew Dzurak（CEO）：这是工业路径。路线图：2029年数千比特，2031年>100万比特。硅量子比特在8比特阵列规模下读出架构无需重大传感器/布线扩展。imec 300mm CMOS为业界标准半导体制造工艺，量子比特直接复用。</li>
+<li><strong>链接：</strong><a href="https://quantumzeitgeist.com/diraq-8-silicon-qubit-fidelity/" target="_blank">https://quantumzeitgeist.com/diraq-8-silicon-qubit-fidelity/</a></li>
+</ul>
+<h3>2. 量子计算"工业级系统工程化实现"跨越期——九章四号+EeroQ+FLiBe</h3>
+<ul>
+<li><strong>标题：</strong> 新华社：全球量子计算研究进入关键跨越期</li>
+<li><strong>来源：</strong> 新华社 / 国际观察</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 7月11日新华社报道：量子计算从"单纯科学探索"迈向"工业级系统工程化实现"关键跨越期。"九章四号"光量子计算原型机5月问世：1024个量子压缩态输入、8176个模式、首次操纵探测3050个光子量子态，求解高斯玻色采样比超算快10^54倍。谷歌目标2029年底交付容错量子计算能力。EeroQ电子氦量子比特强耦合突破。FLiBe分子构型在量子硬件上首次计算。联合国教科文组织数据显示全球量子科技投资超557亿美元，预计2040年增至1060亿美元。</li>
+<li><strong>链接：</strong><a href="http://imgs.xinhuanet.com/tech/20260711/7dafd35cff914069be82fb16f6c5f8fe/c.html" target="_blank">http://imgs.xinhuanet.com/tech/20260711/7dafd35cff914069be82fb16f6c5f8fe/c.html</a></li>
+</ul>
+<h3>3. 全球量子科技"全栈"周——7月1-8日多线突破</h3>
+<ul>
+<li><strong>标题：</strong> Quantum Computing Insights: 全栈周——EeroQ耦合/silicon readout/FLiBe/US政策</li>
+<li><strong>来源：</strong> Enginerds综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 7月1-8日量子计算"全栈"周：①EeroQ电子氦量子比特与微波光子强耦合（电路集成可控性验证）；②CIC nanoGUNE+Quantum Motion硅自旋量子比特超紧凑读出传感器（业界标准MOS工艺，硅量子芯片可扩展性突破）；③Oak Ridge国家实验室+Cleveland Clinic+IBM用量子硬件计算9种FLiBe分子构型（核聚变相关材料，首次硬件级科学计算）；④美国NSA物理科学实验室+陆军DEVCOM启动QuantumEAGLe；⑤白宫量子峰会：联邦早期客户角色+2028量子计算目标。</li>
+<li><strong>链接：</strong><a href="https://www.enginerds.com/insights/Emerging Technologies/Quantum computing" target="_blank">https://www.enginerds.com/insights/Emerging%20Technologies/Quantum%20computing</a></li>
+</ul>
+<h3>4. 工信部启动6G创新发展部省协同试点——2026多地实景试点</h3>
+<ul>
+<li><strong>标题：</strong> 6G研发落地提速：2026多地试点运行，工信部启动部省协同试点</li>
+<li><strong>来源：</strong> 今日头条 / 数码俱乐部</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 工信部正式启动6G创新发展部省协同试点专项行动，2026年国内多个省市全面铺开6G实景试点测试，搭配此前批复的6GHz黄金试验频谱。6G研发正式从实验室小规模验证迈入城市实景组网、多场景落地实测新阶段。6G特性：太赫兹通信、通感算智融合、亚毫秒级时延、海量连接。2030年商用化目标明确。"下一代网络时代将至"。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660780537191137835/" target="_blank">http://m.toutiao.com/group/7660780537191137835/</a></li>
+</ul>
+<h3>5. 阶跃星辰7月13日发布AI智能体手机——Agent走向终端</h3>
+<ul>
+<li><strong>标题：</strong> 阶跃星辰7月13日发布全新终端品牌+智能体系统+全球首款AI智能体手机</li>
+<li><strong>来源：</strong> 凤凰网科技 / 财联社</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 阶跃星辰将于7月13日19:00召开"阶跃终端品牌暨新一代智能体战略发布会"，将正式发布AI终端品牌、智能体系统及全球首款AI智能体手机（由A股华勤技术代工）。Step 3.7 Flash等基座模型国内60%头部手机品牌已合作，模型装机量超4200万台。Agent正式从云端向终端迁移，"端-边-云"协同AI计算新范式。</li>
+<li><strong>链接：</strong><a href="https://tech.ifeng.com/c/8udwLWkdGyG" target="_blank">https://tech.ifeng.com/c/8udwLWkdGyG</a></li>
+</ul>
+<h3>6. 优艾智合工业具身大模型FabriX+人形机器人"隙锋"——"一脑多态"调度</h3>
+<ul>
+<li><strong>标题：</strong> 优艾智合FabriX+人形机器人隙锋：半导体/锂电落地800+场景</li>
+<li><strong>来源：</strong> 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 优艾智合发布工业具身大模型FabriX+人形机器人"隙锋"，已在半导体/锂电落地800+场景。"一脑多态"调度多形态机器人进厂：人形机器人+移动机器人+复合机器人协同作业，单一具身大脑（FabriX）支持多形态本体。FabriX工业具身大模型定位"工厂内通用智能体"，将工业场景的视觉理解、动作规划、安全决策统一到单一AI大脑。半导体洁净室/锂电极片制造/PCB检测等高精度场景规模化部署。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank">http://m.toutiao.com/group/7660668159103386146/</a></li>
+</ul>
+<h3>7. 速腾聚创上半年激光雷达交付71.92万台——机器人业务+510%</h3>
+<ul>
+<li><strong>标题：</strong> 速腾聚创2026上半年激光雷达交付71.92万台，机器人业务同比+510%</li>
+<li><strong>来源：</strong> 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 速腾聚创2026上半年激光雷达交付71.92万台，机器人业务同比大增510%。自研"创世"SPAD-SoC芯片支撑车载+机器人双场景，SPAD（单光子雪崩二极管）+SoC集成显著降低激光雷达系统成本与功耗。"车载+机器人"双轮驱动，速腾聚创从车载激光雷达供应商转型为机器人+自动驾驶+IoT多场景感知解决方案商。灵境智源同步完成超亿元天使轮+天使+轮（经纬创投领投），自研"德沃夏克"具身原生芯片与OS架构。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank">http://m.toutiao.com/group/7660668159103386146/</a></li>
+</ul>
+<h3>8. Advantech + StereoLabs GMSL双目视觉+机器人——多Jetson平台</h3>
+<ul>
+<li><strong>标题：</strong> Advantech + StereoLabs：GMSL双目视觉+机器人多Jetson平台</li>
+<li><strong>来源：</strong> Advantech / StereoLabs</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Advantech与StereoLabs扩大合作，提供Physical AI+机器人高性能感知解决方案。Advantech的AFE-A702/ASR-A702（Jetson Thor）+AFE-R750/ASR-A701（Jetson AGX Orin/Orin NX）平台全支持StereoLabs ZED X GMSL双目相机。ZED GMSL具备长线缆、高带宽、低延迟、强抗噪。ZED X双目视觉+Advantech边缘计算一站式方案，支持AMR/室外自主平台/物流机器人/智能机器。Robotic Suite SDK免费开源+WEDA支持，ROS/ROS 2集成。</li>
+<li><strong>链接：</strong><a href="https://www.advantech.com/es-mx/resources/news/advantech-and-stereolabs" target="_blank">https://www.advantech.com/es-mx/resources/news/advantech-and-stereolabs</a></li>
+</ul>
+<h3>9. 宇树科技73天过审科创板——人形机器人"火箭速度"IPO</h3>
+<ul>
+<li><strong>标题：</strong> 宇树科技73天过审科创板：人形机器人行业IPO最快速度</li>
+<li><strong>来源：</strong> 财经媒体综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 宇树科技6月1日科创板IPO申请通过上交所上市委审议，73天完成全流程，是人形机器人行业IPO最快速度。拟募资42.02亿元，2025年营收17.08亿元、扣非净利润6亿元、人形机器人全球出货超5500台。同期银河通用B轮融资引来国家人工智能产业投资基金、中国石化、中国银行等重量级产业资本；智平方B轮集齐百度、中车资本及多家地方基金。2025年国内具身智能领域共发生744起融资，总额达735亿元。</li>
+<li><strong>链接：</strong><a href="http://www.xinhuanet.com/finance/20260611/2acbc76c56554258af2eef3bf3db4bd5/c.html" target="_blank">http://www.xinhuanet.com/finance/20260611/2acbc76c56554258af2eef3bf3db4bd5/c.html</a></li>
+</ul>
+<h3>10. 小鹏Robotaxi启动员工内测——迈向"机器人汽车"关键一步</h3>
+<ul>
+<li><strong>标题：</strong> 小鹏Robotaxi启动员工内测：迈向"机器人汽车"关键一步</li>
+<li><strong>来源：</strong> 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 小鹏Robotaxi启动员工内测，CEO何小鹏称其为迈向"机器人汽车"的关键一步，将输出整套智驾+Robotaxi软硬件方案。叠加7月8日小鹏IRON机器人量产计划+Robotaxi内测+小鹏汽车自动驾驶，小鹏构建"汽车+机器人+Robotaxi"三栖AI生态。比亚迪上半年英国累计销3.8万辆同比近翻倍，登顶英国新能源品牌第一，Seal U DM-i成当地最畅销插混车型。英伟达在犹他州试点Blackwell AI芯片直连先进核反应堆。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank">http://m.toutiao.com/group/7660668159103386146/</a></li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计（TOP10）</h2>
+<p>
+<strong>概述：</strong> 本日芯片设计领域最重大事件包括：AMD Zen 6 EPYC Venice 7月22日发布、Meta Iris 9月量产、ISSCC 2026论文梳理、华为何庭波"韬定律"LogicFolding、Anthropic/Google/Amazon/Meta/Tesla全员自研、AMD MI350 CDNA 4 3D堆叠、IBM Spyre 5nm INT4 629 TOPS、苹果A20 Pro 2nm、长鑫科技295亿IPO、TSMC Nanjing 7nm ASIL-D汽车订单优先。
+</p>
+<h3>1. AMD Zen 6 EPYC Venice 7月22日发布——256核/PCIe 6.0/Helios AI机架</h3>
+<ul>
+<li><strong>标题：</strong> AMD Zen 6 EPYC Venice 7月22日发布：256核+Helios AI机架3.3倍NVIDIA Vera</li>
+<li><strong>来源：</strong> AMD CTO / HotHardware</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> AMD CTO Mark Papermaster在RAISE Summit 2026确认：Zen 6 EPYC Venice CPU将于7月22-23日Advancing AI活动发布。Venice被传为多代最强服务器CPU：单插槽最高256核、16通道12.8 Gbps MRDIMM、PCIe 6.0扩展。Venice将作为Helios AI机架平台CPU基础，与NVIDIA Blackwell Ultra和Rubin NVL72直接竞争。Helios机架18个tray，每tray 4 GPU + 1 Venice CPU。AMD宣称整机架Venice比NVIDIA Vera CPU快3.3倍。</li>
+<li><strong>链接：</strong><a href="https://hothardware.com/news/amd-zen6-venice-this-month" target="_blank">https://hothardware.com/news/amd-zen6-venice-this-month</a></li>
+</ul>
+<h3>2. Meta自研AI芯片Iris 9月量产——2026 7GW/2027 14GW算力路线</h3>
+<ul>
+<li><strong>标题：</strong> Meta Iris AI芯片9月量产：2026 7GW算力，2027翻倍至14GW</li>
+<li><strong>来源：</strong> 路透社 / 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 7月9日路透社曝光Meta内部备忘录：代号"Iris"自研AI芯片将于2026年9月正式量产，耗时5年、几经波折的MTIA芯片项目终于交卷。流片后缺陷测试仅用6周无重大问题——数据中心级AI芯片罕见速度。设计哲学：不做通用GPU替代品，针对自家业务（Facebook/Instagram推荐/审核/Feed/广告/AI助手）量身定制。Meta 2026年建成7GW AI算力集群，2027年翻倍至14GW，2026年AI基础设施投入最高1450亿美元。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660723847259243018/" target="_blank">http://m.toutiao.com/group/7660723847259243018/</a></li>
+</ul>
+<h3>3. ISSCC 2026论文梳理——中国96篇连续四年第一</h3>
+<ul>
+<li><strong>标题：</strong> ISSCC 2026 Session核心论文：AI/HBM/光互连/Chiplet/IBM Spyre/AMD MI350</li>
+<li><strong>来源：</strong> CSDN</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> ISSCC 2026录用：中国（含港澳）96篇论文连续第四年全球第一（占比37.35%），清华大学18篇登顶全球机构榜首。重点论文：①IBM Spyre（5nm/330mm²/260亿晶体管/INT8 315 TOPS）；②AMD Instinct MI350（CDNA 4/3nm+6nm 3D堆叠/288GB HBM3E/8TB/s）；③Google TPU v6脉冲阵列；④8nm 1.2TB/s HBM3e存内计算子系统；⑤1.6Tb/s/mm²高密度D2D互连。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank">https://blog.csdn.net/qq_41360172/article/details/159571548</a></li>
+</ul>
+<h3>4. 华为何庭波"韬定律"LogicFolding——CPU性能核3.1GHz回归铺路4GHz+</h3>
+<ul>
+<li><strong>标题：</strong> 麒麟2026实测：LogicFolding固定节点实现13%频率提升+41%功耗降低</li>
+<li><strong>来源：</strong> 36氪 / 芯东西</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 华为董事/半导体业务部总裁何庭波署名"韬定律"论文：LogicFolding将数字/模拟/存储电路分配到垂直堆叠有源层，在固定器件节点下实现55%晶体管密度阶跃。麒麟2026 vs 麒麟9030 Pro：①晶体管密度155→238 MTr/mm²；②室温1.1V下SoC性能核最大时钟频率提升近13%（CPU性能核频率今年回到3.1GHz）；③等效性能下功耗降低41%；④SRAM访问频率提升40%+；⑤全局片上网络数据通路面积缩减55%。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7659212425698263562/" target="_blank">http://m.toutiao.com/group/7659212425698263562/</a></li>
+</ul>
+<h3>5. AI芯片自研圈地——OpenAI/Anthropic/Meta/Google/微软/亚马逊/IBM/Tesla</h3>
+<ul>
+<li><strong>标题：</strong> AI算力底座大洗牌：OpenAI/微软/谷歌/亚马逊/Anthropic/Meta全员自研</li>
+<li><strong>来源：</strong> 掘金 / 人工智能学院</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Anthropic启动AI芯片早期开发，与三星洽谈2nm工艺制造合作。OpenAI的Jalapeño ASIC由Broadcom合作代工，9个月完成设计，微软拿下约40%产能。Google TPU v7自研；微软Maia 2自研；NVIDIA Blackwell Ultra/TwoTower由台积电代工。Meta自研AI训练推理加速芯片Iris将于2026年9月启动量产。IBM突破1nm以下，集成近1000亿晶体管。Tesla自研AI5芯片2500 TOPS流片完成，兼顾Optimus人形机器人大脑。韩国政府宣布5760亿美元AI投资计划。</li>
+<li><strong>链接：</strong><a href="https://aicoding.juejin.cn/post/7658290915859087370" target="_blank">https://aicoding.juejin.cn/post/7658290915859087370</a></li>
+</ul>
+<h3>6. AMD Instinct MI350系列GPU——CDNA 4 + 3D堆叠 + HBM3E 8TB/s</h3>
+<ul>
+<li><strong>标题：</strong> AMD Instinct MI350：4×XCD+1×IOD，FP8算力较上代提升1.9倍</li>
+<li><strong>来源：</strong> CSDN</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> AMD Instinct MI350系列基于第四代CDNA 4架构，3D堆叠封装，4×XCD（3nm计算Die）+1×IOD（6nm IO Die），集成288GB HBM3E、8TB/s内存带宽。FP8算力较上代提升1.9倍。支持MXFP6/MXFP4/FP8/FP16混合精度。针对大规模生成式AI训练与科学计算场景优化，缓解内存墙瓶颈。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank">https://blog.csdn.net/qq_41360172/article/details/159571548</a></li>
+</ul>
+<h3>7. IBM Spyre 5nm全精度AI加速器——INT4 629 TOPS企业级推理</h3>
+<ul>
+<li><strong>标题：</strong> IBM Spyre：5nm 260亿晶体管+INT4 629 TOPS</li>
+<li><strong>来源：</strong> CSDN</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> IBM Spyre推理优化可扩展AI加速器，5nm工艺330mm²、260亿晶体管、DRAM带宽超200GB/s。全精度支持：FP16 98 TOPS、FP8 157 TOPS、INT8 315 TOPS、INT4 629 TOPS。兼容PyTorch 2.x。可适配经典AI模型到大型生成模型全场景推理，支持多芯片协同扩展，面向企业级AI推理（金融欺诈检测、零售自动化、金融风控、企业级客服机器人）。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank">https://blog.csdn.net/qq_41360172/article/details/159571548</a></li>
+</ul>
+<h3>8. 苹果A20 Pro芯片2nm LPDDR5X 6通道——iPhone 18 Pro硬件成本涨近300美元</h3>
+<ul>
+<li><strong>标题：</strong> 苹果A20 Pro：2nm工艺+LPDDR5X升级6通道96-bit位宽</li>
+<li><strong>来源：</strong> IT之家 / Counterpoint</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 科技媒体Wccftech报道：iPhone 18 Pro/Pro Max的A20 Pro芯片不会升级至LPDDR6，继续采用LPDDR5X但会升级至6通道96-bit位宽。Counterpoint报告：iPhone 18 Pro Max硬件成本相比前代上涨近300美元，主因全新2nm A20 Pro芯片成本高昂与内存芯片价格飙升。同期印度宣布取消部分手机及电子设备零部件进口关税（涉及无线充电模块、汽车显示屏等），政策延续至2029年3月31日。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660674196418167332/" target="_blank">http://m.toutiao.com/group/7660674196418167332/</a></li>
+</ul>
+<h3>9. 长鑫科技7月16日科创板IPO申购——拟募资295亿元</h3>
+<ul>
+<li><strong>标题：</strong> 长鑫科技7月16日科创板申购：国产DRAM龙头拟募资295亿元</li>
+<li><strong>来源：</strong> IT之家</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 长鑫科技正式启动科创板IPO发行，申购日定于7月16日。作为国内最大DRAM厂商，本次拟募资295亿元用于技术升级与研发，有望成为科创板史上第二大IPO。公司2026年一季度业绩已实现扭亏为盈，增长迅猛。同期"国产GPU四小龙"之一燧原科技科创板IPO注册申请获证监会同意，拟募资60亿元用于五代、六代AI芯片研发产业化。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660674196418167332/" target="_blank">http://m.toutiao.com/group/7660674196418167332/</a></li>
+</ul>
+<h3>10. TSMC Nanjing 7nm产能上调15%——优先ASIL-D汽车订单</h3>
+<ul>
+<li><strong>标题：</strong> TSMC南京7nm产能上调15%：全部锁定ASIL-D汽车客户</li>
+<li><strong>来源：</strong> 奇帅电子 / 综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 6月20日TSMC南京晶圆厂获大陆监管批准，将7nm逻辑IC月产能提升15%，新增产能全部定向分配给通过ISO 26262 ASIL-D认证的汽车电子客户。背景：Level-4自动驾驶主控芯片供应压力，TSMC选择优先车规。消费级7nm客户可能面临交付周期延长。台积电正重新分配先进节点产能，体现汽车半导体战略地位。先进制程产能向车规倾斜，Chiplet异构集成是车规芯片的关键技术路径。</li>
+<li><strong>链接：</strong><a href="https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm_/TSMC_Nanjing_Lifts_7nm_Output_for_ASIL_D_Auto_Orders.html" target="_blank">https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm\_/TSMC_Nanjing_Lifts_7nm_Output_for_ASIL_D_Auto_Orders.html</a></li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端/EDA/工艺（TOP10）</h2>
+<p>
+<strong>概述：</strong> 本日芯片后端/EDA/工艺领域最重大事件包括：ChipAgents在DAC 2026展示自主AI芯片设计、Siemens Solido展示AI定制IC设计、ASP-DAC 2026 3D IC论文清单、DAC 2026 Long Beach首次举办、12位电流舵DAC Q2 Random Walk优化、TCAD 2026最新论文、CoWoS/SoIC持续扩产、TSMC CoWoS 2027 200K wafer、HBM价格2027翻倍、TSMC Nanjing 7nm ASIL-D汽车订单优先、国产EDA/光刻胶困局。
+</p>
+<h3>1. ChipAgents在DAC 2026大会演示自主AI芯片设计</h3>
+<ul>
+<li><strong>标题：</strong> DAC 2026首次登陆Long Beach，ChipAgents展示"AI驱动设计"完整工作流</li>
+<li><strong>来源：</strong> SemiWiki / ChipAgents官方</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> DAC 2026（设计自动化大会，CCF A类）首次在Long Beach举办，AI成为中心议题。ChipAgents通过现场演示、技术会议、客户演讲展示多智能体平台如何自动化设计、验证和调试任务。3场核心会议：①Autonomous Root Cause Analysis（比通用AI Agent高3× pass-at-one准确率）；②AI-Driven Timing Closure（时序收敛自动化）；③与STMicroelectronics合作Digital Verification（规格阅读时间降低15×，形式断言生成240×，UVM环境创建400×）。</li>
+<li><strong>链接：</strong><a href="https://semiwiki.com/eda/chipagents-ai/370911-see-autonomous-chip-design-in-action-with-chipagents-at-dac-2026/" target="_blank">https://semiwiki.com/eda/chipagents-ai/370911-see-autonomous-chip-design-in-action-with-chipagents-at-dac-2026/</a></li>
+</ul>
+<h3>2. Siemens Solido在DAC 2026展示AI驱动定制IC设计</h3>
+<ul>
+<li><strong>标题：</strong> How AI is shaping the future of custom IC design: Solido at DAC 2026</li>
+<li><strong>来源：</strong> Siemens Digital Industries Software</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Siemens EDA的Solido产品线在DAC 2026展示AI如何重塑定制IC设计流程。涵盖从架构探索、电路综合、布局优化到验证签核全流程。DAC 2026聚焦议题：①AI在设计中的可信度与可解释性；②如何将AI Agent整合到既有EDA工具链；③混合信号/射频/全定制设计的AI自动化路径。Cadence/Synopsys等EDA巨头同期发布AI相关主题演讲。</li>
+<li><strong>链接：</strong><a href="https://blogs.sw.siemens.com/cicv/2026/07/10/how-ai-is-shaping-the-future-of-custom-ic-design-solido-at-dac-2026/" target="_blank">https://blogs.sw.siemens.com/cicv/2026/07/10/how-ai-is-shaping-the-future-of-custom-ic-design-solido-at-dac-2026/</a></li>
+</ul>
+<h3>3. ASP-DAC 2026论文清单——HKCU B. Yu团队3D IC/EUV优化系列</h3>
+<ul>
+<li><strong>标题：</strong> ASP-DAC 2026（CCF C，1月19日香港）大模型3D IC与3D放置/布线优化</li>
+<li><strong>来源：</strong> dblp / CSDN</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> ASP-DAC 2026（亚洲南太平洋设计自动化大会，CCF C类）由香港中文大学B. Yu教授团队主导多项论文：①DPO-3D: Face-to-Face 3D IC可微功率传输网络优化（路由性与IR-drop权衡）；②HPPlacer: 高精度slack感知全局布局引擎（DATE 2026）；③IncreMacro-3D: 面-面堆叠Memory-on-Logic 3D IC增量宏布局（DATE 2026）。TCAD/IEEE Trans. CAD：RegPlace（2026）、3D-Flow（2025）、H3D（2025）等系列3D IC布局布线与异构集成研究。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/iaast/article/details/148719040" target="_blank">https://blog.csdn.net/iaast/article/details/148719040</a></li>
+<li><strong>链接：</strong><a href="https://dblp.dagstuhl.de/pid/88/2592-1.html" target="_blank">https://dblp.dagstuhl.de/pid/88/2592-1.html</a></li>
+</ul>
+<h3>4. DAC 2026长滩举办——AI in EDA全议程</h3>
+<ul>
+<li><strong>标题：</strong> DAC 2026 Long Beach全议程发布：AI贯穿设计、验证、签核全流程</li>
+<li><strong>来源：</strong> SemiWiki</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> DAC 2026（设计自动化顶会，CCF A类）7月底在Long Beach Convention Center举办，议程核心：①Engineering Tracks覆盖AI/ML for EDA、3D IC先进封装、量子计算EDA、汽车/AI硬件安全；②Designer Track面向实践工程师；③Exhibit Hall含Cadence、Synopsys、Siemens EDA等三大EDA巨头展位，AI驱动工具集中亮相。3D IC chiplet物理设计、签核、AI驱动的布局布线、形式验证加速是热点。</li>
+<li><strong>链接：</strong><a href="https://semiwiki.com/eda/chipagents-ai/370911-see-autonomous-chip-design-in-action-with-chipagents-at-dac-2026/" target="_blank">https://semiwiki.com/eda/chipagents-ai/370911-see-autonomous-chip-design-in-action-with-chipagents-at-dac-2026/</a></li>
+</ul>
+<h3>5. 12位电流舵DAC的Q2 Random Walk开关序列优化设计</h3>
+<ul>
+<li><strong>标题：</strong> 电流舵DAC的电流源匹配与开关序列优化：INL降至±0.8 LSB</li>
+<li><strong>来源：</strong> 原创力文档</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 论文研究12位电流舵DAC的静态线性度优化。创新性地融合Q2 Random Walk开关序列与共质心布局的协同设计方案，在Cadence Virtuoso 0.18μm CMOS工艺仿真中：①INL从±3.2 LSB降至±0.8 LSB；②DNL从±1.5 LSB降至±0.4 LSB。Q2 Random Walk的漫步过程具有更好空间连续性，相邻选通电流源在物理位置不剧烈跳动，降低大规模阵列切换时的电源地弹噪声。</li>
+<li><strong>链接：</strong><a href="https://m.book118.com/html/2026/0704/7114151032011130.shtm" target="_blank">https://m.book118.com/html/2026/0704/7114151032011130.shtm</a></li>
+</ul>
+<h3>6. TCAD 2026最新论文：SEM缺陷分割/良率预测/工艺优化</h3>
+<ul>
+<li><strong>标题：</strong> IEEE Trans. CAD 2026 Vol 45：半导体晶圆良率AI预测综述</li>
+<li><strong>来源：</strong> dblp / 浙江大学Yining Chen团队</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Yining Chen（浙大）团队2026年TCAD/IEEE Trans. CAD成果：①RegPlace（TCAD 2026 45(2): 686-690）Regularity-Aware Placement for Full-System DNN Accelerator；②AMBCT：半监督虚拟量测自适应多视图贝叶斯协同训练（Expert Syst. Appl. 2026）；③半导体晶圆良率AI预测综述（Microelectron. J. 2026 167: 106958）；④Hybrid弱监督方法高精度SEM缺陷分割（ACM Trans. DAES 2026 31(2)）；⑤ASP-DAC 2026：REDM回归引导扩散建模用于半导体工艺控制通用软传感器增强。</li>
+<li><strong>链接：</strong><a href="https://dblp.dagstuhl.de/pid/88/2592-1.html" target="_blank">https://dblp.dagstuhl.de/pid/88/2592-1.html</a></li>
+</ul>
+<h3>7. TSMC CoWoS月产能2027将达至少20万片——先进封装加速扩产</h3>
+<ul>
+<li><strong>标题：</strong> TSMC CoWoS月产能2027至少20万片，应对AI算力需求</li>
+<li><strong>来源：</strong> DIGITIMES / 综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> DIGITIMES报道：TSMC正加速先进封装产能扩张，市场消息显示CoWoS月产能将在2027年达到至少20万片（vs 2026年底7.5万片）。CoWoS-L、CoWoS-S多产品线同步扩产。AI芯片（NVIDIA Blackwell Ultra/Rubin、AMD MI350、Meta MTIA等）均依赖CoWoS与SoIC先进封装。2027年HBM4价格或翻倍，Rubin平台驱动需求激增。PCB中板供应紧张可能影响NVIDIA Kyber机架2027年发布时间。</li>
+<li><strong>链接：</strong><a href="https://apps.digitimes.com/tag/nvidia/001404.html" target="_blank">https://apps.digitimes.com/tag/nvidia/001404.html</a></li>
+</ul>
+<h3>8. HBM4价格2027预计翻倍——AI需求与供应合同双驱动</h3>
+<ul>
+<li><strong>标题：</strong> HBM4价格2027预计翻倍：AI需求与供应合同收紧</li>
+<li><strong>来源：</strong> DIGITIMES</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> DIGITIMES报道：HBM4价格2027年可能翻倍以上，主要驱动：①NVIDIA Rubin平台需求激增；②HBM4生产复杂度提升（堆叠层数从HBM3e 8/12层升至HBM4 12/16层）；③三星/SK海力士/美光供应合同谈判。三星电子启动PM1763企业SSD量产（PCIe 6.0，AI基础设施专用）。三星HBM4回归押注"芯片级优势"——希望将存储/逻辑/代工/先进封装业务首次整合。</li>
+<li><strong>链接：</strong><a href="https://apps.digitimes.com/tag/nvidia/001404.html" target="_blank">https://apps.digitimes.com/tag/nvidia/001404.html</a></li>
+</ul>
+<h3>9. 国产EDA与光刻胶困局——ISSCC四连冠背后1%国产化率反差</h3>
+<ul>
+<li><strong>标题：</strong> 反思：中国芯片设计论文"量"的盛况与产业"质"的错位</li>
+<li><strong>来源：</strong> 芯核笔记</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> ISSCC 2026中国96篇论文连续四年第一、清华18篇登顶全球第一。但光刻胶国产化率仍在个位数徘徊：ArF浸没式光刻胶<1%，高端KrF光刻胶10-15%，12英寸晶圆BARC/KrF光刻胶仅2%。根源：评价体系奖励"刊物等级"而非"问题解决"。英国REF2021（影响力占比25%）与荷兰"认可和奖励"计划（科学质量/社会相关性/产业应用潜力独立评分）可借鉴。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7659501792614564386/" target="_blank">http://m.toutiao.com/group/7659501792614564386/</a></li>
+</ul>
+<h3>10. DATE 2026/ISPD 2025高密度3D IC时钟树与PDN优化</h3>
+<ul>
+<li><strong>标题：</strong> DATE 2026: HPPlacer高精度slack感知全局布局+IncreMacro-3D增量宏布局</li>
+<li><strong>来源：</strong> dblp</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> DATE 2026论文：①HPPlacer（高精度slack感知全局布局引擎，HKCU Tsung-Yi Ho/Xing Huang合作）；②IncreMacro-3D（面-面堆叠Memory-on-Logic 3D IC增量宏布局，HKCU团队）。ISPD 2025：①Physical Design for Advanced 3D ICs: Challenges and Solutions（Yuxuan Zhao/Bei Yu invited）；②3D-Flow（Flow-based Standard Cell Legalization for 3D ICs，DAC 2025）；③Ultrafast Density Gradient Accumulation in 3D Analytical Placement（ICCAD 2025）。</li>
+<li><strong>链接：</strong><a href="https://dblp.dagstuhl.de/pid/88/2592-1.html" target="_blank">https://dblp.dagstuhl.de/pid/88/2592-1.html</a></li>
+</ul>
+<hr class="section-divider">
+<h2>五、CPU 5G 提频（TOP10，全新板块）</h2>
+<p>
+<strong>概述：</strong> 本日CPU 5G提频领域最重大事件包括：AMD Zen 6 EPYC Venice 7/22发布（256核/PCIe 6.0/16通道MRDIMM）、Meta Iris 9月量产（7GW/14GW算力路线）、阶跃星辰AI智能体手机（7/13发布）、华为何庭波"韬定律"LogicFolding（CPU 3.1GHz回归）、NVIDIA Vera CPU 256颗机架、6G多地试点运行（部省协同）、Intel Xeon 6 E-core 5G核心网、AMD EPYC 8005 84核vRAN 54小区9.5Gbps、MediaTek Dimensity/Snapdragon 5G下沉、Tenstorrent Wormhole RISC-V开源。
+</p>
+<h3>1. AMD Zen 6 EPYC Venice 7月22日发布——256核/PCIe 6.0/Helios AI机架</h3>
+<ul>
+<li><strong>标题：</strong> AMD Zen 6 EPYC Venice 7月22日发布：256核+Helios AI机架3.3倍NVIDIA Vera</li>
+<li><strong>来源：</strong> AMD CTO / HotHardware</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> AMD CTO Mark Papermaster在RAISE Summit 2026确认：Zen 6 EPYC Venice CPU将于7月22-23日Advancing AI活动发布。Venice被传为多代最强服务器CPU：单插槽最高256核、16通道12.8 Gbps MRDIMM、PCIe 6.0扩展。Venice将作为Helios AI机架平台CPU基础，与NVIDIA Blackwell Ultra和Rubin NVL72直接竞争。Helios机架18个tray，每tray 4 GPU + 1 Venice CPU。CPU 5G提频场景：5G MEC+AI Agent协同。</li>
+<li><strong>链接：</strong><a href="https://hothardware.com/news/amd-zen6-venice-this-month" target="_blank">https://hothardware.com/news/amd-zen6-venice-this-month</a></li>
+</ul>
+<h3>2. Meta自研AI芯片Iris 9月量产——2026 7GW/2027 14GW算力路线</h3>
+<ul>
+<li><strong>标题：</strong> Meta Iris AI芯片9月量产：2026 7GW算力，2027翻倍至14GW</li>
+<li><strong>来源：</strong> 路透社 / 今日头条综合</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 7月9日路透社曝光Meta内部备忘录：代号"Iris"自研AI芯片将于2026年9月正式量产，耗时5年、几经波折的MTIA芯片项目终于交卷。Iris在Meta自有业务负载（推荐/审核/Feed/广告/AI助手）上的能效远超通用GPU。Meta 2026年建成7GW AI算力集群，2027年翻倍至14GW，2026年AI基础设施投入最高1450亿美元。CPU 5G协同：Iris可与Meta自研的5G MEC边缘节点CPU协同，5G/6G工作负载（AR/VR、短视频、社交推荐）下CPU频率与Iris频率动态调度。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660723847259243018/" target="_blank">http://m.toutiao.com/group/7660723847259243018/</a></li>
+</ul>
+<h3>3. 阶跃星辰7月13日发布AI智能体手机——端侧大模型CPU频率调度</h3>
+<ul>
+<li><strong>标题：</strong> 阶跃星辰7月13日发布全球首款AI智能体手机：端侧大模型+5G协同</li>
+<li><strong>来源：</strong> 凤凰网科技 / 财联社</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 阶跃星辰7月13日发布全新终端品牌、智能体系统及全球首款AI智能体手机（华勤技术代工）。Step 3.7 Flash等基座模型国内60%头部手机品牌已合作，装机量超4200万台。CPU 5G提频场景：手机SoC应用CPU配合5G吞吐的频率提升机制（QoS调度、5G调制解调器触发的CPU提频、Snapdragon/Dimensity/苹果A系列在5G模式下的频率策略）、发热与功耗控制。Agent操作系统实时监控5G信号质量+端侧大模型推理负载，动态调度大中小CPU核频率。</li>
+<li><strong>链接：</strong><a href="https://tech.ifeng.com/c/8udwLWkdGyG" target="_blank">https://tech.ifeng.com/c/8udwLWkdGyG</a></li>
+</ul>
+<h3>4. 华为"韬定律"LogicFolding——CPU性能核3.1GHz回归铺路4GHz+</h3>
+<ul>
+<li><strong>标题：</strong> 麒麟2026实测：LogicFolding固定节点实现13%频率提升+41%功耗降低</li>
+<li><strong>来源：</strong> 36氪 / 芯东西</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 华为董事/半导体业务部总裁何庭波署名"韬定律"论文：LogicFolding将数字/模拟/存储电路分配到垂直堆叠有源层，在固定器件节点下实现55%晶体管密度阶跃。麒麟2026 vs 麒麟9030 Pro：①晶体管密度155→238 MTr/mm²；②室温1.1V下SoC性能核最大时钟频率提升近13%（CPU性能核频率今年回到3.1GHz）；③等效性能下功耗降低41%；④SRAM访问频率提升40%+；⑤全局片上网络数据通路面积缩减55%。CPU 5G提频核心：固定节点下通过3D折叠协同提升主频与能效。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7659212425698263562/" target="_blank">http://m.toutiao.com/group/7659212425698263562/</a></li>
+</ul>
+<h3>5. NVIDIA Vera CPU——首款专为智能体AI设计的CPU</h3>
+<ul>
+<li><strong>标题：</strong> NVIDIA Vera CPU：88核Armv9.2，单机架256颗Vera，22500个并发CPU环境</li>
+<li><strong>来源：</strong> NVIDIA官方</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> NVIDIA发布全球首款专为智能体AI设计的Vera CPU：88颗定制Olympus核心、Armv9.2架构、LPDDR5X 1.2TB/s内存子系统。单机架256颗液冷Vera处理器，22500个并发CPU环境，400TB总内存+300TB/s聚合带宽。强化学习训练后阶段三大计算池（GPU训练池/推理加速器/CPU集群）协同。CPU 5G提频场景：5G MEC+AI Agent协同，单机架承担数万并发AI推理会话的CPU算力。</li>
+<li><strong>链接：</strong><a href="https://www.nvidia.com/vera-cpu" target="_blank">https://www.nvidia.com/vera-cpu</a></li>
+</ul>
+<h3>6. 6G多地试点运行——部省协同CPU+Modem协同提频基础</h3>
+<ul>
+<li><strong>标题：</strong> 6G研发落地提速：2026多地试点运行，工信部启动部省协同试点</li>
+<li><strong>来源：</strong> 今日头条 / 数码俱乐部</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 工信部正式启动6G创新发展部省协同试点专项行动，2026年国内多个省市全面铺开6G实景试点测试，搭配此前批复的6GHz黄金试验频谱。6G研发正式从实验室小规模验证迈入城市实景组网、多场景落地实测新阶段。6G特性：太赫兹通信、通感算智融合、亚毫秒级时延、海量连接。CPU 5G提频场景：手机SoC应用CPU配合6G吞吐的频率提升（QoS调度、Modem触发CPU提频）、发热与功耗控制；5G切片CPU资源分配、Sub-6/mmWave/6G（太赫兹、通感算智融合）频率与功耗策略。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660780537191137835/" target="_blank">http://m.toutiao.com/group/7660780537191137835/</a></li>
+</ul>
+<h3>7. Intel Xeon 6 E-core 5G核心网部署——SK Telecom/NTT DOCOMO已采用</h3>
+<ul>
+<li><strong>标题：</strong> Intel Xeon 6 E-core 5G核心网：SK Telecom/NTT DOCOMO已部署</li>
+<li><strong>来源：</strong> Intel官方</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Intel Xeon 6 E-core在5G核心网部署进展：①SK Telecom在移动核心生产环境部署Xeon 6 E-core+Intel Ethernet 800系列；②NTT DOCOMO选择Xeon 6 E-core+Intel Ethernet E830网卡用于下一代移动核心。Xeon 6集成TDX零信任安全、QAT数据传输加速、原生AI推理能力，可在不重新设计网络前提下引入新功能。下一代Xeon 6+基于Intel 18A工艺，6G演进关键算力底座。CPU 5G提频场景：核心网侧的CPU加速，5G切片按QoS调度CPU资源。</li>
+<li><strong>链接：</strong><a href="https://www.intel.com/content/www/us/en/communications/5g-core-network.html" target="_blank">https://www.intel.com/content/www/us/en/communications/5g-core-network.html</a></li>
+</ul>
+<h3>8. AMD EPYC 8005 84核Zen 5 vRAN——Samsung多小区测试54小区/9.5Gbps</h3>
+<ul>
+<li><strong>标题：</strong> AMD EPYC 8005 84核vRAN：Samsung多小区54小区/9.5Gbps下行/2.0Gbps上行</li>
+<li><strong>来源：</strong> AMD官方</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> AMD EPYC 8005系列84核Zen 5架构、单插槽70-225W TDP。低密度奇偶校验（LDPC）优化面向vRAN L1加速，减少延迟，加速5G前向纠错。在Samsung多小区vRAN测试：单服务器84核EPYC 8635P支持54小区/9.5Gbps下行/2.0Gbps上行。CPU 5G提频场景：5G MEC边缘节点标配，vRAN/Open RAN中CPU+FPGA/ASIC协同提频，5G切片下CPU频率按QoS分级调度。</li>
+<li><strong>链接：</strong><a href="https://www.amd.com/en/blogs/2026/new-amd-epyc-8005-server-cpus-big-performance-low-power.html" target="_blank">https://www.amd.com/en/blogs/2026/new-amd-epyc-8005-server-cpus-big-performance-low-power.html</a></li>
+</ul>
+<h3>9. 5G芯片下沉入门机型——MediaTek Dimensity 6300 2.4GHz 6nm</h3>
+<ul>
+<li><strong>标题：</strong> MediaTek Dimensity 6300 2.4GHz 6nm 5G芯片下沉入门机型</li>
+<li><strong>来源：</strong> IDN Times / MediaTek官方</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> MediaTek Dimensity 6300采用6nm工艺、Cortex-A76双核（2.4GHz）+A55六核架构，支持2K 30FPS视频录制、UFS 2.2存储。CPU 5G提频视角：5G入门机型芯片从原Helio G99的2.2GHz提升至2.4GHz，单核性能提升约9%。在千元价位段实现2.4GHz主频+5G连接的组合，让入门机用户体验到5G吞吐下的CPU频率加速。同期Snapdragon 6s Gen 3、UNISOC T8300、Dimensity 7100/6080同样普及5G到入门段。</li>
+<li><strong>链接：</strong><a href="https://www.idntimes.com/tech/gadget/chipset-5g-murah-ramadan-2026-c1c2-01-b11wj-x3s7bl" target="_blank">https://www.idntimes.com/tech/gadget/chipset-5g-murah-ramadan-2026-c1c2-01-b11wj-x3s7bl</a></li>
+</ul>
+<h3>10. Tenstorrent Wormhole开源架构——RISC-V+以太网AI加速器</h3>
+<ul>
+<li><strong>标题：</strong> Tenstorrent Wormhole：开源RISC-V+以太网AI加速器架构</li>
+<li><strong>来源：</strong> Tenstorrent官方</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> Tenstorrent发布Wormhole开源架构细节：基于RISC-V CPU核心+自研AI张量计算单元，通过以太网（而非NVLink/CXL）实现芯片间互联。定位"AI算力的Linux"——开源硬件+开源软件栈（TT-Metal/TT-Buda），让客户在不绑定专有生态的前提下使用AI加速器。每颗Wormhole芯片有80个RISC-V核+108个AI核心，14nm工艺，可与下一代Blackhole芯片（4nm）协同。CPU 5G提频场景：RISC-V核心CPU面向5G/6G负载优化，开源架构便于运营商定制。</li>
+<li><strong>链接：</strong><a href="https://tenstorrent.com/wormhole" target="_blank">https://tenstorrent.com/wormhole</a></li>
+</ul>
+<hr class="section-divider">
+<h2>总结</h2>
+<p>
+<strong>今日（2026-07-09）技术洞察报告，共5个板块50条TOP级动态：</strong>
+</p>
+<ul>
+<li><strong>AI 领域：</strong> OpenAI GPT-5.6全球发布+ChatGPT Work、ChatGPT Work智能体平台、GPT-Live全双工语音、Meta Iris 9月量产+7GW/14GW、Meta超级感知AI眼镜、蚂蚁灵波LingBot-World 2.0、阶跃星辰AI智能体手机、Diraq 8比特硅量子Nature、AMD Zen 6 Venice 7/22、EeroQ电子氦强耦合。</li>
+<li><strong>电子科技·全领域：</strong> Diraq硅量子8比特阵列Nature、量子计算工业级跨越期、量子全栈周7/1-8、6G多地试点部省协同、阶跃星辰7/13 AI智能体手机、优艾智合FabriX+隙锋工业具身、速腾聚创激光雷达+机器人+510%、Advantech+StereoLabs GMSL双目、宇树科技73天过审科创板、小鹏Robotaxi内测+机器人汽车。</li>
+<li><strong>芯片设计：</strong> AMD Zen 6 Venice 256核、Meta Iris 9月量产+7GW/14GW、ISSCC 2026中国96篇第一、华为韬定律LogicFolding 3.1GHz、AI芯片自研圈地全员、AMD MI350 CDNA 4、IBM Spyre 5nm INT4 629 TOPS、苹果A20 Pro 2nm+LPDDR5X 6通道、长鑫科技295亿IPO、TSMC南京7nm ASIL-D汽车订单。</li>
+<li><strong>芯片后端/EDA/工艺：</strong> ChipAgents DAC 2026自主AI设计、Siemens Solido AI定制IC、ASP-DAC 2026 3D IC系列、DAC 2026 Long Beach首办、12位DAC Q2 Random Walk、TCAD 2026 SEM缺陷分割、TSMC CoWoS 2027 20万片、HBM4价格2027翻倍、国产EDA/光刻胶困局、DATE 2026 HPPlacer/IncreMacro-3D。</li>
+<li><strong>CPU 5G 提频：</strong> AMD Zen 6 Venice 7/22、Meta Iris 9月量产+7GW/14GW、阶跃星辰AI智能体手机、华为韬定律3.1GHz、NVIDIA Vera CPU 256颗机架、6G多地试点部省协同、Intel Xeon 6 E-core 5G核心网、AMD EPYC 8005 84核vRAN、Dimensity 6300 2.4GHz 5G入门、Tenstorrent Wormhole RISC-V开源。</li>
+</ul>
+<p>
+<strong>核心趋势观察：</strong>
+</p>
+<p>
+1. <strong>OpenAI GPT-5.6全球发布与ChatGPT Work标志着AI进入"长时智能体"时代</strong>——智能体可跨应用连续工作数小时，与传统"一问一答"模式告别。
+2. <strong>Meta Iris + 7GW/14GW 算力路线揭示自研芯片进入"基础设施级"竞赛</strong>——5年研发、流片后6周无重大bug、Meta自有业务能效远超通用GPU。
+3. <strong>硅量子比特 CMOS 8比特阵列突破</strong>——Diraq在imec 300mm foundry产线完成8比特阵列，论文发Nature，证明量子比特可使用现有半导体工艺规模化生产，2029年数千比特、2031年>100万比特。
+4. <strong>AMD Zen 6 EPYC Venice 256核+Helios AI机架 3.3倍 NVIDIA Vera</strong>——CPU AI机架时代到来，CPU不再是"GPU附庸"。
+5. <strong>6G多地试点+部省协同</strong>——6G从实验室验证迈入城市实景组网新阶段，2030年商用目标明确。
+6. <strong>机器人三栖生态成型</strong>——小鹏"汽车+机器人+Robotaxi"+宇树科技IPO+智平方1000台订单+优艾智合FabriX。
+</p>
+<hr class="section-divider">
+<p>
+<strong>编制说明：</strong> 本报告基于2026-07-08至2026-07-09公开信息整理，来源涵盖OpenAI官方、Meta官方、路透社、Nature、Quantum Zeitgeist、HotHardware、AMD CTO、凤凰网科技、新华网、CSDN、SemiWiki、36氪、芯东西、AMD官方、Intel官方、NVIDIA官方、ISSCC、dblp、DIGITIMES等权威媒体与会议。同一事件多源时保留最权威来源。
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a><a href="#CPU 5G" class="section-nav-link" style="--accent: #6bcf7f">CPU 5G 提频</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  <div class="section-summary">本日AI领域最重磅事件为OpenAI GPT-5.6系列全球发布（Sol/Terra/Luna三档全球可用+ChatGPT Work智能体平台）、GPT-Live全双工语音模型首发、Meta Iris自研AI芯片9月量产+2026 7GW/2027 14GW算力路线、Meta&quot;超级感知&quot;AI眼镜曝光、蚂蚁灵波开源LingBot-World 2.0实时世界模型、阶跃星辰7月13日发布AI智能体手机、Diraq 8比特硅量子芯片Nature论文、AMD Zen 6 EPYC Venice 7月22日发布、EeroQ电子氦量子芯片强耦合突破。</div>
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> GPT-5.6: Frontier intelligence that scales with your ambition</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 OpenAI官方 / 新华网 / 新浪财经</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">7月9日OpenAI正式推出GPT-5.6系列，包括旗舰Sol（5/30美元/M）、均衡Terra（2.5/15）、轻量Luna（1/6）三档。新增&quot;max&quot;推理力度+&quot;ultra&quot;子智能体模式（默认4个Agent、最高16个并行）。ChatGPT Work智能体平台同步上线，可跨Slack/Gmail/Drive数小时连续工作，处理研究+文档+表格+演示+网页等多模态产物。定价明确：Free/Go用户可使用Terra，Plus/Pro/Business/Enterprise可选Sol+Terra+Luna。Sol 24小时内向全球付费用户开放，Terra/Luna向免费用户开放。</div>
-  <div class="insight-links"><a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener" class="link-btn">🔗 openai.com</a> <a href="http://www.xinhuanet.com/20260710/74a4edded29942f8b0f02ac483a7a76f/c.html" target="_blank" rel="noopener" class="link-btn">🔗 xinhuanet.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> ChatGPT Work: 智能体可在你的应用和文件中持续处理项目数小时</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 OpenAI官方 / ChatGPT Release Notes</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">ChatGPT Work是为长时、多步骤任务设计的智能体：可研究分析信息、跨已连接应用和文件工作、生成完整文档/电子表格/演示/报告/Sites。可跟踪进度、回答问题、变更方向、批准重要动作。支持Scheduled Tasks（一次性/重复/触发器/监视变更）。付费计划（Pro/Pro Lite/Enterprise/Edu）首批开通，Plus/Business后续推出。Plugin Directory取代App Directory，支持打包技能/应用/模板。</div>
-  <div class="insight-links"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener" class="link-btn">🔗 help.openai.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> GPT-Live 全双工语音模型：支持同声传译和实时打断</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 OpenAI官方 / Showmetech</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">OpenAI发布GPT-Live新一代全双工语音模型，驱动ChatGPT语音模式。核心创新：full-duplex架构——同时听+说，用户可中途打断，AI发出&quot;嗯&quot;或&quot;是的&quot;等注意信号。GPT-Live-1（付费用户）+GPT-Live-1-mini（免费用户）本周全球iOS/Android/Web上线。直播演示英语↔日语同声传译。暂不支持视频/屏幕共享（保留旧语音模式）。GPT-Live是OpenAI首款将&quot;语音+实时理解&quot;作为独立模型的产品。</div>
-  <div class="insight-links"><a href="https://en.showmetech.com.br/openai-releases-gpt-5-6-sol-terra-luna/" target="_blank" rel="noopener" class="link-btn">🔗 en.showmetech.com.br</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> Meta Iris AI芯片9月量产：2026 7GW算力，2027翻倍至14GW</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 路透社 / 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">7月9日路透社曝光Meta内部备忘录：代号&quot;Iris&quot;自研AI芯片将于2026年9月正式量产，耗时5年、几经波折的MTIA芯片项目终于交卷。流片后缺陷测试仅用6周无重大问题——数据中心级AI芯片罕见速度。设计哲学：不做通用GPU替代品，针对自家业务（Facebook/Instagram推荐/审核/Feed/广告/AI助手）量身定制。Iris在Meta自有业务负载上的能效远超通用GPU。Meta 2026年建成7GW AI算力集群，2027年翻倍至14GW，2026年AI基础设施投入最高1450亿美元。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660723847259243018/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> Meta秘密研发&quot;超级感知&quot;AI眼镜：每秒拍照+持续录音+隐私争议</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">7月9日The Information披露：Meta秘密研发&quot;超级感知&quot;AI眼镜，可持续录音并每秒拍照提取元数据供Meta AI查询。关键隐私争议：LED指示灯拟保持关闭。设备定位Ray-Ban Meta的下一代，2026年9月发布。叠加Meta Iris芯片+Llama 4模型+Meta AI应用，Meta构建&quot;端-边-云&quot;完整AI生态闭环。智能眼镜竞争升级：与苹果Vision Pro、谷歌AR眼镜形成新一代计算平台之争。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> 蚂蚁灵波LingBot-World 2.0开源：14B权重720p/60fps低延迟交互</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 蚂蚁灵波 / 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">蚂蚁灵波开源LingBot-World 2.0实时世界模型：14B权重实现720p/60fps低延迟交互，支持具身智能训练与自动驾驶仿真。模型可作为具身智能+自动驾驶的&quot;世界模拟器&quot;，让机器人在仿真环境中学习物理交互规律，显著降低真实世界训练数据采集成本。LingBot-World 2.0与6-7月发布的LingBot-VA 2.0（基于自回归架构从头预训练，融合因果预训练、语义分词器、MoE架构与Foresight Reasoning）形成&quot;具身原生&quot;完整技术栈。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> 阶跃星辰7月13日发布全新终端品牌、智能体系统、全球首款AI智能体手机</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 凤凰网科技 / 财联社</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">阶跃星辰将于7月13日19:00召开&quot;阶跃终端品牌暨新一代智能体战略发布会&quot;，将正式发布AI终端品牌、智能体系统及全球首款AI智能体手机（由A股华勤技术代工）。Step 3.7 Flash等基座模型海外评测第一梯队，国内60%头部手机品牌已合作，模型装机量超4200万台。Agent正式从云端向终端迁移，&quot;端-边-云&quot;协同AI计算新范式。</div>
-  <div class="insight-links"><a href="https://tech.ifeng.com/c/8udwLWkdGyG" target="_blank" rel="noopener" class="link-btn">🔗 tech.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> Diraq硅量子比特在imec 300mm CMOS产线达到8比特阵列</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Nature / Quantum Zeitgeist</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Diraq报道在imec 300mm CMOS foundry产线上成功运行完整8比特硅量子比特阵列，论文发表于Nature。从2到8比特阵列扩展用时不到一年，关键性能指标（相干性、控制质量）保持。意义：证明硅量子比特可使用现有CMOS工艺规模化生产，无需为量子芯片重建制造基础设施。Andrew Dzurak（CEO）：每比特成本目标&lt;1美元。路线图：2029年达数千比特，2031年超100万比特。&quot;这是量子计算工业化路径。&quot;</div>
-  <div class="insight-links"><a href="https://quantumzeitgeist.com/diraq-8-silicon-qubit-fidelity/" target="_blank" rel="noopener" class="link-btn">🔗 quantumzeitgeist.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> AMD Zen 6 EPYC Venice 7月22日发布：256核/PCIe 6.0/16通道MRDIMM</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AMD CTO / HotHardware</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">AMD CTO Mark Papermaster在RAISE Summit 2026确认：Zen 6 EPYC Venice CPU将于7月22-23日Advancing AI活动发布。Venice被传为多代最强服务器CPU：单插槽最高256核、16通道12.8 Gbps MRDIMM、PCIe 6.0扩展。Venice将作为Helios AI机架平台CPU基础，与NVIDIA Blackwell Ultra和Rubin NVL72直接竞争。AMD宣称整机架Venice比NVIDIA Vera CPU快3.3倍（基于Grace外推）。同期Olympic Ridge（消费级Zen 6）可能因CCD供应不足延迟。</div>
-  <div class="insight-links"><a href="https://hothardware.com/news/amd-zen6-venice-this-month" target="_blank" rel="noopener" class="link-btn">🔗 hothardware.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> EeroQ电子氦量子比特与微波光子强耦合突破</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Phys.org / Enginerds综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">EeroQ Corporation报道单电子氦量子比特与单微波光子强耦合——这一长期被理论化但缺乏实验验证的&quot;电子氦&quot;量子比特架构取得关键里程碑。意义：电子氦量子比特结合超流氦超长相干时间+CMOS风格可扩展架构。Quantum Motion/CIC nanoGUNE团队同期推出业界标准MOS工艺硅自旋量子比特超紧凑读出传感器。Oak Ridge国家实验室+Cleveland Clinic+IBM用量子计算机计算9种FLiBe分子构型（核聚变相关材料）。NSA物理科学实验室+陆军DEVCOM启动QuantumEAGLe。</div>
-  <div class="insight-links"><a href="https://www.enginerds.com/insights/Emerging Technologies/Quantum computing" target="_blank" rel="noopener" class="link-btn">🔗 enginerds.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  <div class="section-summary">本日泛电子科技领域最重大事件包括：Diraq硅量子芯片Nature论文（CMOS 8比特阵列）、EeroQ电子氦量子比特强耦合突破、九章四号光量子计算原型机、FLiBe量子计算、Advantech+StereoLabs GMSL双目视觉+机器人、6G多地试点运行、Meta Iris量产+Meta&quot;超级感知&quot;AI眼镜、AMD Zen 6 Venice 7/22发布、TSMC Nanjing 7nm ASIL-D汽车订单、宇树科技73天过审科创板。</div>
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> Diraq硅量子比特imec 300mm CMOS产线达8比特阵列：实用量子计算工业路径</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Nature / Quantum Zeitgeist</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Diraq在imec 300mm CMOS foundry产线成功运行完整8比特硅量子比特阵列，论文发表于Nature。意义：硅量子比特可使用现有CMOS工艺规模化生产，无需重建制造基础设施。性能指标（相干性、控制质量）在2→8比特扩展中保持。Andrew Dzurak（CEO）：这是工业路径。路线图：2029年数千比特，2031年&gt;100万比特。硅量子比特在8比特阵列规模下读出架构无需重大传感器/布线扩展。imec 300mm CMOS为业界标准半导体制造工艺，量子比特直接复用。</div>
-  <div class="insight-links"><a href="https://quantumzeitgeist.com/diraq-8-silicon-qubit-fidelity/" target="_blank" rel="noopener" class="link-btn">🔗 quantumzeitgeist.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> 新华社：全球量子计算研究进入关键跨越期</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 新华社 / 国际观察</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">7月11日新华社报道：量子计算从&quot;单纯科学探索&quot;迈向&quot;工业级系统工程化实现&quot;关键跨越期。&quot;九章四号&quot;光量子计算原型机5月问世：1024个量子压缩态输入、8176个模式、首次操纵探测3050个光子量子态，求解高斯玻色采样比超算快10^54倍。谷歌目标2029年底交付容错量子计算能力。EeroQ电子氦量子比特强耦合突破。FLiBe分子构型在量子硬件上首次计算。联合国教科文组织数据显示全球量子科技投资超557亿美元，预计2040年增至1060亿美元。</div>
-  <div class="insight-links"><a href="http://imgs.xinhuanet.com/tech/20260711/7dafd35cff914069be82fb16f6c5f8fe/c.html" target="_blank" rel="noopener" class="link-btn">🔗 imgs.xinhuanet.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> Quantum Computing Insights: 全栈周——EeroQ耦合/silicon readout/FLiBe/US政策</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Enginerds综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">7月1-8日量子计算&quot;全栈&quot;周：①EeroQ电子氦量子比特与微波光子强耦合（电路集成可控性验证）；②CIC nanoGUNE+Quantum Motion硅自旋量子比特超紧凑读出传感器（业界标准MOS工艺，硅量子芯片可扩展性突破）；③Oak Ridge国家实验室+Cleveland Clinic+IBM用量子硬件计算9种FLiBe分子构型（核聚变相关材料，首次硬件级科学计算）；④美国NSA物理科学实验室+陆军DEVCOM启动QuantumEAGLe；⑤白宫量子峰会：联邦早期客户角色+2028量子计算目标。</div>
-  <div class="insight-links"><a href="https://www.enginerds.com/insights/Emerging Technologies/Quantum computing" target="_blank" rel="noopener" class="link-btn">🔗 enginerds.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 6G研发落地提速：2026多地试点运行，工信部启动部省协同试点</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条 / 数码俱乐部</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">工信部正式启动6G创新发展部省协同试点专项行动，2026年国内多个省市全面铺开6G实景试点测试，搭配此前批复的6GHz黄金试验频谱。6G研发正式从实验室小规模验证迈入城市实景组网、多场景落地实测新阶段。6G特性：太赫兹通信、通感算智融合、亚毫秒级时延、海量连接。2030年商用化目标明确。&quot;下一代网络时代将至&quot;。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660780537191137835/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 阶跃星辰7月13日发布全新终端品牌+智能体系统+全球首款AI智能体手机</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 凤凰网科技 / 财联社</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">阶跃星辰将于7月13日19:00召开&quot;阶跃终端品牌暨新一代智能体战略发布会&quot;，将正式发布AI终端品牌、智能体系统及全球首款AI智能体手机（由A股华勤技术代工）。Step 3.7 Flash等基座模型国内60%头部手机品牌已合作，模型装机量超4200万台。Agent正式从云端向终端迁移，&quot;端-边-云&quot;协同AI计算新范式。</div>
-  <div class="insight-links"><a href="https://tech.ifeng.com/c/8udwLWkdGyG" target="_blank" rel="noopener" class="link-btn">🔗 tech.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> 优艾智合FabriX+人形机器人隙锋：半导体/锂电落地800+场景</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">优艾智合发布工业具身大模型FabriX+人形机器人&quot;隙锋&quot;，已在半导体/锂电落地800+场景。&quot;一脑多态&quot;调度多形态机器人进厂：人形机器人+移动机器人+复合机器人协同作业，单一具身大脑（FabriX）支持多形态本体。FabriX工业具身大模型定位&quot;工厂内通用智能体&quot;，将工业场景的视觉理解、动作规划、安全决策统一到单一AI大脑。半导体洁净室/锂电极片制造/PCB检测等高精度场景规模化部署。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> 速腾聚创2026上半年激光雷达交付71.92万台，机器人业务同比+510%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">速腾聚创2026上半年激光雷达交付71.92万台，机器人业务同比大增510%。自研&quot;创世&quot;SPAD-SoC芯片支撑车载+机器人双场景，SPAD（单光子雪崩二极管）+SoC集成显著降低激光雷达系统成本与功耗。&quot;车载+机器人&quot;双轮驱动，速腾聚创从车载激光雷达供应商转型为机器人+自动驾驶+IoT多场景感知解决方案商。灵境智源同步完成超亿元天使轮+天使+轮（经纬创投领投），自研&quot;德沃夏克&quot;具身原生芯片与OS架构。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> Advantech + StereoLabs：GMSL双目视觉+机器人多Jetson平台</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Advantech / StereoLabs</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Advantech与StereoLabs扩大合作，提供Physical AI+机器人高性能感知解决方案。Advantech的AFE-A702/ASR-A702（Jetson Thor）+AFE-R750/ASR-A701（Jetson AGX Orin/Orin NX）平台全支持StereoLabs ZED X GMSL双目相机。ZED GMSL具备长线缆、高带宽、低延迟、强抗噪。ZED X双目视觉+Advantech边缘计算一站式方案，支持AMR/室外自主平台/物流机器人/智能机器。Robotic Suite SDK免费开源+WEDA支持，ROS/ROS 2集成。</div>
-  <div class="insight-links"><a href="https://www.advantech.com/es-mx/resources/news/advantech-and-stereolabs" target="_blank" rel="noopener" class="link-btn">🔗 advantech.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> 宇树科技73天过审科创板：人形机器人行业IPO最快速度</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 财经媒体综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">宇树科技6月1日科创板IPO申请通过上交所上市委审议，73天完成全流程，是人形机器人行业IPO最快速度。拟募资42.02亿元，2025年营收17.08亿元、扣非净利润6亿元、人形机器人全球出货超5500台。同期银河通用B轮融资引来国家人工智能产业投资基金、中国石化、中国银行等重量级产业资本；智平方B轮集齐百度、中车资本及多家地方基金。2025年国内具身智能领域共发生744起融资，总额达735亿元。</div>
-  <div class="insight-links"><a href="http://www.xinhuanet.com/finance/20260611/2acbc76c56554258af2eef3bf3db4bd5/c.html" target="_blank" rel="noopener" class="link-btn">🔗 xinhuanet.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> 小鹏Robotaxi启动员工内测：迈向&quot;机器人汽车&quot;关键一步</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">小鹏Robotaxi启动员工内测，CEO何小鹏称其为迈向&quot;机器人汽车&quot;的关键一步，将输出整套智驾+Robotaxi软硬件方案。叠加7月8日小鹏IRON机器人量产计划+Robotaxi内测+小鹏汽车自动驾驶，小鹏构建&quot;汽车+机器人+Robotaxi&quot;三栖AI生态。比亚迪上半年英国累计销3.8万辆同比近翻倍，登顶英国新能源品牌第一，Seal U DM-i成当地最畅销插混车型。英伟达在犹他州试点Blackwell AI芯片直连先进核反应堆。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660668159103386146/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  <div class="section-summary">本日芯片设计领域最重大事件包括：AMD Zen 6 EPYC Venice 7月22日发布、Meta Iris 9月量产、ISSCC 2026论文梳理、华为何庭波&quot;韬定律&quot;LogicFolding、Anthropic/Google/Amazon/Meta/Tesla全员自研、AMD MI350 CDNA 4 3D堆叠、IBM Spyre 5nm INT4 629 TOPS、苹果A20 Pro 2nm、长鑫科技295亿IPO、TSMC Nanjing 7nm ASIL-D汽车订单优先。</div>
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> AMD Zen 6 EPYC Venice 7月22日发布：256核+Helios AI机架3.3倍NVIDIA Vera</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AMD CTO / HotHardware</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">AMD CTO Mark Papermaster在RAISE Summit 2026确认：Zen 6 EPYC Venice CPU将于7月22-23日Advancing AI活动发布。Venice被传为多代最强服务器CPU：单插槽最高256核、16通道12.8 Gbps MRDIMM、PCIe 6.0扩展。Venice将作为Helios AI机架平台CPU基础，与NVIDIA Blackwell Ultra和Rubin NVL72直接竞争。Helios机架18个tray，每tray 4 GPU + 1 Venice CPU。AMD宣称整机架Venice比NVIDIA Vera CPU快3.3倍。</div>
-  <div class="insight-links"><a href="https://hothardware.com/news/amd-zen6-venice-this-month" target="_blank" rel="noopener" class="link-btn">🔗 hothardware.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> Meta Iris AI芯片9月量产：2026 7GW算力，2027翻倍至14GW</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 路透社 / 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">7月9日路透社曝光Meta内部备忘录：代号&quot;Iris&quot;自研AI芯片将于2026年9月正式量产，耗时5年、几经波折的MTIA芯片项目终于交卷。流片后缺陷测试仅用6周无重大问题——数据中心级AI芯片罕见速度。设计哲学：不做通用GPU替代品，针对自家业务（Facebook/Instagram推荐/审核/Feed/广告/AI助手）量身定制。Meta 2026年建成7GW AI算力集群，2027年翻倍至14GW，2026年AI基础设施投入最高1450亿美元。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660723847259243018/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> ISSCC 2026 Session核心论文：AI/HBM/光互连/Chiplet/IBM Spyre/AMD MI350</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CSDN</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">ISSCC 2026录用：中国（含港澳）96篇论文连续第四年全球第一（占比37.35%），清华大学18篇登顶全球机构榜首。重点论文：①IBM Spyre（5nm/330mm²/260亿晶体管/INT8 315 TOPS）；②AMD Instinct MI350（CDNA 4/3nm+6nm 3D堆叠/288GB HBM3E/8TB/s）；③Google TPU v6脉冲阵列；④8nm 1.2TB/s HBM3e存内计算子系统；⑤1.6Tb/s/mm²高密度D2D互连。</div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> 麒麟2026实测：LogicFolding固定节点实现13%频率提升+41%功耗降低</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36氪 / 芯东西</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">华为董事/半导体业务部总裁何庭波署名&quot;韬定律&quot;论文：LogicFolding将数字/模拟/存储电路分配到垂直堆叠有源层，在固定器件节点下实现55%晶体管密度阶跃。麒麟2026 vs 麒麟9030 Pro：①晶体管密度155→238 MTr/mm²；②室温1.1V下SoC性能核最大时钟频率提升近13%（CPU性能核频率今年回到3.1GHz）；③等效性能下功耗降低41%；④SRAM访问频率提升40%+；⑤全局片上网络数据通路面积缩减55%。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659212425698263562/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> AI算力底座大洗牌：OpenAI/微软/谷歌/亚马逊/Anthropic/Meta全员自研</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 掘金 / 人工智能学院</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Anthropic启动AI芯片早期开发，与三星洽谈2nm工艺制造合作。OpenAI的Jalapeño ASIC由Broadcom合作代工，9个月完成设计，微软拿下约40%产能。Google TPU v7自研；微软Maia 2自研；NVIDIA Blackwell Ultra/TwoTower由台积电代工。Meta自研AI训练推理加速芯片Iris将于2026年9月启动量产。IBM突破1nm以下，集成近1000亿晶体管。Tesla自研AI5芯片2500 TOPS流片完成，兼顾Optimus人形机器人大脑。韩国政府宣布5760亿美元AI投资计划。</div>
-  <div class="insight-links"><a href="https://aicoding.juejin.cn/post/7658290915859087370" target="_blank" rel="noopener" class="link-btn">🔗 aicoding.juejin.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> AMD Instinct MI350：4×XCD+1×IOD，FP8算力较上代提升1.9倍</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CSDN</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">AMD Instinct MI350系列基于第四代CDNA 4架构，3D堆叠封装，4×XCD（3nm计算Die）+1×IOD（6nm IO Die），集成288GB HBM3E、8TB/s内存带宽。FP8算力较上代提升1.9倍。支持MXFP6/MXFP4/FP8/FP16混合精度。针对大规模生成式AI训练与科学计算场景优化，缓解内存墙瓶颈。</div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> IBM Spyre：5nm 260亿晶体管+INT4 629 TOPS</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CSDN</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">IBM Spyre推理优化可扩展AI加速器，5nm工艺330mm²、260亿晶体管、DRAM带宽超200GB/s。全精度支持：FP16 98 TOPS、FP8 157 TOPS、INT8 315 TOPS、INT4 629 TOPS。兼容PyTorch 2.x。可适配经典AI模型到大型生成模型全场景推理，支持多芯片协同扩展，面向企业级AI推理（金融欺诈检测、零售自动化、金融风控、企业级客服机器人）。</div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> 苹果A20 Pro：2nm工艺+LPDDR5X升级6通道96-bit位宽</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IT之家 / Counterpoint</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">科技媒体Wccftech报道：iPhone 18 Pro/Pro Max的A20 Pro芯片不会升级至LPDDR6，继续采用LPDDR5X但会升级至6通道96-bit位宽。Counterpoint报告：iPhone 18 Pro Max硬件成本相比前代上涨近300美元，主因全新2nm A20 Pro芯片成本高昂与内存芯片价格飙升。同期印度宣布取消部分手机及电子设备零部件进口关税（涉及无线充电模块、汽车显示屏等），政策延续至2029年3月31日。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660674196418167332/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 长鑫科技7月16日科创板申购：国产DRAM龙头拟募资295亿元</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IT之家</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">长鑫科技正式启动科创板IPO发行，申购日定于7月16日。作为国内最大DRAM厂商，本次拟募资295亿元用于技术升级与研发，有望成为科创板史上第二大IPO。公司2026年一季度业绩已实现扭亏为盈，增长迅猛。同期&quot;国产GPU四小龙&quot;之一燧原科技科创板IPO注册申请获证监会同意，拟募资60亿元用于五代、六代AI芯片研发产业化。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660674196418167332/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> TSMC南京7nm产能上调15%：全部锁定ASIL-D汽车客户</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 奇帅电子 / 综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">6月20日TSMC南京晶圆厂获大陆监管批准，将7nm逻辑IC月产能提升15%，新增产能全部定向分配给通过ISO 26262 ASIL-D认证的汽车电子客户。背景：Level-4自动驾驶主控芯片供应压力，TSMC选择优先车规。消费级7nm客户可能面临交付周期延长。台积电正重新分配先进节点产能，体现汽车半导体战略地位。先进制程产能向车规倾斜，Chiplet异构集成是车规芯片的关键技术路径。</div>
-  <div class="insight-links"><a href="https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm_/TSMC_Nanjing_Lifts_7nm_Output_for_ASIL_D_Auto_Orders.html" target="_blank" rel="noopener" class="link-btn">🔗 qishuai-cn.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  <div class="section-summary">本日芯片后端/EDA/工艺领域最重大事件包括：ChipAgents在DAC 2026展示自主AI芯片设计、Siemens Solido展示AI定制IC设计、ASP-DAC 2026 3D IC论文清单、DAC 2026 Long Beach首次举办、12位电流舵DAC Q2 Random Walk优化、TCAD 2026最新论文、CoWoS/SoIC持续扩产、TSMC CoWoS 2027 200K wafer、HBM价格2027翻倍、TSMC Nanjing 7nm ASIL-D汽车订单优先、国产EDA/光刻胶困局。</div>
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> DAC 2026首次登陆Long Beach，ChipAgents展示&quot;AI驱动设计&quot;完整工作流</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 SemiWiki / ChipAgents官方</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">DAC 2026（设计自动化大会，CCF A类）首次在Long Beach举办，AI成为中心议题。ChipAgents通过现场演示、技术会议、客户演讲展示多智能体平台如何自动化设计、验证和调试任务。3场核心会议：①Autonomous Root Cause Analysis（比通用AI Agent高3× pass-at-one准确率）；②AI-Driven Timing Closure（时序收敛自动化）；③与STMicroelectronics合作Digital Verification（规格阅读时间降低15×，形式断言生成240×，UVM环境创建400×）。</div>
-  <div class="insight-links"><a href="https://semiwiki.com/eda/chipagents-ai/370911-see-autonomous-chip-design-in-action-with-chipagents-at-dac-2026/" target="_blank" rel="noopener" class="link-btn">🔗 semiwiki.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> How AI is shaping the future of custom IC design: Solido at DAC 2026</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Siemens Digital Industries Software</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Siemens EDA的Solido产品线在DAC 2026展示AI如何重塑定制IC设计流程。涵盖从架构探索、电路综合、布局优化到验证签核全流程。DAC 2026聚焦议题：①AI在设计中的可信度与可解释性；②如何将AI Agent整合到既有EDA工具链；③混合信号/射频/全定制设计的AI自动化路径。Cadence/Synopsys等EDA巨头同期发布AI相关主题演讲。</div>
-  <div class="insight-links"><a href="https://blogs.sw.siemens.com/cicv/2026/07/10/how-ai-is-shaping-the-future-of-custom-ic-design-solido-at-dac-2026/" target="_blank" rel="noopener" class="link-btn">🔗 blogs.sw.siemens.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> ASP-DAC 2026（CCF C，1月19日香港）大模型3D IC与3D放置/布线优化</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 dblp / CSDN</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">ASP-DAC 2026（亚洲南太平洋设计自动化大会，CCF C类）由香港中文大学B. Yu教授团队主导多项论文：①DPO-3D: Face-to-Face 3D IC可微功率传输网络优化（路由性与IR-drop权衡）；②HPPlacer: 高精度slack感知全局布局引擎（DATE 2026）；③IncreMacro-3D: 面-面堆叠Memory-on-Logic 3D IC增量宏布局（DATE 2026）。TCAD/IEEE Trans. CAD：RegPlace（2026）、3D-Flow（2025）、H3D（2025）等系列3D IC布局布线与异构集成研究。</div>
-  <div class="insight-links"><a href="https://blog.csdn.net/iaast/article/details/148719040" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a> <a href="https://dblp.dagstuhl.de/pid/88/2592-1.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.dagstuhl.de</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> DAC 2026 Long Beach全议程发布：AI贯穿设计、验证、签核全流程</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 SemiWiki</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">DAC 2026（设计自动化顶会，CCF A类）7月底在Long Beach Convention Center举办，议程核心：①Engineering Tracks覆盖AI/ML for EDA、3D IC先进封装、量子计算EDA、汽车/AI硬件安全；②Designer Track面向实践工程师；③Exhibit Hall含Cadence、Synopsys、Siemens EDA等三大EDA巨头展位，AI驱动工具集中亮相。3D IC chiplet物理设计、签核、AI驱动的布局布线、形式验证加速是热点。</div>
-  <div class="insight-links"><a href="https://semiwiki.com/eda/chipagents-ai/370911-see-autonomous-chip-design-in-action-with-chipagents-at-dac-2026/" target="_blank" rel="noopener" class="link-btn">🔗 semiwiki.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 电流舵DAC的电流源匹配与开关序列优化：INL降至±0.8 LSB</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 原创力文档</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">论文研究12位电流舵DAC的静态线性度优化。创新性地融合Q2 Random Walk开关序列与共质心布局的协同设计方案，在Cadence Virtuoso 0.18μm CMOS工艺仿真中：①INL从±3.2 LSB降至±0.8 LSB；②DNL从±1.5 LSB降至±0.4 LSB。Q2 Random Walk的漫步过程具有更好空间连续性，相邻选通电流源在物理位置不剧烈跳动，降低大规模阵列切换时的电源地弹噪声。</div>
-  <div class="insight-links"><a href="https://m.book118.com/html/2026/0704/7114151032011130.shtm" target="_blank" rel="noopener" class="link-btn">🔗 m.book118.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> IEEE Trans. CAD 2026 Vol 45：半导体晶圆良率AI预测综述</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 dblp / 浙江大学Yining Chen团队</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Yining Chen（浙大）团队2026年TCAD/IEEE Trans. CAD成果：①RegPlace（TCAD 2026 45(2): 686-690）Regularity-Aware Placement for Full-System DNN Accelerator；②AMBCT：半监督虚拟量测自适应多视图贝叶斯协同训练（Expert Syst. Appl. 2026）；③半导体晶圆良率AI预测综述（Microelectron. J. 2026 167: 106958）；④Hybrid弱监督方法高精度SEM缺陷分割（ACM Trans. DAES 2026 31(2)）；⑤ASP-DAC 2026：REDM回归引导扩散建模用于半导体工艺控制通用软传感器增强。</div>
-  <div class="insight-links"><a href="https://dblp.dagstuhl.de/pid/88/2592-1.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.dagstuhl.de</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> TSMC CoWoS月产能2027至少20万片，应对AI算力需求</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 DIGITIMES / 综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">DIGITIMES报道：TSMC正加速先进封装产能扩张，市场消息显示CoWoS月产能将在2027年达到至少20万片（vs 2026年底7.5万片）。CoWoS-L、CoWoS-S多产品线同步扩产。AI芯片（NVIDIA Blackwell Ultra/Rubin、AMD MI350、Meta MTIA等）均依赖CoWoS与SoIC先进封装。2027年HBM4价格或翻倍，Rubin平台驱动需求激增。PCB中板供应紧张可能影响NVIDIA Kyber机架2027年发布时间。</div>
-  <div class="insight-links"><a href="https://apps.digitimes.com/tag/nvidia/001404.html" target="_blank" rel="noopener" class="link-btn">🔗 apps.digitimes.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> HBM4价格2027预计翻倍：AI需求与供应合同收紧</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 DIGITIMES</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">DIGITIMES报道：HBM4价格2027年可能翻倍以上，主要驱动：①NVIDIA Rubin平台需求激增；②HBM4生产复杂度提升（堆叠层数从HBM3e 8/12层升至HBM4 12/16层）；③三星/SK海力士/美光供应合同谈判。三星电子启动PM1763企业SSD量产（PCIe 6.0，AI基础设施专用）。三星HBM4回归押注&quot;芯片级优势&quot;——希望将存储/逻辑/代工/先进封装业务首次整合。</div>
-  <div class="insight-links"><a href="https://apps.digitimes.com/tag/nvidia/001404.html" target="_blank" rel="noopener" class="link-btn">🔗 apps.digitimes.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 反思：中国芯片设计论文&quot;量&quot;的盛况与产业&quot;质&quot;的错位</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 芯核笔记</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">ISSCC 2026中国96篇论文连续四年第一、清华18篇登顶全球第一。但光刻胶国产化率仍在个位数徘徊：ArF浸没式光刻胶&lt;1%，高端KrF光刻胶10-15%，12英寸晶圆BARC/KrF光刻胶仅2%。根源：评价体系奖励&quot;刊物等级&quot;而非&quot;问题解决&quot;。英国REF2021（影响力占比25%）与荷兰&quot;认可和奖励&quot;计划（科学质量/社会相关性/产业应用潜力独立评分）可借鉴。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659501792614564386/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> DATE 2026: HPPlacer高精度slack感知全局布局+IncreMacro-3D增量宏布局</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 dblp</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">DATE 2026论文：①HPPlacer（高精度slack感知全局布局引擎，HKCU Tsung-Yi Ho/Xing Huang合作）；②IncreMacro-3D（面-面堆叠Memory-on-Logic 3D IC增量宏布局，HKCU团队）。ISPD 2025：①Physical Design for Advanced 3D ICs: Challenges and Solutions（Yuxuan Zhao/Bei Yu invited）；②3D-Flow（Flow-based Standard Cell Legalization for 3D ICs，DAC 2025）；③Ultrafast Density Gradient Accumulation in 3D Analytical Placement（ICCAD 2025）。</div>
-  <div class="insight-links"><a href="https://dblp.dagstuhl.de/pid/88/2592-1.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.dagstuhl.de</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="CPU 5G" style="--accent: #6bcf7f">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #6bcf7f"></span>
-    CPU 5G
-  </h2>
-  <div class="section-summary">本日CPU 5G提频领域最重大事件包括：AMD Zen 6 EPYC Venice 7/22发布（256核/PCIe 6.0/16通道MRDIMM）、Meta Iris 9月量产（7GW/14GW算力路线）、阶跃星辰AI智能体手机（7/13发布）、华为何庭波&quot;韬定律&quot;LogicFolding（CPU 3.1GHz回归）、NVIDIA Vera CPU 256颗机架、6G多地试点运行（部省协同）、Intel Xeon 6 E-core 5G核心网、AMD EPYC 8005 84核vRAN 54小区9.5Gbps、MediaTek Dimensity/Snapdragon 5G下沉、Tenstorrent Wormhole RISC-V开源。</div>
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">1</span> AMD Zen 6 EPYC Venice 7月22日发布：256核+Helios AI机架3.3倍NVIDIA Vera</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AMD CTO / HotHardware</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">AMD CTO Mark Papermaster在RAISE Summit 2026确认：Zen 6 EPYC Venice CPU将于7月22-23日Advancing AI活动发布。Venice被传为多代最强服务器CPU：单插槽最高256核、16通道12.8 Gbps MRDIMM、PCIe 6.0扩展。Venice将作为Helios AI机架平台CPU基础，与NVIDIA Blackwell Ultra和Rubin NVL72直接竞争。Helios机架18个tray，每tray 4 GPU + 1 Venice CPU。CPU 5G提频场景：5G MEC+AI Agent协同。</div>
-  <div class="insight-links"><a href="https://hothardware.com/news/amd-zen6-venice-this-month" target="_blank" rel="noopener" class="link-btn">🔗 hothardware.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">2</span> Meta Iris AI芯片9月量产：2026 7GW算力，2027翻倍至14GW</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 路透社 / 今日头条综合</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">7月9日路透社曝光Meta内部备忘录：代号&quot;Iris&quot;自研AI芯片将于2026年9月正式量产，耗时5年、几经波折的MTIA芯片项目终于交卷。Iris在Meta自有业务负载（推荐/审核/Feed/广告/AI助手）上的能效远超通用GPU。Meta 2026年建成7GW AI算力集群，2027年翻倍至14GW，2026年AI基础设施投入最高1450亿美元。CPU 5G协同：Iris可与Meta自研的5G MEC边缘节点CPU协同，5G/6G工作负载（AR/VR、短视频、社交推荐）下CPU频率与Iris频率动态调度。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660723847259243018/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">3</span> 阶跃星辰7月13日发布全球首款AI智能体手机：端侧大模型+5G协同</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 凤凰网科技 / 财联社</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">阶跃星辰7月13日发布全新终端品牌、智能体系统及全球首款AI智能体手机（华勤技术代工）。Step 3.7 Flash等基座模型国内60%头部手机品牌已合作，装机量超4200万台。CPU 5G提频场景：手机SoC应用CPU配合5G吞吐的频率提升机制（QoS调度、5G调制解调器触发的CPU提频、Snapdragon/Dimensity/苹果A系列在5G模式下的频率策略）、发热与功耗控制。Agent操作系统实时监控5G信号质量+端侧大模型推理负载，动态调度大中小CPU核频率。</div>
-  <div class="insight-links"><a href="https://tech.ifeng.com/c/8udwLWkdGyG" target="_blank" rel="noopener" class="link-btn">🔗 tech.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">4</span> 麒麟2026实测：LogicFolding固定节点实现13%频率提升+41%功耗降低</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36氪 / 芯东西</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">华为董事/半导体业务部总裁何庭波署名&quot;韬定律&quot;论文：LogicFolding将数字/模拟/存储电路分配到垂直堆叠有源层，在固定器件节点下实现55%晶体管密度阶跃。麒麟2026 vs 麒麟9030 Pro：①晶体管密度155→238 MTr/mm²；②室温1.1V下SoC性能核最大时钟频率提升近13%（CPU性能核频率今年回到3.1GHz）；③等效性能下功耗降低41%；④SRAM访问频率提升40%+；⑤全局片上网络数据通路面积缩减55%。CPU 5G提频核心：固定节点下通过3D折叠协同提升主频与能效。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659212425698263562/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">5</span> NVIDIA Vera CPU：88核Armv9.2，单机架256颗Vera，22500个并发CPU环境</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 NVIDIA官方</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">NVIDIA发布全球首款专为智能体AI设计的Vera CPU：88颗定制Olympus核心、Armv9.2架构、LPDDR5X 1.2TB/s内存子系统。单机架256颗液冷Vera处理器，22500个并发CPU环境，400TB总内存+300TB/s聚合带宽。强化学习训练后阶段三大计算池（GPU训练池/推理加速器/CPU集群）协同。CPU 5G提频场景：5G MEC+AI Agent协同，单机架承担数万并发AI推理会话的CPU算力。</div>
-  <div class="insight-links"><a href="https://www.nvidia.com/vera-cpu" target="_blank" rel="noopener" class="link-btn">🔗 nvidia.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">6</span> 6G研发落地提速：2026多地试点运行，工信部启动部省协同试点</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条 / 数码俱乐部</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">工信部正式启动6G创新发展部省协同试点专项行动，2026年国内多个省市全面铺开6G实景试点测试，搭配此前批复的6GHz黄金试验频谱。6G研发正式从实验室小规模验证迈入城市实景组网、多场景落地实测新阶段。6G特性：太赫兹通信、通感算智融合、亚毫秒级时延、海量连接。CPU 5G提频场景：手机SoC应用CPU配合6G吞吐的频率提升（QoS调度、Modem触发CPU提频）、发热与功耗控制；5G切片CPU资源分配、Sub-6/mmWave/6G（太赫兹、通感算智融合）频率与功耗策略。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7660780537191137835/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">7</span> Intel Xeon 6 E-core 5G核心网：SK Telecom/NTT DOCOMO已部署</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Intel官方</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Intel Xeon 6 E-core在5G核心网部署进展：①SK Telecom在移动核心生产环境部署Xeon 6 E-core+Intel Ethernet 800系列；②NTT DOCOMO选择Xeon 6 E-core+Intel Ethernet E830网卡用于下一代移动核心。Xeon 6集成TDX零信任安全、QAT数据传输加速、原生AI推理能力，可在不重新设计网络前提下引入新功能。下一代Xeon 6+基于Intel 18A工艺，6G演进关键算力底座。CPU 5G提频场景：核心网侧的CPU加速，5G切片按QoS调度CPU资源。</div>
-  <div class="insight-links"><a href="https://www.intel.com/content/www/us/en/communications/5g-core-network.html" target="_blank" rel="noopener" class="link-btn">🔗 intel.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">8</span> AMD EPYC 8005 84核vRAN：Samsung多小区54小区/9.5Gbps下行/2.0Gbps上行</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AMD官方</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">AMD EPYC 8005系列84核Zen 5架构、单插槽70-225W TDP。低密度奇偶校验（LDPC）优化面向vRAN L1加速，减少延迟，加速5G前向纠错。在Samsung多小区vRAN测试：单服务器84核EPYC 8635P支持54小区/9.5Gbps下行/2.0Gbps上行。CPU 5G提频场景：5G MEC边缘节点标配，vRAN/Open RAN中CPU+FPGA/ASIC协同提频，5G切片下CPU频率按QoS分级调度。</div>
-  <div class="insight-links"><a href="https://www.amd.com/en/blogs/2026/new-amd-epyc-8005-server-cpus-big-performance-low-power.html" target="_blank" rel="noopener" class="link-btn">🔗 amd.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">9</span> MediaTek Dimensity 6300 2.4GHz 6nm 5G芯片下沉入门机型</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IDN Times / MediaTek官方</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">MediaTek Dimensity 6300采用6nm工艺、Cortex-A76双核（2.4GHz）+A55六核架构，支持2K 30FPS视频录制、UFS 2.2存储。CPU 5G提频视角：5G入门机型芯片从原Helio G99的2.2GHz提升至2.4GHz，单核性能提升约9%。在千元价位段实现2.4GHz主频+5G连接的组合，让入门机用户体验到5G吞吐下的CPU频率加速。同期Snapdragon 6s Gen 3、UNISOC T8300、Dimensity 7100/6080同样普及5G到入门段。</div>
-  <div class="insight-links"><a href="https://www.idntimes.com/tech/gadget/chipset-5g-murah-ramadan-2026-c1c2-01-b11wj-x3s7bl" target="_blank" rel="noopener" class="link-btn">🔗 idntimes.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">10</span> Tenstorrent Wormhole：开源RISC-V+以太网AI加速器架构</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Tenstorrent官方</span>
-    <span class="meta-tag">🕐 2026-07-09</span>
-  </div>
-  <div class="insight-points">Tenstorrent发布Wormhole开源架构细节：基于RISC-V CPU核心+自研AI张量计算单元，通过以太网（而非NVLink/CXL）实现芯片间互联。定位&quot;AI算力的Linux&quot;——开源硬件+开源软件栈（TT-Metal/TT-Buda），让客户在不绑定专有生态的前提下使用AI加速器。每颗Wormhole芯片有80个RISC-V核+108个AI核心，14nm工艺，可与下一代Blackhole芯片（4nm）协同。CPU 5G提频场景：RISC-V核心CPU面向5G/6G负载优化，开源架构便于运营商定制。</div>
-  <div class="insight-links"><a href="https://tenstorrent.com/wormhole" target="_blank" rel="noopener" class="link-btn">🔗 tenstorrent.com</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-07-08.html" class="day-nav-btn">← 上一篇 2026-07-08</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-07-10.html" class="day-nav-btn">下一篇 2026-07-10 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

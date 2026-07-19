@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-07-12 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-07-12</div>
+    </div>
+    <div class="card">
+      <h2>【技术洞察】2026-07-12</h2>
+<p>
+> 时间窗口：2026-07-05 至 2026-07-12（含 24-48 小时内重点资讯）
+> 编制日期：2026-07-12（周日）
+> 编制规则：每板块 TOP 10，共 50 条；每条包含标题、来源、时间、核心要点、链接
+</p>
+<hr class="section-divider">
+<h2>一、人工智能 AI 领域（TOP 10）</h2>
+<h3>1. OpenAI 正式发布 GPT-5.6：旗舰版 Sol/Terra/Luna 三档齐发，引入递归自我改进</h3>
+<ul>
+<li><strong>来源：</strong> 澎湃新闻 / OpenAI 官网</li>
+<li><strong>时间：</strong> 2026-07-09（2026-07-11 国内媒体广泛报道）</li>
+<li><strong>核心要点：</strong> OpenAI 全球开放 GPT-5.6 全系列三档模型：旗舰 Sol、均衡 Terra、轻量 Luna；新增 max 深度推理模式与 ultra 四智能体并行。Sol 在编程基准 Terminal-Bench 2.1 拿下 91.9%，较 Anthropic Claude Fable 5 领先 8 个百分点；Luna 输入价格低至 1 美元/百万 token。最具历史意义的是技术文档披露：旗舰 Sol 自主完成 Luna 的后训练（数据筛选、实验设计、知识蒸馏、评测迭代），开启"AI 训练 AI"的递归自我改进工程化量产。Sol 在 7 月登陆 Cerebras 硬件，推理速度可达 750 token/秒。</li>
+<li><strong>链接：</strong><a href="https://m.thepaper.cn/newsDetail_forward_33565169" target="_blank">https://m.thepaper.cn/newsDetail_forward_33565169</a></li>
+</ul>
+<h3>2. NVIDIA Vera CPU 架构发布，剑指智能体 AI 时代单线程高并发</h3>
+<ul>
+<li><strong>来源：</strong> The Verge / CSDN</li>
+<li><strong>时间：</strong> 2026-07-06</li>
+<li><strong>核心要点：</strong> NVIDIA 正式发布 Vera 架构 CPU，主打高并发单线程性能，针对 AI 智能体场景中推理调度、工具调用等 CPU 密集型任务优化，已与全球多家头部云厂商启动联合落地测试。Vera 将融入 NVIDIA AI 计算全栈体系，行业分析师认为 Agentic AI 正在重构算力需求结构，单线程性能将成为新的核心竞争维度。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/yuntongliangda/article/details/162807778" target="_blank">https://blog.csdn.net/yuntongliangda/article/details/162807778</a></li>
+</ul>
+<h3>3. 智谱 AI 启动 314 亿港元配售并发布"摸高计划"两年战略</h3>
+<ul>
+<li><strong>来源：</strong> 证券日报 / 证券时报</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 智谱 AI 拟以每股 1588 港元配售最多 1978 万股新 H 股，预计募资 314.11 亿港元，创下港股 AI 上市企业单笔最大融资纪录。同日，创始人唐杰发布《巨浪已来》内部信，正式启动"TouchHigh（摸高）"两年战略：不追求短期商业变现，集中资源攻坚长程任务、自治智能体系统、完全自我训练、极致安全治理四大方向；并开源 GLM-5.2（百万 token 上下文，MIT 协议）。股价当日上涨 11.34%。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7661620028093121064/" target="_blank">http://m.toutiao.com/group/7661620028093121064/</a></li>
+</ul>
+<h3>4. 阿里达摩院 ElementsClaw 智能体 28 GPU 小时发现 4 种新超导体</h3>
+<ul>
+<li><strong>来源：</strong> 凤凰网科技 / CSDN</li>
+<li><strong>时间：</strong> 2026-07-03</li>
+<li><strong>核心要点：</strong> 阿里达摩院 AI 智能体 ElementsClaw 仅用 28 GPU 小时即发现 4 种全新超导体材料，将 AI for Science 范式推向新高度。同周中国发布全球首个地层学 AI 大模型，AI for Science 进入产出期，"预测→筛选→实验验证"范式可向材料/药物/能源领域广泛复用。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/agito_cheung/article/details/162587564" target="_blank">https://blog.csdn.net/agito_cheung/article/details/162587564</a></li>
+</ul>
+<h3>5. 宇树科技 73 天闪电过审科创板，具身智能完成资本化关键一跃</h3>
+<ul>
+<li><strong>来源：</strong> 证监会公告 / 凤凰网科技</li>
+<li><strong>时间：</strong> 2026-07-03</li>
+<li><strong>核心要点：</strong> 人形机器人企业宇树科技以 73 天创科创板最快过审纪录，标志具身智能企业盈利模式获资本市场认可。结合 2026 中端机型 BOM 已降至 14-20 万元、国产零部件替代加速，具身智能从"实验室玩具"走向规模化量产。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/agito_cheung/article/details/162587564" target="_blank">https://blog.csdn.net/agito_cheung/article/details/162587564</a></li>
+</ul>
+<h3>6. 美团开源 LongCat-2.0：1.6 万亿参数，全程国产算力训练</h3>
+<ul>
+<li><strong>来源：</strong> 美团官方 / CSDN</li>
+<li><strong>时间：</strong> 2026-06-30（本周仍为热点话题）</li>
+<li><strong>核心要点：</strong> 美团发布新一代 1.6 万亿参数大模型 LongCat-2.0 并开源，是业界首个依靠国产算力完成训练、推理全流程的万亿参数大模型。验证了国产算力链路在万亿级训练上的工程闭环能力，"全程国产算力 + 万亿参数 + 开源"三要素叠加，被视为中国大模型产业的"DeepSeek 时刻"。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/agito_cheung/article/details/162587564" target="_blank">https://blog.csdn.net/agito_cheung/article/details/162587564</a></li>
+</ul>
+<h3>7. WAIC 2026 倒计时：华为 Atlas 950 超节点首秀，国产算力峰值亮相</h3>
+<ul>
+<li><strong>来源：</strong> 赛迪网 / 36 氪 / IT 之家</li>
+<li><strong>时间：</strong> 2026-07-12（开幕倒计时 5 天）</li>
+<li><strong>核心要点：</strong> 2026 世界人工智能大会将于 7 月 17-20 日在上海"三地四馆"举办。华为 Atlas 950 超节点将真机首秀：单柜 64 卡起步、最大 8192 张 NPU，专为万亿级参数大模型训练与高密度推理设计，算力性能领跑全球商用市场。同期努比亚全球首发 AI 智能体手机、百度携"芯云模体"全栈升级、阶跃 Agent 操作系统全球首发。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660146938553123354/" target="_blank">http://m.toutiao.com/group/7660146938553123354/</a></li>
+</ul>
+<h3>8. 中国大模型周调用量连续十周领跑全球，DeepSeek-V4-Flash 单模型七连冠</h3>
+<ul>
+<li><strong>来源：</strong> OpenRouter 监测数据 / 中信证券</li>
+<li><strong>时间：</strong> 2026-07-07</li>
+<li><strong>核心要点：</strong> OpenRouter 监测显示，6 月 29 日至 7 月 5 日全球 AI 大模型总调用量 46.7 万亿 Token，中国厂商贡献 23.45 万亿 Token（环比+15.01%），连续十周全球第一。DeepSeek-V4-Flash 连续七周蝉联单模型调用量榜首，性价比优势显著。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/yuntongliangda/article/details/162807778" target="_blank">https://blog.csdn.net/yuntongliangda/article/details/162807778</a></li>
+</ul>
+<h3>9. Anthropic Claude Sonnet 5 上线，Agent 能力逼近旗舰 Opus</h3>
+<ul>
+<li><strong>来源：</strong> Anthropic 官网 / ZoomBangla News</li>
+<li><strong>时间：</strong> 2026-06-30（本周仍是 Claude 系列主推）</li>
+<li><strong>核心要点：</strong> Anthropic 发布 Sonnet 5，强化 Agent 工作流能力，官网对比显示 Sonnet 5 与 Opus 4.8 在不同档位代理任务完成水平已非常接近。Jim Keller 公开盛赞中国大模型成本低 5 倍，"美国 AI 没法微调"。与此同时阿里宣布 7 月 10 日起全面禁用 Claude 全系模型，企业 AI 自主可控加速。</li>
+<li><strong>链接：</strong><a href="https://inews.zoombangla.com/ai-breakthroughs-july-2026-claude-sonnet-5/" target="_blank">https://inews.zoombangla.com/ai-breakthroughs-july-2026-claude-sonnet-5/</a></li>
+</ul>
+<h3>10. 华为云跻身 Gartner 云 AI 基础设施领导者象限</h3>
+<ul>
+<li><strong>来源：</strong> Gartner 报告 / CSDN</li>
+<li><strong>时间：</strong> 2026-07-06</li>
+<li><strong>核心要点：</strong> 国际权威咨询机构 Gartner 发布 2026《云 AI 基础设施魔力象限》，华为云凭借软硬芯协同的全栈技术能力进入领导者象限，与微软、AWS、Google 并列全球第一梯队。报告特别认可华为云灵衢智算集群、Agentic 记忆存储等方案。这是国产云 AI 基础设施首次进入全球领导者阵营。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/yuntongliangda/article/details/162807778" target="_blank">https://blog.csdn.net/yuntongliangda/article/details/162807778</a></li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域（TOP 10）</h2>
+<h3>1. Google 量子 AI 在 Nature 发文：强化学习实时优化量子纠错，逻辑稳定性提升 3.5 倍</h3>
+<ul>
+<li><strong>来源：</strong> Nature / Google 量子 AI 团队</li>
+<li><strong>时间：</strong> 2026-07-08</li>
+<li><strong>核心要点：</strong> Google 量子 AI 团队在 Nature 发表《Reinforcement learning control of quantum error correction》，训练强化学习智能体在表面码纠错过程中稳定逻辑量子比特。方法将检测器事件转化为局部奖励信号，因子图局部化使单参数奖励稀疏问题得到解决，逻辑计算稳定性提升 3.5 倍，LER 在已优化基线基础上再降 20%，参数规模可扩展至接近 4 万个。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660438239697764904/" target="_blank">http://m.toutiao.com/group/7660438239697764904/</a></li>
+</ul>
+<h3>2. 新华社：全球量子计算研究进入关键跨越期，容错量子计算机"呼之欲出"</h3>
+<ul>
+<li><strong>来源：</strong> 新华社</li>
+<li><strong>时间：</strong> 2026-07-11</li>
+<li><strong>核心要点：</strong> 新华社发布国际观察报道：联合国"可持续发展全球量子倡议（2026-2028）"显示，全球量子科技投资已超 557 亿美元，预计 2040 年增至 1060 亿美元。谷歌目标 2029 年底前交付可完成实际产业任务的容错量子计算；日本 6 月 24 日宣布到 2040 财年推动 370 万亿日元（约 2.3 万亿美元）长期投资，量子技术为重点；美国 6 月 22 日签署行政令加强量子计算机研发。</li>
+<li><strong>链接：</strong><a href="http://imgs.xinhuanet.com/tech/20260711/7dafd35cff914069be82fb16f6c5f8fe/c.html" target="_blank">http://imgs.xinhuanet.com/tech/20260711/7dafd35cff914069be82fb16f6c5f8fe/c.html</a></li>
+</ul>
+<h3>3. Neuralink 完成全球首例经硬脑膜脑机接口手术，无需切开头骨</h3>
+<ul>
+<li><strong>来源：</strong> 科技媒体 / Neuralink 官方</li>
+<li><strong>时间：</strong> 2026-07（首例手术于 5 月完成，7 月公布）</li>
+<li><strong>核心要点：</strong> Neuralink 在加拿大多伦多西部医院完成首例经硬脑膜（不切开硬脑膜、直接穿透完整硬膜）植入超细电极线的脑机接口手术，Andres Lozano 团队协助。极大提升脑机接口手术安全性和便捷性。截至 2026 年 7 月，Neuralink 累计为超过 21 名患者完成植入，最新几例均采用该新技术，术后恢复显著加快。</li>
+<li><strong>链接：</strong> （综合今日头条报道）</li>
+</ul>
+<h3>4. 中国 0.7nm 实验室芯片突破：IBM 纳米堆叠三维晶体管架构</h3>
+<ul>
+<li><strong>来源：</strong> 行业媒体 / CSDN 综合</li>
+<li><strong>时间：</strong> 2026-07-10</li>
+<li><strong>核心要点：</strong> IBM 发布 0.7nm（7 埃米）实验室芯片，依赖自研纳米堆叠三维晶体管架构（全球首个垂直多层纳米片晶体管方案）。对比 2nm 芯片，性能最高提升 50%，或能效优化 70%。晶体管密度直接翻倍，工艺设备打磨至少 5 年，最快 2031 年实现商业化量产。配套"韬定律 V2"（华为何庭波）、昇腾 950 超节点发布临近，国产芯片产业链迎新机遇。</li>
+<li><strong>链接：</strong><a href="https://www.qishuai-cn.com/news/Huawei_Unveils_Tao_Law_55nm_In_Memory_AI_Chip_Gains_Dual_ISSCC_Recognition.html" target="_blank">https://www.qishuai-cn.com/news/Huawei_Unveils_Tao_Law_55nm_In_Memory_AI_Chip_Gains_Dual_ISSCC_Recognition.html</a></li>
+</ul>
+<h3>5. 全球人形机器人标准化底层平台时代开启：Booster T2 旗舰机型亮相</h3>
+<ul>
+<li><strong>来源：</strong> RoboCup 赛事报道 / 加速进化官方</li>
+<li><strong>时间：</strong> 2026-07（RoboCup 仁川赛落幕一周后）</li>
+<li><strong>核心要点：</strong> 加速进化旗舰机型 Booster T2 正式亮相，定位具身智能底层开发载体：整机身高 1.4 米，全身 75 个运动自由度，自研关节峰值扭矩 140Nm，双臂静态负载 10kg；搭载英伟达 Thor 芯片，FP32 总算力 2070 TFLOPS，本地多模态推理延迟低至 100ms，支持离线运行大模型与实时环境决策。搭载加速进化机型的队伍拿下 RoboCup 双足人形全部组别冠军，38 支队伍均采用该品牌底层运动平台。</li>
+<li><strong>链接：</strong><a href="https://www.shobserver.cn/staticsg/wap/newsDetail?id=1143071" target="_blank">https://www.shobserver.cn/staticsg/wap/newsDetail?id=1143071</a></li>
+</ul>
+<h3>6. 韩国宣布 8800 亿美元 10 年投资计划：半导体+AI 基础设施+机器人</h3>
+<ul>
+<li><strong>来源：</strong> ZoomBangla News / 韩国官方</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> 韩国宣布 8800 亿美元 10 年投资计划，聚焦半导体、AI 基础设施与机器人。三星和 SK 海力士合计承诺 5180 亿美元用于芯片制造，是国家层面对 AI 未来的资本配置承诺。这不是理论上的，而是规模化资本配置。</li>
+<li><strong>链接：</strong><a href="https://inews.zoombangla.com/ai-breakthroughs-july-2026-claude-sonnet-5/" target="_blank">https://inews.zoombangla.com/ai-breakthroughs-july-2026-claude-sonnet-5/</a></li>
+</ul>
+<h3>7. 独立式 XR 头显 2026 出货量预计下滑 15% 至 470 万台，连续第五年萎缩</h3>
+<ul>
+<li><strong>来源：</strong> Omdia / 行业研究</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> Meta Quest 3、Apple Vision Pro 等独立式 XR 头显 2026 出货预计下滑 15% 至 470 万台，2027 延续下行，这是 2021-2022 疫情高点后连续第五年萎缩。机构预判 2028 市场才回暖至 500 万台，核心利好是苹果或推出平价版 Vision Pro。Omdia 分析师表示厚重 XR 头显难融入日常，Meta、谷歌今年均把 XR 眼镜作为核心研发方向，轻量化外观才是长期主流。</li>
+<li><strong>链接：</strong> （行业研究综合报道）</li>
+</ul>
+<h3>8. 美砸 20 亿美元布局量子医疗，万亿级新蓝海浮现</h3>
+<ul>
+<li><strong>来源：</strong> 今日头条 / 行业媒体</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 美国商务部向 9 家量子计算企业注资 20 亿美元，政府直接持有少量股权，被视为国家队正式入场；两项量子相关行政命令签署，要求 2028 年前建成科研级量子计算机。本源量子的"量子分子对接"应用将小分子药物研发效率提升数十倍；玻色量子联合广州国家实验室已实现量子计算赋能 mRNA 疫苗序列设计与优化。国内一季度量子科技赛道融资 32 亿元，超 2025 年全年规模。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660389511511163419/" target="_blank">http://m.toutiao.com/group/7660389511511163419/</a></li>
+</ul>
+<h3>9. 中科院微电子所"感存算一体"单片三维集成原型入选 VLSI 2026，获最佳学生论文提名</h3>
+<ul>
+<li><strong>来源：</strong> 中国科学院微电子研究所</li>
+<li><strong>时间：</strong> 2026-07-08</li>
+<li><strong>核心要点：</strong> 中科院微电子所先导中心殷华湘团队联合清华大学集成电路学院唐建石团队，提出面向视觉大模型加速的全低热预算"感存算一体化"单片三维集成原型芯片架构。垂直异质集成多光谱碳纳米管传感单元、3D 混合增益存算单元与混合 CFET 结构 SRAM 数字存算单元。论文《Monolithic 3D Integration of Stacked IGZO/Si Memtransistor-based 2T0C Gain Cell...》入选 VLSI 2026，并获最佳学生论文提名奖。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660000635739292195/" target="_blank">http://m.toutiao.com/group/7660000635739292195/</a></li>
+</ul>
+<h3>10. OpenAI 自研推理芯片 Jalapeño 联手博通 9 个月流片，专攻推理降本 50%</h3>
+<ul>
+<li><strong>来源：</strong> 行业媒体（综合）</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> OpenAI 首款自研芯片 Jalapeño 深度解析披露：联手博通 9 个月完成流片，专攻推理降本 50%。芯片展示区基于端侧实测实时运行 130 亿参数 LLaMA-3 模型、仅占用 9.8W 功耗，验证在端侧大模型推理中的可行性，直击边缘 AI 长期面临的"能效墙"。AI 算力从"英伟达依赖"走向"全栈自研"的转折时刻。</li>
+<li><strong>链接：</strong> （AAA 2026 芯片展示区报道）</li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计（TOP 10）</h2>
+<h3>1. 华为"韬定律 V2"论文发布：麒麟 2026 验证 LogicFolding，密度跃升 53.5%</h3>
+<ul>
+<li><strong>来源：</strong> ChinaXiv / 36 氪</li>
+<li><strong>时间：</strong> 2026-07-03（V2 版本在中科院科技论文预发布平台公开发表）</li>
+<li><strong>核心要点：</strong> 华为董事、半导体业务部总裁何庭波署名论文《多层电子系统的时间缩微理论》V2 修订版在 ChinaXiv 公开发表。LogicFolding 在固定器件节点下实现 55% 晶体管密度阶跃提升、等效性能下 41% 功耗降低。麒麟 2026 验证：晶体管密度从 155 MTr/mm² 跃升至 238 MTr/mm²（提升 53.5%），功耗下降 41%，面积缩小 37.5%，主频达 3.1 GHz，综合性能对标等效 3nm 工艺。V2 新增 gear ratio 理论框架、顺序 3D 集成讨论、热管理等论述。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7659212425698263562/" target="_blank">http://m.toutiao.com/group/7659212425698263562/</a></li>
+</ul>
+<h3>2. NVIDIA 256Gb/s DWDM 3D CPO 芯片在 ISSCC 2026 亮相</h3>
+<ul>
+<li><strong>来源：</strong> ISSCC 2026 / NVIDIA</li>
+<li><strong>时间：</strong> 2026-02-19（ISSCC 2026 期间） / 本周行业再传播</li>
+<li><strong>核心要点：</strong> NVIDIA 在 ISSCC 2026 展示业界首款商用级 256Gb/s DWDM 共封装光芯片（CPO），采用 3D 堆叠架构，通过混合键合将 7nm 电子 IC 与 65nm 光子 IC 集成。同技术已在 Broadcom Monaka AI 处理器进入量产导入阶段，预计 2027 年出货。标志 CPO 从研究阶段走向数据中心高密度部署。</li>
+<li><strong>链接：</strong><a href="https://www.qishuai-cn.com/news/Telecom_6G/Sub_terahertz_Optical_Modules/NVIDIA_Shows_256Gb_s_DWDM_3D_CPO_Chip_at_ISSCC_2026.html" target="_blank">https://www.qishuai-cn.com/news/Telecom_6G/Sub_terahertz_Optical_Modules/NVIDIA_Shows_256Gb_s_DWDM_3D_CPO_Chip_at_ISSCC_2026.html</a></li>
+</ul>
+<h3>3. 合肥瑞徽 55nm 存算一体 AI 芯片获 ISSCC 2026 双论文认证，能效 3.2 倍领先 7nm</h3>
+<ul>
+<li><strong>来源：</strong> ISSCC 2026 / qishuai-cn.com</li>
+<li><strong>时间：</strong> 2026-05-25（ISSCC 2026）/ 行业持续关注</li>
+<li><strong>核心要点：</strong> 合肥瑞徽微电子在 ISSCC 2026 展示基于 55nm CMOS+ReRAM 的存算一体 AI 芯片，两篇入选论文证实其在轻量级 LLM 推理和实时边缘 AI 感知任务中，能效比同等 7nm 冯·诺依曼架构高 3.2 倍。该芯片设计已通过 ISO/IEC 17025 实验室认证，配套模块实现符合 AEC-Q200 汽车级要求。同日华为何庭波在 ISCAS 2026 提出"韬（τ）定律"，倡导时间缩微替代几何缩微。</li>
+<li><strong>链接：</strong><a href="https://www.qishuai-cn.com/news/Huawei_Unveils_Tao_Law_55nm_In_Memory_AI_Chip_Gains_Dual_ISSCC_Recognition.html" target="_blank">https://www.qishuai-cn.com/news/Huawei_Unveils_Tao_Law_55nm_In_Memory_AI_Chip_Gains_Dual_ISSCC_Recognition.html</a></li>
+</ul>
+<h3>4. ISSCC 2026 高速互连：南大&平头哥 PAM4 收发器创 47.0Tb/s/mm 边缘带宽密度世界纪录</h3>
+<ul>
+<li><strong>来源：</strong> ISSCC 2026 Session 8 / CSDN</li>
+<li><strong>时间：</strong> 2026-07-09 报道</li>
+<li><strong>核心要点：</strong> 南京大学杜源、杜力教授团队联合平头哥半导体，在 ISSCC 2026 Session 8 发布 28nm CMOS 单端 PAM4 收发器：112Gb/s/pin 传输速率、4 源串扰抵消、电源噪声抑制，创造 47.0Tb/s/mm 边缘带宽密度世界纪录（适配 AI 智算芯粒与 HBM 存储芯粒接口）。浙大&达摩院发布 1.6Tb/s/mm² 多芯粒 AI 加速器互连结构；电子科大&小米发布 640Gbps 边缘 AI Chiplet 低功耗收发器。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank">https://blog.csdn.net/qq_41360172/article/details/159571548</a></li>
+</ul>
+<h3>5. JSSC/IEEE：194.6 TOPS/W 流水线全电流域 MS-CIM 28nm 宏单元</h3>
+<ul>
+<li><strong>来源：</strong> IEEE J. Solid-State Circuits Letters</li>
+<li><strong>时间：</strong> 2026-07-11</li>
+<li><strong>核心要点：</strong> IEEE 固态电路学会 7 月 11 日发布：28nm CMOS 流水线全电流域混合信号存算一体宏单元，bit-cell 匹配线性化接口（BMLI）+ 循环展开 SAR ADC，256×256 SRAM 阵列 8-bit 输入/8-bit 权重实现 10.16-TOPS 峰值算力，能效 194.6 TOPS/W，是边缘 AI 推理的低功耗高密度方案代表。</li>
+<li><strong>链接：</strong><a href="https://sscs.ieee.org/tag/in-memory-computing/" target="_blank">https://sscs.ieee.org/tag/in-memory-computing/</a></li>
+</ul>
+<h3>6. 联发科 VLSI 2026：GNN+PPO 强化学习重构 AI 布局规划，无需大型算力</h3>
+<ul>
+<li><strong>来源：</strong> IEEE VLSI Symposium 2026 / 电子工程专辑</li>
+<li><strong>时间：</strong> 2026-07-12</li>
+<li><strong>核心要点：</strong> 联发科在 2026 IEEE VLSI 研讨会发布自研 GNN+强化学习 AI 布局规划全流程方案，覆盖芯片顶层 Floorplan 与宏单元 Macro Placement。三层 GNN + 五层反卷积网络，在 4 张 RTX3090 上仅需数小时完成训练。实测同一手机芯片人工总线长 138.0M，AI 优化后降至 126.1M（线长缩减 8.9%）；车载算力芯片人工 315.2M 优化至 278.0M（降幅 8.6%）；电视芯片总线长缩减 7.4%，旗舰手机芯片布局面积降低 2.22%，结温下降最高 20%。</li>
+<li><strong>链接：</strong><a href="https://www.eet-china.com/mp/a509147.html" target="_blank">https://www.eet-china.com/mp/a509147.html</a></li>
+</ul>
+<h3>7. RISC-V 玄铁 C950 发布：SPECint2006 单核首破 70 分</h3>
+<ul>
+<li><strong>来源：</strong> 玄铁/RISC-V 中国峰会 2026</li>
+<li><strong>时间：</strong> 2026-07-12</li>
+<li><strong>核心要点：</strong> 阿里巴巴集团副总裁、达摩院玄铁团队负责人戚肖宁在 RISC-V 中国峰会上发布：玄铁 C950 相比上一代玄铁 C920 综合性能提升 3 倍以上，SPECint2006 单核性能测试首次超过 70 分，主要适用云计算、高性能 AI 计算等高性能计算场景。openKylin 适配 RISC-V 具身智能人形机器人与 RISC-V 智能 NAS 存储一体机，紫荆半导体 RISC-V 车规产品同步亮相。</li>
+<li><strong>链接：</strong> （RISC-V 中国峰会 2026 报道综合）</li>
+</ul>
+<h3>8. 国产 5nm 数据流 AI 芯片马赫 100：单颗算力 1280 TOPS，等效 3 倍英伟达 Thor U</h3>
+<ul>
+<li><strong>来源：</strong> 行业媒体</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> 马赫 100 芯片采用 5nm 工艺制程，单颗算力达到 1280 TOPS，得益于数据流架构提供给算法软件最大优化空间，有效算力相当于英伟达 Thor U 的 3 倍。在相同场景下，意味着更高的帧率、更短的响应时间，使车辆在紧急情况下能更早感知风险并更快采取避险动作。</li>
+<li><strong>链接：</strong> （智驾行业报道综合）</li>
+</ul>
+<h3>9. 浙大&达摩院：1.6Tb/s/mm² 多芯粒 AI 加速器互连（ISSCC 2026 Session 8 核心论文）</h3>
+<ul>
+<li><strong>来源：</strong> ISSCC 2026 / 浙江大学</li>
+<li><strong>时间：</strong> 2026-07-09</li>
+<li><strong>核心要点：</strong> 浙江大学微电子学院吴汉明院士团队联合阿里巴巴达摩院芯片研发团队，发布 7nm CMOS 1.6Tb/s/mm² 高密度芯粒互连结构：单通道 100Gb/s PAM4、均方根抖动<0.8ps、支持最多 8 个芯粒协同、功耗 1.8pJ/bit。解决多芯粒协同运算中的互连带宽瓶颈与时钟同步问题，为大规模多芯粒 AI 加速器提供灵活互连解决方案。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank">https://blog.csdn.net/qq_41360172/article/details/159571548</a></li>
+</ul>
+<h3>10. 2026 VLSI 获奖论文：单片三维"感存算一体"原型芯片（IGZO/Si Memtransistor + CFET SRAM-DCIM）</h3>
+<ul>
+<li><strong>来源：</strong> IEEE VLSI 2026 / 中科院微电子所</li>
+<li><strong>时间：</strong> 2026-07-08</li>
+<li><strong>核心要点：</strong> 中国科学院微电子所联合清华大学在 VLSI 2026 发布的"感存算一体"单片三维异质集成原型芯片，单芯片内垂直异质集成多光谱碳纳米管传感单元、3D 混合增益存算单元与混合 CFET 结构 SRAM 数字存算单元，与 DETR 视觉大模型注意力计算范式深度对齐。相比传统 2D 架构，有效提升计算能效与处理时效，获 VLSI 2026 最佳学生论文提名奖。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660000635739292195/" target="_blank">http://m.toutiao.com/group/7660000635739292195/</a></li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端/EDA/工艺（TOP 10）</h2>
+<h3>1. 台积电 3DFabric 完整 2.5D 产品线：CoWoS-S/R/L 三路线适配不同算力需求</h3>
+<ul>
+<li><strong>来源：</strong> 伯恩斯坦研报 / 行业媒体</li>
+<li><strong>时间：</strong> 2026-07（持续传播）</li>
+<li><strong>核心要点：</strong> 台积电 CoWoS-S、CoWoS-R、CoWoS-L 三条 2.5D 技术路线分层适配：中介层凸距 25~~55μm，密度 0.3K~~1.6K 路/mm²；3D SoIC 堆叠凸点小于 10μm，互连密度可达 12K~~49K 路/mm²，单比特传输能耗低至 0.05pJ，相比板级互连功耗下降 40 倍以上。SoW（System on Wafer）抛弃传统小块中介，集成规模最高可达 43 倍常规光罩面积，算力密度提升 25 倍。HBM5 堆叠层数提升至 20 层，TSV 凸距缩小至 10~~15μm。</li>
+<li><strong>链接：</strong> （伯恩斯坦研报与先进封装行业综合）</li>
+</ul>
+<h3>2. Chiplet 异构集成热模型：精确预测稳态温度分布，外围高功率 chiplet 布局最优</h3>
+<ul>
+<li><strong>来源：</strong> arXiv / 行业研究</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> 学术论文提出 Chiplet 异构集成系统精确热模型，用于预测稳态温度分布。结果显示随着空间增大，结温先降后升；研究发现大空间设计可能恶化热行为，而将高功率 chiplet 放置在阵列外围是有效的热管理（H/M/L 分别指 15W/12W/10W，放置 I 结温 80.4°C，放置 II 结温高达 87.4°C）。模型对 RDL、TSV 和凸点的精细模拟提高了准确性，适用于大规模芯片级 CHI 系统热仿真。</li>
+<li><strong>链接：</strong> （arXiv 学术论文综合）</li>
+</ul>
+<h3>3. 国产先进封装能否追上"韬速度"？274 亿资本洪流涌入先进封装</h3>
+<ul>
+<li><strong>来源：</strong> 钛媒体 APP / 产联社 CLS</li>
+<li><strong>时间：</strong> 2026-07-10</li>
+<li><strong>核心要点：</strong> 2026 年 7 月 3 日华为半导体业务负责人何庭波在 ChinaXiv 提交"韬定律"V2，距离 5 月 25 日 V1 首发仅过去不到 40 天，"韬定律"完成从理论框架到工程实证的跨越。V2 版本首次公开量产芯片实测数据。但一个更关键问题随之浮出：麒麟 2026 跑通理论后，先进封装产业链能否跟上"韬速度"？274 亿资本洪流涌向先进封装。逻辑折叠依赖 2.5D/3D 集成和超细间距混合键合工艺体系。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660856609979056694/" target="_blank">http://m.toutiao.com/group/7660856609979056694/</a></li>
+</ul>
+<h3>4. 联发科 AI 布局：商业化版图兑现，多款量产 SoC PPA 提升 15%</h3>
+<ul>
+<li><strong>来源：</strong> 2026 IEEE VLSI 研讨会</li>
+<li><strong>时间：</strong> 2026-07-12</li>
+<li><strong>核心要点：</strong> 联发科基于 GNN+PPO 强化学习的 AI 布局框架商业化版图兑现：多款量产 SoC（手机、车载、HDMI 等）相比纯人工手段效果提升近 15%。电视芯片总线长缩减 7.4%，旗舰手机芯片布局面积降低 2.22%；芯片面积缩小直接降低热阻，芯片结温 Theta JC 下降最高 20%，散热压力与封装成本同步优化。算法框架可无缝迁移至 SRAM 等宏块摆放。</li>
+<li><strong>链接：</strong><a href="https://www.eet-china.com/mp/a509147.html" target="_blank">https://www.eet-china.com/mp/a509147.html</a></li>
+</ul>
+<h3>5. SABLE：NDA-Safe 闭环 LLM 工业 EDA 模拟电路优化框架</h3>
+<ul>
+<li><strong>来源：</strong> arXiv 2607.03701</li>
+<li><strong>时间：</strong> 2026-07-08</li>
+<li><strong>核心要点：</strong> Xunqi Li、Chris H. Kim 提出 SABLE——一个面向工业 EDA 流的 NDA-Safe 闭环 LLM 模拟电路优化框架。在保护商业机密的前提下，利用大语言模型能力对模拟电路设计参数进行自动优化，代表 LLM 正式进入工业级 EDA 设计自动化流程。</li>
+<li><strong>链接：</strong><a href="https://arxiv.org/list/cs.AR/recent?show=50&skip=8" target="_blank">https://arxiv.org/list/cs.AR/recent?show=50&skip=8</a></li>
+</ul>
+<h3>6. ArchEval：衡量 AI Agent 作为计算机架构师的能力基准</h3>
+<ul>
+<li><strong>来源：</strong> arXiv 2607.03601</li>
+<li><strong>时间：</strong> 2026-07-08</li>
+<li><strong>核心要点：</strong> 哈佛/MIT 等联合团队发布 ArchEval：用于衡量 AI 智能体作为计算机架构师的能力基准，涵盖架构设计、性能评估、多目标优化等核心任务。该基准的发布意味着 AI 智能体正式从"代码生成"延伸到"芯片架构设计"领域，标志 EDA 智能化进入新阶段。</li>
+<li><strong>链接：</strong><a href="https://arxiv.org/list/cs.AR/recent?show=50&skip=8" target="_blank">https://arxiv.org/list/cs.AR/recent?show=50&skip=8</a></li>
+</ul>
+<h3>7. RegPlace / HPPlacer / IncreMacro-3D 等 EDA 顶会论文密集亮相（DAC/ICCAD/DATE 2026）</h3>
+<ul>
+<li><strong>来源：</strong> IEEE TCAD / DAC 2026 / DATE 2026</li>
+<li><strong>时间：</strong> 2026-07-06 至 2026-07-11</li>
+<li><strong>核心要点：</strong> 香港中文大学 Yuxuan Zhao 团队系列论文持续霸榜：RegPlace（规则感知 DNN 加速器布局，IEEE TCAD 2026）、DPO-3D（3D IC 电源分配网络可微优化，ASP-DAC 2026）、HPPlacer（高精度时序感知全局布局引擎，DATE 2026）、IncreMacro-3D（人脸到人脸堆叠 Memory-on-Logic 3D IC 增量宏布局，DATE 2026）。MIT/UTD Keren Zhu 团队 PigMap3、PhySeqForm、HOLMES 等物理感知综合与布局论文同步入选 ISCAS 2026 / ICCAD 2026。</li>
+<li><strong>链接：</strong><a href="https://dblp.org/pid/173/0246-1.html" target="_blank">https://dblp.org/pid/173/0246-1.html</a></li>
+</ul>
+<h3>8. ICCAD 2026 入选论文：两篇来自 UTD EACAS 实验室</h3>
+<ul>
+<li><strong>来源：</strong> UTD EACAS / ICCAD 2026</li>
+<li><strong>时间：</strong> 2026-07-11</li>
+<li><strong>核心要点：</strong> 德州大学达拉斯分校 EACAS 实验室 Ismail Mohamed、Hammad Omar、Patrick Sigler 三人各有一篇论文被 ICCAD 2026 接收。EACAS 实验室聚焦 EDA 与计算机架构前沿，2026 持续在 ICCAD/DAC 等顶会产出。</li>
+<li><strong>链接：</strong><a href="https://labs.utdallas.edu/eacas/2026/07/11/two-papers-accepted-for-presentation-at-ieee-acm-iccad26/" target="_blank">https://labs.utdallas.edu/eacas/2026/07/11/two-papers-accepted-for-presentation-at-ieee-acm-iccad26/</a></li>
+</ul>
+<h3>9. 3nm→2nm 节点路线图深度解析：GAA 不是名称升级，是结构性转变</h3>
+<ul>
+<li><strong>来源：</strong> qishuai-cn.com</li>
+<li><strong>时间：</strong> 2026-07-12</li>
+<li><strong>核心要点：</strong> GAA 节点路线图已超越 FinFET 时代。GAA 用栅极四面完全包裹沟道，相比 FinFET 三面包裹，电流控制大幅增强；纳米片宽度可独立调节，提供更高设计自由度。2nm 之后将进入 forksheet、CFET、背面供电、与先进封装协同优化阶段。Foundry 命名不再清晰映射到单一物理尺寸；需结合工艺成熟度、设计生态、封装集成、可靠性、供应链等多维度评估。ASML High-NA EUV（NA 0.55）单次曝光分辨率 8nm，是 2nm 入场券。</li>
+<li><strong>链接：</strong><a href="https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm_/GAA_Node_Roadmap_Explained_What_Changes_from_3nm_to_2nm_and_Beyond.html" target="_blank">https://www.qishuai-cn.com/news/Integrated_Circuits/Logic_Memory_ICs_7nm_sub_7nm\_/GAA_Node_Roadmap_Explained_What_Changes_from_3nm_to_2nm_and_Beyond.html</a></li>
+</ul>
+<h3>10. Chiplet 2.5D 联合优化：FAPlace 算法在 GLSVLSI 2026 发布</h3>
+<ul>
+<li><strong>来源：</strong> arXiv 2607.02610</li>
+<li><strong>时间：</strong> 2026-07-08</li>
+<li><strong>核心要点：</strong> Yubo Hou、Sezin Kircali Ata、Gen Liang Lim、Richard Chang、Mihai Dragos Rotaru、Rahul Dutta、Ashish James 提出 FAPlace：2.5D 系统中 Chiplet 布局与中介层封装的联合优化。发表于 Great Lakes Symposium on VLSI 2026，标志 Chiplet 后端物理设计从"分别优化"走向"协同优化"阶段。</li>
+<li><strong>链接：</strong><a href="https://arxiv.org/list/cs.AR/recent?show=50&skip=8" target="_blank">https://arxiv.org/list/cs.AR/recent?show=50&skip=8</a></li>
+</ul>
+<hr class="section-divider">
+<h2>五、CPU 5G 提频（TOP 10）</h2>
+<h3>1. 华为 Atlas 950 超节点真机首秀：单柜 64 卡起、最大 8192 NPU</h3>
+<ul>
+<li><strong>来源：</strong> 赛迪网 / 36 氪 / IT 之家</li>
+<li><strong>时间：</strong> 2026-07-12 报道</li>
+<li><strong>核心要点：</strong> 华为 Atlas 950 超节点将在 WAIC 2026 真机首秀。作为业界顶级商用超节点，单柜 64 卡起步、最大可搭载 8192 张 NPU 卡，专为万亿级参数大模型训练、高密度推理场景打造，算力性能领跑全球商用市场。同期全球首款商用近存计算 3D 芯片正式发布，通过内存与计算单元立体集成将 AI 计算能效比提升 10 倍以上。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7660146938553123354/" target="_blank">http://m.toutiao.com/group/7660146938553123354/</a></li>
+</ul>
+<h3>2. 华为"韬定律 V2"：麒麟 2026 SoC 主频 3.1 GHz，等效性能功耗降 41%</h3>
+<ul>
+<li><strong>来源：</strong> ChinaXiv / 36 氪</li>
+<li><strong>时间：</strong> 2026-07-03 / 2026-07-06</li>
+<li><strong>核心要点：</strong> 华为"韬定律 V2"实证数据：麒麟 2026 性能核在室温 1.1V 供电下最大时钟频率提升近 13%（达 3.1 GHz），功耗下降 41%，功率密度下降 5.6%。双层折叠架构将时钟缓冲器数量减少 50% 以上，时钟偏斜降低 25%，布线长度缩短约 30%。SRAM 工作频率提升 40% 以上。V2 论文新增 gear ratio 理论框架、顺序 3D 集成讨论、热管理论述；远期目标 2030 昇腾 990 成首款采用逻辑折叠的 AI 加速芯片。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7659212425698263562/" target="_blank">http://m.toutiao.com/group/7659212425698263562/</a></li>
+</ul>
+<h3>3. 国产手机 SoC 新动向：联发科 Dimensity 8550/9500s/6360/6500 多档齐发</h3>
+<ul>
+<li><strong>来源：</strong> 91mobiles / gsmarena / digit.in</li>
+<li><strong>时间：</strong> 2026-07-06 至 2026-07-12</li>
+<li><strong>核心要点：</strong> 联发科 Dimensity 8550（4nm TSMC Gen 2）首发 Oppo Reno 16 Pro，性能比上代提升 7%，GPU 功耗降 20%。Dimensity 9500s（3nm）AnTuTu v11 平均 3.1M 分数。Dimensity 6500（6nm）CPU 性能比竞品高 18%，能效高 15-19%。Vivo X300 Pro 搭载 Dimensity 9500（4.21 GHz Cortex-X925 + 3×3.5 GHz + 4×2.7 GHz），AnTuTu 评分 84.2%。Motorola Signature 搭载 Snapdragon 8 Gen 5（3.8 GHz Oryon V3 Phoenix L），与 5G 调制解调器协同优化成为关键。</li>
+<li><strong>链接：</strong><a href="https://www.91mobiles.com/id/hub/daftar-chipset-mediatek-dimensity-terbaru-di-2026-hp-nya-apa-saja/" target="_blank">https://www.91mobiles.com/id/hub/daftar-chipset-mediatek-dimensity-terbaru-di-2026-hp-nya-apa-saja/</a></li>
+</ul>
+<h3>4. 努比亚全球首发 AI 智能体手机：端侧千亿参数 5GB 压缩、NPU 算力提升 10 倍</h3>
+<ul>
+<li><strong>来源：</strong> IT 之家 / 数码体验局</li>
+<li><strong>时间：</strong> 2026-07-12（WAIC 2026 现场实测）</li>
+<li><strong>核心要点：</strong> 努比亚总裁倪飞发布长文：AI 手机下半场会从"功能叠加"走向"原生智能体"。WAIC 2026 现场实测：千亿参数模型通过 4bit 极致量化和稀疏混合架构被压缩到 5GB 以内，普通手机也能装得下、跑得动。NPU 算力较上代提升 10 倍，离线状态下 AI 响应延迟已能压到 45 毫秒以内。现场"飞行模式"测试：翻译、修图、闹钟、文字摘要全部本地完成。倪飞表示该设备定位量产旗舰机型。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7661489247714656795/" target="_blank">http://m.toutiao.com/group/7661489247714656795/</a></li>
+</ul>
+<h3>5. 6G 通感算智一体技术亮相第四届链博会：中兴通讯展示 Sub-6 太赫兹演进</h3>
+<ul>
+<li><strong>来源：</strong> 行业媒体 / 中兴通讯</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> 随着通感算智一体技术发展，6G（第六代移动通信）已悄然而至。中兴通讯在第四届链博会展示 6G 通感算智一体技术板，多样化智能感知应用场景陆续落地。中国工程院院士张平团队指导学生科研，推动通感算智一体从理论走向标准化。中关村泛联院 6G 研发总监徐飞发布三套联合编制白皮书，由中国移动、泛联院、浙江大学、罗德与施瓦茨、香港科技大学等十余家国内外机构联合完成，形成"网络架构-行业应用-质量评测"三层技术规范体系。</li>
+<li><strong>链接：</strong> （第四届链博会报道综合）</li>
+</ul>
+<h3>6. OpenAI 自研推理芯片 Jalapeño 联手博通 9 个月流片，专攻推理降本 50%</h3>
+<ul>
+<li><strong>来源：</strong> AAAI 2026 芯片展示区 / 行业媒体</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> OpenAI 首款自研芯片 Jalapeño 深度解析：联手博通 9 个月完成流片，专攻推理降本 50%。芯片展示区基于端侧实测实时运行 130 亿参数 LLaMA-3 模型、仅占用 9.8W 功耗，验证在端侧大模型推理中的可行性。直击边缘 AI 长期面临的"能效墙"，基于架构创新的突围路径，标志 AI 算力从"英伟达依赖"走向"全栈自研"的转折时刻。</li>
+<li><strong>链接：</strong> （AAAI 2026 芯片展示区报道）</li>
+</ul>
+<h3>7. 高通骁龙 8 Gen 5 / 8 Elite：Oryon V3 Phoenix 架构支撑 5G 频率策略升级</h3>
+<ul>
+<li><strong>来源：</strong> Digit.in / 行业评测</li>
+<li><strong>时间：</strong> 2026-07-10</li>
+<li><strong>核心要点：</strong> 高通旗舰 Snapdragon 8 Gen 5 采用 Oryon V3 Phoenix L（3.8 GHz 双核）+ Phoenix M（3.32 GHz 六核）架构；Snapdragon 8 Elite 采用 Oryon（4.47 GHz 双核 + 3.5 GHz 六核）。Motorola Signature、Samsung Galaxy S25 Ultra、OnePlus 15R 5G 旗舰机全面搭载。新一代 Adreno GPU 与 5G 调制解调器协同调度，针对 5G 吞吐做主频与功耗优化；与 Cortex-X925 同级别性能，成为 5G 加速负载下的 CPU 提频标杆。</li>
+<li><strong>链接：</strong><a href="https://www.digit.in/mobiles/best-5g-phones.html" target="_blank">https://www.digit.in/mobiles/best-5g-phones.html</a></li>
+</ul>
+<h3>8. 华为 Mate 系列搭载盘古大模型 10B：端云协同 AI 推理</h3>
+<ul>
+<li><strong>来源：</strong> 数码体验局 / WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-12</li>
+<li><strong>核心要点：</strong> 华为 WAIC 2026 展台重头戏是 Atlas 950 超节点首展，手机端 AI 能力同步亮相。Mate 系列搭载盘古大模型 10B 版本，现场演示拍照识物和实时翻译的衔接，对准英文菜单拍照秒出中文翻译和菜品介绍。强项在于生态联动：手机拍完照，AI 可直接调用车机导航、智能家居设备。现场演示"拍一张冰箱照片，AI 自动识别食材并推荐菜谱，同时把购物清单发到车机上"，跨设备 AI 协同在华为生态闭环中顺畅运行。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7661489247714656795/" target="_blank">http://m.toutiao.com/group/7661489247714656795/</a></li>
+</ul>
+<h3>9. vRAN/Open RAN CPU 调度：x86 + FPGA 协同 5G 加速卡路径再深化</h3>
+<ul>
+<li><strong>来源：</strong> 行业研究 / Linley Group</li>
+<li><strong>时间：</strong> 2026-07</li>
+<li><strong>核心要点：</strong> vRAN/Open RAN 架构下，CPU 与 FPGA/ASIC 协同提频成为 5G 加速核心方案。Intel Xeon / AMD EPYC / Ampere Altra / 华为鲲鹏 950 等主流服务器 CPU 面向 5G vBBU 工作负载优化，提供 QoS 调度切片、Modem 触发 CPU 提频等机制。SmartNIC、DPU 卡（如 NVIDIA BlueField）作为 CPU 卸载加速的关键。Intel 18A PowerVia 背面供电与 RibbonFET 同步推进，目标在 5G/6G 通信芯片上实现 5G 以下节点的全栈能力。</li>
+<li><strong>链接：</strong> （行业研究综合）</li>
+</ul>
+<h3>10. 联发科 Dimensity 7300 Ultra：4×2.6 GHz Cortex-A78 5G 中端机主频标杆</h3>
+<ul>
+<li><strong>来源：</strong> 91mobiles / giznext</li>
+<li><strong>时间：</strong> 2026-07-08</li>
+<li><strong>核心要点：</strong> Realme P4 Power 5G 搭载联发科 Dimensity 7400 Ultra（2.6 GHz Cortex-A78 四核 + 2.0 GHz Cortex-A55 四核，10W TDP），配备 10001 mAh 电池，是 5G 中端机电池与频率平衡的代表。Oppo Reno 15 5G 搭载 Snapdragon 7 Gen 4（2.8 GHz Cortex-X2 + 4×2.4 GHz Cortex-A720 + 3×1.8 GHz Cortex-A520），AnTuTu v11 达 1.458M。Snapdragon 7 Gen 4 在保持 5G 连接性能的同时，针对中端场景优化了 CPU 提频策略与功耗控制。</li>
+<li><strong>链接：</strong><a href="https://www.digit.in/mobiles/best-5g-phones.html" target="_blank">https://www.digit.in/mobiles/best-5g-phones.html</a></li>
+</ul>
+<hr class="section-divider">
+<h2>附：本周技术洞察小结</h2>
+<p>
+<strong>AI 领域三大主线：</strong>
+</p>
+<p>
+1. <strong>递归自我改进进入工程化量产</strong> — OpenAI GPT-5.6 Sol 自主完成 Luna 后训练，AI 训练 AI 的飞轮开始转动；
+2. <strong>国产 AI 资本与算力双线爆发</strong> — 智谱 314 亿港元配售、华为云 Gartner 领导者象限、Atlas 950 超节点首秀；
+3. <strong>AI 智能体从概念走向商业化</strong> — 阿里 ElementsClaw 28 GPU 小时发现 4 种超导体、宇树科技 73 天过审科创板、WAIC 2026 努比亚 AI 智能体手机首发。
+</p>
+<p>
+<strong>芯片产业三大主线：</strong>
+</p>
+<p>
+1. <strong>后摩尔时代的新范式确立</strong> — 华为"韬定律"从几何缩微转向时间缩微，LogicFolding 让麒麟 2026 等效 3nm 性能；
+2. <strong>存算一体 + Chiplet + CPO 三线并进</strong> — ISSCC 2026 南大&平头哥 47.0Tb/s/mm 世界纪录、合肥瑞徽 55nm 存算一体 3.2 倍能效领先、NVIDIA 256Gb/s DWDM CPO 量产导入；
+3. <strong>GAA 节点进入实质竞争</strong> — 台积电/三星/Intel 2nm 路线齐发，0.7nm 实验室突破，3DFabric 完整 2.5D 产品线分层适配。
+</p>
+<p>
+<strong>5G/CPU 协同三大主线：</strong>
+</p>
+<p>
+1. <strong>手机 SoC 5G 协同提频</strong> — Dimensity 9500/8550、Snapdragon 8 Gen 5/8 Elite 全线升级，Cortex-X925 4.21 GHz + Oryon V3 4.47 GHz 频段创新高；
+2. <strong>端侧 AI 推理的能效突破</strong> — 努比亚端侧千亿参数 5GB 压缩、NPU 算力提升 10 倍、45ms 延迟；OpenAI Jalapeño 推理降本 50%；
+3. <strong>6G 通感算智融合加速</strong> — 第四届链博会中兴通讯展示 Sub-6 太赫兹演进，三套白皮书填补行业标准空白。
+</p>
+<hr class="section-divider">
+<p>
+*报告生成时间：2026-07-12 09:00 (UTC+8) | 编制：陈权标的智能伙伴 | 数据来源：搜索聚合自 CSDN、新华网、IEEE、Nature、半导体行业媒体、知乎、36 氪、IT 之家、电子工程专辑、qishuai-cn.com 等*
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
+  </div>
+</body>
+</html>

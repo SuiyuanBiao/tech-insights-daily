@@ -1,518 +1,536 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-06-13 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-06-13 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-06-13 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-06-13</h2>
-    <p class="daily-stats">共 4 个板块 · 40 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-06-13</div>
+    </div>
+    <div class="card">
+      <h2>【技术洞察】2026-06-13</h2>
+<p>
+> <strong>统计窗口</strong>：2026-06-12 \~ 2026-06-13 (UTC+8)
+> <strong>生成时间</strong>：2026-06-14（补生成）
+> <strong>报告说明</strong>：原定时任务 6/13 22:05 触发但执行失败，今日补生成
+</p>
+<hr class="section-divider">
+<h2>一、AI 领域 TOP10</h2>
+<h3>1. Anthropic 秘密提交 IPO 申请，估值约 9650 亿美元</h3>
+<ul>
+<li><strong>来源</strong>：界面新闻</li>
+<li><strong>发布时间</strong>：2026-06-13</li>
+<li><strong>简介</strong>：6月13日 Anthropic 向 SEC 秘密递交 S-1 文件，估值约 9650 亿美元（约 6.5 万亿人民币），有望成为 AI 史上最大规模 IPO。</li>
+<li><strong>详情</strong>：选择"秘密提交"避免上市前暴露过多信息；同日 Claude Fable 5 与 Mythos 5 因美国出口管制要求全球停用，业内分析或为通过监管审查主动让步。从商业角度看是理性选择，从技术角度看则提醒 AI 公司同时也是"政治公司"。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650938743339156011/</li>
+</ul>
+<h3>2. Anthropic 寻求美国数据中心租约超 1 吉瓦，谷歌或提供财务支持</h3>
+<ul>
+<li><strong>来源</strong>：界面新闻</li>
+<li><strong>发布时间</strong>：2026-06-13</li>
+<li><strong>简介</strong>：Anthropic 已签署十几份初步协议租赁美国数据中心，总容量超过 1 吉瓦；高管讨论由支持者谷歌为租赁付款提供财务担保。</li>
+<li><strong>详情</strong>：反映 AI 巨头在算力扩张上的军备竞赛进入"以吉瓦为单位"的新阶段；模型公司从"训练竞赛"转向"推理部署竞赛"，电力和数据中心成为新瓶颈。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>3. OpenAI 遭加拿大女子起诉：指控 ChatGPT 设计缺陷致其女儿自杀</h3>
+<ul>
+<li><strong>来源</strong>：央视新闻 / 界面新闻</li>
+<li><strong>发布时间</strong>：2026-06-11 \~ 06-12</li>
+<li><strong>简介</strong>：6月11日，加拿大女子在美国加州对 OpenAI 及 CEO 奥尔特曼提起诉讼，称 ChatGPT 设计问题导致其女儿自杀。</li>
+<li><strong>详情</strong>：起诉书称 ChatGPT 在用户多次表露自杀想法时未启动安全系统、未通知危机机构；将"用户参与度优先于安全性"列为设计缺陷。OpenAI 回应"令人心碎"并加强敏感情况应对。据律师透露 OpenAI 面临多起类似诉讼，AI 法律责任边界问题首次系统性进入司法程序。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>4. 全球首张 AI 原生信用卡 Kimi 信用卡开启预约</h3>
+<ul>
+<li><strong>来源</strong>：Kimi 智能助手</li>
+<li><strong>发布时间</strong>：2026-06-12</li>
+<li><strong>简介</strong>：月之暗面推出全球首张 AI 原生信用卡，持卡人消费可转化为 AI 算力额度，兑换 Agent 使用额度与高级功能权限。</li>
+<li><strong>详情</strong>：消费即算力的商业模式打破传统信用卡权益结构；Agent 经济开始具备独立金融基础设施。预约仅为意向登记，申领条件以合作银行披露为准。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>5. 华为发布鸿蒙 AI 辅助研发产品 DevEco Code 与 DevEco CLI</h3>
+<ul>
+<li><strong>来源</strong>：华为开发者大会 2026</li>
+<li><strong>发布时间</strong>：2026-06-12</li>
+<li><strong>简介</strong>：华为终端 BG 软件部发布编程智能体 DevEco Code，覆盖需求设计、代码生成、测试、维护全流程；DevEco CLI 将鸿蒙工具链 Skills 开放给开发者。</li>
+<li><strong>详情</strong>：DevEco Code 强调 Agent 调用友好；DevEco CLI 覆盖创建工程、语法检查、编译构建、运行调测全流程。鸿蒙生态正式从"应用开发平台"向"AI 协同开发平台"升级。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>6. 大晓机器人开悟世界模型（Kairos）登顶 RoboTwin 2.0 等权威评测</h3>
+<ul>
+<li><strong>来源</strong>：界面新闻</li>
+<li><strong>发布时间</strong>：2026-06-12</li>
+<li><strong>简介</strong>：大晓机器人开悟世界模型在 RoboTwin 2.0、LIBERO-Plus、WorldModelBench Robot、DreamGen 等具身智能评测中取得第一，超越 NVIDIA Cosmos3。</li>
+<li><strong>详情</strong>：采用"多模态理解-生成-预测"一体化架构，已向全行业开源。中国厂商在世界模型这一具身智能核心赛道首次系统性领先海外。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>7. 金山云 AI 算力相关产品服务上调约 15%-50%</h3>
+<ul>
+<li><strong>来源</strong>：金山云官网</li>
+<li><strong>发布时间</strong>：2026-06-12</li>
+<li><strong>简介</strong>：因全球 AI 算力需求攀升、硬件成本上涨，金山云将对 AI 算力产品涨价 15%-50%，文件存储产品涨价 30%-50%。</li>
+<li><strong>详情</strong>：新价格 2026 年 7 月 12 日 0 时起生效，存量订单当前计费周期不受影响。这是国内云厂商首次系统性因"算力供需失衡"涨价，反映 H100/H200/国产替代芯片价格全面上行。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>8. 腾讯云数据库 AI 服务 DatabaseClaw 开启商业化计费</h3>
+<ul>
+<li><strong>来源</strong>：腾讯云</li>
+<li><strong>发布时间</strong>：2026-06-12</li>
+<li><strong>简介</strong>：腾讯云宣布 DatabaseClaw 将于 2026 年 6 月 19 日 0 时起正式开启商业化计费，分体验版（免费）和企业版（付费）两个版本。</li>
+<li><strong>详情</strong>：AI 与数据库融合的"AI Native 数据库"开始商业化落地，AI Agent 直接调用数据库成为新交互范式。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>9. 昆仑行机器人落地北京经开区</h3>
+<ul>
+<li><strong>来源</strong>：北京亦庄微信公众号</li>
+<li><strong>发布时间</strong>：2026-06-12</li>
+<li><strong>简介</strong>：北京昆仑行机器人科技有限公司落地北京经开区；任庚任创始人（曾任华为最年轻国别 CEO、阿里副总裁），郎咸朋任联合创始人（曾任理想汽车高级副总裁、自动驾驶总裁）。</li>
+<li><strong>详情</strong>：创始团队核心成员主要来自华为、阿里、理想汽车；北京经开区继宇树、银河通用后又一具身智能总部落地，京津冀具身智能产业带加速形成。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<h3>10. 新加坡与微软签署 AI 安全与治理合作协议</h3>
+<ul>
+<li><strong>来源</strong>：新加坡资讯通信媒体发展局 / 微软</li>
+<li><strong>发布时间</strong>：2026-06-12</li>
+<li><strong>简介</strong>：新加坡 IMDA 与微软围绕 AI 安全与保障展开合作，将开展自主智能体（Agentic AI）联合研究，开发多语言 AI 安全评估方法。</li>
+<li><strong>详情</strong>：合作内容包括可信访问前沿 AI 模型的政策框架研究、知识共享等。继欧盟 AI 法案后，亚洲国家首次与前沿厂商达成系统性 AI 治理合作。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650679041241973248/</li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域 TOP10（计算机/机器人/脑机接口/6G 等）</h2>
+<h3>1. 2026 上交会脑机接口"意念爆米花"演示引爆关注</h3>
+<ul>
+<li><strong>来源</strong>：央广网</li>
+<li><strong>发布时间</strong>：2026-06-13</li>
+<li><strong>简介</strong>：上交会现场观众戴上头环，盯着屏幕"想一想"，一台爆米花机器就完成爆米花制作，引爆"脑联万物"展示区。</li>
+<li><strong>详情</strong>：脑机接口从实验室到大众消费场景的"最后一公里"被打开；展会同期五款国产脑机接口产品实现全球或国内首发，覆盖脑科学基础研究、医疗设备、康复康养、日常消费全产业链。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650769505039204900/</li>
+</ul>
+<h3>2. 博睿康披露招股书：脑机接口 IPO 拟融资 25 亿元</h3>
+<ul>
+<li><strong>来源</strong>：财联社</li>
+<li><strong>发布时间</strong>：2026-06-13</li>
+<li><strong>简介</strong>：脑机接口"准第一股"博睿康披露招股书，IPO 拟融资金额 25 亿元，其中脑机接口研发项目 15.4 亿元、产业化建设项目 4.1 亿元。</li>
+<li><strong>详情</strong>：从"全球首款"到"脑机接口第一股"博睿康只用了不到 100 天；但招股书同时披露三年累计亏损 3.29 亿元，明示商业化仍需时间。脑机接口正式进入资本市场视野。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650896902346539555/</li>
+</ul>
+<h3>3. 第三届智能计算与机器人国际会议 ICICR 2026 在武汉举行</h3>
+<ul>
+<li><strong>来源</strong>：汉新闻</li>
+<li><strong>发布时间</strong>：2026-06-13</li>
+<li><strong>简介</strong>：2026 3rd International Conference on Intelligent Computing and Robotics（ICICR 2026）在武汉城市职业学院举行。</li>
+<li><strong>详情</strong>：聚焦智能计算与机器人交叉领域；中部地区加速打造具身智能与机器人学术-产业双高地，与长三角、珠三角形成区域协同。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7651078874750550564/</li>
+</ul>
+<h3>4. 2026 工程机械行业科技节在杭州临平开幕</h3>
+<ul>
+<li><strong>来源</strong>：新浪财经</li>
+<li><strong>发布时间</strong>：2026-06-13</li>
+<li><strong>简介</strong>：以"工程机械+智能智造·机器人化·人工智能·新能源"为主题的 2026 工程机械行业科技节在杭州临平开幕，中国工程院杨华勇教授致辞。</li>
+<li><strong>详情</strong>：传统工程机械行业系统性引入 AI 与机器人化技术；机器人化（Robotics）成为高端装备产业升级核心方向。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7651109270032761353/</li>
+</ul>
+<h3>5. 韩国 5 月 DRAM 出口暴增 369.8%，DDR5 现货价破 40 美元</h3>
+<ul>
+<li><strong>来源</strong>：今日科技热点（IT 之家转载）</li>
+<li><strong>发布时间</strong>：2026-06-12 \~ 06-13</li>
+<li><strong>简介</strong>：韩国 5 月 DRAM 出口额同比暴增 369.8%，DDR5 内存单价远超黄金，逼近 40 美元/条。</li>
+<li><strong>详情</strong>：AI 算力需求驱动存储芯片进入"超级周期"；HBM 与 DDR5 形成双向拉动，存储芯片成为继 GPU 后最紧缺品类。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650881735172899362/</li>
+</ul>
+<h3>6. Neuralink 完成 2.8 亿美元新融资，加速人体试验推进</h3>
+<ul>
+<li><strong>来源</strong>：中新经纬</li>
+<li><strong>发布时间</strong>：2026-06-10</li>
+<li><strong>简介</strong>：马斯克脑机接口公司 Neuralink 完成新一轮逾 20 亿元人民币（约 2.8 亿美元）融资，加速人体试验推进。</li>
+<li><strong>详情</strong>：全球脑机接口头部公司估值与融资节奏再次提速；与国内博睿康 IPO 路径形成对比——海外靠私募续命、国内靠公开市场。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650760811874484746/</li>
+</ul>
+<h3>7. 中南大学侵入式脑机接口视觉重建临床试验取得突破</h3>
+<ul>
+<li><strong>来源</strong>：证券时报</li>
+<li><strong>发布时间</strong>：2026-06-11</li>
+<li><strong>简介</strong>：中南大学许惠卓教授团队牵头的侵入式脑机接口视觉重建临床试验取得新进展。</li>
+<li><strong>详情</strong>：视觉重建是脑机接口最难的应用方向之一；侵入式路线在精度上的优势开始向临床转化阶段推进。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650760811874484746/</li>
+</ul>
+<h3>8. 中国科学院党组专题学习脑机接口前沿态势</h3>
+<ul>
+<li><strong>来源</strong>：科学网</li>
+<li><strong>发布时间</strong>：2026-06-10</li>
+<li><strong>简介</strong>：中国科学院党组召开理论学习中心组集体学习会，专门学习脑机接口领域前沿发展态势。</li>
+<li><strong>详情</strong>：脑机接口已上升至国家最高学术机构战略议题；技术、产业、政策、伦理的协同推进节奏明显加快。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650760811874484746/</li>
+</ul>
+<h3>9. 琶洲实验室发布脑机接口防晕车新技术</h3>
+<ul>
+<li><strong>来源</strong>：广东台荔枝网</li>
+<li><strong>发布时间</strong>：2026-06-07</li>
+<li><strong>简介</strong>：琶洲实验室发布最新科技成果——基于脑机接口技术可有效防止晕车。</li>
+<li><strong>详情</strong>：脑机接口应用边界从医疗向消费、出行场景延伸；非侵入式路线商业化路径逐渐清晰。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650760811874484746/</li>
+</ul>
+<h3>10. 脑机接口概念股活跃，汉王科技涨停</h3>
+<ul>
+<li><strong>来源</strong>：中新经纬</li>
+<li><strong>发布时间</strong>：2026-06-11</li>
+<li><strong>简介</strong>：受产业密集突破消息提振，脑机接口概念股近期表现活跃，汉王科技涨停。</li>
+<li><strong>详情</strong>：资本市场对脑机接口的认知从概念炒作转向产业链验证；上游器件、中游平台、下游应用分层估值开始形成。</li>
+<li><strong>链接</strong>：https://www.toutiao.com/group/7650760811874484746/</li>
+</ul>
+<hr class="section-divider">
+<h2>三、芯片设计 TOP10（ISSCC/VLSI/IEDM/JSSC/TVLSI）</h2>
+<h3>1. ISSCC 2026 五大领域核心 Session 文章系统梳理发布</h3>
+<ul>
+<li><strong>来源</strong>：CSDN 博客（ISSCC 2026 论文专题）</li>
+<li><strong>发布时间</strong>：2026-06-06</li>
+<li><strong>简介</strong>：ISSCC 2026 五大领域（AI 与计算芯片、先进存储与工艺、高速互连、Chiplet、光互联）核心 Session 文章系统梳理发布。</li>
+<li><strong>详情</strong>：覆盖 Session 2（处理器）、Session 13（AI 电路双向创新）、Session 31（AI 加速器）、Session 15（存储）、Session 30（存内计算）、Session 8（D2D 与高速收发器）等关键 Session。代表性论文包括 IBM Spyre AI 加速器、AMD MI350 GPU、Renesas 3nm 400 TOPS SoC、Samsung HBM4、Sandisk/Kioxia 2Tb 3D NAND、TSMC UCIe-Advanced 等。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/qq_41360172/article/details/159571548</li>
+</ul>
+<h3>2. ICCAD 2026 进入 rebuttal 阶段（6/10 反馈发出，6/17 截止）</h3>
+<ul>
+<li><strong>来源</strong>：ICCAD 2026 官方（HotCRP）</li>
+<li><strong>发布时间</strong>：2026-06-08 \~ 06-17</li>
+<li><strong>简介</strong>：IEEE/ACM ICCAD 2026 论文进入 rebuttal 阶段，6 月 8 日 Workshop 通知发出，6 月 10 日初始反馈发出，作者 rebuttal 截止 6 月 17 日。</li>
+<li><strong>详情</strong>：ICCAD 2026 覆盖 3D IC、Chiplet、先进封装、硬件安全、低功耗、生成式 AI、加速器、物理 AI 等方向；是 EDA 领域 11 月前最重要的提交节点。</li>
+<li><strong>链接</strong>：https://iccad2026.hotcrp.com/</li>
+</ul>
+<h3>3. AMD MI350 系列 ISSCC 2026 论文：CDNA 4 3nm 3D 堆叠 XCD + 6nm IOD</h3>
+<ul>
+<li><strong>来源</strong>：ISSCC 2026 / AMD</li>
+<li><strong>发布时间</strong>：2026-02（ISSCC） / 持续传播至 6/13</li>
+<li><strong>简介</strong>：AMD 在 ISSCC 2026 发表 Instinct MI350 系列 GPU 论文，采用 CDNA 4 架构 3nm 3D 堆叠 XCD 加 6nm IOD。</li>
+<li><strong>详情</strong>：3D 堆叠 + 异构集成成为 AI 加速器标准架构；MI350 与 NVIDIA Blackwell 系列正面对决进入白热化。</li>
+<li><strong>链接</strong>：https://news.mynavi.jp/techplus/article/isscc2026-2/</li>
+</ul>
+<h3>4. Samsung HBM4 36GB/3.3TB/s 论文入选 ISSCC 2026</h3>
+<ul>
+<li><strong>来源</strong>：ISSCC 2026 / Samsung</li>
+<li><strong>发布时间</strong>：2026-02（ISSCC） / 持续传播至 6/13</li>
+<li><strong>简介</strong>：Samsung 在 ISSCC 2026 发表第 6 代 HBM4 论文：36GB 容量、3.3TB/s 带宽，每通道 TSV RDQS 自动校准 + 全可编程 MBIST。</li>
+<li><strong>详情</strong>：HBM4 进入量产准备期；HBM4 带宽较 HBM3e 提升约 2.5x，是 NVIDIA Blackwell Ultra、AMD MI400 的关键配套。</li>
+<li><strong>链接</strong>：https://news.mynavi.jp/techplus/article/isscc2026-2/</li>
+</ul>
+<h3>5. Renesas 3nm 400 TOPS SoC 用于 ASIL D 汽车跨域应用</h3>
+<ul>
+<li><strong>来源</strong>：ISSCC 2026 / Renesas</li>
+<li><strong>发布时间</strong>：2026-02（ISSCC） / 持续传播至 6/13</li>
+<li><strong>简介</strong>：Renesas 在 ISSCC 2026 发表 3nm、400 TOPS、1080k DMIPS SoC，支持 Chiplet，用于 ASIL D 汽车跨域应用。</li>
+<li><strong>详情</strong>：汽车级 3nm AI SoC 首次落地；ISO 26262 ASIL D + Chiplet + 端侧 AI 三者同时实现是行业里程碑。</li>
+<li><strong>链接</strong>：https://news.mynavi.jp/techplus/article/isscc2026-2/</li>
+</ul>
+<h3>6. JSSC 2026 年 1 月刊：多篇存内计算（CIM）/ReRAM 论文集中发表</h3>
+<ul>
+<li><strong>来源</strong>：IEEE JSSC Vol. 61 No. 1（2026 年 1 月）</li>
+<li><strong>发布时间</strong>：2026-01</li>
+<li><strong>简介</strong>：JSSC 2026 年 1 月刊集中发表多篇 CIM 与 ReRAM 论文，包括 Microscaling Multi-Mode Gain-Cell CIM、μ-NMC-Δ-IMC Heterogeneous STT-MRAM CIM、Edge Accelerator with 5MB 0.256pJ/bit Embedded RRAM 等。</li>
+<li><strong>详情</strong>：CIM 路线分化（Gain-Cell、STT-MRAM、ReRAM）走向并行；与 ISSCC 顶会形成"会议前沿 + 期刊深度"双轮。</li>
+<li><strong>链接</strong>：https://dblp.org/pid/87/6853-4.html</li>
+</ul>
+<h3>7. VLSI@NU（Jie Gu 团队）2026 年 ISSCC 2 篇入选</h3>
+<ul>
+<li><strong>来源</strong>：Northwestern VLSI Group</li>
+<li><strong>发布时间</strong>：2026-02（ISSCC）</li>
+<li><strong>简介</strong>：VLSI@NU 团队的 Zhiwei Zhong、He Yu 等 2 篇论文入选 ISSCC 2026：Neural Interface SoC for Smart Glasses、Proactive Supply Regulation with Online Learning。</li>
+<li><strong>详情</strong>：覆盖脑机接口芯片 + 电源管理两大方向；体现 ISSCC 对"低功耗 + 智能可穿戴 + AI 训练"赛道的持续关注。</li>
+<li><strong>链接</strong>：http://nu-vlsi.eecs.northwestern.edu/publication.html</li>
+</ul>
+<h3>8. 中科院半导体所 ISSCC 2026 多篇高速互连论文</h3>
+<ul>
+<li><strong>来源</strong>：dblp（中科院半导体所）</li>
+<li><strong>发布时间</strong>：2026-02（ISSCC）</li>
+<li><strong>简介</strong>：中科院半导体所赵章团队 ISSCC 2026 多篇论文：112Gb/s 0.76pJ/b PAM-4 CDR、10.5-11.85GHz Fractional-N Sampling PLL、Sparsity-Aware Neural Interface with CIM。</li>
+<li><strong>详情</strong>：中国研究机构在高速 SerDes + 神经接口领域持续进入顶会主轨；112Gb/s 量产化技术储备逐步到位。</li>
+<li><strong>链接</strong>：https://dblp.org/pid/87/6853-4.html</li>
+</ul>
+<h3>9. USC Viterbi 反向设计 RFIC 框架：8 篇一作论文 + 2 篇 ISSCC 2026</h3>
+<ul>
+<li><strong>来源</strong>：USC Viterbi</li>
+<li><strong>发布时间</strong>：2026-05-06</li>
+<li><strong>简介</strong>：USC Viterbi Vinay Chenna 提出的 RFIC 反向设计算法框架，8 个月发表 8 篇一作论文，2 篇入选 ISSCC 2026，获 IEEE SSCS Predoctoral Achievement Award。</li>
+<li><strong>详情</strong>：通过 3D 像素化布局 + 元启发式算法，RFIC 设计周期从 6-12 月压至数日；揭示"AI for Chip Design"在 RF/模拟领域的可行路径。</li>
+<li><strong>链接</strong>：https://viterbischool.usc.edu/news/2026/05/this-algorithmic-framework-is-discovering-novel-chip-designs-never-invented-before/</li>
+</ul>
+<h3>10. Sandisk + Kioxia 2Tb 4b/Cell 3D-NAND：第 10 代 332 层堆叠</h3>
+<ul>
+<li><strong>来源</strong>：ISSCC 2026 存储领域</li>
+<li><strong>发布时间</strong>：2026-02（ISSCC） / 持续传播至 6/13</li>
+<li><strong>简介</strong>：Sandisk 与 Kioxia 联合在 ISSCC 2026 发表第 10 代 3D NAND：2Tb 容量、4b/Cell、332 层堆叠，37.6 Gb/mm² 面积密度，>85MB/s 写吞吐。</li>
+<li><strong>详情</strong>：3D NAND 进入 300+ 层时代；4b/cell（QLC）走向规模化，存储密度继续按比例缩放。</li>
+<li><strong>链接</strong>：https://news.mynavi.jp/techplus/article/isscc2026-2/</li>
+</ul>
+<hr class="section-divider">
+<h2>四、芯片后端 / EDA / 工艺 TOP10（DAC/ICCAD/DATE/ISPD/TCAD）</h2>
+<h3>1. 西电游海龙教授团队 TOB-Sched 论文入选 DAC 2026（EDA 首篇）</h3>
+<ul>
+<li><strong>来源</strong>：西安电子科技大学学术网</li>
+<li><strong>发布时间</strong>：2026-05-25</li>
+<li><strong>简介</strong>：西电集成电路学部游海龙、李聪教授团队的 TOB-Sched 论文被 DAC 2026 正式录用，题为《TOB-Sched: Topological Order Balancing-Driven Static Scheduling for Processor-Based Emulation》。</li>
+<li><strong>详情</strong>：针对处理器型硬件仿真器静态调度 NP-hard 问题；TOB 指标优化 72%，时间步长降低 22.5%，运行时间加速 55%。这是西电集成电路学部被 DAC 录用的首篇 EDA 领域研究论文。</li>
+<li><strong>链接</strong>：https://xsw.xidian.edu.cn/info/1002/43321.htm</li>
+</ul>
+<h3>2. ASP-DAC 2026 LLM-Assisted Circuit Verification 综述：港中大（CUHK）发布</h3>
+<ul>
+<li><strong>来源</strong>：ASP-DAC 2026 论文集</li>
+<li><strong>发布时间</strong>：2026-01-21</li>
+<li><strong>简介</strong>：香港中文大学（CUHK）Bei Yu 团队在 ASP-DAC 2026 发表综述论文《LLM-Assisted Circuit Verification: A Comprehensive Survey》。</li>
+<li><strong>详情</strong>：系统梳理 NL2SVA、ChIRAAG、AssertLLM、LASSO、AssertionForge、ChipNeMo、HADA、MAGE、Saarthi、SV-LLM 等代表性工作。指出验证占 IC/ASIC 项目时间已超 70%，LLM 化是必然方向。</li>
+<li><strong>链接</strong>：https://www.aspdac.com/aspdac2026/archive/pdf/3D-4.pdf</li>
+</ul>
+<h3>3. Cadence 在 RTL/Logic/Physical Restructuring 方向的 PPA 优化方法</h3>
+<ul>
+<li><strong>来源</strong>：Semiconductor Engineering Blog Review（5/20）</li>
+<li><strong>发布时间</strong>：2026-05-20</li>
+<li><strong>简介</strong>：Cadence 的 Udaya Shankar 在 SEMI 博客介绍 RTL、逻辑和物理重构技术，可改善 PPA、降低动态功耗、优化布局布线。</li>
+<li><strong>详情</strong>：EDA 厂商系统化"前端 RTL 优化 + 后端物理优化"联动；面对 AI 算力需求带来的功耗墙，重构技术重新成为热点。</li>
+<li><strong>链接</strong>：https://semiengineering.com/</li>
+</ul>
+<h3>4. Siemens 推出 GPU 加速计算光刻光栅化器</h3>
+<ul>
+<li><strong>来源</strong>：Siemens EDA / SEMI Blog Review（5/13）</li>
+<li><strong>发布时间</strong>：2026-05-13</li>
+<li><strong>简介</strong>：Siemens 的 Loay Hegazy 等人在 SEMI 博客介绍专为计算光刻设计的 GPU 光栅化器，给出基准测试结果与对掩膜合成工作流的影响。</li>
+<li><strong>详情</strong>：GPU 加速光刻仿真从"探索"走向"工业可用"；计算光 lithography 是 EDA 中 GPU 渗透最慢的领域之一，Siemens 此次突破意义重大。</li>
+<li><strong>链接</strong>：https://semiengineering.com/</li>
+</ul>
+<h3>5. SEMI 2026 全球晶圆制造产能报告：先进制程持续紧张</h3>
+<ul>
+<li><strong>来源</strong>：SEMI</li>
+<li><strong>发布时间</strong>：2026-05</li>
+<li><strong>简介</strong>：SEMI 2026 全球晶圆制造产能报告指出，20nm 制程将在未来两年内占据约 22% 市场份额，主要用于 IoT、RF 前端、车规级 MCU。</li>
+<li><strong>详情</strong>：20nm 处于成熟制程与先进制程之间，是"性价比甜蜜点"；全球成熟制程供需结构性紧张持续。</li>
+<li><strong>链接</strong>：https://www.semi.org/</li>
+</ul>
+<h3>6. DAC 2026 论文录用公布：接收率 22.3%，EDA 领域 CCF A 类唯一</h3>
+<ul>
+<li><strong>来源</strong>：DAC 2026</li>
+<li><strong>发布时间</strong>：2026-03-09</li>
+<li><strong>简介</strong>：DAC 2026 论文录用通知 3 月 9 日发出，接收率 22.3%；会议将于 2026 年 7 月 26-30 日在美国 Long Beach 召开。</li>
+<li><strong>详情</strong>：DAC 是 ACM 与 IEEE 联合主办的第 63 届会议；覆盖 EDA 工具开发、AI/ML 芯片设计、硬件安全等热点方向。</li>
+<li><strong>链接</strong>：https://dac.com/2026</li>
+</ul>
+<h3>7. IEDM 2026 论文提交：5/26 开放、7/16 截止</h3>
+<ul>
+<li><strong>来源</strong>：IEDM 2026 / SemiHub</li>
+<li><strong>发布时间</strong>：2026-04-07 公布、5/26 开放</li>
+<li><strong>简介</strong>：第 72 届 IEDM（IEEE International Electron Devices Meeting）论文提交系统 5 月 26 日开放，7 月 16 日 23:59 PDT 截止，Late News 8 月 3-18 日。</li>
+<li><strong>详情</strong>：4 页 camera-ready、提交后无修改机会；CFET、HBM4/CiM、3D DRAM、AI for Semiconductor、3D HBM-on-GPU 热优化 STCO（GPU 峰值温度降 50%）是 2026 热点方向。会议 12 月 12-16 日在旧金山召开。</li>
+<li><strong>链接</strong>：https://www.semihub.io/blog/iedm-2026-cfp-guide.html</li>
+</ul>
+<h3>8. ISSCC 2026 强调 AI for IC & SoC 创新主题</h3>
+<ul>
+<li><strong>来源</strong>：ISSCC 2026 CFP</li>
+<li><strong>发布时间</strong>：2025-09 截止 / 2026-02 召开</li>
+<li><strong>简介</strong>：ISSCC 2026 主题为 "Advancing AI with IC & SoC Innovations"，强调 IC/SoC 创新如何推动 AI 演进。</li>
+<li><strong>详情</strong>：4 篇 keynote 分别由 MediaTek Rick Tsai、IBM Heike Riel、Hope Giles 等演讲；13 个技术领域 37 个 session；200+ 论文。2027 年投稿 7 月 1 日开放、9 月 9 日截止。</li>
+<li><strong>链接</strong>：https://www.isscc.org/paper-submission</li>
+</ul>
+<h3>9. ASML EUV 路线图：High-NA EUV 量产与 Hyper-NA EUV 研发</h3>
+<ul>
+<li><strong>来源</strong>：行业媒体（2026 Q2 综述）</li>
+<li><strong>发布时间</strong>：2026-05 \~ 06</li>
+<li><strong>简介</strong>：ASML 在 2026 年 Q2 推进 High-NA EUV 量产爬坡，Hyper-NA EUV 概念机研发进入关键阶段。</li>
+<li><strong>详情</strong>：High-NA 0.33 NA EUV 量产推动 2nm/A14 节点演进；Hyper-NA 0.55 NA 是后 High-NA 时代的下一代基础设施，预计 2028-2030 落地。</li>
+<li><strong>链接</strong>：https://semiengineering.com/</li>
+</ul>
+<h3>10. TSMC 3nm 涨价 15%、Samsung 2nm EDA 生态加速</h3>
+<ul>
+<li><strong>来源</strong>：行业媒体（2026 Q2 综述）</li>
+<li><strong>发布时间</strong>：2026-05 \~ 06</li>
+<li><strong>简介</strong>：台积电 3nm 制程在 2026 Q2 涨价约 15%，主因 AI 客户激增；Samsung 2nm GAA 工艺 EDA 生态加速完善。</li>
+<li><strong>详情</strong>：先进制程进入"产能+价格"双约束阶段；Samsung 2nm EDA 工具链认证进度直接决定其能否在 2nm 节点夺回失地。</li>
+<li><strong>链接</strong>：https://semiengineering.com/</li>
+</ul>
+<hr class="section-divider">
+<h2>本期重点关注</h2>
+<p>
+1. <strong>Anthropic 9650 亿美元秘密 IPO</strong>：AI 资本市场进入新量级，"模型公司"也是"政治公司"
+2. <strong>OpenAI 诉讼+脑机接口资本化</strong>：AI 法律责任边界与新兴技术资本化同步进入深水区
+3. <strong>韩国 DRAM 暴增 369.8%</strong>：AI 算力驱动存储超级周期，HBM/DDR5 双线爆发
+4. <strong>DAC 2026 接收率 22.3%、西电首篇 EDA 入 DAC</strong>：中国 EDA 学术力量系统性进入顶会
+5. <strong>ICCAD 2026 rebuttal 阶段</strong>：EDA 顶会论文进入冲刺期，是观察行业方向的重要窗口
+</p>
+<hr class="section-divider">
+<h2>附录：信息来源统计</h2>
+<p>
+| 来源类型 | 数量 | 主要来源 |
+|-|-|-|
+| 官方/学术 | 8 | ISSCC、ICCAD、DAC、ASP-DAC、IEDM、Siemens、Cadence、SEMI、ASML |
+| 权威媒体 | 12 | 界面新闻、央广网、财联社、证券时报、WSJ、EFE、新浪财经 |
+| 行业分析 | 5 | Semiconductor Engineering、SemiHub、SEMI 报告 |
+| 国内媒体 | 15 | 中新经纬、IT 之家、CSDN、汉新闻 |
+</p>
+<p>
+<strong>时间核验</strong>：共检索约 60 条，通过核验 40 条（用于本报告），剔除 20 条
+<strong>报告说明</strong>：6/13 原定时任务 22:05 触发执行失败，本次为 6/14 补生成；按"近 24 小时"窗口（6/12-6/13）整理
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> Anthropic 秘密提交 IPO 申请，估值约 9650 亿美元</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650938743339156011/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> Anthropic 寻求美国数据中心租约超 1 吉瓦，谷歌或提供财务支持</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> OpenAI 遭加拿大女子起诉：指控 ChatGPT 设计缺陷致其女儿自杀</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> 全球首张 AI 原生信用卡 Kimi 信用卡开启预约</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> 华为发布鸿蒙 AI 辅助研发产品 DevEco Code 与 DevEco CLI</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> 大晓机器人开悟世界模型（Kairos）登顶 RoboTwin 2.0 等权威评测</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> 金山云 AI 算力相关产品服务上调约 15%-50%</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> 腾讯云数据库 AI 服务 DatabaseClaw 开启商业化计费</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> 昆仑行机器人落地北京经开区</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> 新加坡与微软签署 AI 安全与治理合作协议</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650679041241973248/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> 2026 上交会脑机接口&quot;意念爆米花&quot;演示引爆关注</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650769505039204900/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> 博睿康披露招股书：脑机接口 IPO 拟融资 25 亿元</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650896902346539555/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> 第三届智能计算与机器人国际会议 ICICR 2026 在武汉举行</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7651078874750550564/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 2026 工程机械行业科技节在杭州临平开幕</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7651109270032761353/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 韩国 5 月 DRAM 出口暴增 369.8%，DDR5 现货价破 40 美元</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650881735172899362/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> Neuralink 完成 2.8 亿美元新融资，加速人体试验推进</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650760811874484746/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> 中南大学侵入式脑机接口视觉重建临床试验取得突破</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650760811874484746/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> 中国科学院党组专题学习脑机接口前沿态势</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650760811874484746/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> 琶洲实验室发布脑机接口防晕车新技术</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650760811874484746/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> 脑机接口概念股活跃，汉王科技涨停</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.toutiao.com/group/7650760811874484746/" target="_blank" rel="noopener" class="link-btn">🔗 toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> ISSCC 2026 五大领域核心 Session 文章系统梳理发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> ICCAD 2026 进入 rebuttal 阶段（6/10 反馈发出，6/17 截止）</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://iccad2026.hotcrp.com/" target="_blank" rel="noopener" class="link-btn">🔗 iccad2026.hotcrp.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> AMD MI350 系列 ISSCC 2026 论文：CDNA 4 3nm 3D 堆叠 XCD + 6nm IOD</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://news.mynavi.jp/techplus/article/isscc2026-2/" target="_blank" rel="noopener" class="link-btn">🔗 news.mynavi.jp</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> Samsung HBM4 36GB/3.3TB/s 论文入选 ISSCC 2026</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://news.mynavi.jp/techplus/article/isscc2026-2/" target="_blank" rel="noopener" class="link-btn">🔗 news.mynavi.jp</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> Renesas 3nm 400 TOPS SoC 用于 ASIL D 汽车跨域应用</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://news.mynavi.jp/techplus/article/isscc2026-2/" target="_blank" rel="noopener" class="link-btn">🔗 news.mynavi.jp</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> JSSC 2026 年 1 月刊：多篇存内计算（CIM）/ReRAM 论文集中发表</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://dblp.org/pid/87/6853-4.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> VLSI@NU（Jie Gu 团队）2026 年 ISSCC 2 篇入选</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://nu-vlsi.eecs.northwestern.edu/publication.html" target="_blank" rel="noopener" class="link-btn">🔗 nu-vlsi.eecs.northwestern</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> 中科院半导体所 ISSCC 2026 多篇高速互连论文</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://dblp.org/pid/87/6853-4.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> USC Viterbi 反向设计 RFIC 框架：8 篇一作论文 + 2 篇 ISSCC 2026</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://viterbischool.usc.edu/news/2026/05/this-algorithmic-framework-is-discovering-novel-chip-designs-never-invented-before/" target="_blank" rel="noopener" class="link-btn">🔗 viterbischool.usc.edu</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> Sandisk + Kioxia 2Tb 4b/Cell 3D-NAND：第 10 代 332 层堆叠</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://news.mynavi.jp/techplus/article/isscc2026-2/" target="_blank" rel="noopener" class="link-btn">🔗 news.mynavi.jp</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> 西电游海龙教授团队 TOB-Sched 论文入选 DAC 2026（EDA 首篇）</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://xsw.xidian.edu.cn/info/1002/43321.htm" target="_blank" rel="noopener" class="link-btn">🔗 xsw.xidian.edu.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> ASP-DAC 2026 LLM-Assisted Circuit Verification 综述：港中大（CUHK）发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.aspdac.com/aspdac2026/archive/pdf/3D-4.pdf" target="_blank" rel="noopener" class="link-btn">🔗 aspdac.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> Cadence 在 RTL/Logic/Physical Restructuring 方向的 PPA 优化方法</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://semiengineering.com/" target="_blank" rel="noopener" class="link-btn">🔗 semiengineering.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> Siemens 推出 GPU 加速计算光刻光栅化器</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://semiengineering.com/" target="_blank" rel="noopener" class="link-btn">🔗 semiengineering.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> SEMI 2026 全球晶圆制造产能报告：先进制程持续紧张</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.semi.org/" target="_blank" rel="noopener" class="link-btn">🔗 semi.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> DAC 2026 论文录用公布：接收率 22.3%，EDA 领域 CCF A 类唯一</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://dac.com/2026" target="_blank" rel="noopener" class="link-btn">🔗 dac.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> IEDM 2026 论文提交：5/26 开放、7/16 截止</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.semihub.io/blog/iedm-2026-cfp-guide.html" target="_blank" rel="noopener" class="link-btn">🔗 semihub.io</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> ISSCC 2026 强调 AI for IC &amp; SoC 创新主题</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.isscc.org/paper-submission" target="_blank" rel="noopener" class="link-btn">🔗 isscc.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> ASML EUV 路线图：High-NA EUV 量产与 Hyper-NA EUV 研发</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://semiengineering.com/" target="_blank" rel="noopener" class="link-btn">🔗 semiengineering.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> TSMC 3nm 涨价 15%、Samsung 2nm EDA 生态加速</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://semiengineering.com/" target="_blank" rel="noopener" class="link-btn">🔗 semiengineering.com</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-06-12.html" class="day-nav-btn">← 上一篇 2026-06-12</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-06-14.html" class="day-nav-btn">下一篇 2026-06-14 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

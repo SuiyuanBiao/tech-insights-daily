@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-07-13 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-07-13</div>
+    </div>
+    <div class="card">
+      <h2>【技术洞察】2026-07-13</h2>
+<p>
+> 报告时间：2026-07-13（周一）｜时间窗口：近 24-48 小时｜共 5 大板块 50 条
+> 权威优先：官方发布 > 顶会官网 > 权威媒体
+</p>
+<hr class="section-divider">
+<h2>一、人工智能 AI 领域（TOP10）</h2>
+<h3>1. OpenAI 发布 GPT-5.6 系列模型，Sol / Terra / Luna 三档齐发</h3>
+<ul>
+<li><strong>来源</strong>：钛媒体 / OpenAI 官方｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：OpenAI 正式推出 GPT-5.6 系列旗舰模型 Sol（$5/$30 per 1M token）、日常均衡型 Terra（$2.5/$15）、性价比 Luna（$1/$6），全基准超越 Claude Fable 5 且 token 消耗与推理成本大幅下降；同步将独立 Codex 客户端整合进 ChatGPT Work 智能体，可跨邮箱、日历、Slack、云盘、CRM 连续工作数小时输出成品。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>2. SpaceXAI × Cursor 联合发布 Grok 4.5，编程与 Agent 任务全面对标 Opus</h3>
+<ul>
+<li><strong>来源</strong>：钛媒体 / SpaceXAI 官方｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：首个专为编程与 Agent 任务训练的 Grok 4.5 模型，使用数万台 NVIDIA GB300 GPU 联合训练，基准全面超越 Opus 4.8，运行速度达 80 TPS，Token 效率为竞品两倍，单次任务步骤减半；定价为输入 \$2 / 输出 \$6 per 1M token，不足同类一半；马斯克宣布次日向公众开放。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>3. DeepSeek 推进自研 AI 推理芯片，降低算力对外依赖</h3>
+<ul>
+<li><strong>来源</strong>：路透社 / 钛媒体｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：国内头部大模型初创 DeepSeek 正在推进自有 AI 芯片研发，核心定位聚焦 AI 推理场景（非预训练 HPC 芯片），若量产将显著降低算力采购成本；中国头部开源/开放权重模型相比美国顶尖模型价格低 60-90%，在美企业调用中国模型词元占比周均超 30%、最高 46%。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>4. 美团 LongCat-2.0 正式开源，万亿参数全栈国产 5 万卡集群训练</h3>
+<ul>
+<li><strong>来源</strong>：美团技术团队 / AIToolly｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：万亿参数大模型 LongCat-2.0（总参数 1.6T，激活 33B-56B 平均 48B）正式开源，是行业首个在国产 5 万卡集群上完成训练与推理全生命周期的模型，原生支持 1M token 超长上下文，架构专为 Agentic Coding 任务优化；同步开源 VitaBench 2.0、WBench、General 365 三大基准，并入选 ICML/ACL 2026 多篇论文。</li>
+<li><strong>链接</strong>：https://aitoolly.com/ai-news/2026-07-13</li>
+</ul>
+<h3>5. 蚂蚁灵波开源 LingBot-Video，全球首个 MoE 架构具身智能视频基础模型</h3>
+<ul>
+<li><strong>来源</strong>：钛媒体 / 蚂蚁集团｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：基于 MoE 架构、面向具身智能的开源视频生成基础模型，融合 7 万小时具身数据，针对机器人重设计视频预训练范式；采用 DiT+MoE 架构，总参 30B、推理时仅激活约 3B，推理效率约同规模 Dense 的 3 倍；在北大联合字节发布的 RBench 上总分 0.620，超越 Wan2.6、Seedance 1.5 Pro、Cosmos3 Super。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>6. 2026 世界人工智能大会首秀：华为 Atlas 950、阶跃 Agent 操作系统、AI 智能体手机</h3>
+<ul>
+<li><strong>来源</strong>：上海市政府新闻发布会 / 钛媒体｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：WAIC 2026 围绕世界模型、开源智能体、AI Coding、Token 经济、OPC 等议题；展览将首发业界最大规模超节点华为 Atlas 950 真机、行业领先的多模态大模型、阶跃 Agent 操作系统、近存计算 3D 芯片、全球首款 AI 智能体手机及多款人形机器人与 AI 灵巧手。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>7. 词元无限发布企业级 AI Agent 平台，支持私有化部署</h3>
+<ul>
+<li><strong>来源</strong>：钛媒体｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：全自主、高安全、自进化企业级 AI Agent 平台，支持私有化部署与分级权限管控；覆盖研发全流程，InfCode、InfTest 等系列产品采用 RaaS 结果即服务模式；银行场景代码可用率超 88%，大型企业研发效率提升约 40%。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>8. 粤港澳大湾区国产智算超万卡集群在韶关上线，总算力 9000P</h3>
+<ul>
+<li><strong>来源</strong>：钛媒体｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：总投资 55 亿元，部署 11520 张昇腾国产 AI 加速算力芯片卡，整体性能达国际领先水平；标志国产大模型研发进入"算力自主"新阶段，联动国产芯片、操作系统、算法框架完善产业链生态。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>9. OpenAI 推出 GPT-Live 全双工语音模型，可同时听与说</h3>
+<ul>
+<li><strong>来源</strong>：钛媒体 / OpenAI 官方｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：基于全双工架构的新一代语音模型，可同时进行聆听和说话；OpenAI 将推出 GPT-Live-1 和 GPT-Live-1 mini 两个版本，与 GPT-5.6 协同构建多模态 Agent 入口。</li>
+<li><strong>链接</strong>：https://m.toutiao.com/group/7661921566388683310/</li>
+</ul>
+<h3>10. 阿联酋 TII 发布 Falcon H1R 7B 开源模型，性能比肩 47B</h3>
+<ul>
+<li><strong>来源</strong>：WAM Emirates News Agency｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：阿布扎比先进技术研究委员会（ATRC）下属 TII 发布 Falcon H1R 7B，仅 70 亿参数便在多基准上超越 Microsoft Phi 4 Reasoning Plus 14B、阿里 Qwen3 32B 与 NVIDIA Nemotron H 47B；以紧凑、高效、开放格式再次刷新小型开源模型能力上限。</li>
+<li><strong>链接</strong>：https://www.wam.ae/article/by2puv3-technology-innovation-institute-announces-release</li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域（TOP10）</h2>
+<h3>1. Meta FAIR 发布 Brain2Qwerty v2，非侵入式脑机接口文本解码</h3>
+<ul>
+<li><strong>来源</strong>：The Decoder / Meta FAIR｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：基于脑磁图（MEG）的非侵入式 BCI 文本解码系统，无需手术或击键时序；平均词错率 39%，最佳受试者降至 22%，28% 句子完美解码；为中风、ALS、脑损伤致残患者提供无创脑-文本通路。</li>
+<li><strong>链接</strong>：https://www.thelab.gr/news/</li>
+</ul>
+<h3>2. China NMPA 批准全球首个侵入式 BCI 医疗设备"NEO"商业化</h3>
+<ul>
+<li><strong>来源</strong>：Bird & Bird 法律观察｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：上海 Neuracle 联合清华研发的植入式手部运动功能补偿系统 NEO 获 NMPA 三类医疗器械批准，用于恢复颈脊髓损伤患者手部运动；48 小时内获医保编码，标志中国 BCI 正式进入"批准-报销"全周期；行业资本同步加速。</li>
+<li><strong>链接</strong>：https://www.twobirds.com/en/insights/2026/china/china-clears-worlds-first-invasive-braincomputer-interface-for-commercial-use-what-the-regulatory-la</li>
+</ul>
+<h3>3. 华为公布脑机接口新专利，基于宽谱脉冲光实现高空间分辨率</h3>
+<ul>
+<li><strong>来源</strong>：Shulou / 国家知识产权局｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：专利 CN116350174A 通过"宽谱脉冲光 + 时域延迟"技术获取不同波长探测光，无需多个光源即可在小型化前提下实现 BCI 高空间分辨率；对标 Neuralink 等侵入式方案的中国本土化探索。</li>
+<li><strong>链接</strong>：https://www.shulou.com/a588255</li>
+</ul>
+<h3>4. 潘建伟斩获 UNESCO 门捷列夫国际基础科学奖 + IEEE 量子电子学奖</h3>
+<ul>
+<li><strong>来源</strong>：大皖新闻 / UNESCO / IEEE Photonics｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：因"在大尺度安全量子通信和可扩展量子计算方面的开创性贡献"获第三届门捷列夫国际基础科学奖（7 月 17 日巴黎颁奖）；与陆朝阳同获 2026 IEEE Photonics Society 量子电子学奖，表彰单光子源与光学量子计算工作。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7661811456148521510/</li>
+</ul>
+<h3>5. 1X Technologies 发布 NEO's Hands，25 自由度仿人手逼近人类灵巧度</h3>
+<ul>
+<li><strong>来源</strong>：aitoolly / 1X 官方｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：NEO 仿人手采用 5:1-15:1 低齿比 + 25 自由度（22 指掌 + 3 腕）+ 力透明控制，可"输入式感知"接触力；具备本体感觉、IP68 防水、食品级安全；2026 年产能规划 1 万只；可执行拼乐高、拾螺丝、摘葡萄等精细任务。</li>
+<li><strong>链接</strong>：https://ai-damn.com/figure-ai-unveils-figure03-a-humanoid-robot-for-home-and-commercial-use-1760070314691</li>
+</ul>
+<h3>6. Figure AI 发布 Figure03 家用/商用量产人形机器人</h3>
+<ul>
+<li><strong>来源</strong>：AI D-A-M-N / Figure AI 官方｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：高 1.68m / 重 60kg / 载重 20kg / 1.2 m·s⁻¹，5 小时续航 + 无线充电；自研 Helix 视觉-语言-动作模型支持语音自主执行家务；相机帧率翻倍、延迟降 75%、视场扩 60%，手掌内嵌摄像头兜底；规划年产 1.2 万台、4 年内扩至 10 万台。</li>
+<li><strong>链接</strong>：https://ai-damn.com/figure-ai-unveils-figure03-a-humanoid-robot-for-home-and-commercial-use-1760070314691</li>
+</ul>
+<h3>7. 越南 VinDynamics × Skild AI 签 MOU，共推人形机器人基础模型</h3>
+<ul>
+<li><strong>来源</strong>：The Times Australia / Vingroup｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：聚焦具身 AI、机械臂、sim-to-real、边缘 AI 部署；将 Skild Brain omnibodied 模型集成进 VinDynamics 人形机器人；Skild AI 估值超 140 亿美元，由软银、英伟达风投、贝索斯、Lightspeed、Coatue、Sequoia 等投资。</li>
+<li><strong>链接</strong>：https://thetimes.com.au/news/news-from-asia/50760-vindynamics-and-skild-ai-form-strategic-partnership-to-advance-humanoid-robotics</li>
+</ul>
+<h3>8. UBTech 推出全球首款可量产超写实陪伴人形机器人 U1</h3>
+<ul>
+<li><strong>来源</strong>：Bisik.id / UBTech 官方｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：面向独居/老人群体的 AI 陪伴机器人，具备情绪识别与长期记忆；硅胶皮肤 + 摄像头眼睛可检测疲劳/压力；分男女版、119,800 元起，最高 99 万元；目标中国市场 2026 年庞大养老陪伴空白。</li>
+<li><strong>链接</strong>：https://bisik.id/read/ubtech-rilis-robot-humanoid-u1-teman-ai-untuk-lawan-kesepian-1783927941249</li>
+</ul>
+<h3>9. UNIST / 东京大学提出 V-Die 与 MOSAIC 新一代 HBM 架构</h3>
+<ul>
+<li><strong>来源</strong>：TheLab.gr / IEEE/JSAP Symposium on VLSI 2026｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：UNIST V-Die 将 DRAM 竖直放置 + TSV + 液冷通道，在等容量 GPT-3 负载下模拟达 540 tokens/s，对比 HBM4 的 296 tokens/s；东京大学 MOSAIC 采用矩形堆叠 + 无接触电感耦合互连；同在 VLSI 2026 发表，挑战传统堆叠 HBM 热瓶颈。</li>
+<li><strong>链接</strong>：https://www.thelab.gr/news/</li>
+</ul>
+<h3>10. SK hynix + TetraMem + USC 联合展示 Memristor SoC 面向边缘 AI</h3>
+<ul>
+<li><strong>来源</strong>：TheLab.gr / Tom's Hardware｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：三方合作研发 memristor SoC，针对 depthwise convolution 优化；理论峰值 2.54 TOPS，约为微软 Copilot+ 计划的 1/16；仍处 PoC 阶段，无商业化时间表；为低功耗边缘神经网络推理探索新路径。</li>
+<li><strong>链接</strong>：https://www.thelab.gr/news/</li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计（TOP10）</h2>
+<h3>1. Krste Asanović 在 RISC-V Summit Europe 2026 发布主题演讲：RISC-V 不可避免</h3>
+<ul>
+<li><strong>来源</strong>：EE Times / RISC-V International｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：SiFive 首席架构师宣告 RISC-V 已"上强度"，开始与 x86/ARM 在企业服务器正面竞争；RVA23 标准化使高能效数据中心级 RISC-V 硅片今年真正落地；新优化指引选项 Oilsm/Ovlt 锁定非对齐访问性能；CHERI 不再以扩展而是 RV32Y/RV64Y 全新基 ISA 形式落地。</li>
+<li><strong>链接</strong>：https://www.eetimes.com/risc-v-is-inevitable-state-of-the-union-keynote-argues/</li>
+</ul>
+<h3>2. SemiAnalysis：苹果部分嵌入式 Core 加速转向 RISC-V 架构</h3>
+<ul>
+<li><strong>来源</strong>：Shulou / SemiAnalysis｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：Dylan Patel 指出苹果 SoC 内 30+ 个 WiFi/蓝牙/触盘/NAND 控制器嵌入式核心正从 ARM M 系列向 RISC-V 迁移，Google TPU 亦在部分设计中采用 SiFive X280；BSD 许可下苹果可能走 Apple ISA 闭源路线，以节省巨额授权费。</li>
+<li><strong>链接</strong>：https://www.shulou.com/a540572</li>
+</ul>
+<h3>3. SiFive 4 亿美元 G 轮融资，Nvidia/Atreides 等参投</h3>
+<ul>
+<li><strong>来源</strong>：Semiconductor Engineering / Q2 2026 Startup Funding｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：SiFive G 轮融资 4 亿美元，Atreides Management 领投，Apollo、Nvidia、Point72 Turion、T. Rowe Price、Prosperity7、Sutter Hill 等参投；资金将加速 RISC-V CPU 与 AI IP 面向数据中心的开发。</li>
+<li><strong>链接</strong>：https://semiengineering.com/startup-funding-q2-2026/</li>
+</ul>
+<h3>4. ISSCC 2026：清华赵章组/中科院推出 112Gb/s 无参考混合信号 PAM-4 CDR</h3>
+<ul>
+<li><strong>来源</strong>：dblp / ISSCC 2026 Proceedings｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：28nm CMOS 工艺，0.76pJ/b 能效，无参考时钟 PAM-4 时钟数据恢复；中科院半导体所赵章组同期还展示 0.65-1V 10.5-11.85GHz 分数-N 采样 PLL（71.47fs 积分抖动、-60dBc 邻整数杂散，40nm CMOS）等多篇 ISSCC 论文。</li>
+<li><strong>链接</strong>：https://dblp.org/pid/87/6853-4.html</li>
+</ul>
+<h3>5. arXiv：FPGN 用可微 LUT 重新定义超快可编程神经加速</h3>
+<ul>
+<li><strong>来源</strong>：arXiv 2607.08427｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：Jiawei Liang 等提出基于可微查找表（LUT）的现场可编程门阵列式神经加速方案，将 LUT 重新定义为"可微神经元"以支持端到端训练与推理；以 Ultra-Fast Programmable 范式重塑神经加速器的可编程性与能效。</li>
+<li><strong>链接</strong>：https://arxiv.org/list/cs.AR/recent</li>
+</ul>
+<h3>6. CHICO-Agent：面向 2.5D/3D Chiplet 系统的 LLM 跨层优化 Agent</h3>
+<ul>
+<li><strong>来源</strong>：arXiv 2604.18764 (Qihang Wu, Aman Arora, Vidya A. Chhabria)｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：基于大语言模型 Agent 的 Chiplet 跨层优化框架，串联工艺-封装-架构-EDA 工具链；与同组 Spec2Cov（代码覆盖率闭合 Agent）、CarbonPATH（碳感知路径规划）、OpenFPGA-NoC 等共同构成 LLM-for-EDA 系列。</li>
+<li><strong>链接</strong>：https://dblp.org/pid/75/912-1.html</li>
+</ul>
+<h3>7. NEMESIS：Netlist 驱动的 SPICE 反演感知建模与方程综合</h3>
+<ul>
+<li><strong>来源</strong>：arXiv 2607.05657 (Subhadip Ghosh 等)｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：被 IEEE International Conference on LLM-Aided Design 2026 接收，2026 年 7 月 30-31 日斯坦福大学举办；将 LLM 引入 SPICE 建模与方程综合，显著加速模拟集成电路设计验证。</li>
+<li><strong>链接</strong>：https://arxiv.org/list/cs.AR/recent</li>
+</ul>
+<h3>8. FPGA 2026：Boosting FPGA Performance with Direct BRAM-DSP Paths</h3>
+<ul>
+<li><strong>来源</strong>：arXiv 2607.05756 (Hu, Sunketa, Boutros, Arora)｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：FPGA 2026 接收论文，通过在 BRAM 与 DSP 之间建立直连数据通路，绕过通用逻辑路由，显著提升 FPGA 上 DNN 加速器吞吐与能效。</li>
+<li><strong>链接</strong>：https://arxiv.org/list/cs.AR/recent</li>
+</ul>
+<h3>9. "Is Your NPU Ready for LLMs?"：基于可重构 ISA 的 NPU 架构</h3>
+<ul>
+<li><strong>来源</strong>：arXiv 2607.05475 (Sakellariou 等)｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：针对 LLM 工作负载提出可重构、表示自适应的 NPU 指令集；解决不同 LLM 模型在量化精度、稀疏模式、张量布局上的差异，让 NPU 通过指令级灵活性适配多类 LLM 推理。</li>
+<li><strong>链接</strong>：https://arxiv.org/list/cs.AR/recent</li>
+</ul>
+<h3>10. FPL 2025 / FCCM 2026：AMD Versal AIE-ML 上的 GEMM 与拓扑优化加速</h3>
+<ul>
+<li><strong>来源</strong>：dblp (Aman Arora)｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：Mhatre 等将 CRONet 与拓扑优化迁移到 AMD Versal AIE-ML 引擎，FCCM 2026 接收；FPL 2025 GAMA 已在 ML 优化 AIE 上展示高性能 GEMM 加速；为 AIE-ML 平台上的 AI 工作负载落地提供系统级路径。</li>
+<li><strong>链接</strong>：https://dblp.org/pid/75/912-1.html</li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端 / EDA / 工艺（TOP10）</h2>
+<h3>1. Samsung 在 VLSI 2026 展示 3D Stacked FET 三层纳米片器件</h3>
+<ul>
+<li><strong>来源</strong>：Noah News / VLSI Symposium 2026｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：Samsung 半导体研究中心展示 42nm gate pitch + 三层堆叠 nanosheet channel 的 3D Stacked FET（3DSFET），被 VLSI 2026 评为 Best Paper；研究聚焦外延生长降低 channel 缺陷、用三种 Ge 浓度层精确形成中段介质隔离；为 SF1.4 及后续节点铺路。</li>
+<li><strong>链接</strong>：https://noah-news.com/samsung-advances-3d-stacked-fet-technology-to-overcome-horizontal-scaling-limits/</li>
+</ul>
+<h3>2. 台积电 CoWoS 月产能 2027 年冲向 20 万片，联发科 350% 暴增</h3>
+<ul>
+<li><strong>来源</strong>：36 氪 / 摩根士丹利 / DIGITIMES / Mizuho｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：TSMC 将 2026 年底 CoWoS 月产能指引从 12 万片提至 14 万片，2027 年达 19-20 万片；供需缺口从 \~20% 收窄至 \~10%；客户结构从 NVIDIA 一家独大转向 GPU+CPU+ASIC 三足鼎立，联发科从 40k 暴涨至 180k（350%），主因谷歌 TPU v8t 等 ASIC。</li>
+<li><strong>链接</strong>：https://eu.36kr.com/zh/p/3892020701149697</li>
+</ul>
+<h3>3. 长电科技 14 亿美元 AI 先进封装 capex，重塑跨海封装供应链</h3>
+<ul>
+<li><strong>来源</strong>：36 氪 / VendorDeep｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：JCET 2026 年 14 亿美元 capex 聚焦 CoWoS 类、Chiplet、HBM、2.5D/3D 先进封装；与 TSMC 形成"双轨扩产"，TSMC 占高端 CoWoS \~70%，JCET/Amkor/ASE 共占 30%；服务华为昇腾 910C、寒武纪、璧仞等本土 ASIC/HBM 封装需求。</li>
+<li><strong>链接</strong>：https://eu.36kr.com/zh/p/3892020701149697</li>
+</ul>
+<h3>4. 三星完成特斯拉 AI5 芯片 tape-out，2nm 工艺 Taylor 厂量产在即</h3>
+<ul>
+<li><strong>来源</strong>：TrendForce / 凤凰网科技｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：Samsung Foundry 工程师在 LinkedIn 透露特斯拉 AI5 芯片已完成 tape-out（已删帖），将由三星 2nm 工艺在德州 Taylor 厂生产，集成进特斯拉新品；Tesla AI5 将由三星与台积电分单，AI6 由三星独供，AI6.5 由台积电独供；Taylor 厂 2024 年 4 月起搬入设备、计划 2027 年 ramp。</li>
+<li><strong>链接</strong>：https://www.trendforce.com/news/2026/07/13/news-samsung-reportedly-completes-tesla-ai5-tape-out-paving-the-way-for-2nm-ramp-at-taylor-fab/</li>
+</ul>
+<h3>5. Intel 推进 1.4nm（14A2）双面供电，对标台积电</h3>
+<ul>
+<li><strong>来源</strong>：DIGITIMES Asia｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：Intel 正在为下一代 1.4nm 工艺 14A2 准备新路线图，评估芯片双面供电（backside power）混合架构；与 Samsung 双轨推进尖端节点，意在 14A 系列重新拿回工艺领先。</li>
+<li><strong>链接</strong>：https://apps.digitimes.com/news/a20260713PD220/intel-1.4nm-tsmc-samsung-technology.html</li>
+</ul>
+<h3>6. 台积电嘉义园区第二期动工，专攻先进封装</h3>
+<ul>
+<li><strong>来源</strong>：DIGITIMES Asia / TSMC｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：嘉义科学园区第二期约 90 公顷土地正式动工，TSMC 领衔打造以先进封装为中心的产业聚落；与新竹、台南既有枢纽形成分布式风险共担的"硅盾"格局，强化台湾在全球 AI 算力供应链中的关键地位。</li>
+<li><strong>链接</strong>：https://apps.digitimes.com/tag/tsmc/001264.html</li>
+</ul>
+<h3>7. Samsung 联合 Samsung Display 研发玻璃中介层，目标降封装成本</h3>
+<ul>
+<li><strong>来源</strong>：DIGITIMES Asia｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：Samsung Electronics 与 Samsung Display 共同开发新一代玻璃中介层（glass interposer），相比硅中介层在大尺寸先进封装中具成本与翘曲优势；面对台积电 CoWoS 扩产压力，三星在封装侧同步加码差异化。</li>
+<li><strong>链接</strong>：https://apps.digitimes.com/tag/tsmc/001264.html</li>
+</ul>
+<h3>8. ASP-DAC 2026 / DAC 2026 论文聚焦 AI 系统、内存架构与 Chiplet</h3>
+<ul>
+<li><strong>来源</strong>：dblp / arXiv 2607.08794｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：ASP-DAC 2026 已于 2026 年 1 月 19-22 日香港举办，覆盖 AI 系统、内存架构、Photonic/RF、Physical Design 等 12 大主题；DAC 2026 接收论文 arXiv 2607.08794《Accelerating GPU Inference of LLMs with Moderately Unstructured Sparse Weight Matrices》探索 GPU LLM 推理加速。</li>
+<li><strong>链接</strong>：https://dblp.org/db/conf/aspdac/index.html</li>
+</ul>
+<h3>9. arXiv：GPU 加速 3D IC 电源分配网络有效电阻分析</h3>
+<ul>
+<li><strong>来源</strong>：arXiv 2607.05818 (Hu, Zhuo, Jin)｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：针对 3D IC PDN（power delivery network）有效电阻分析提出 GPU 加速方法，显著加速大规模 3D 封装电源/地网络仿真；为 3D IC 物理签核与电源完整性验证提供新工具。</li>
+<li><strong>链接</strong>：https://arxiv.org/list/cs.AR/recent</li>
+</ul>
+<h3>10. ASML 2026 年 EUV 产能指引 90 台、2028 年 100+ 台</h3>
+<ul>
+<li><strong>来源</strong>：Simply Wall St / Reuters / DIGITIMES｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：ASML 2026 营收指引上调至 360-400 亿欧元；EUV 系统订单积压 450 亿欧元创纪录；2027 年 EUV 产能将达 90 台，2028 年突破 100 台；ASML 同步领投 Mistral AI 17 亿欧元 C 轮，与欧洲 AI 生态深度绑定。</li>
+<li><strong>链接</strong>：https://simplywall.st/stocks/nl/semiconductors/ams-asml/asml-holding-shares/future</li>
+</ul>
+<hr class="section-divider">
+<h2>五、CPU × 5G 提频（TOP10）</h2>
+<h3>1. AMD Zen 6 EPYC 7 月 22 日发布，2nm + 256 核 16 通道 DDR5</h3>
+<ul>
+<li><strong>来源</strong>：TopCPU / AMD 官方 Advancing AI 活动预告｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：AMD 在 7 月 22-23 日 Advancing AI 大会上正式发布 Zen 6 EPYC，是业界首款基于 TSMC 2nm 的高性能处理器；旗舰 256 颗 Zen 6C 核（较前代 192 核提升 33%），Zen 6 单核版最高 96 核；16 通道 DDR5 提供 1.6 TB/s 内存带宽，支持 PCIe 6.0；晶体管密度提升 30%，整体性能提升 70%。</li>
+<li><strong>链接</strong>：https://www.topcpu.net/en/news/amd-zen-6-epyc-launch-july-22-2nm-256-core</li>
+</ul>
+<h3>2. 联发科 CoWoS 需求翻 3.5 倍，剑指 AI 服务器 CPU 与 5G 加速</h3>
+<ul>
+<li><strong>来源</strong>：36 氪 / DIGITIMES｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：联发科 CoWoS 需求从 40k 片飙至 180k 片（增长 350%），主因基于 ARM 的 AI 服务器 CPU（CoWoS-R 工艺）以及承接谷歌 TPU v8t（ZebraFish）ASIC 大单，预计对应 360 万颗芯片出货；从传统手机 SoC 厂商向云端/边缘 AI 加速器跨越。</li>
+<li><strong>链接</strong>：https://eu.36kr.com/zh/p/3892020701149697</li>
+</ul>
+<h3>3. 高通 X105 5G 调制解调器及射频发布：全球首款 R19 就绪 5G Advanced</h3>
+<ul>
+<li><strong>来源</strong>：Qualcomm 中国新闻中心｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：高通发布 X105 5G Modem-RF，全球首款面向 3GPP Release 19 就绪的调制解调器，实现 5G Advanced 关键跃升，为 6G 奠定基础；并联合多家行业领军企业推动 6G 商用自 2029 年起逐步实现。</li>
+<li><strong>链接</strong>：https://www.qualcomm.cn/news</li>
+</ul>
+<h3>4. 高通 × Meta 达成数据中心 CPU 多代战略合作</h3>
+<ul>
+<li><strong>来源</strong>：Qualcomm 官方新闻稿｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：高通与 Meta 宣布就数据中心 CPU 达成多代战略合作协议，强化高通面向 AI 数据中心的自研 CPU 路线图（基于 Nuvia 团队技术）；同步推出"高通飞龙"产品组合，标志高通正式以 CPU IP 重塑云端 AI 算力版图。</li>
+<li><strong>链接</strong>：https://www.qualcomm.cn/news</li>
+</ul>
+<h3>5. 高通骁龙 C 平台重塑入门级笔记本，ARM CPU 携 5G 提频</h3>
+<ul>
+<li><strong>来源</strong>：Qualcomm 中国新闻中心｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：骁龙 C 平台瞄准入门级笔记本体验，结合 ARM 架构能效与 5G 始终连接；为 5G 蜂窝连接下的 ARM SoC 在长续航场景提供 CPU 频率调度基础。</li>
+<li><strong>链接</strong>：https://www.qualcomm.cn/news</li>
+</ul>
+<h3>6. AMD Ryzen 9 9955HX3D 移动旗舰发布，3D V-Cache 加持游戏/创作提频</h3>
+<ul>
+<li><strong>来源</strong>：AMD 官方 / Framework 社区｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：世界最快移动游戏处理器，16 核 32 线程，Boost 5.4 GHz，128MB L3（三代 3D V-Cache），TSMC 4nm FinFET；游戏相比 Intel Core Ultra 9 285HX 提升 5-44%；同代 Lenovo Legion R9000X 2026 搭载 Ryzen AI Max+ 392，5GHz Boost、120W 性能释放。</li>
+<li><strong>链接</strong>：https://community.frame.work/t/i-wonder-if-the-16-will-get-this-chip-from-amd/83493</li>
+</ul>
+<h3>7. Lenovo ThinkCentre Neo 50q Gen 6 改用 Intel Lunar Lake，AI 算力提频</h3>
+<ul>
+<li><strong>来源</strong>：NotebookCheck｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：1L 迷你主机从高通 Snapdragon 切到 Intel Lunar Lake；Core Ultra 5 226V 8 核 3.5-4.5 GHz + 40 TOPS NPU + Arc 130V；Core Ultra 7 256V 提频更强 + Arc 140V；售价 1,179 美元起，瞄准本地 AI + 5G 边缘计算场景。</li>
+<li><strong>链接</strong>：https://www.notebookcheck.net/New-Lenovo-ThinkCentre-mini-PC-launches-with-16GB-RAM-and-Intel-Lunar-Lake-starting-at-1-179.1341162.0.html</li>
+</ul>
+<h3>8. 高通收购 Modular 公司，强化 vRAN/Open RAN CPU 调度</h3>
+<ul>
+<li><strong>来源</strong>：Qualcomm 官方新闻稿｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：高通宣布收购 Modular 公司，将 Modular 容器化/虚拟化 RAN 编排能力整合到高通 X100/X85 等 5G 基带 + CPU 平台；为 Open RAN/vRAN 中 CPU 与基带协同提频提供"调度大脑"。</li>
+<li><strong>链接</strong>：https://www.qualcomm.cn/news</li>
+</ul>
+<h3>9. 高通面向 RAN 平台推出 AI 增强特性与智能体 RAN 管理</h3>
+<ul>
+<li><strong>来源</strong>：Qualcomm 官方新闻稿｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：在商用 RAN 平台引入 AI 原生特性与智能体 RAN 管理服务，加速电信运营商在通往 6G 路上创造价值；为 vRAN/Open RAN 中 CPU 资源分配与 5G 切片提供 AI 调度。</li>
+<li><strong>链接</strong>：https://www.qualcomm.cn/news</li>
+</ul>
+<h3>10. 高通 Snapdragon Ride 平台至尊版推动舱驾智能与机器人扩展</h3>
+<ul>
+<li><strong>来源</strong>：Qualcomm 中国新闻中心｜<strong>时间</strong>：2026-07-13</li>
+<li><strong>核心要点</strong>：卓驭科技与高通基于 Snapdragon Ride 平台至尊版合作扩展舱驾智能；元戎启行基于同平台推动 VLA 模型在中国量产；高通跃龙 IQ10 RRD 面向机器人的全栈参考设计发布；车端 5G 调制解调器与 CPU 协同提频加速智能驾驶普及。</li>
+<li><strong>链接</strong>：https://www.qualcomm.cn/news</li>
+</ul>
+<hr class="section-divider">
+<h2>附：本报告由 aily 智能助手自动汇总整理</h2>
+<ul>
+<li>数据来源：官方发布 / 顶会官网 / 权威媒体；时间窗口：近 24-48 小时</li>
+<li>共 5 大板块、50 条核心洞察，涵盖 AI、电子科技全领域、芯片设计、芯片后端/EDA/工艺、CPU × 5G 提频</li>
+<li>下期报告将于 2026-07-14 自动生成</li>
+</ul>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
+  </div>
+</body>
+</html>

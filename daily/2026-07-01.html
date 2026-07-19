@@ -1,638 +1,431 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-07-01 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-07-01 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-07-01 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-07-01</h2>
-    <p class="daily-stats">共 5 个板块 · 50 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-07-01</div>
+    </div>
+    <div class="card">
+      <p>
+<callout emoji="📌">
+<strong>报告生成时间：</strong>2026-07-01（周三）　<strong>覆盖窗口：</strong>最近 24 小时（部分扩展至 48 小时）　<strong>信息源：</strong>官方发布 / 权威媒体 / 顶会官网
+</callout>
+</p>
+<h2>一、人工智能 AI 领域（TOP10）</h2>
+<p>
+<callout emoji="🤖">
+聚焦大模型、AI Agent、具身智能、AI4Science、推理能力突破、开源模型、AI 安全与对齐、AI 芯片、行业落地。来源覆盖美团、DeepSeek、华为、OpenAI、智元、智谱、Meta、Anthropic、Nous Research、新华网、36 氪等。
+</callout>
+</p>
+<p>
+1. <strong>美团开源 1.6 万亿 MoE 大模型 LongCat-2.0，5 万张国产加速器全流程跑通</strong>
+<strong>来源：</strong>美团官方 / 澎湃新闻 / 36 氪　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>全球首个依托国产加速器集群完成训练+推理全链路的 1.6T MoE 模型，单次推理平均激活 480 亿参数，原生支持 100 万 Token 上下文。代码基准 SWE-bench Pro 59.5 分，超过 GPT-5.5（58.6）和 Claude Opus 4.6（57.3）。训练峰值 5 万张国产 AI 加速器，集群算力利用率 42%+，训练成本相比海外集群下降 31%。MIT 协议开源。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank">今日头条报道</a>
+2. <strong>DeepSeek V4 正式版 7 月中旬上线，启用国内首个峰谷分时计费机制</strong>
+<strong>来源：</strong>DeepSeek 官方 / 第一财经 / 界面新闻　<strong>时间：</strong>2026-06-29
+<strong>核心要点：</strong>工作日 9-12、14-18 点（合计 7 小时）高峰时段 API 价统一翻倍，夜间与周末维持谷价。V4-Pro 缓存命中 0.025→0.05 元/百万 Token，V4-Flash 同步调整。V4 正式版将集成 DSpark 投机解码框架（V4-Flash 提速 60-85%）、100 万 Token 上下文、自动语义缓存引擎。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank">今日头条深度报道</a>
+3. <strong>OpenAI 通过系统底层优化，模型推理成本降低 50% 以上</strong>
+<strong>来源：</strong>36 氪 / 界面新闻　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>OpenAI 工程师在内部透露，公司已通过一系列全新的系统底层优化（涉及推理服务、KV Cache、调度等基础设施层），成功将 AI 模型推理（运行）成本降低 50% 以上，是今年行业最大的成本侧突破之一。
+<strong>链接：</strong><a href="https://36kr.com/newsflashes/3876288840331266" target="_blank">36 氪快讯</a>
+4. <strong>智元第 1.5 万台具身机器人下线，工厂实景作业成功率 99.99%</strong>
+<strong>来源：</strong>智元机器人 / 36 氪　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>智元第 1.5 万台具身机器人正式下线，龙旗工厂 60 个具体问题的修复，6 天 64 小时作业覆盖 10 省市。99.99% 作业成功率背后是「工厂+机器人+零部件供应商」深度协同的 know-how，是后入局者短期难以复制的护城河。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank">今日头条 AI 日报</a>
+5. <strong>华为开源盘古 openPangu-2.0-Flash，920 亿参数，原生昇腾</strong>
+<strong>来源：</strong>华为官方 / 腾讯研究院　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>openPangu 是华为开源 AI 模型品牌，依托昇腾原生训练与推理技术。2.0-Flash 版同步开放模型权重、基础推理代码与训推算子。openPangu-2.0-Pro 权重及推理代码将于 7 月上线，更多开源组件下半年陆续推出。
+<strong>链接：</strong><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank">腾讯研究院 AI 速递</a>
+6. <strong>Hermes Agent 上线 MoA 混合智能体，HermesBench 评分超 Opus 4.8</strong>
+<strong>来源：</strong>Nous Research / 36 氪 / 腾讯研究院　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>MoA（Mixture of Agents）支持自由组合多种开源模型作为「参考模型+聚合模型」。在 HermesBench 上，MoA 评分 0.8202，显著超过单独 Claude Opus 4.8（0.7607）和 GPT-5.5（0.7412）。多视角覆盖盲区、错误互相纠正、共识即信号是三大机制。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657411078791365171/" target="_blank">今日头条深度评测</a>
+7. <strong>OpenAI 首款硬件 Codex Micro 曝光，与 Work Louder 联名客制化键盘</strong>
+<strong>来源：</strong>腾讯研究院 / The Information　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>Codex Micro 是一款与键盘厂商 Work Louder 联名的客制化键盘，旨在提升开发者使用 Codex 编程工具的效率。键盘深度适配工作流，旋钮可调节 AI 生成代码的「创造力阈值」。OpenAI 硬件战略双线并行：B 端以务实配件固化生态，C 端与前苹果设计官 Jony Ive 合作研发取代智能手机的 AI 原生终端。
+<strong>链接：</strong><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank">腾讯研究院 AI 速递</a>
+8. <strong>智谱 GLM-5.2 在 Code Arena 取得全球可用模型第一</strong>
+<strong>来源：</strong>智谱 / 新华网　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>在 Code Arena 百万用户参与盲测的前端开发评估系统中，智谱新一代旗舰 GLM-5.2 取得全球可用模型第一。在编码与 Agent 评测中达到行业顶尖水平，是国产开源模型在工程代码场景反超闭源的代表性事件。
+<strong>链接：</strong><a href="http://www.xinhuanet.com/20260701/d9a7a20080c24c4b8febfed1ae010dd3/c.html" target="_blank">新华网特稿</a>
+9. <strong>Meta 发布非侵入式脑机接口 Brain2Qwerty v2，开源完整训练代码</strong>
+<strong>来源：</strong>Meta AI / 腾讯研究院　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>基于脑磁图记录实现实时句子级解码，准确率逼近此前需开颅手术才能达到的水平。v1、v2 完整训练代码开源，训练数据来自 9 名志愿者每人 10 小时、累计约 22000 条真实打字记录。整体单词准确率 61%，最佳参与者 78%，远超此前非侵入方法的 8%。
+<strong>链接：</strong><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank">腾讯研究院 AI 速递</a>
+10. <strong>OpenSquilla 0.4.0：编码 Agent 引入「自我验证」机制</strong>
+<strong>来源：</strong>封面新闻　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>开源 AI Agent 项目 OpenSquilla 发布 0.4.0 版本，核心更新是推出编码工作流 coding 模式，并首次为 AI 编码引入「自我验证」机制——AI 不再止步于「我改好了」的口头交付，而是先用测试为自己跑出一份「红绿回归证据链」再交付，把验证内化进 Agent 自身。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657448436848935433/" target="_blank">封面新闻</a>
+</p>
+<h2>二、电子科技·全领域（TOP10）</h2>
+<p>
+<callout emoji="⚡">
+覆盖计算机体系结构、机器人、脑机接口、量子计算、自动驾驶、XR/AR/VR、网络通信、光电、半导体等泛电子科技领域。
+</callout>
+</p>
+<p>
+1. <strong>高通官宣 2026 骁龙峰会 9 月 22-24 日举行，2nm 骁龙 8 Elite Gen6 系列将发布</strong>
+<strong>来源：</strong>高通官方 / CNMO 科技 / 半导体投资联盟　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>高通在 2025 骁龙峰会上发表以台积电 N3P 制程打造的「骁龙 8 Elite Gen 5」，今年骁龙 8 Elite Gen6 系列将基于台积电 2nm（N2 / N2P）工艺打造。台积电 2nm 良率已达标。安卓阵营第一款规模化商用的 2nm 手机 SoC，将由小米 18 系列首发。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657336044957778442/" target="_blank">CNMO 科技</a>
+2. <strong>中南大学侵入式 BCI 视觉重建临床试验取得新进展</strong>
+<strong>来源：</strong>证券时报网　<strong>时间：</strong>2026-06-26
+<strong>核心要点：</strong>许惠卓教授团队为一名失明多年的受试者植入团队自主研发的「IMIE 智能视网膜系统」，受试者已初步实现视觉重建。该试验由中南大学牵头，属侵入式脑机接口领域的重要突破。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank">金飞鹰药械每日简报</a>
+3. <strong>广东、安徽脑机接口政策密集落地，国内首个省级医保政策</strong>
+<strong>来源：</strong>南方财经网 / 安徽新闻网　<strong>时间：</strong>2026-06-26
+<strong>核心要点：</strong>广东 6 月 25 日发布政策，将脑机接口相关服务纳入医疗服务价格项目，标志着国内首个省级层面的医保政策落地，BCI 商业化路径进一步清晰。安徽 6 月 25 日召开全省人工智能和脑机接口产业推进会，王清宪省长强调「保持战略敏捷，强化应用引领」。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank">BCI 每日简报</a>
+4. <strong>小米 MIX Fold5 入网 3C，独家首发玄戒 O3 自研 3nm 芯片 + 澎湃 OS4</strong>
+<strong>来源：</strong>泡泡网　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>小米阔折叠（MIX Fold5）顺利通过 3C 认证，标配 100W 快充。独家首发玄戒 O3 自研芯片（台积电 3nm，2+3+3 架构，超大核 4.05GHz / 大核 3.42GHz / 小核 3.02GHz，GPU 频率 1.49GHz、带宽 9600MT/s），澎湃 OS4 全面重构底层、Rust 重写核心模块。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657386542192755241/" target="_blank">泡泡网</a>
+5. <strong>vivo X500 Pro Max 影像规格曝光，全球首发天玑 9600 Pro 2nm 旗舰</strong>
+<strong>来源：</strong>CNMO 科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>vivo X500 Pro Max 搭载 50MP 1/1.28 英寸索尼 LOFIC 超大底主摄（动态范围 16EV+）、200MP 1/1.4 英寸 85mm 潜望长焦、50MP 小底超广角。全球首发联发科天玑 9600 Pro（首款基于台积电 2nm 工艺的量产手机 SoC），预计面向全球市场发售。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657366974904713769/" target="_blank">CNMO 科技</a>
+6. <strong>Neuralink N1 脑机接口美国临床试验 10 月启动</strong>
+<strong>来源：</strong>Neuralink 官方 / DJ Seo 公开演讲　<strong>时间：</strong>2026-07-01（综合报道）
+<strong>核心要点：</strong>Neuralink 计划于 2025 年 10 月在美国开始脑机接口 BCI 临床试验，可直接读取大脑中的「说话信号」并转化为文本。FDA 已批准该研究，公司正考虑在 2030 年前向健康人植入设备，标志着脑机接口向消费级迈进的拐点。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank">BCI 每日简报</a>
+7. <strong>S1500 飞行风力涡轮机新疆沙漠首飞成功，1 兆瓦级输出</strong>
+<strong>来源：</strong>中新网 / Sawes Energy Technology　<strong>时间：</strong>2026-07-01（综合报道）
+<strong>核心要点：</strong>全球最大、最强飞行风力涡轮机 S1500 于 9 月 19-21 日在新疆沙漠完成首飞测试，峰值输出 1 兆瓦。质量生产计划 2026 年启动，可作为「飞行充电宝」在灾后停电场景中快速恢复医院、通信塔等关键设施电力。
+<strong>链接：</strong><a href="https://m.book118.com/html/2026/0629/8122054030010105.shtm" target="_blank">公开技术资料</a>
+8. <strong>7 月新机潮：REDMI / iQOO / 三星折叠屏集体亮相，中低端成看点</strong>
+<strong>来源：</strong>36 氪 / 雷科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>REDMI Note17 系列搭载骁龙 6 Gen5 4nm 芯片 + 9000mAh 电池 + 1.5K OLED 直屏。三星 Z Fold8 改用 16:10 宽屏（4.5mm 展开 / 9.7mm 折叠 / 201g），搭载定制骁龙 8 Elite Gen5、5000 万主摄。努比亚 All in 豆包手机。涨价潮下厂商策略明显保守。
+<strong>链接：</strong><a href="https://36kr.com/p/3876487460649860" target="_blank">36 氪</a>
+9. <strong>无锡医学中心脑机接口创新平台揭牌，9 只脑机接口概念股涨停</strong>
+<strong>来源：</strong>无锡日报 / 时代在线　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>6 月 29 日无锡医学中心脑机接口创新平台暨无锡市高水平医院揭牌仪式在市人民医院举行，无锡正式落地 BCI 产学研医协同创新平台。9 只脑机接口概念股涨停，产业迈入商业化探索期。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank">BCI 每日简报</a>
+10. <strong>无锡医学中心同步发布，中国智能医疗设备亮相全球（康复机器人+BCI）</strong>
+<strong>来源：</strong>Global Times　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>在 Global Times 报道中，康复机器人、脑机接口康复设备及胶囊内镜正成为全球智能医疗的核心赛道，中国企业持续加大布局力度。BCI 与康复机器人成为焦点。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank">BCI 每日简报</a>
+</p>
+<h2>三、电子科技·芯片设计（TOP10）</h2>
+<p>
+<callout emoji="🔬">
+聚焦 ISSCC、VLSI Symposium、IEDM、JSSC、TVLSI 等顶会/期刊最新论文；关注先进制程、存算一体、Chiplet/异构集成、RISC-V/开源芯片、AI 芯片、通信芯片、GPU 与芯片架构创新。
+</callout>
+</p>
+<p>
+1. <strong>Tenstorrent 发布 RISC-V CPU TT-Ascalon S，单位面积性能提升 140%</strong>
+<strong>来源：</strong>IT 之家 / 凤凰网科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>由知名芯片设计师 Jim Keller 领导的 Fabless 企业 Tenstorrent 于 TT-Deploy JP 大会（东京）发布 RISC-V CPU 内核 TT-Ascalon S。Ascalon S 以旗舰核心 Ascalon X 一半的面积实现后者 70% 的性能，单位面积性能提升 1.4 倍。Galaxy Blackhole「超级集群」在 Kimi K2.6 上达 900 Token/s/user，是 GPU 的 3 倍。
+<strong>链接：</strong><a href="https://tech.ifeng.com/c/8uOsI7Ij8LI" target="_blank">凤凰网科技</a>
+2. <strong>高通官宣骁龙 8 Elite Gen6 系列：台积电 2nm N2P，5GHz 峰值主频</strong>
+<strong>来源：</strong>高通官方 / CNMO 科技　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>第六代骁龙 8 至尊版首次双旗舰：标准版 SM8950、Pro 版 SM8975，均基于台积电 2nm N2P GAA 工艺。Pro 版首次采用「2+3+3」Oryon 架构，CPU 峰值主频可达 5GHz（业内首款破 5GHz 的智能手机芯片）。GPU 升级至 Adreno 850，GMEM 18MB；独家支持 LPDDR6。集成 X80 基带支持 5G R18。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657336044957778442/" target="_blank">CNMO 科技深度</a>
+3. <strong>联发科天玑 9400：第八代 NPU 890 + 5G 智能体化引擎</strong>
+<strong>来源：</strong>联发科官方 Developer Center　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>天玑 9400 集成 MediaTek 第八代 AI 处理器 NPU 890，支持时域张量硬件加速、端侧高画质视频生成，端侧运行 Stable Diffusion 性能提升 2 倍；端侧多模态 AI 运算 50 tokens/秒，运行主流大模型平均功耗节省 35%。支持 32K tokens 文本长度（上一代 8 倍），端侧 LoRA 训练。
+<strong>链接：</strong><a href="https://developer.mediatek.com/ai/6719f45634f9e46679e51f01.html" target="_blank">MediaTek 联发科技</a>
+4. <strong>小米玄戒 O3：3nm 自研旗舰 SoC，超大核 4.05GHz</strong>
+<strong>来源：</strong>泡泡网 / 数码博主　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>小米 MIX Fold5 首发玄戒 O3 自研芯片（台积电 3nm），超大核+性能大核+小核三丛集架构。超大核 4.05GHz / 大核 3.42GHz / 小核 3.02GHz，GPU 频率 1.49GHz、带宽 9600MT/s。配套澎湃 OS4，Rust 重写核心系统模块。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657386542192755241/" target="_blank">泡泡网</a>
+5. <strong>vivo X500 Pro Max 全球首发天玑 9600 Pro（首款 2nm 量产手机 SoC）</strong>
+<strong>来源：</strong>CNMO 科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>联发科天玑 9600 Pro 是首款基于台积电 2nm 工艺打造的量产手机 SoC，由 vivo X500 Pro Max 全球首发，标志联发科正式跨入 2nm 时代。X500 Pro Max 已现身 GSMA 数据库，预计面向全球市场。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657366974904713769/" target="_blank">CNMO 科技</a>
+6. <strong>星云科技 SK-YK100：7nm 异构加速芯片，96 核 RISC-V + 1280 TOPS</strong>
+<strong>来源：</strong>上证报 / 星云科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>星云科技自主研发架构第一代加速芯片 SK-YK100 完成全功能流片验证。基于 7nm 工艺，集成 96 个 RISC-V 通用计算核心与专用 AI 张量引擎，典型工作频率 1280 TOPS（INT8）峰值算力，能效比 8.7 TOPS/W（提升 42%）。2027 年 Q1 量产，首批面向自动驾驶域控制器与云端推理服务器。
+<strong>链接：</strong><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank">公开报道</a>
+7. <strong>紫光展锐 W117：小米手表 S4 Sport 国产芯 eSIM</strong>
+<strong>来源：</strong>紫光展锐 / 快科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>小米手表 S4 Sport 搭载紫光展锐 W117 处理器，实现 eSIM 功能。这是国产芯片厂商在智能手表 SoC 领域替代海外方案的重要里程碑，对应小米首款钛金属专业运动手表（对标 Apple Watch Ultra）。
+<strong>链接：</strong><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank">快科技</a>
+8. <strong>ISSCC 2026 范式转移：从云端 AI 算力走向终端自主推理</strong>
+<strong>来源：</strong>ISSCC 2026 / 综合报道　<strong>时间：</strong>2026-07-01（行业总结）
+<strong>核心要点：</strong>ISSCC 2026 论文重点关注：1）3nm GAA 工艺下 AVFS（自适应电压频率调节）响应时间缩短到 2μs（前代 1/5）；2）CIM（存算一体）单元在 8 位整数推理任务中能效 15 TOPS/W（业界平均 8 TOPS/W）；3）可重构 NPU 成为终端 AI 算力标配，移动 SoC 已能运行 70B 级模型端侧推理。
+<strong>链接：</strong><a href="http://www.zgdazxw.com.cn/fjsa/article/details/36855184/" target="_blank">行业综合报道</a>
+9. <strong>虎牙发布实时多模态数字人 VAM 1.0，DiT 架构 28 帧 24h 连续运行</strong>
+<strong>来源：</strong>虎牙 / 腾讯研究院　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>虎牙推出基于 DiT 架构的实时多模态数字人模型 VAM 1.0，仅需一张照片即可生成能聊天、唱跳、玩游戏的数字人，480×832 分辨率、28 帧实时流式输出，可连续运行 24h+。原生覆盖静默、聆听、说话三态并支持全双工打断接话。8 卡 H200 集群达 36.4 帧/秒，首帧延迟约 1.3 秒。
+<strong>链接：</strong><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank">腾讯研究院 AI 速递</a>
+10. <strong>高通 39.2 亿美元收购 Modular，AI 编译栈战火升级</strong>
+<strong>来源：</strong>36 氪　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>高通宣布以 39.2 亿美元收购 Modular（AI 推理运行时与编译栈厂商）。结合 OpenAI「Jalapeño」自研芯片 9 个月流片完成，高通在 AI 算力底层栈「芯片+编译+模型」的卡位战进入新阶段。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank">今日头条 AI 日报</a>
+</p>
+<h2>四、电子科技·芯片后端/EDA/工艺（TOP10）</h2>
+<p>
+<callout emoji="💡">
+聚焦芯片物理设计后端、EDA 工具、先进封装、工艺制造领域最新进展；关注 DAC、ICCAD、DATE、ISPD、TCAD；方向覆盖先进节点（3nm/2nm/1nm）、光刻/工艺创新、先进封装（CoWoS、SoIC、HBM）、良率/可靠性、国产 EDA、开源 EDA 工具。
+</callout>
+</p>
+<p>
+1. <strong>东方晶源科创板 IPO 获受理，国产 EDA + 电子束量检测双轮驱动</strong>
+<strong>来源：</strong>每日经济新闻 / 凤凰网　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>6 月 30 日东方晶源微电子科创板 IPO 申请获上交所受理。以「电子束量检测设备+计算光刻软件」为双核心，构建软硬件协同的良率管理解决方案。计算光刻软件 PanGen 在逻辑芯片 28nm/22nm 量产、14nm 试量产，已掌握 7nm/5nm 全套关键技术；存储芯片在 25nm/1xnm 量产、1ynm 试量产。拟募资 25 亿元。
+<strong>链接：</strong><a href="https://news.ifeng.com/c/8uPIesrcCWw" target="_blank">凤凰网</a>
+2. <strong>半导体开启第二轮涨价潮：芯联/斯达/扬杰/士兰微全线跟涨 15-25%</strong>
+<strong>来源：</strong>上海证券报 / 财经杂志　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>7 月 1 日全球半导体行业迎来新一轮价格调整窗口。芯联集成 6 月 30 日发函 Q3 涨价 15-25%（年内第二轮）。斯达半导 IGBT、SiC MOSFET 模块 7 月 1 日起涨价 15% 起。TI、MPS、ST、NXP 等国际大厂已于 3-4 月发布第一轮涨价函（AI 服务器电源涨价 20-85%），目前国内外宣布涨价公司近 20 家。
+<strong>链接：</strong><a href="https://m.weibo.cn/detail/5315913416180699" target="_blank">财经杂志微博</a>
+3. <strong>三星晶圆代工确认 2029 量产 1.4nm SF1.4，2nm SF2P+ 2027-2028 导入</strong>
+<strong>来源：</strong>36 氪 / 半导体行业观察　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>三星晶圆代工确认 2029 年量产第一代 1.4nm 工艺制程 SF1.4 的计划，改进版 SF1.4+ 于 2030 年面世。2nm 家族中继 SF2P 后的 SF2P+ 调整到 2027-2028 年导入，后续保持 IP 兼容性的 SF2X。台积电 N2P 已在 2026 年量产并被骁龙 8 Elite Gen6 率先采用。
+<strong>链接：</strong><a href="https://36kr.com/p/3876487460649860" target="_blank">36 氪</a>
+4. <strong>三星 HBM4E 良率突破 70%，第七代 AI 内存进入稳定阶段</strong>
+<strong>来源：</strong>IT 之家 / 凤凰网科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>三星电子 CTO Song Jai Hyuk 在 6 月 30 日 DS 部门内部高管简报会透露：HBM4E 可靠性测试良率提升至 70% 以上，行业普遍将 80% 视为「成熟良率」阶段，意味着 HBM4E 研发已步入稳定轨道。同时下一代 10nm 级第七代 D1d DRAM 相比竞争对手已占据优势。
+<strong>链接：</strong><a href="https://tech.ifeng.com/c/8uPHdE6dgUL" target="_blank">凤凰网科技</a>
+5. <strong>DAC 2026 7 月 26-29 日长滩举办，AI 驱动 EDA 新纪元</strong>
+<strong>来源：</strong>DAC 官方 / 顺企网　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>第 62 届 Design Automation Conference 将于 2026 年 7 月 26-29 日在美国长滩举办，主题为「Chips to Systems Conference」。聚焦 AI EDA、Chiplet 系统设计、先进制程 EDA、量子 EDA、汽车电子设计、安全可靠性设计。Synopsys AI RTL 优化可减少 20-40% 设计时间；P&R 优化周期缩短到 25-40%。UCIe 接口技术进入产业落地期。
+<strong>链接：</strong><a href="https://m.11467.com/product/d51878469.htm" target="_blank">DAC 2026 介绍</a>
+6. <strong>英飞凌 PCIM Europe 2026 展示 SiC/GaN 半导体方案（AI 数据中心 + 机器人）</strong>
+<strong>来源：</strong>凤凰网山东 / 英飞凌官方　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>英飞凌在 2026 年纽伦堡 PCIM Europe 展（7 号展厅 470 号）展示 Si/SiC/GaN 完整电源系统方案。亮点包括：1）固态变压器（SST）+ CoolSiC JFET 固态断路器（SSCB），微秒级故障隔离；2）数据中心从电网到处理器核心全链路 HVDC 转型；3）One Inverter One Infineon 系统级电动出行方案；4）机器人 PSOC Control C3 + XENSIV 传感方案。
+<strong>链接：</strong><a href="https://sd.ifeng.com/c/8uPCS7mRHlW" target="_blank">凤凰网</a>
+7. <strong>共封装光学（CPO）进入小规模出货，交换机营收同比 +192.7%</strong>
+<strong>来源：</strong>36 氪 / TrendForce　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>网络与传输侧 CPO（共封装光学）已进入小规模出货阶段，配合 800G/1.6T 交换机在 AI 数据中心加速渗透。主流光模块厂商交换机业务营收同比增长 192.7%，印证了 AI 算力扩张对高速光互连的强烈拉动。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank">今日头条 AI 日报</a>
+8. <strong>英伟达液冷方案颠覆数据中心散热，ASIC 联合反击</strong>
+<strong>来源：</strong>36 氪 / TrendForce　<strong>时间：</strong>2026-06-30
+<strong>核心要点：</strong>英伟达彻底颠覆数据中心液冷方案，结合 GB200/Rubin 平台对冷板式/浸没式液冷提出新要求。同时云厂商自研 ASIC 联合反击，谷歌 TPU、AWS Trainium、Meta MTIA 在 HBM 容量、互联带宽上对标 GPU。电子元器件（存储/PCB/MLCC/MLPC）板块被重估。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank">今日头条 AI 日报</a>
+9. <strong>PanGen 计算光刻软件：CPU+GPU 混合超算架构，AI 驱动</strong>
+<strong>来源：</strong>东方晶源招股书　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>东方晶源自主研发的 PanGen 软件建立在 CPU+GPU 混合超算架构之上，并在多个产品模块引入人工智能技术，是全球最早实现全芯片反向光刻的计算光刻工具之一。叠加 HPO 全流程良率优化方案（检测+反馈+模型修正+工艺优化），已形成 YieldBook、DMC、PHD、vPWQ 等多款产品。
+<strong>链接：</strong><a href="https://news.ifeng.com/c/8uPIesrcCWw" target="_blank">凤凰网</a>
+10. <strong>国产半导体设备 + EDA 国产化：电子束量检测市场 2025 年 33.09 亿美元</strong>
+<strong>来源：</strong>每日经济新闻 / 凤凰网　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>SEMI 数据：2024 年全球半导体前道工艺设备销售 1042.7 亿美元，预计 2026 年 1221.0 亿美元。2025 年中国大陆市场规模 493.1 亿美元，过去十年 CAGR 25.34%。电子束量检测设备全球 2025 年 33.09 亿美元（2032 年 54.61 亿美元）；计算光刻软件国内市场 2025 年 3.79 亿美元（2032 年 8.14 亿美元）。
+<strong>链接：</strong><a href="https://news.ifeng.com/c/8uPIesrcCWw" target="_blank">凤凰网</a>
+</p>
+<h2>五、CPU 5G 提频（TOP10）</h2>
+<p>
+<callout emoji="📡">
+聚焦 CPU 与 5G（含 6G 演进）协同提频、CPU 主频/睿频/能效调度、5G 蜂窝连接下的 CPU 加速等全谱系技术洞察。覆盖手机 SoC、5G 基带 Modem CPU、服务器/边缘 CPU 5G 加速、CPU 微架构 5G 切片协同等四大方向。
+</callout>
+</p>
+<p>
+1. <strong>骁龙 8 Elite Gen6 Pro：5GHz 峰值主频 + 5G R18 X80 基带 + HPB 散热</strong>
+<strong>来源：</strong>CNMO 科技 / 高通官方　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>第六代骁龙 8 至尊版 Pro（SM8975）基于台积电 2nm N2P 工艺。首次采用「2+3+3」Oryon 架构（2 Prime 核 + 3 性能核 + 3 能效核），CPU 峰值主频可达 5GHz（业内首款破 5GHz 的智能手机芯片）。集成新一代 X80 基带支持 5G R18 标准、卫星双向消息；HPB（Heat Pass Block）散热穿透模块，将热量更快传导至均热板。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657336044957778442/" target="_blank">CNMO 科技</a>
+2. <strong>联发科天玑 9400：第八代 NPU 890 + 5G 智能体化引擎（端侧 + 5G 协同）</strong>
+<strong>来源：</strong>联发科 Developer Center　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>天玑 9400 集成 MediaTek 第八代 AI 处理器 NPU 890，支持时域张量硬件加速、端侧 LoRA 训练、32K tokens 多轮对话。配套天玑 AI 智能体化引擎 + 先锋计划，为 AI 智能体、第三方 App、大模型提供统一标准接口，实现端侧 AI 与 5G 高带宽回传的高效协同。
+<strong>链接：</strong><a href="https://developer.mediatek.com/ai/6719f45634f9e46679e51f01.html" target="_blank">MediaTek 联发科技</a>
+3. <strong>vivo X500 Pro Max 全球首发天玑 9600 Pro：2nm 移动 SoC + 5G 提频</strong>
+<strong>来源：</strong>CNMO 科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>联发科天玑 9600 Pro 是首款基于台积电 2nm 工艺的量产手机 SoC。CPU 集群在 2nm GAA 工艺下频率天花板进一步上探，搭配 5G 调制解调器触发的 CPU 提频（QoS 调度、Sub-6 GHz + mmWave 双连接），在 LOFIC 主摄 + 2 亿潜望长焦拍摄中实现边拍边传。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657366974904713769/" target="_blank">CNMO 科技</a>
+4. <strong>小米玄戒 O3：3nm 自研旗舰 SoC，超大核 4.05GHz + 澎湃 OS4 调度</strong>
+<strong>来源：</strong>泡泡网　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>小米 MIX Fold5 首发玄戒 O3 自研芯片（台积电 3nm），超大核 4.05GHz / 大核 3.42GHz / 小核 3.02GHz，GPU 1.49GHz、带宽 9600MT/s。澎湃 OS4 重构底层、引入液态玻璃设计，AI 智能体全链路底层整合，跨应用底层联动 + 5G 切片资源分配。
+<strong>链接：</strong><a href="http://m.toutiao.com/group/7657386542192755241/" target="_blank">泡泡网</a>
+5. <strong>小米 18 系列首发骁龙 8 Elite Gen6：徕卡双 2 亿像素 + 5G 旗舰 SoC</strong>
+<strong>来源：</strong>快科技 / 数码闲聊站　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>小米 18 系列预计 9 月 28-30 日发布，全球首发骁龙 8 Elite Gen6，搭载超大底徕卡 2 亿像素主摄 + 徕卡 2 亿像素潜望长焦（全系潜望长焦下放）。新一代 Oryon CPU 架构 + Adreno 850 GPU，搭配 X80 5G R18 基带，本地 AI 大模型推理 + 5G 双连接，预计起步价或突破 5000 元。
+<strong>链接：</strong><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank">快科技</a>
+6. <strong>REDMI Note17：9000mAh + 骁龙 6 Gen5 4nm 中低端 SoC 提频</strong>
+<strong>来源：</strong>36 氪 / 雷科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>REDMI Note17 搭载骁龙 6 Gen5 低功耗芯片（台积电 4nm），CPU 八核：4 颗 2.6GHz 性能核 + 4 颗 2.0GHz 能效核，GPU 性能较前代提升 21%、能效提升 8%，与骁龙 7s Gen3 持平。搭配 9000mAh 电池，定位走量大电池耐用机型。在 5G Sub-6 GHz 连接下能效优势明显。
+<strong>链接：</strong><a href="https://36kr.com/p/3876487460649860" target="_blank">36 氪</a>
+7. <strong>星云科技 SK-YK100：96 核 RISC-V + 1280 TOPS，边缘 5G 加速</strong>
+<strong>来源：</strong>上证报 / 星云科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>星云科技 SK-YK100（7nm 异构加速芯片）面向自动驾驶域控制器与云端推理服务器。96 个 RISC-V 通用计算核心在 5G MEC 边缘节点上提供 1280 TOPS 算力，能效比 8.7 TOPS/W（提升 42%）。在 vRAN/Open RAN 5G 基站场景中可替代部分 FPGA 加速卡。
+<strong>链接：</strong><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank">公开报道</a>
+8. <strong>Tenstorrent Ascalon S：单位面积性能 +140%，RISC-V 服务器 CPU 提频</strong>
+<strong>来源：</strong>IT 之家 / 凤凰网科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>Tenstorrent 在 TT-Deploy JP 大会发布 RISC-V CPU 内核 TT-Ascalon S，以 Ascalon X 一半的面积实现 70% 性能，单位面积性能 +140%。Galaxy Blackhole「超级集群」在 Kimi K2.6 上达 900 Token/s/user（GPU 的 3 倍）。在 5G MEC 与 AI 边缘推理场景中提供 RISC-V 提频方案。
+<strong>链接：</strong><a href="https://tech.ifeng.com/c/8uOsI7Ij8LI" target="_blank">凤凰网科技</a>
+9. <strong>Anthropic 副总裁 Krieger：模型能力仅走完 10%，对标 SpaceX 太空合作</strong>
+<strong>来源：</strong>36 氪 / Anthropic Labs　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>Anthropic Labs 负责人 Mike Krieger 表示，对照模型能力的终极形态目前大概只走了 10% 的路程，正聚焦让 Claude 拥有更多自主权与环境感知。Anthropic 正与 SpaceX 洽谈太空相关合作，并提出未来可能从卖 Token 转向基于结果的定价模式（Claude Managed Agents 已尝试）。5G/6G 太空-地面融合场景下，Token 计费向「结果计费」转变。
+<strong>链接：</strong><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank">腾讯研究院 AI 速递</a>
+10. <strong>半导体涨价潮传导：旗舰机价格普涨 1000-2000 元，AI + 5G 双驱动</strong>
+<strong>来源：</strong>36 氪 / 雷科技　<strong>时间：</strong>2026-07-01
+<strong>核心要点：</strong>内存、闪存、芯片、面板全线上涨，蓝厂黑厂旗下产品已二次涨价。由于台积电 2nm 晶圆代工价格较 3nm 上浮 + 芯片面积增大 + N2P 工艺研发摊销 + HPB 新型散热结构，骁龙 8E6 系列成本上涨几乎板上钉钉。搭载 Pro 版的旗舰定价或突破 7000-8000 元，2nm 旗舰对 5G + AI 算力的双驱动让「分水岭周期」到来。
+<strong>链接：</strong><a href="https://36kr.com/p/3876487460649860" target="_blank">36 氪</a>
+</p>
+<hr class="section-divider">
+<p>
+<callout emoji="📊">
+<strong>报告说明：</strong>本报告覆盖 2026-06-29 至 2026-07-01 期间全球技术领域核心动态，部分内容因信息源特征扩展至 48 小时窗口。同一事件多源时优先保留最权威来源。所有条目均标注「来源 / 时间 / 核心要点 / 链接」。
+<strong>下期预告：</strong>2026-07-02 重点关注 DAC 2026 大会预热、MICRO 2026 论文入选、高通 6G 预商用设备进展、ISSCC 2026 论文深度解读。
+</callout>
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a><a href="#CPU 5G" class="section-nav-link" style="--accent: #6bcf7f">CPU 5G 提频</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> 美团开源 1.6 万亿 MoE 大模型 LongCat-2.0，5 万张国产加速器全流程跑通</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 美团官方 / 澎湃新闻 / 36 氪　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">全球首个依托国产加速器集群完成训练+推理全链路的 1.6T MoE 模型，单次推理平均激活 480 亿参数，原生支持 100 万 Token 上下文。代码基准 SWE-bench Pro 59.5 分，超过 GPT-5.5（58.6）和 Claude Opus 4.6（57.3）。训练峰值 5 万张国产 AI 加速器，集群算力利用率 42%+，训练成本相比海外集群下降 31%。MIT 协议开源。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> DeepSeek V4 正式版 7 月中旬上线，启用国内首个峰谷分时计费机制</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 DeepSeek 官方 / 第一财经 / 界面新闻　**时间：**2026-06-29</span>
-    <span class="meta-tag">🕐 2026-06-29</span>
-  </div>
-  <div class="insight-points">工作日 9-12、14-18 点（合计 7 小时）高峰时段 API 价统一翻倍，夜间与周末维持谷价。V4-Pro 缓存命中 0.025→0.05 元/百万 Token，V4-Flash 同步调整。V4 正式版将集成 DSpark 投机解码框架（V4-Flash 提速 60-85%）、100 万 Token 上下文、自动语义缓存引擎。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> OpenAI 通过系统底层优化，模型推理成本降低 50% 以上</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / 界面新闻　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">OpenAI 工程师在内部透露，公司已通过一系列全新的系统底层优化（涉及推理服务、KV Cache、调度等基础设施层），成功将 AI 模型推理（运行）成本降低 50% 以上，是今年行业最大的成本侧突破之一。</div>
-  <div class="insight-links"><a href="https://36kr.com/newsflashes/3876288840331266" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> 智元第 1.5 万台具身机器人下线，工厂实景作业成功率 99.99%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 智元机器人 / 36 氪　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">智元第 1.5 万台具身机器人正式下线，龙旗工厂 60 个具体问题的修复，6 天 64 小时作业覆盖 10 省市。99.99% 作业成功率背后是「工厂+机器人+零部件供应商」深度协同的 know-how，是后入局者短期难以复制的护城河。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> 华为开源盘古 openPangu-2.0-Flash，920 亿参数，原生昇腾</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 华为官方 / 腾讯研究院　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">openPangu 是华为开源 AI 模型品牌，依托昇腾原生训练与推理技术。2.0-Flash 版同步开放模型权重、基础推理代码与训推算子。openPangu-2.0-Pro 权重及推理代码将于 7 月上线，更多开源组件下半年陆续推出。</div>
-  <div class="insight-links"><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank" rel="noopener" class="link-btn">🔗 m.sohu.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> Hermes Agent 上线 MoA 混合智能体，HermesBench 评分超 Opus 4.8</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Nous Research / 36 氪 / 腾讯研究院　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">MoA（Mixture of Agents）支持自由组合多种开源模型作为「参考模型+聚合模型」。在 HermesBench 上，MoA 评分 0.8202，显著超过单独 Claude Opus 4.8（0.7607）和 GPT-5.5（0.7412）。多视角覆盖盲区、错误互相纠正、共识即信号是三大机制。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657411078791365171/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> OpenAI 首款硬件 Codex Micro 曝光，与 Work Louder 联名客制化键盘</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 腾讯研究院 / The Information　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">Codex Micro 是一款与键盘厂商 Work Louder 联名的客制化键盘，旨在提升开发者使用 Codex 编程工具的效率。键盘深度适配工作流，旋钮可调节 AI 生成代码的「创造力阈值」。OpenAI 硬件战略双线并行：B 端以务实配件固化生态，C 端与前苹果设计官 Jony Ive 合作研发取代智能手机的 AI 原生终端。</div>
-  <div class="insight-links"><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank" rel="noopener" class="link-btn">🔗 m.sohu.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> 智谱 GLM-5.2 在 Code Arena 取得全球可用模型第一</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 智谱 / 新华网　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">在 Code Arena 百万用户参与盲测的前端开发评估系统中，智谱新一代旗舰 GLM-5.2 取得全球可用模型第一。在编码与 Agent 评测中达到行业顶尖水平，是国产开源模型在工程代码场景反超闭源的代表性事件。</div>
-  <div class="insight-links"><a href="http://www.xinhuanet.com/20260701/d9a7a20080c24c4b8febfed1ae010dd3/c.html" target="_blank" rel="noopener" class="link-btn">🔗 xinhuanet.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> Meta 发布非侵入式脑机接口 Brain2Qwerty v2，开源完整训练代码</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Meta AI / 腾讯研究院　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">基于脑磁图记录实现实时句子级解码，准确率逼近此前需开颅手术才能达到的水平。v1、v2 完整训练代码开源，训练数据来自 9 名志愿者每人 10 小时、累计约 22000 条真实打字记录。整体单词准确率 61%，最佳参与者 78%，远超此前非侵入方法的 8%。</div>
-  <div class="insight-links"><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank" rel="noopener" class="link-btn">🔗 m.sohu.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> OpenSquilla 0.4.0：编码 Agent 引入「自我验证」机制</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 封面新闻　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">开源 AI Agent 项目 OpenSquilla 发布 0.4.0 版本，核心更新是推出编码工作流 coding 模式，并首次为 AI 编码引入「自我验证」机制——AI 不再止步于「我改好了」的口头交付，而是先用测试为自己跑出一份「红绿回归证据链」再交付，把验证内化进 Agent 自身。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657448436848935433/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> 高通官宣 2026 骁龙峰会 9 月 22-24 日举行，2nm 骁龙 8 Elite Gen6 系列将发布</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 高通官方 / CNMO 科技 / 半导体投资联盟　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">高通在 2025 骁龙峰会上发表以台积电 N3P 制程打造的「骁龙 8 Elite Gen 5」，今年骁龙 8 Elite Gen6 系列将基于台积电 2nm（N2 / N2P）工艺打造。台积电 2nm 良率已达标。安卓阵营第一款规模化商用的 2nm 手机 SoC，将由小米 18 系列首发。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657336044957778442/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> 中南大学侵入式 BCI 视觉重建临床试验取得新进展</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 证券时报网　**时间：**2026-06-26</span>
-    <span class="meta-tag">🕐 2026-06-26</span>
-  </div>
-  <div class="insight-points">许惠卓教授团队为一名失明多年的受试者植入团队自主研发的「IMIE 智能视网膜系统」，受试者已初步实现视觉重建。该试验由中南大学牵头，属侵入式脑机接口领域的重要突破。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> 广东、安徽脑机接口政策密集落地，国内首个省级医保政策</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 南方财经网 / 安徽新闻网　**时间：**2026-06-26</span>
-    <span class="meta-tag">🕐 2026-06-26</span>
-  </div>
-  <div class="insight-points">广东 6 月 25 日发布政策，将脑机接口相关服务纳入医疗服务价格项目，标志着国内首个省级层面的医保政策落地，BCI 商业化路径进一步清晰。安徽 6 月 25 日召开全省人工智能和脑机接口产业推进会，王清宪省长强调「保持战略敏捷，强化应用引领」。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 小米 MIX Fold5 入网 3C，独家首发玄戒 O3 自研 3nm 芯片 + 澎湃 OS4</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 泡泡网　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">小米阔折叠（MIX Fold5）顺利通过 3C 认证，标配 100W 快充。独家首发玄戒 O3 自研芯片（台积电 3nm，2+3+3 架构，超大核 4.05GHz / 大核 3.42GHz / 小核 3.02GHz，GPU 频率 1.49GHz、带宽 9600MT/s），澎湃 OS4 全面重构底层、Rust 重写核心模块。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657386542192755241/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> vivo X500 Pro Max 影像规格曝光，全球首发天玑 9600 Pro 2nm 旗舰</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CNMO 科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">vivo X500 Pro Max 搭载 50MP 1/1.28 英寸索尼 LOFIC 超大底主摄（动态范围 16EV+）、200MP 1/1.4 英寸 85mm 潜望长焦、50MP 小底超广角。全球首发联发科天玑 9600 Pro（首款基于台积电 2nm 工艺的量产手机 SoC），预计面向全球市场发售。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657366974904713769/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> Neuralink N1 脑机接口美国临床试验 10 月启动</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Neuralink 官方 / DJ Seo 公开演讲　**时间：**2026-07-01（综合报道）</span>
-    <span class="meta-tag">🕐 2026-07-01（综合报道）</span>
-  </div>
-  <div class="insight-points">Neuralink 计划于 2025 年 10 月在美国开始脑机接口 BCI 临床试验，可直接读取大脑中的「说话信号」并转化为文本。FDA 已批准该研究，公司正考虑在 2030 年前向健康人植入设备，标志着脑机接口向消费级迈进的拐点。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> S1500 飞行风力涡轮机新疆沙漠首飞成功，1 兆瓦级输出</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 中新网 / Sawes Energy Technology　**时间：**2026-07-01（综合报道）</span>
-    <span class="meta-tag">🕐 2026-07-01（综合报道）</span>
-  </div>
-  <div class="insight-points">全球最大、最强飞行风力涡轮机 S1500 于 9 月 19-21 日在新疆沙漠完成首飞测试，峰值输出 1 兆瓦。质量生产计划 2026 年启动，可作为「飞行充电宝」在灾后停电场景中快速恢复医院、通信塔等关键设施电力。</div>
-  <div class="insight-links"><a href="https://m.book118.com/html/2026/0629/8122054030010105.shtm" target="_blank" rel="noopener" class="link-btn">🔗 m.book118.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> 7 月新机潮：REDMI / iQOO / 三星折叠屏集体亮相，中低端成看点</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / 雷科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">REDMI Note17 系列搭载骁龙 6 Gen5 4nm 芯片 + 9000mAh 电池 + 1.5K OLED 直屏。三星 Z Fold8 改用 16:10 宽屏（4.5mm 展开 / 9.7mm 折叠 / 201g），搭载定制骁龙 8 Elite Gen5、5000 万主摄。努比亚 All in 豆包手机。涨价潮下厂商策略明显保守。</div>
-  <div class="insight-links"><a href="https://36kr.com/p/3876487460649860" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> 无锡医学中心脑机接口创新平台揭牌，9 只脑机接口概念股涨停</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 无锡日报 / 时代在线　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">6 月 29 日无锡医学中心脑机接口创新平台暨无锡市高水平医院揭牌仪式在市人民医院举行，无锡正式落地 BCI 产学研医协同创新平台。9 只脑机接口概念股涨停，产业迈入商业化探索期。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> 无锡医学中心同步发布，中国智能医疗设备亮相全球（康复机器人+BCI）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Global Times　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">在 Global Times 报道中，康复机器人、脑机接口康复设备及胶囊内镜正成为全球智能医疗的核心赛道，中国企业持续加大布局力度。BCI 与康复机器人成为焦点。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657427807701664283/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> Tenstorrent 发布 RISC-V CPU TT-Ascalon S，单位面积性能提升 140%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IT 之家 / 凤凰网科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">由知名芯片设计师 Jim Keller 领导的 Fabless 企业 Tenstorrent 于 TT-Deploy JP 大会（东京）发布 RISC-V CPU 内核 TT-Ascalon S。Ascalon S 以旗舰核心 Ascalon X 一半的面积实现后者 70% 的性能，单位面积性能提升 1.4 倍。Galaxy Blackhole「超级集群」在 Kimi K2.6 上达 900 Token/s/user，是 GPU 的 3 倍。</div>
-  <div class="insight-links"><a href="https://tech.ifeng.com/c/8uOsI7Ij8LI" target="_blank" rel="noopener" class="link-btn">🔗 tech.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> 高通官宣骁龙 8 Elite Gen6 系列：台积电 2nm N2P，5GHz 峰值主频</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 高通官方 / CNMO 科技　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">第六代骁龙 8 至尊版首次双旗舰：标准版 SM8950、Pro 版 SM8975，均基于台积电 2nm N2P GAA 工艺。Pro 版首次采用「2+3+3」Oryon 架构，CPU 峰值主频可达 5GHz（业内首款破 5GHz 的智能手机芯片）。GPU 升级至 Adreno 850，GMEM 18MB；独家支持 LPDDR6。集成 X80 基带支持 5G R18。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657336044957778442/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> 联发科天玑 9400：第八代 NPU 890 + 5G 智能体化引擎</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 联发科官方 Developer Center　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">天玑 9400 集成 MediaTek 第八代 AI 处理器 NPU 890，支持时域张量硬件加速、端侧高画质视频生成，端侧运行 Stable Diffusion 性能提升 2 倍；端侧多模态 AI 运算 50 tokens/秒，运行主流大模型平均功耗节省 35%。支持 32K tokens 文本长度（上一代 8 倍），端侧 LoRA 训练。</div>
-  <div class="insight-links"><a href="https://developer.mediatek.com/ai/6719f45634f9e46679e51f01.html" target="_blank" rel="noopener" class="link-btn">🔗 developer.mediatek.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> 小米玄戒 O3：3nm 自研旗舰 SoC，超大核 4.05GHz</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 泡泡网 / 数码博主　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">小米 MIX Fold5 首发玄戒 O3 自研芯片（台积电 3nm），超大核+性能大核+小核三丛集架构。超大核 4.05GHz / 大核 3.42GHz / 小核 3.02GHz，GPU 频率 1.49GHz、带宽 9600MT/s。配套澎湃 OS4，Rust 重写核心系统模块。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657386542192755241/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> vivo X500 Pro Max 全球首发天玑 9600 Pro（首款 2nm 量产手机 SoC）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CNMO 科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">联发科天玑 9600 Pro 是首款基于台积电 2nm 工艺打造的量产手机 SoC，由 vivo X500 Pro Max 全球首发，标志联发科正式跨入 2nm 时代。X500 Pro Max 已现身 GSMA 数据库，预计面向全球市场。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657366974904713769/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> 星云科技 SK-YK100：7nm 异构加速芯片，96 核 RISC-V + 1280 TOPS</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 上证报 / 星云科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">星云科技自主研发架构第一代加速芯片 SK-YK100 完成全功能流片验证。基于 7nm 工艺，集成 96 个 RISC-V 通用计算核心与专用 AI 张量引擎，典型工作频率 1280 TOPS（INT8）峰值算力，能效比 8.7 TOPS/W（提升 42%）。2027 年 Q1 量产，首批面向自动驾驶域控制器与云端推理服务器。</div>
-  <div class="insight-links"><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank" rel="noopener" class="link-btn">🔗 news.mydrivers.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> 紫光展锐 W117：小米手表 S4 Sport 国产芯 eSIM</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 紫光展锐 / 快科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">小米手表 S4 Sport 搭载紫光展锐 W117 处理器，实现 eSIM 功能。这是国产芯片厂商在智能手表 SoC 领域替代海外方案的重要里程碑，对应小米首款钛金属专业运动手表（对标 Apple Watch Ultra）。</div>
-  <div class="insight-links"><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank" rel="noopener" class="link-btn">🔗 news.mydrivers.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> ISSCC 2026 范式转移：从云端 AI 算力走向终端自主推理</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 ISSCC 2026 / 综合报道　**时间：**2026-07-01（行业总结）</span>
-    <span class="meta-tag">🕐 2026-07-01（行业总结）</span>
-  </div>
-  <div class="insight-points">ISSCC 2026 论文重点关注：1）3nm GAA 工艺下 AVFS（自适应电压频率调节）响应时间缩短到 2μs（前代 1/5）；2）CIM（存算一体）单元在 8 位整数推理任务中能效 15 TOPS/W（业界平均 8 TOPS/W）；3）可重构 NPU 成为终端 AI 算力标配，移动 SoC 已能运行 70B 级模型端侧推理。</div>
-  <div class="insight-links"><a href="http://www.zgdazxw.com.cn/fjsa/article/details/36855184/" target="_blank" rel="noopener" class="link-btn">🔗 zgdazxw.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 虎牙发布实时多模态数字人 VAM 1.0，DiT 架构 28 帧 24h 连续运行</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 虎牙 / 腾讯研究院　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">虎牙推出基于 DiT 架构的实时多模态数字人模型 VAM 1.0，仅需一张照片即可生成能聊天、唱跳、玩游戏的数字人，480×832 分辨率、28 帧实时流式输出，可连续运行 24h+。原生覆盖静默、聆听、说话三态并支持全双工打断接话。8 卡 H200 集群达 36.4 帧/秒，首帧延迟约 1.3 秒。</div>
-  <div class="insight-links"><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank" rel="noopener" class="link-btn">🔗 m.sohu.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> 高通 39.2 亿美元收购 Modular，AI 编译栈战火升级</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">高通宣布以 39.2 亿美元收购 Modular（AI 推理运行时与编译栈厂商）。结合 OpenAI「Jalapeño」自研芯片 9 个月流片完成，高通在 AI 算力底层栈「芯片+编译+模型」的卡位战进入新阶段。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> 东方晶源科创板 IPO 获受理，国产 EDA + 电子束量检测双轮驱动</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 每日经济新闻 / 凤凰网　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">6 月 30 日东方晶源微电子科创板 IPO 申请获上交所受理。以「电子束量检测设备+计算光刻软件」为双核心，构建软硬件协同的良率管理解决方案。计算光刻软件 PanGen 在逻辑芯片 28nm/22nm 量产、14nm 试量产，已掌握 7nm/5nm 全套关键技术；存储芯片在 25nm/1xnm 量产、1ynm 试量产。拟募资 25 亿元。</div>
-  <div class="insight-links"><a href="https://news.ifeng.com/c/8uPIesrcCWw" target="_blank" rel="noopener" class="link-btn">🔗 news.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> 半导体开启第二轮涨价潮：芯联/斯达/扬杰/士兰微全线跟涨 15-25%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 上海证券报 / 财经杂志　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">7 月 1 日全球半导体行业迎来新一轮价格调整窗口。芯联集成 6 月 30 日发函 Q3 涨价 15-25%（年内第二轮）。斯达半导 IGBT、SiC MOSFET 模块 7 月 1 日起涨价 15% 起。TI、MPS、ST、NXP 等国际大厂已于 3-4 月发布第一轮涨价函（AI 服务器电源涨价 20-85%），目前国内外宣布涨价公司近 20 家。</div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5315913416180699" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> 三星晶圆代工确认 2029 量产 1.4nm SF1.4，2nm SF2P+ 2027-2028 导入</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / 半导体行业观察　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">三星晶圆代工确认 2029 年量产第一代 1.4nm 工艺制程 SF1.4 的计划，改进版 SF1.4+ 于 2030 年面世。2nm 家族中继 SF2P 后的 SF2P+ 调整到 2027-2028 年导入，后续保持 IP 兼容性的 SF2X。台积电 N2P 已在 2026 年量产并被骁龙 8 Elite Gen6 率先采用。</div>
-  <div class="insight-links"><a href="https://36kr.com/p/3876487460649860" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> 三星 HBM4E 良率突破 70%，第七代 AI 内存进入稳定阶段</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IT 之家 / 凤凰网科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">三星电子 CTO Song Jai Hyuk 在 6 月 30 日 DS 部门内部高管简报会透露：HBM4E 可靠性测试良率提升至 70% 以上，行业普遍将 80% 视为「成熟良率」阶段，意味着 HBM4E 研发已步入稳定轨道。同时下一代 10nm 级第七代 D1d DRAM 相比竞争对手已占据优势。</div>
-  <div class="insight-links"><a href="https://tech.ifeng.com/c/8uPHdE6dgUL" target="_blank" rel="noopener" class="link-btn">🔗 tech.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> DAC 2026 7 月 26-29 日长滩举办，AI 驱动 EDA 新纪元</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 DAC 官方 / 顺企网　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">第 62 届 Design Automation Conference 将于 2026 年 7 月 26-29 日在美国长滩举办，主题为「Chips to Systems Conference」。聚焦 AI EDA、Chiplet 系统设计、先进制程 EDA、量子 EDA、汽车电子设计、安全可靠性设计。Synopsys AI RTL 优化可减少 20-40% 设计时间；P&amp;R 优化周期缩短到 25-40%。UCIe 接口技术进入产业落地期。</div>
-  <div class="insight-links"><a href="https://m.11467.com/product/d51878469.htm" target="_blank" rel="noopener" class="link-btn">🔗 m.11467.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> 英飞凌 PCIM Europe 2026 展示 SiC/GaN 半导体方案（AI 数据中心 + 机器人）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 凤凰网山东 / 英飞凌官方　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">英飞凌在 2026 年纽伦堡 PCIM Europe 展（7 号展厅 470 号）展示 Si/SiC/GaN 完整电源系统方案。亮点包括：1）固态变压器（SST）+ CoolSiC JFET 固态断路器（SSCB），微秒级故障隔离；2）数据中心从电网到处理器核心全链路 HVDC 转型；3）One Inverter One Infineon 系统级电动出行方案；4）机器人 PSOC Control C3 + XENSIV 传感方案。</div>
-  <div class="insight-links"><a href="https://sd.ifeng.com/c/8uPCS7mRHlW" target="_blank" rel="noopener" class="link-btn">🔗 sd.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> 共封装光学（CPO）进入小规模出货，交换机营收同比 +192.7%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / TrendForce　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">网络与传输侧 CPO（共封装光学）已进入小规模出货阶段，配合 800G/1.6T 交换机在 AI 数据中心加速渗透。主流光模块厂商交换机业务营收同比增长 192.7%，印证了 AI 算力扩张对高速光互连的强烈拉动。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> 英伟达液冷方案颠覆数据中心散热，ASIC 联合反击</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / TrendForce　**时间：**2026-06-30</span>
-    <span class="meta-tag">🕐 2026-06-30</span>
-  </div>
-  <div class="insight-points">英伟达彻底颠覆数据中心液冷方案，结合 GB200/Rubin 平台对冷板式/浸没式液冷提出新要求。同时云厂商自研 ASIC 联合反击，谷歌 TPU、AWS Trainium、Meta MTIA 在 HBM 容量、互联带宽上对标 GPU。电子元器件（存储/PCB/MLCC/MLPC）板块被重估。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657357819691254282/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> PanGen 计算光刻软件：CPU+GPU 混合超算架构，AI 驱动</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 东方晶源招股书　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">东方晶源自主研发的 PanGen 软件建立在 CPU+GPU 混合超算架构之上，并在多个产品模块引入人工智能技术，是全球最早实现全芯片反向光刻的计算光刻工具之一。叠加 HPO 全流程良率优化方案（检测+反馈+模型修正+工艺优化），已形成 YieldBook、DMC、PHD、vPWQ 等多款产品。</div>
-  <div class="insight-links"><a href="https://news.ifeng.com/c/8uPIesrcCWw" target="_blank" rel="noopener" class="link-btn">🔗 news.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> 国产半导体设备 + EDA 国产化：电子束量检测市场 2025 年 33.09 亿美元</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 每日经济新闻 / 凤凰网　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">SEMI 数据：2024 年全球半导体前道工艺设备销售 1042.7 亿美元，预计 2026 年 1221.0 亿美元。2025 年中国大陆市场规模 493.1 亿美元，过去十年 CAGR 25.34%。电子束量检测设备全球 2025 年 33.09 亿美元（2032 年 54.61 亿美元）；计算光刻软件国内市场 2025 年 3.79 亿美元（2032 年 8.14 亿美元）。</div>
-  <div class="insight-links"><a href="https://news.ifeng.com/c/8uPIesrcCWw" target="_blank" rel="noopener" class="link-btn">🔗 news.ifeng.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="CPU 5G" style="--accent: #6bcf7f">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #6bcf7f"></span>
-    CPU 5G
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">1</span> 骁龙 8 Elite Gen6 Pro：5GHz 峰值主频 + 5G R18 X80 基带 + HPB 散热</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CNMO 科技 / 高通官方　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">第六代骁龙 8 至尊版 Pro（SM8975）基于台积电 2nm N2P 工艺。首次采用「2+3+3」Oryon 架构（2 Prime 核 + 3 性能核 + 3 能效核），CPU 峰值主频可达 5GHz（业内首款破 5GHz 的智能手机芯片）。集成新一代 X80 基带支持 5G R18 标准、卫星双向消息；HPB（Heat Pass Block）散热穿透模块，将热量更快传导至均热板。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657336044957778442/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">2</span> 联发科天玑 9400：第八代 NPU 890 + 5G 智能体化引擎（端侧 + 5G 协同）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 联发科 Developer Center　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">天玑 9400 集成 MediaTek 第八代 AI 处理器 NPU 890，支持时域张量硬件加速、端侧 LoRA 训练、32K tokens 多轮对话。配套天玑 AI 智能体化引擎 + 先锋计划，为 AI 智能体、第三方 App、大模型提供统一标准接口，实现端侧 AI 与 5G 高带宽回传的高效协同。</div>
-  <div class="insight-links"><a href="https://developer.mediatek.com/ai/6719f45634f9e46679e51f01.html" target="_blank" rel="noopener" class="link-btn">🔗 developer.mediatek.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">3</span> vivo X500 Pro Max 全球首发天玑 9600 Pro：2nm 移动 SoC + 5G 提频</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CNMO 科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">联发科天玑 9600 Pro 是首款基于台积电 2nm 工艺的量产手机 SoC。CPU 集群在 2nm GAA 工艺下频率天花板进一步上探，搭配 5G 调制解调器触发的 CPU 提频（QoS 调度、Sub-6 GHz + mmWave 双连接），在 LOFIC 主摄 + 2 亿潜望长焦拍摄中实现边拍边传。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657366974904713769/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">4</span> 小米玄戒 O3：3nm 自研旗舰 SoC，超大核 4.05GHz + 澎湃 OS4 调度</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 泡泡网　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">小米 MIX Fold5 首发玄戒 O3 自研芯片（台积电 3nm），超大核 4.05GHz / 大核 3.42GHz / 小核 3.02GHz，GPU 1.49GHz、带宽 9600MT/s。澎湃 OS4 重构底层、引入液态玻璃设计，AI 智能体全链路底层整合，跨应用底层联动 + 5G 切片资源分配。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7657386542192755241/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">5</span> 小米 18 系列首发骁龙 8 Elite Gen6：徕卡双 2 亿像素 + 5G 旗舰 SoC</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 快科技 / 数码闲聊站　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">小米 18 系列预计 9 月 28-30 日发布，全球首发骁龙 8 Elite Gen6，搭载超大底徕卡 2 亿像素主摄 + 徕卡 2 亿像素潜望长焦（全系潜望长焦下放）。新一代 Oryon CPU 架构 + Adreno 850 GPU，搭配 X80 5G R18 基带，本地 AI 大模型推理 + 5G 双连接，预计起步价或突破 5000 元。</div>
-  <div class="insight-links"><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank" rel="noopener" class="link-btn">🔗 news.mydrivers.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">6</span> REDMI Note17：9000mAh + 骁龙 6 Gen5 4nm 中低端 SoC 提频</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / 雷科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">REDMI Note17 搭载骁龙 6 Gen5 低功耗芯片（台积电 4nm），CPU 八核：4 颗 2.6GHz 性能核 + 4 颗 2.0GHz 能效核，GPU 性能较前代提升 21%、能效提升 8%，与骁龙 7s Gen3 持平。搭配 9000mAh 电池，定位走量大电池耐用机型。在 5G Sub-6 GHz 连接下能效优势明显。</div>
-  <div class="insight-links"><a href="https://36kr.com/p/3876487460649860" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">7</span> 星云科技 SK-YK100：96 核 RISC-V + 1280 TOPS，边缘 5G 加速</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 上证报 / 星云科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">星云科技 SK-YK100（7nm 异构加速芯片）面向自动驾驶域控制器与云端推理服务器。96 个 RISC-V 通用计算核心在 5G MEC 边缘节点上提供 1280 TOPS 算力，能效比 8.7 TOPS/W（提升 42%）。在 vRAN/Open RAN 5G 基站场景中可替代部分 FPGA 加速卡。</div>
-  <div class="insight-links"><a href="https://news.mydrivers.com/tag/xiaomi.htm" target="_blank" rel="noopener" class="link-btn">🔗 news.mydrivers.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">8</span> Tenstorrent Ascalon S：单位面积性能 +140%，RISC-V 服务器 CPU 提频</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IT 之家 / 凤凰网科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">Tenstorrent 在 TT-Deploy JP 大会发布 RISC-V CPU 内核 TT-Ascalon S，以 Ascalon X 一半的面积实现 70% 性能，单位面积性能 +140%。Galaxy Blackhole「超级集群」在 Kimi K2.6 上达 900 Token/s/user（GPU 的 3 倍）。在 5G MEC 与 AI 边缘推理场景中提供 RISC-V 提频方案。</div>
-  <div class="insight-links"><a href="https://tech.ifeng.com/c/8uOsI7Ij8LI" target="_blank" rel="noopener" class="link-btn">🔗 tech.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">9</span> Anthropic 副总裁 Krieger：模型能力仅走完 10%，对标 SpaceX 太空合作</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / Anthropic Labs　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">Anthropic Labs 负责人 Mike Krieger 表示，对照模型能力的终极形态目前大概只走了 10% 的路程，正聚焦让 Claude 拥有更多自主权与环境感知。Anthropic 正与 SpaceX 洽谈太空相关合作，并提出未来可能从卖 Token 转向基于结果的定价模式（Claude Managed Agents 已尝试）。5G/6G 太空-地面融合场景下，Token 计费向「结果计费」转变。</div>
-  <div class="insight-links"><a href="https://m.sohu.com/a/1043925759_455313/" target="_blank" rel="noopener" class="link-btn">🔗 m.sohu.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">10</span> 半导体涨价潮传导：旗舰机价格普涨 1000-2000 元，AI + 5G 双驱动</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 36 氪 / 雷科技　**时间：**2026-07-01</span>
-    <span class="meta-tag">🕐 2026-07-01</span>
-  </div>
-  <div class="insight-points">内存、闪存、芯片、面板全线上涨，蓝厂黑厂旗下产品已二次涨价。由于台积电 2nm 晶圆代工价格较 3nm 上浮 + 芯片面积增大 + N2P 工艺研发摊销 + HPB 新型散热结构，骁龙 8E6 系列成本上涨几乎板上钉钉。搭载 Pro 版的旗舰定价或突破 7000-8000 元，2nm 旗舰对 5G + AI 算力的双驱动让「分水岭周期」到来。</div>
-  <div class="insight-links"><a href="https://36kr.com/p/3876487460649860" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-06-30.html" class="day-nav-btn">← 上一篇 2026-06-30</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-07-02.html" class="day-nav-btn">下一篇 2026-07-02 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

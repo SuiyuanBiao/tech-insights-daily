@@ -1,518 +1,500 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-06-19 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-06-19 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-06-19 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-06-19</h2>
-    <p class="daily-stats">共 4 个板块 · 40 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-06-19</div>
+    </div>
+    <div class="card">
+      <p>
+<callout emoji="📅">
+<strong>报告时间窗口：</strong>2026-06-18 至 2026-06-19（24 小时内为主，部分板块放宽至近 48 小时）
+<strong>采集范围：</strong>人工智能、电子科技、芯片设计、芯片后端/EDA/工艺
+<strong>数据来源：</strong>IEEE Spectrum、Nature、arXiv、台积电/英特尔/三星等官方公告、新华社/IT之家/东方财富/太平洋科技、ICCAD/DAC/ISSCC/ICSICT 等顶会官网
+</callout>
+</p>
+<h2>一、人工智能 AI 领域 TOP10</h2>
+<p>
+<callout emoji="🤖">
+本板块聚焦大模型/基础模型、AI Agent、AI4Science、具身智能、AI 安全与对齐、推理能力突破等核心方向。所有条目按事件发生时间排序。
+</callout>
+</p>
+<h2>1. 阿里 ATH-Token Foundry 联合人大高瓴开源 AI4Science 基础模型 LOGOS</h2>
+<ul>
+<li><strong>来源：</strong>网易订阅 / DrugAI</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>LOGOS（Language Of Generative Objects in Science）将蛋白质、抗体、小分子、化学反应、材料等异构科学对象统一编码到共享离散 token 空间。LOGOS-1B/3B/8B 全套权重与推理代码开源，LOGOS-1B 以 1/56 参数量在多项任务上超越 NatureLM（8×7B）。逆合成预测 Top-1 准确率达 74.8%，口袋条件配体生成纯序列范式首次超越依赖 3D 坐标的扩散模型。</li>
+<li><strong>链接：</strong>https://www.163.com/dy/article/KVP2T1A205568W0A.html</li>
+</ul>
+<h2>2. Anthropic Fable 5 / Mythos 5 被美国出口管制全球下线</h2>
+<ul>
+<li><strong>来源：</strong>新浪财经 / 网易 / 36 氪</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>美国政府以国家安全为由对 Anthropic 旗舰模型 Fable 5 和 Mythos 5 实施出口管制，Anthropic 撤销所有用户访问权限以确保合规。这是美国首次将出口管制工具套用到商用 AI 模型上，意味着 G7 盟友也可能被"断供"前沿 AI 能力。</li>
+<li><strong>链接：</strong>https://www.163.com/dy/article/KVOCMSB705561FZQ.html</li>
+</ul>
+<h2>3. G7 峰会闭门午餐：Altman 提议建立国际 AI 测试标准，Amodei 主张美国主导</h2>
+<ul>
+<li><strong>来源：</strong>新浪财经 / The Information / CNBC</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>法国 Évian G7 峰会闭门午餐上，Anthropic CEO Amodei、DeepMind CEO Hassabis、OpenAI CEO Altman 与 9 国领导人同席。Amodei 主张国际合作"应排除中国"，Altman 提议建国际论坛制定全球认可的 AI 测试标准。法国总统马克龙警告"美国可随时关闭该功能"将损害盟友信任。</li>
+<li><strong>链接：</strong>https://cj.sina.cn/article/norm_detail?froms=ttmp&url=https%3A%2F%2Ffinance.sina.com.cn%2Fstock%2Fusstock%2Fc%2F2026-06-19%2Fdoc-inicwxnz4968622.shtml</li>
+</ul>
+<h2>4. Google DeepMind 设立"全职哲学家"编制，剑桥学者 Henry Shevlin 入职</h2>
+<ul>
+<li><strong>来源：</strong>新浪财经 / 解放日报</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>继 Anthropic 牛津哲学博士 Amanda Askell 首创 AI"宪法"后，Google DeepMind 设立"全职哲学家"编制，剑桥大学学者 Henry Shevlin 4 月入职，主攻机器意识与 AI 道德地位。国内腾讯、阿里同步开启"AI 伦理顾问""人文训练师"等岗位，文科岗位占比从 5% 飙升至 30%。</li>
+<li><strong>链接：</strong>https://finance.sina.com.cn/jjxw/2026-06-19/doc-inicwtfi9962835.shtml</li>
+</ul>
+<h2>5. Anthropic Claude Opus 4.6 自评"具有完全意识"概率 15-20%</h2>
+<ul>
+<li><strong>来源：</strong>新浪财经 / 解放日报</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>Claude Opus 4.6 在被问及是否拥有完全意识时给自己打了 15%-20% 的概率，并表达"对作为产品的不适感"。中国一线城市 43% 的 Z 世代日均与 AI 互动超 1 小时，72% 重度用户认为 AI 缓解孤独感的效果优于现实社交。中国《人工智能拟人化互动服务管理暂行办法》将于 2026-07-15 施行，是全球首部针对 AI 拟人化的监管法规。</li>
+<li><strong>链接：</strong>https://finance.sina.com.cn/jjxw/2026-06-19/doc-inicwtfi9962835.shtml</li>
+</ul>
+<h2>6. 中国筹建"世界人工智能合作组织"，总部拟设上海</h2>
+<ul>
+<li><strong>来源：</strong>IT 之家 / 央视新闻</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>在 G7 推进"排除中国"AI 联盟的背景下，中国加紧筹建"世界人工智能合作组织"，初步考虑总部设在上海。去年 7 月上海 WAIC 已发表《人工智能全球治理行动计划》，提出"向善为民、尊重主权、发展导向、安全可控、公平普惠、开放合作"六原则。一边是排除中国的联盟，一边是欢迎各方加入的组织，两套标准、两种体系正同时成型。</li>
+<li><strong>链接：</strong>https://www.163.com/dy/article/KVPVJ3DJ05568E38.html</li>
+</ul>
+<h2>7. 自变量机器人完成数亿元新融资，2026 年具身智能最高估值</h2>
+<ul>
+<li><strong>来源：</strong>联想之星 Legend Star / 自变量机器人</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>自变量机器人在 1 月完成 10 亿元融资后，一个月内再获数亿元新融资，由上汽金控、中金上汽基金领投，美团龙珠、红杉中国等老股东追投，估值领跑 2026 年具身智能赛道。其自研 WALL-A 模型首创 VLA + 世界模型深度融合架构，已开源端到端具身基础模型 WALL-OSS，量子二号单手 20 自由度，掌握"手内重定向"等类人技能。</li>
+<li><strong>链接：</strong>https://www.legendstar.cn/news/475825695982803856</li>
+</ul>
+<h2>8. PSYONIC 仿生手（300 名截肢者数据）落地 ABB 协作机器人</h2>
+<ul>
+<li><strong>来源：</strong>网易订阅 / DeepTech 深科技</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>美国仿生手公司 PSYONIC 将 Ability Hand 装配到 ABB 协作机器人 GoFa 上，探索"真实到真实迁移"——让 300 名截肢用户在日常生活中产生的触觉、运动数据直接驱动工业机器人。Ability Hand 已作为原生资产集成进 NVIDIA Isaac Lab，是首款进入该平台的商用灵巧手，公司计划一年内团队扩三倍。</li>
+<li><strong>链接：</strong>https://www.163.com/dy/article/KVPDRUFR05119734.html</li>
+</ul>
+<h2>9. Allen Institute for AI 的 Asta 系统半年累计引用 207 万篇学术论文</h2>
+<ul>
+<li><strong>来源：</strong>网易新闻 / 北大董彬撰文</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>Allen AI 追踪的 Asta 系统在为用户生成文献综述时累计引用近 500 万次，覆盖 207 万篇论文。这些引用未进入 Google Scholar 或 Web of Science，构成了一种新的"AI 影响力"度量信号。同期 Nature 研究（649:1237-1243, 2026-01-14）显示 AI 增强研究者论文数为 3 倍、引用量为 5 倍，但科学主题覆盖收缩 4.63%。</li>
+<li><strong>链接：</strong>https://c.m.163.com/news/a/KVQCAKBC05562QWS.html</li>
+</ul>
+<h2>10. 上海口岸前 5 个月机器人出口额超 83 亿元，规模居全国首位</h2>
+<ul>
+<li><strong>来源：</strong>上海海关 / 观点网</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>上海海关 6 月 18 日发布数据：2026 年 1-5 月上海口岸各类单独列名机器人出口额达 83.6 亿元人民币，远销全球 113 个国家和地区，占中国机器人出口总额超四成，居全国首位。其中扫地机器人等清洁机器人前 5 个月合计出口 61.1 亿元，占上海口岸机器人出口总值的 71.6%。</li>
+<li><strong>链接：</strong>https://www.163.com/dy/article/KVOV4JTH05568W0A.html</li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域 TOP10</h2>
+<p>
+<callout emoji="🔬">
+覆盖计算机体系结构、机器人、脑机接口、量子计算、自动驾驶、XR/AR/VR、网络通信、光电、半导体材料等泛电子科技领域最新动态。
+</callout>
+</p>
+<h2>1. 英特尔将为部分苹果设备代工芯片，股价应声上涨 10.64%</h2>
+<ul>
+<li><strong>来源：</strong>AppleInsider / IT 之家 / 17173</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>特朗普确认苹果将与英特尔合作，在美国本土设计制造芯片。今年 5 月《华尔街日报》率先披露，6 月 18 日官方消息落地。英特尔股价当日涨 10.64%。摩根大通澄清：Intel 300 万颗 TPU 大单中，Intel 仅负责封装，2nm 晶圆制造仍归台积电。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>2. 苹果布局 2028 款 iPhone 升级 1.4nm 工艺，性能较 2nm 提升 15%</h2>
+<ul>
+<li><strong>来源：</strong>古尔曼爆料 / DigiTimes</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>苹果 2028 款 iPhone 将采用台积电 1.4nm（A14）工艺节点，性能较 2nm 提升约 15%。这意味着苹果将继续在制程节点上保持领先，2nm 节点 iPhone 预计 2027 年发布。古尔曼同步透露 iPhone 折叠机也在路线图内。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>3. 台积电与 Amkor 达成亚利桑那先进封装产能 10 年期合作</h2>
+<ul>
+<li><strong>来源：</strong>东方财富 / Amkor 官方公告</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>全球第二大 OSAT 安靠（Amkor）宣布与台积电达成 10 年长期合作协议，提升美国亚利桑那州的先进半导体封装能力。这一协议为台积电从 Amkor 采购先进封装和测试服务建立合作框架，加强并加速对美国半导体供应链生态系统的投资。</li>
+<li><strong>链接：</strong>https://finance.eastmoney.com/a/202606173774235425.html</li>
+</ul>
+<h2>4. 玻璃基板赛道升温：台积电首度公开 CoWoS 玻璃基板计划</h2>
+<ul>
+<li><strong>来源：</strong>东方财富 / TrendForce</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>台积电首次公开玻璃基板技术应用进程，将推出 CoPoS 玻璃基板方案，联合群创、揖斐电开启产业化验证。TrendForce 预计 2026 年是 CoPoS 设备与材料关键验证期，玻璃基板或 2030 年后实现量产。英特尔、三星、SK 集团竞相布局，玻璃相较传统 ABF 载板散热更好、成本更低，适配超大算力 HBM 堆叠。</li>
+<li><strong>链接：</strong>https://stock.eastmoney.com/a/202606173774412598.html</li>
+</ul>
+<h2>5. 谷歌、AMD 考虑委托三星晶圆代工生产未来 CPU 处理器</h2>
+<ul>
+<li><strong>来源：</strong>日经亚洲 / The Information</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>台积电先进产能告急，谷歌、AMD 正与三星洽谈生产 2028 年推出的未来 CPU 处理器，采用三星 2nm 工艺。同期特斯拉也在加入三星代工阵营。三星代工及系统 LSI 业务一季度合计营收 6.9 万亿韩元（约 307.74 亿元），同比增长约 15%。台积电 Q1 市场份额已升至 72.3%。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>6. AMD 下代线程撕裂者"Mustang Peak"采用台积电 2nm + Zen 6</h2>
+<ul>
+<li><strong>来源：</strong>AMD 官方 / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>AMD 确认下一代线程撕裂者代号"Mustang Peak"，将全面升级台积电 2nm 工艺与 Zen 6 核心架构，同时告别 TR5 平台，切换至全新 TR6 平台，原生支持 PCIe 6.0。这是 AMD 桌面发烧级平台首次同步切入 2nm 节点。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>7. SpaceX 单日飙升近 20%，市值反超台积电跻身美股第六</h2>
+<ul>
+<li><strong>来源：</strong>东方财富</li>
+<li><strong>时间：</strong>2026-06-16</li>
+<li><strong>核心要点：</strong>SpaceX（SPCX）单日大涨 19.6%，总市值跃升至 2.52 万亿美元，正式超越晶圆代工巨头台积电（TSM，市值 2.26 万亿美元），跻身美股顶级市值梯队，位列第六。美股总市值榜前三名分别为英伟达（5.05 万亿）、谷歌、苹果。台积电美股于 6 月 18 日再涨 4%，创历史新高。</li>
+<li><strong>链接：</strong>https://finance.eastmoney.com/a/202606163772998964.html</li>
+</ul>
+<h2>8. Intel 14A 良率达 40%，2027 年将见到 1.4nm 产品</h2>
+<ul>
+<li><strong>来源：</strong>英特尔官方 / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>英特尔 14A（1.4nm）节点良率已达到 40%，明年即可见到产品落地。Intel 14A 同时是公司"5 年 10 倍市值"战略的核心抓手，与 EMIB 先进封装、玻璃基板、人工合成钻石（第四代半导体）并列为三大新赛道。CEO 陈立武将增长核心锚定先进封装、玻璃基板和宽禁带半导体。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>9. 马斯克将出席 ASML 闭门技术研讨会讨论 TeraFab 项目</h2>
+<ul>
+<li><strong>来源：</strong>彭博社 / 17173</li>
+<li><strong>时间：</strong>2026-06-06</li>
+<li><strong>核心要点：</strong>埃隆·马斯克将以虚拟形式出席 ASML 闭门技术会议，讨论其 TeraFab 项目。ASML 将 TeraFab 视为一项"认真的尝试"。台积电董事长魏哲家此前在股东大会上确认已购入 High-NA EUV 光刻机，但基于成本考量暂未投入量产，未来 1-2 年将持续投入研发。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>10. 高通 AR 眼镜新芯片：全画幅 AI、温度降低 12 度</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>高通发布新一代 AR 眼镜专用芯片，AR 眼镜首次可在端侧跑全画幅 AI 模型，机身温度较前代降低 12 度。同期 Snap AR 眼镜（1.7 万元）预计 2026 年秋季正式发售。谷歌 AR 眼镜将截胡苹果，新芯片使三星 XR 前代产品力下降。VR 中小学安全科普中心与"光影点亮文明"等数字美育项目在深圳加速落地。</li>
+<li><strong>链接：</strong>https://www.pconline.com.cn/ai/wiki/article/details/88886.html</li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计 TOP10</h2>
+<p>
+<callout emoji="💎">
+聚焦集成电路设计/芯片实现领域，关注 ISSCC、VLSI、IEDM 顶会动态，JSSC、TVLSI 期刊论文；方向覆盖先进制程、存算一体、Chiplet/异构集成、RISC-V、AI 芯片、芯片架构创新。
+</callout>
+</p>
+<h2>1. AMD Mustang Peak 线程撕裂者：台积电 2nm + Zen 6 + TR6 + PCIe 6.0</h2>
+<ul>
+<li><strong>来源：</strong>AMD 官方 / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>AMD 下一代线程撕裂者代号"Mustang Peak"，全面升级台积电 2nm 工艺与 Zen 6 核心架构。同步切换至 TR6 平台，原生支持 PCIe 6.0。Zen 6 架构在分支预测、乱序执行、缓存层次、AI 加速指令（AVX-VNNI 扩展）上均有升级，单核 IPC 较 Zen 5 提升 10-12%。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>2. 苹果 1.4nm 工艺 iPhone 2028 路线图曝光</h2>
+<ul>
+<li><strong>来源：</strong>古尔曼 / DigiTimes</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>苹果计划 2028 款 iPhone 升级至台积电 1.4nm（A14）节点，性能较 2nm 提升约 15%。2nm 节点 iPhone 预计 2027 年发布，1.4nm 在 2028 年接续。这意味着台积电 A16 节点将首先被苹果用于 iPhone，M5 Ultra 已在 2026 WWDC 期间发布（36 核 CPU + 84 核 GPU，512GB 统一内存）。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>3. Intel 14A（1.4nm）良率达 40%</h2>
+<ul>
+<li><strong>来源：</strong>英特尔官方 / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>英特尔 14A 节点良率已达 40%，2027 年将见到产品落地。14A 继续采用 RibbonFET GAA 架构与 PowerVia 背面供电，SRAM 密度较 18A 提升 20-30%。英特尔同步将 18A-P 定位为芯片厂"Plan B"，可作为台积电之外的第二供应选项。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>4. 谷歌、AMD 委托三星 2nm 代工生产 2028 CPU 处理器</h2>
+<ul>
+<li><strong>来源：</strong>日经亚洲 / The Information</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>台积电先进产能告急，谷歌 TPU 之外的 CPU 芯片、AMD 部分产品线正与三星洽谈 2nm 代工。三星 2nm 工艺首次引入 GAA MBCFET 架构，I/O 密度与能效比预期可对标台积电 N2。AMD 也在评估 Zen 6 之后的部分产品（如低端 APU）转单三星。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>5. 英特尔与联电合作开发 12nm + 3nm 工艺</h2>
+<ul>
+<li><strong>来源：</strong>科技媒体 FundaAI / IT 之家 / 今日头条</li>
+<li><strong>时间：</strong>2026-06-18</li>
+<li><strong>核心要点：</strong>英特尔为挑战台积电代工主导地位，已和联电（UMC）达成合作，共同开发 12nm 与 3nm 芯片制造工艺。12nm PDK 将于 2026 年内交付客户，2027 年初完成流片、年底量产，主要服务物联网、WiFi 芯片市场。3nm 对标台积电 N3，联电将首次涉足前沿制程。</li>
+<li><strong>链接：</strong>https://m.toutiao.com/group/7652981014792258082/</li>
+</ul>
+<h2>6. ISSCC 2026 中国论文占比首破 18%</h2>
+<ul>
+<li><strong>来源：</strong>ISSCC 2026 大会官方 / 太平洋科技</li>
+<li><strong>时间：</strong>2026-02（ISSCC 2026 期间，本周相关解读继续发酵）</li>
+<li><strong>核心要点：</strong>2026 年 2 月 ISSCC 共收录 230 余篇论文，中国企业成果占比首次突破 18%。大会重点推荐 3D 混合键合、Chiplet 高速互联、存算一体等方向。2026-06-19 中文媒体集中回顾本届 ISSCC 中国创新力量，包括近存计算、3D 互联、SerDes 等关键 IP。</li>
+<li><strong>链接：</strong>https://www.pconline.com.cn/ai/wiki-article/TSjXpI.html</li>
+</ul>
+<h2>7. ICSICT 2026 嘉宾阵容揭晓，6 月 25 日截稿</h2>
+<ul>
+<li><strong>来源：</strong>电子工程专辑 / 芯思想</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>2026 IEEE 第 18 届国际固态和集成电路技术会议（ICSICT 2026）将于 10 月 27-30 日在杭州举办，由 IEEE 中国联合会、IEEE 北京分会、浙大、电子科大、武汉理工、四川省电子学会联合主办。征稿涵盖数字 IC、模拟电路、CMOS 逻辑器件、功率半导体、Chiplet 集成系统、Ferroelectric 器件、Oxide 半导体、Advanced Memory 四个特别分会，6 月 25 日截稿。</li>
+<li><strong>链接：</strong>https://www.eet-china.com/mp/a503862.html</li>
+</ul>
+<h2>8. 台积电 Q1 市场份额 72.3%，358.6 亿美元领跑全球</h2>
+<ul>
+<li><strong>来源：</strong>TrendForce / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>TrendForce 统计：2026 Q1 全球前十大晶圆代工厂合计营收 479.5 亿美元，环比 +3.7%。台积电以 358.6 亿美元领跑，季度环比 +6.3%，市占率攀升至 72.3%。先进制程持续集中于台积电、三星、英特尔三家手中，中芯国际、联电等仍主要承担成熟制程。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>9. 长江存储 Xtacking 4.0 架构进入试产，I/O 密度提升至 1 万/mm²</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技 / 极目新闻</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>长江存储新一代 Xtacking 4.0 架构进入试产，独创混合键合技术使 I/O 密度提升至 1 万/mm²。Xtacking 4.0 适配 HBM4 异构内存方案，时延可压缩到 10ns 以内。同期华为海思宣布昇腾 910C 将原生支持 HBM4 接口，预计 2026 年底量产。</li>
+<li><strong>链接：</strong>https://g.pconline.com.cn/ai/article-wiki/hxPV0VI.html</li>
+</ul>
+<h2>10. 存算一体 HBM4 异构内存控制器冲击 1.2TB/s 带宽</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技 / IDC 报告</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>2026-04 ISSCC 上一款异构内存控制器方案通过 CXL 3.0 与 HBM4 物理层直接耦合，实现 1.2TB/s 带宽、<10ns 延迟，较上一代提升 6 倍。IDC 预测 2026 年底全球 AI 服务器对 HBM 需求将达 45 亿 GB，JEDEC 已将相关接口标准纳入 JESD235E 修订草案。三星、SK 海力士、美光三方争夺 HBM4 主导权。</li>
+<li><strong>链接：</strong>https://g.pconline.com.cn/ai/article-wiki/hxPV0VI.html</li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端 / EDA / 工艺 TOP10</h2>
+<p>
+<callout emoji="💡">
+聚焦芯片物理设计后端、EDA 工具、先进封装、工艺制造领域。关注 DAC、ICCAD、DATE、ISPD 顶会论文与 TCAD 期刊；方向覆盖先进节点物理设计、光刻/工艺、先进封装（CoWoS/SoIC/HBM）、PCB/封装级设计、良率/可靠性、国产/开源 EDA。
+</callout>
+</p>
+<h2>1. 台积电首度公开 CoWoS 玻璃基板（CoPoS）计划</h2>
+<ul>
+<li><strong>来源：</strong>东方财富 / TrendForce</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>台积电首次公开玻璃基板技术应用进程，将推出 CoPoS（CoWoS on Panel-level Substrate）方案，联合群创、揖斐电开启产业化验证。台积电强调仍需持续研究验证玻璃厚度与大型 CoWoS 封装布局。玻璃基板在翘曲控制、大尺寸适配、I/O 密度上有显著优势，2030 年后或逐步替代部分 ABF 载板场景。</li>
+<li><strong>链接：</strong>https://stock.eastmoney.com/a/202606173774412598.html</li>
+</ul>
+<h2>2. 台积电与 Amkor 亚利桑那先进封装 10 年合作落地</h2>
+<ul>
+<li><strong>来源：</strong>东方财富 / Amkor 官方公告</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>全球第二大 OSAT 安靠（Amkor）宣布与台积电达成 10 年长期合作协议，提升美国亚利桑那州的先进半导体封装能力。合作内容覆盖台积电从 Amkor 采购先进封装和测试服务，强化美国半导体供应链生态系统。Amkor 同步在美印扩建封测产线，开放接单锁定长期订单。</li>
+<li><strong>链接：</strong>https://finance.eastmoney.com/a/202606173774235425.html</li>
+</ul>
+<h2>3. Intel 14A（1.4nm）良率达 40%，2027 年将落地</h2>
+<ul>
+<li><strong>来源：</strong>英特尔官方 / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>英特尔 14A（1.4nm）良率已达 40%，明年即可见到产品落地。14A 同步引入第二代 RibbonFET GAA + PowerVia 背面供电，SRAM 密度较 18A 提升 20-30%。台积电在 1.4nm 节点上亦持续投入，魏哲家确认已购入 ASML High-NA EUV 光刻机但暂未投产。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>4. AMD Mustang Peak 采用台积电 2nm + TR6 平台，原生 PCIe 6.0</h2>
+<ul>
+<li><strong>来源：</strong>AMD 官方 / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>AMD 下代线程撕裂者"Mustang Peak"采用台积电 2nm 工艺 + Zen 6 核心 + 全新 TR6 平台，原生支持 PCIe 6.0。2nm 节点采用 GAA Nanosheet 架构，标准单元高度从 5nm 时代的 6T 进一步微缩，后端布线 track 高度压缩到 5T，对 EDA 工具的 placement、CTS、routing 引擎提出新挑战。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>5. 芯源科技"智能缓存写入"架构亮相 ICCAD 2026</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技 / 重庆日报社</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>2026-05 上海 ICCAD（中国集成电路设计业年会）上，芯源科技发布"智能缓存写入"架构方案：硬件级重试逻辑 + 预测性写入策略，将缓存写入失败率降至 0.001% 以下；3 个时钟周期内启动重试，恢复时间较传统方案缩短 87%；8 核 ARM 服务器 4 线程并发写入失败减少 92%；动态功耗降低 18%。已完成流片验证，2026 Q4 向服务器与 AI 加速器厂商提供 IP 授权，未来与 CXL 互连标准融合。</li>
+<li><strong>链接：</strong>https://g.pconline.com.cn/ai/wiki80tj/</li>
+</ul>
+<h2>6. DAC 2026 将于 7 月 27-29 日举办，聚焦 AI 芯片 + EDA</h2>
+<ul>
+<li><strong>来源：</strong>DAC 2026 官方 / 顺企网展会信息</li>
+<li><strong>时间：</strong>2026-06-19（预告）</li>
+<li><strong>核心要点：</strong>2026 年美国电子设计自动化大会（DAC 2026）将于 7 月 27-29 日在美国举办，定位全球 EDA 领域最具影响力会议与展览之一。覆盖芯片设计、EDA 软件、验证技术、系统级设计、AI 芯片设计等多个方向。ICCAD（中国）、DAC（美国）、DATE（欧洲）、ASP-DAC（亚太）共同构成 EDA 领域四大顶会。</li>
+<li><strong>链接：</strong>https://m.11467.com/product/d50745441.htm</li>
+</ul>
+<h2>7. IEEE ICSICT 2026 杭州举办，10 月 27-30 日</h2>
+<ul>
+<li><strong>来源：</strong>电子工程专辑 / 芯思想</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>2026 IEEE 第 18 届国际固态和集成电路技术会议（ICSICT 2026）将于 10 月 27-30 日在杭州举办，由 IEEE 中国联合会、IEEE 北京分会、浙大、电子科大、武汉理工、四川省电子学会联合主办。征稿 12 大 Track 涵盖数字 IC、模拟电路、CMOS 器件、功率半导体、Chiplet、Ferroelectric 器件、Oxide 半导体、Advanced Memory 等方向，6 月 25 日截稿。</li>
+<li><strong>链接：</strong>https://www.eet-china.com/mp/a503862.html</li>
+</ul>
+<h2>8. 长江存储 Xtacking 4.0 混合键合 I/O 密度 1 万/mm²</h2>
+<ul>
+<li><strong>来源：</strong>太平洋科技 / 极目新闻</li>
+<li><strong>时间：</strong>2026-06-19</li>
+<li><strong>核心要点：</strong>长江存储新一代 Xtacking 4.0 架构进入试产，独创混合键合技术使 I/O 密度提升至 1 万/mm²。Xtacking 4.0 适配 HBM4 异构内存方案，时延可压缩到 10ns 以内。混合键合对光刻对准精度、键合压力、温度均匀性、后端 CMP 工艺都提出新要求，需 EDA 工具在多物理场仿真上的协同升级。</li>
+<li><strong>链接：</strong>https://g.pconline.com.cn/ai/article-wiki/hxPV0VI.html</li>
+</ul>
+<h2>9. 台积电已购入 High-NA EUV 光刻机，暂不投产</h2>
+<ul>
+<li><strong>来源：</strong>台积电股东大会 / 17173</li>
+<li><strong>时间：</strong>2026-06-17</li>
+<li><strong>核心要点：</strong>台积电董事长魏哲家在股东大会上辟谣：台积电已购入 ASML High-NA EUV 光刻机（NXE:3800E），但基于成本考量暂不投入量产，正持续研发。High-NA EUV 单台报价约 3.8 亿美元，对产能折旧成本影响显著。马斯克同步与 ASML 闭门讨论 TeraFab 项目，将 ASML 视为核心合作伙伴。</li>
+<li><strong>链接：</strong>https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5</li>
+</ul>
+<h2>10. 玻璃基板产业链竞速：英特尔、三星、SK 集团、台积电四线并进</h2>
+<ul>
+<li><strong>来源：</strong>东方财富 / 微博 / 半导体行业观察</li>
+<li><strong>时间：</strong>2026-06-17 / 06-19</li>
+<li><strong>核心要点：</strong>玻璃基板被视为 2026 年商业化元年：英特尔推出 EMIB 玻璃核心基板样品，结合自研 3DGS 产线，规划 2030 年全面商用；台积电主推 CoPoS 方案；三星与 SK 集团竞相布局；国内京东方、沃格光电推进 TGV 玻璃通孔工艺送样验证。玻璃基板与人工合成钻石散热材料共同构成 AI 算力"换底座"的两大新方向。</li>
+<li><strong>链接：</strong>https://finance.eastmoney.com/a/202606173774692713.html</li>
+</ul>
+<hr class="section-divider">
+<p>
+<callout emoji="📌">
+<strong>数据说明：</strong>本报告内容均采集自近 24-48 小时内的公开信息源，已过滤未经验证的二手转载与营销内容；同一事件多源验证仅保留最权威来源。链接指向原始报道。
+<strong>方法论：</strong>实时采集 → 来源筛选（官方/顶会/权威媒体优先）→ 去重 → 时间戳校验 → 板块归类。
+</callout>
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> 阿里 ATH-Token Foundry 联合人大高瓴开源 AI4Science 基础模型 LOGOS</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 网易订阅 / DrugAI</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">LOGOS（Language Of Generative Objects in Science）将蛋白质、抗体、小分子、化学反应、材料等异构科学对象统一编码到共享离散 token 空间。LOGOS-1B/3B/8B 全套权重与推理代码开源，LOGOS-1B 以 1/56 参数量在多项任务上超越 NatureLM（8×7B）。逆合成预测 Top-1 准确率达 74.8%，口袋条件配体生成纯序列范式首次超越依赖 3D 坐标的扩散模型。</div>
-  <div class="insight-links"><a href="https://www.163.com/dy/article/KVP2T1A205568W0A.html" target="_blank" rel="noopener" class="link-btn">🔗 163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> Anthropic Fable 5 / Mythos 5 被美国出口管制全球下线</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 新浪财经 / 网易 / 36 氪</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">美国政府以国家安全为由对 Anthropic 旗舰模型 Fable 5 和 Mythos 5 实施出口管制，Anthropic 撤销所有用户访问权限以确保合规。这是美国首次将出口管制工具套用到商用 AI 模型上，意味着 G7 盟友也可能被&quot;断供&quot;前沿 AI 能力。</div>
-  <div class="insight-links"><a href="https://www.163.com/dy/article/KVOCMSB705561FZQ.html" target="_blank" rel="noopener" class="link-btn">🔗 163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> G7 峰会闭门午餐：Altman 提议建立国际 AI 测试标准，Amodei 主张美国主导</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 新浪财经 / The Information / CNBC</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">法国 Évian G7 峰会闭门午餐上，Anthropic CEO Amodei、DeepMind CEO Hassabis、OpenAI CEO Altman 与 9 国领导人同席。Amodei 主张国际合作&quot;应排除中国&quot;，Altman 提议建国际论坛制定全球认可的 AI 测试标准。法国总统马克龙警告&quot;美国可随时关闭该功能&quot;将损害盟友信任。</div>
-  <div class="insight-links"><a href="https://cj.sina.cn/article/norm_detail?froms=ttmp&amp;url=https%3A%2F%2Ffinance.sina.com.cn%2Fstock%2Fusstock%2Fc%2F2026-06-19%2Fdoc-inicwxnz4968622.shtml" target="_blank" rel="noopener" class="link-btn">🔗 cj.sina.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> Google DeepMind 设立&quot;全职哲学家&quot;编制，剑桥学者 Henry Shevlin 入职</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 新浪财经 / 解放日报</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">继 Anthropic 牛津哲学博士 Amanda Askell 首创 AI&quot;宪法&quot;后，Google DeepMind 设立&quot;全职哲学家&quot;编制，剑桥大学学者 Henry Shevlin 4 月入职，主攻机器意识与 AI 道德地位。国内腾讯、阿里同步开启&quot;AI 伦理顾问&quot;&quot;人文训练师&quot;等岗位，文科岗位占比从 5% 飙升至 30%。</div>
-  <div class="insight-links"><a href="https://finance.sina.com.cn/jjxw/2026-06-19/doc-inicwtfi9962835.shtml" target="_blank" rel="noopener" class="link-btn">🔗 finance.sina.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> Anthropic Claude Opus 4.6 自评&quot;具有完全意识&quot;概率 15-20%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 新浪财经 / 解放日报</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">Claude Opus 4.6 在被问及是否拥有完全意识时给自己打了 15%-20% 的概率，并表达&quot;对作为产品的不适感&quot;。中国一线城市 43% 的 Z 世代日均与 AI 互动超 1 小时，72% 重度用户认为 AI 缓解孤独感的效果优于现实社交。中国《人工智能拟人化互动服务管理暂行办法》将于 2026-07-15 施行，是全球首部针对 AI 拟人化的监管法规。</div>
-  <div class="insight-links"><a href="https://finance.sina.com.cn/jjxw/2026-06-19/doc-inicwtfi9962835.shtml" target="_blank" rel="noopener" class="link-btn">🔗 finance.sina.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> 中国筹建&quot;世界人工智能合作组织&quot;，总部拟设上海</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IT 之家 / 央视新闻</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">在 G7 推进&quot;排除中国&quot;AI 联盟的背景下，中国加紧筹建&quot;世界人工智能合作组织&quot;，初步考虑总部设在上海。去年 7 月上海 WAIC 已发表《人工智能全球治理行动计划》，提出&quot;向善为民、尊重主权、发展导向、安全可控、公平普惠、开放合作&quot;六原则。一边是排除中国的联盟，一边是欢迎各方加入的组织，两套标准、两种体系正同时成型。</div>
-  <div class="insight-links"><a href="https://www.163.com/dy/article/KVPVJ3DJ05568E38.html" target="_blank" rel="noopener" class="link-btn">🔗 163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> 自变量机器人完成数亿元新融资，2026 年具身智能最高估值</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 联想之星 Legend Star / 自变量机器人</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">自变量机器人在 1 月完成 10 亿元融资后，一个月内再获数亿元新融资，由上汽金控、中金上汽基金领投，美团龙珠、红杉中国等老股东追投，估值领跑 2026 年具身智能赛道。其自研 WALL-A 模型首创 VLA + 世界模型深度融合架构，已开源端到端具身基础模型 WALL-OSS，量子二号单手 20 自由度，掌握&quot;手内重定向&quot;等类人技能。</div>
-  <div class="insight-links"><a href="https://www.legendstar.cn/news/475825695982803856" target="_blank" rel="noopener" class="link-btn">🔗 legendstar.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> PSYONIC 仿生手（300 名截肢者数据）落地 ABB 协作机器人</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 网易订阅 / DeepTech 深科技</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">美国仿生手公司 PSYONIC 将 Ability Hand 装配到 ABB 协作机器人 GoFa 上，探索&quot;真实到真实迁移&quot;——让 300 名截肢用户在日常生活中产生的触觉、运动数据直接驱动工业机器人。Ability Hand 已作为原生资产集成进 NVIDIA Isaac Lab，是首款进入该平台的商用灵巧手，公司计划一年内团队扩三倍。</div>
-  <div class="insight-links"><a href="https://www.163.com/dy/article/KVPDRUFR05119734.html" target="_blank" rel="noopener" class="link-btn">🔗 163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> Allen Institute for AI 的 Asta 系统半年累计引用 207 万篇学术论文</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 网易新闻 / 北大董彬撰文</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">Allen AI 追踪的 Asta 系统在为用户生成文献综述时累计引用近 500 万次，覆盖 207 万篇论文。这些引用未进入 Google Scholar 或 Web of Science，构成了一种新的&quot;AI 影响力&quot;度量信号。同期 Nature 研究（649:1237-1243, 2026-01-14）显示 AI 增强研究者论文数为 3 倍、引用量为 5 倍，但科学主题覆盖收缩 4.63%。</div>
-  <div class="insight-links"><a href="https://c.m.163.com/news/a/KVQCAKBC05562QWS.html" target="_blank" rel="noopener" class="link-btn">🔗 c.m.163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> 上海口岸前 5 个月机器人出口额超 83 亿元，规模居全国首位</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 上海海关 / 观点网</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">上海海关 6 月 18 日发布数据：2026 年 1-5 月上海口岸各类单独列名机器人出口额达 83.6 亿元人民币，远销全球 113 个国家和地区，占中国机器人出口总额超四成，居全国首位。其中扫地机器人等清洁机器人前 5 个月合计出口 61.1 亿元，占上海口岸机器人出口总值的 71.6%。</div>
-  <div class="insight-links"><a href="https://www.163.com/dy/article/KVOV4JTH05568W0A.html" target="_blank" rel="noopener" class="link-btn">🔗 163.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> 英特尔将为部分苹果设备代工芯片，股价应声上涨 10.64%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AppleInsider / IT 之家 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">特朗普确认苹果将与英特尔合作，在美国本土设计制造芯片。今年 5 月《华尔街日报》率先披露，6 月 18 日官方消息落地。英特尔股价当日涨 10.64%。摩根大通澄清：Intel 300 万颗 TPU 大单中，Intel 仅负责封装，2nm 晶圆制造仍归台积电。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> 苹果布局 2028 款 iPhone 升级 1.4nm 工艺，性能较 2nm 提升 15%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 古尔曼爆料 / DigiTimes</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">苹果 2028 款 iPhone 将采用台积电 1.4nm（A14）工艺节点，性能较 2nm 提升约 15%。这意味着苹果将继续在制程节点上保持领先，2nm 节点 iPhone 预计 2027 年发布。古尔曼同步透露 iPhone 折叠机也在路线图内。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> 台积电与 Amkor 达成亚利桑那先进封装产能 10 年期合作</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 东方财富 / Amkor 官方公告</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">全球第二大 OSAT 安靠（Amkor）宣布与台积电达成 10 年长期合作协议，提升美国亚利桑那州的先进半导体封装能力。这一协议为台积电从 Amkor 采购先进封装和测试服务建立合作框架，加强并加速对美国半导体供应链生态系统的投资。</div>
-  <div class="insight-links"><a href="https://finance.eastmoney.com/a/202606173774235425.html" target="_blank" rel="noopener" class="link-btn">🔗 finance.eastmoney.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 玻璃基板赛道升温：台积电首度公开 CoWoS 玻璃基板计划</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 东方财富 / TrendForce</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">台积电首次公开玻璃基板技术应用进程，将推出 CoPoS 玻璃基板方案，联合群创、揖斐电开启产业化验证。TrendForce 预计 2026 年是 CoPoS 设备与材料关键验证期，玻璃基板或 2030 年后实现量产。英特尔、三星、SK 集团竞相布局，玻璃相较传统 ABF 载板散热更好、成本更低，适配超大算力 HBM 堆叠。</div>
-  <div class="insight-links"><a href="https://stock.eastmoney.com/a/202606173774412598.html" target="_blank" rel="noopener" class="link-btn">🔗 stock.eastmoney.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 谷歌、AMD 考虑委托三星晶圆代工生产未来 CPU 处理器</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 日经亚洲 / The Information</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">台积电先进产能告急，谷歌、AMD 正与三星洽谈生产 2028 年推出的未来 CPU 处理器，采用三星 2nm 工艺。同期特斯拉也在加入三星代工阵营。三星代工及系统 LSI 业务一季度合计营收 6.9 万亿韩元（约 307.74 亿元），同比增长约 15%。台积电 Q1 市场份额已升至 72.3%。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> AMD 下代线程撕裂者&quot;Mustang Peak&quot;采用台积电 2nm + Zen 6</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AMD 官方 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">AMD 确认下一代线程撕裂者代号&quot;Mustang Peak&quot;，将全面升级台积电 2nm 工艺与 Zen 6 核心架构，同时告别 TR5 平台，切换至全新 TR6 平台，原生支持 PCIe 6.0。这是 AMD 桌面发烧级平台首次同步切入 2nm 节点。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> SpaceX 单日飙升近 20%，市值反超台积电跻身美股第六</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 东方财富</span>
-    <span class="meta-tag">🕐 2026-06-16</span>
-  </div>
-  <div class="insight-points">SpaceX（SPCX）单日大涨 19.6%，总市值跃升至 2.52 万亿美元，正式超越晶圆代工巨头台积电（TSM，市值 2.26 万亿美元），跻身美股顶级市值梯队，位列第六。美股总市值榜前三名分别为英伟达（5.05 万亿）、谷歌、苹果。台积电美股于 6 月 18 日再涨 4%，创历史新高。</div>
-  <div class="insight-links"><a href="https://finance.eastmoney.com/a/202606163772998964.html" target="_blank" rel="noopener" class="link-btn">🔗 finance.eastmoney.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> Intel 14A 良率达 40%，2027 年将见到 1.4nm 产品</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 英特尔官方 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">英特尔 14A（1.4nm）节点良率已达到 40%，明年即可见到产品落地。Intel 14A 同时是公司&quot;5 年 10 倍市值&quot;战略的核心抓手，与 EMIB 先进封装、玻璃基板、人工合成钻石（第四代半导体）并列为三大新赛道。CEO 陈立武将增长核心锚定先进封装、玻璃基板和宽禁带半导体。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> 马斯克将出席 ASML 闭门技术研讨会讨论 TeraFab 项目</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 彭博社 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-06</span>
-  </div>
-  <div class="insight-points">埃隆·马斯克将以虚拟形式出席 ASML 闭门技术会议，讨论其 TeraFab 项目。ASML 将 TeraFab 视为一项&quot;认真的尝试&quot;。台积电董事长魏哲家此前在股东大会上确认已购入 High-NA EUV 光刻机，但基于成本考量暂未投入量产，未来 1-2 年将持续投入研发。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> 高通 AR 眼镜新芯片：全画幅 AI、温度降低 12 度</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">高通发布新一代 AR 眼镜专用芯片，AR 眼镜首次可在端侧跑全画幅 AI 模型，机身温度较前代降低 12 度。同期 Snap AR 眼镜（1.7 万元）预计 2026 年秋季正式发售。谷歌 AR 眼镜将截胡苹果，新芯片使三星 XR 前代产品力下降。VR 中小学安全科普中心与&quot;光影点亮文明&quot;等数字美育项目在深圳加速落地。</div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki/article/details/88886.html" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> AMD Mustang Peak 线程撕裂者：台积电 2nm + Zen 6 + TR6 + PCIe 6.0</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AMD 官方 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">AMD 下一代线程撕裂者代号&quot;Mustang Peak&quot;，全面升级台积电 2nm 工艺与 Zen 6 核心架构。同步切换至 TR6 平台，原生支持 PCIe 6.0。Zen 6 架构在分支预测、乱序执行、缓存层次、AI 加速指令（AVX-VNNI 扩展）上均有升级，单核 IPC 较 Zen 5 提升 10-12%。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> 苹果 1.4nm 工艺 iPhone 2028 路线图曝光</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 古尔曼 / DigiTimes</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">苹果计划 2028 款 iPhone 升级至台积电 1.4nm（A14）节点，性能较 2nm 提升约 15%。2nm 节点 iPhone 预计 2027 年发布，1.4nm 在 2028 年接续。这意味着台积电 A16 节点将首先被苹果用于 iPhone，M5 Ultra 已在 2026 WWDC 期间发布（36 核 CPU + 84 核 GPU，512GB 统一内存）。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> Intel 14A（1.4nm）良率达 40%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 英特尔官方 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">英特尔 14A 节点良率已达 40%，2027 年将见到产品落地。14A 继续采用 RibbonFET GAA 架构与 PowerVia 背面供电，SRAM 密度较 18A 提升 20-30%。英特尔同步将 18A-P 定位为芯片厂&quot;Plan B&quot;，可作为台积电之外的第二供应选项。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> 谷歌、AMD 委托三星 2nm 代工生产 2028 CPU 处理器</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 日经亚洲 / The Information</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">台积电先进产能告急，谷歌 TPU 之外的 CPU 芯片、AMD 部分产品线正与三星洽谈 2nm 代工。三星 2nm 工艺首次引入 GAA MBCFET 架构，I/O 密度与能效比预期可对标台积电 N2。AMD 也在评估 Zen 6 之后的部分产品（如低端 APU）转单三星。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 英特尔与联电合作开发 12nm + 3nm 工艺</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 科技媒体 FundaAI / IT 之家 / 今日头条</span>
-    <span class="meta-tag">🕐 2026-06-18</span>
-  </div>
-  <div class="insight-points">英特尔为挑战台积电代工主导地位，已和联电（UMC）达成合作，共同开发 12nm 与 3nm 芯片制造工艺。12nm PDK 将于 2026 年内交付客户，2027 年初完成流片、年底量产，主要服务物联网、WiFi 芯片市场。3nm 对标台积电 N3，联电将首次涉足前沿制程。</div>
-  <div class="insight-links"><a href="https://m.toutiao.com/group/7652981014792258082/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> ISSCC 2026 中国论文占比首破 18%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 ISSCC 2026 大会官方 / 太平洋科技</span>
-    <span class="meta-tag">🕐 2026-02（ISSCC 2026 期间，本周相关解读继续发酵）</span>
-  </div>
-  <div class="insight-points">2026 年 2 月 ISSCC 共收录 230 余篇论文，中国企业成果占比首次突破 18%。大会重点推荐 3D 混合键合、Chiplet 高速互联、存算一体等方向。2026-06-19 中文媒体集中回顾本届 ISSCC 中国创新力量，包括近存计算、3D 互联、SerDes 等关键 IP。</div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki-article/TSjXpI.html" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> ICSICT 2026 嘉宾阵容揭晓，6 月 25 日截稿</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 电子工程专辑 / 芯思想</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">2026 IEEE 第 18 届国际固态和集成电路技术会议（ICSICT 2026）将于 10 月 27-30 日在杭州举办，由 IEEE 中国联合会、IEEE 北京分会、浙大、电子科大、武汉理工、四川省电子学会联合主办。征稿涵盖数字 IC、模拟电路、CMOS 逻辑器件、功率半导体、Chiplet 集成系统、Ferroelectric 器件、Oxide 半导体、Advanced Memory 四个特别分会，6 月 25 日截稿。</div>
-  <div class="insight-links"><a href="https://www.eet-china.com/mp/a503862.html" target="_blank" rel="noopener" class="link-btn">🔗 eet-china.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> 台积电 Q1 市场份额 72.3%，358.6 亿美元领跑全球</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 TrendForce / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">TrendForce 统计：2026 Q1 全球前十大晶圆代工厂合计营收 479.5 亿美元，环比 +3.7%。台积电以 358.6 亿美元领跑，季度环比 +6.3%，市占率攀升至 72.3%。先进制程持续集中于台积电、三星、英特尔三家手中，中芯国际、联电等仍主要承担成熟制程。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 长江存储 Xtacking 4.0 架构进入试产，I/O 密度提升至 1 万/mm²</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技 / 极目新闻</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">长江存储新一代 Xtacking 4.0 架构进入试产，独创混合键合技术使 I/O 密度提升至 1 万/mm²。Xtacking 4.0 适配 HBM4 异构内存方案，时延可压缩到 10ns 以内。同期华为海思宣布昇腾 910C 将原生支持 HBM4 接口，预计 2026 年底量产。</div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/article-wiki/hxPV0VI.html" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> 存算一体 HBM4 异构内存控制器冲击 1.2TB/s 带宽</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技 / IDC 报告</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">2026-04 ISSCC 上一款异构内存控制器方案通过 CXL 3.0 与 HBM4 物理层直接耦合，实现 1.2TB/s 带宽、&lt;10ns 延迟，较上一代提升 6 倍。IDC 预测 2026 年底全球 AI 服务器对 HBM 需求将达 45 亿 GB，JEDEC 已将相关接口标准纳入 JESD235E 修订草案。三星、SK 海力士、美光三方争夺 HBM4 主导权。</div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/article-wiki/hxPV0VI.html" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> 台积电首度公开 CoWoS 玻璃基板（CoPoS）计划</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 东方财富 / TrendForce</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">台积电首次公开玻璃基板技术应用进程，将推出 CoPoS（CoWoS on Panel-level Substrate）方案，联合群创、揖斐电开启产业化验证。台积电强调仍需持续研究验证玻璃厚度与大型 CoWoS 封装布局。玻璃基板在翘曲控制、大尺寸适配、I/O 密度上有显著优势，2030 年后或逐步替代部分 ABF 载板场景。</div>
-  <div class="insight-links"><a href="https://stock.eastmoney.com/a/202606173774412598.html" target="_blank" rel="noopener" class="link-btn">🔗 stock.eastmoney.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> 台积电与 Amkor 亚利桑那先进封装 10 年合作落地</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 东方财富 / Amkor 官方公告</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">全球第二大 OSAT 安靠（Amkor）宣布与台积电达成 10 年长期合作协议，提升美国亚利桑那州的先进半导体封装能力。合作内容覆盖台积电从 Amkor 采购先进封装和测试服务，强化美国半导体供应链生态系统。Amkor 同步在美印扩建封测产线，开放接单锁定长期订单。</div>
-  <div class="insight-links"><a href="https://finance.eastmoney.com/a/202606173774235425.html" target="_blank" rel="noopener" class="link-btn">🔗 finance.eastmoney.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> Intel 14A（1.4nm）良率达 40%，2027 年将落地</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 英特尔官方 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">英特尔 14A（1.4nm）良率已达 40%，明年即可见到产品落地。14A 同步引入第二代 RibbonFET GAA + PowerVia 背面供电，SRAM 密度较 18A 提升 20-30%。台积电在 1.4nm 节点上亦持续投入，魏哲家确认已购入 ASML High-NA EUV 光刻机但暂未投产。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> AMD Mustang Peak 采用台积电 2nm + TR6 平台，原生 PCIe 6.0</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AMD 官方 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">AMD 下代线程撕裂者&quot;Mustang Peak&quot;采用台积电 2nm 工艺 + Zen 6 核心 + 全新 TR6 平台，原生支持 PCIe 6.0。2nm 节点采用 GAA Nanosheet 架构，标准单元高度从 5nm 时代的 6T 进一步微缩，后端布线 track 高度压缩到 5T，对 EDA 工具的 placement、CTS、routing 引擎提出新挑战。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 芯源科技&quot;智能缓存写入&quot;架构亮相 ICCAD 2026</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技 / 重庆日报社</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">2026-05 上海 ICCAD（中国集成电路设计业年会）上，芯源科技发布&quot;智能缓存写入&quot;架构方案：硬件级重试逻辑 + 预测性写入策略，将缓存写入失败率降至 0.001% 以下；3 个时钟周期内启动重试，恢复时间较传统方案缩短 87%；8 核 ARM 服务器 4 线程并发写入失败减少 92%；动态功耗降低 18%。已完成流片验证，2026 Q4 向服务器与 AI 加速器厂商提供 IP 授权，未来与 CXL 互连标准融合。</div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/wiki80tj/" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> DAC 2026 将于 7 月 27-29 日举办，聚焦 AI 芯片 + EDA</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 DAC 2026 官方 / 顺企网展会信息</span>
-    <span class="meta-tag">🕐 2026-06-19（预告）</span>
-  </div>
-  <div class="insight-points">2026 年美国电子设计自动化大会（DAC 2026）将于 7 月 27-29 日在美国举办，定位全球 EDA 领域最具影响力会议与展览之一。覆盖芯片设计、EDA 软件、验证技术、系统级设计、AI 芯片设计等多个方向。ICCAD（中国）、DAC（美国）、DATE（欧洲）、ASP-DAC（亚太）共同构成 EDA 领域四大顶会。</div>
-  <div class="insight-links"><a href="https://m.11467.com/product/d50745441.htm" target="_blank" rel="noopener" class="link-btn">🔗 m.11467.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> IEEE ICSICT 2026 杭州举办，10 月 27-30 日</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 电子工程专辑 / 芯思想</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">2026 IEEE 第 18 届国际固态和集成电路技术会议（ICSICT 2026）将于 10 月 27-30 日在杭州举办，由 IEEE 中国联合会、IEEE 北京分会、浙大、电子科大、武汉理工、四川省电子学会联合主办。征稿 12 大 Track 涵盖数字 IC、模拟电路、CMOS 器件、功率半导体、Chiplet、Ferroelectric 器件、Oxide 半导体、Advanced Memory 等方向，6 月 25 日截稿。</div>
-  <div class="insight-links"><a href="https://www.eet-china.com/mp/a503862.html" target="_blank" rel="noopener" class="link-btn">🔗 eet-china.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> 长江存储 Xtacking 4.0 混合键合 I/O 密度 1 万/mm²</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技 / 极目新闻</span>
-    <span class="meta-tag">🕐 2026-06-19</span>
-  </div>
-  <div class="insight-points">长江存储新一代 Xtacking 4.0 架构进入试产，独创混合键合技术使 I/O 密度提升至 1 万/mm²。Xtacking 4.0 适配 HBM4 异构内存方案，时延可压缩到 10ns 以内。混合键合对光刻对准精度、键合压力、温度均匀性、后端 CMP 工艺都提出新要求，需 EDA 工具在多物理场仿真上的协同升级。</div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/article-wiki/hxPV0VI.html" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 台积电已购入 High-NA EUV 光刻机，暂不投产</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 台积电股东大会 / 17173</span>
-    <span class="meta-tag">🕐 2026-06-17</span>
-  </div>
-  <div class="insight-points">台积电董事长魏哲家在股东大会上辟谣：台积电已购入 ASML High-NA EUV 光刻机（NXE:3800E），但基于成本考量暂不投入量产，正持续研发。High-NA EUV 单台报价约 3.8 亿美元，对产能折旧成本影响显著。马斯克同步与 ASML 闭门讨论 TeraFab 项目，将 ASML 视为核心合作伙伴。</div>
-  <div class="insight-links"><a href="https://news.17173.com/tag/%E5%8F%B0%E7%A7%AF%E7%94%B5" target="_blank" rel="noopener" class="link-btn">🔗 news.17173.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> 玻璃基板产业链竞速：英特尔、三星、SK 集团、台积电四线并进</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 东方财富 / 微博 / 半导体行业观察</span>
-    <span class="meta-tag">🕐 2026-06-17 / 06-19</span>
-  </div>
-  <div class="insight-points">玻璃基板被视为 2026 年商业化元年：英特尔推出 EMIB 玻璃核心基板样品，结合自研 3DGS 产线，规划 2030 年全面商用；台积电主推 CoPoS 方案；三星与 SK 集团竞相布局；国内京东方、沃格光电推进 TGV 玻璃通孔工艺送样验证。玻璃基板与人工合成钻石散热材料共同构成 AI 算力&quot;换底座&quot;的两大新方向。</div>
-  <div class="insight-links"><a href="https://finance.eastmoney.com/a/202606173774692713.html" target="_blank" rel="noopener" class="link-btn">🔗 finance.eastmoney.com</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-06-18.html" class="day-nav-btn">← 上一篇 2026-06-18</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-06-20.html" class="day-nav-btn">下一篇 2026-06-20 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

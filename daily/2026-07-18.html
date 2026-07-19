@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-07-18 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-07-18</div>
+    </div>
+    <div class="card">
+      <h2>【技术洞察】2026-07-18</h2>
+<h2>一、人工智能 AI 领域</h2>
+<h3>1. WAIC 2026 进入第二日，RISC-V AI 算力成最大亮点</h3>
+<ul>
+<li><strong>来源：</strong> 智东西 / 文汇报</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> WAIC 2026 第二日，RISC-V AI 算力成为全场焦点。联想发布全球首款 RISC-V AI 服务器（蓝芯算力 LX500），奕行智能展示业界首个 RISC-V AI 算力超节点方案。国产 RISC-V 架构在 AI 算力领域加速突破，从芯片到集群到软件栈形成完整自主可控技术体系。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7663851832048927258/" target="_blank">http://m.toutiao.com/group/7663851832048927258/</a></li>
+</ul>
+<h3>2. 联想发布全球首款 RISC-V AI 服务器，搭载蓝芯 LX500</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 联想 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 联想在 WAIC 2026 重磅发布全球首款 RISC-V AI 服务器。蓝芯算力 LX500 CPU 为全球首款 RISC-V+AI 智通一体融合服务器芯片，48 核异构架构，片内集成 75TOPS INT8 专用 AI 算力引擎，打破传统 X86 与 ARM 的算力垄断，全精度覆盖大模型推理、云计算、数据中心等场景。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>3. 奕行智能 RISC-V AI 算力超节点方案首秀，支持万卡级扩展</h3>
+<ul>
+<li><strong>来源：</strong> 智东西 / 奕行智能 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 奕行智能展示业界首个 RISC-V AI 算力超节点方案，基于自研 Epoch 云端大算力 AI 芯片。单柜百 T 级聚合带宽，支持 32-128 卡 Scale-Up 高带宽全互联，正交无背板架构+液冷技术，可扩展至万卡级集群。EVACA 软件栈由 AI 智能体驱动算子智造。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7663851832048927258/" target="_blank">http://m.toutiao.com/group/7663851832048927258/</a></li>
+</ul>
+<h3>4. 谷歌 NotebookLM 更名为 Gemini Notebook，并入 Gemini 生态</h3>
+<ul>
+<li><strong>来源：</strong> 谷歌官方 / The Verge / CSDN博客</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 谷歌宣布 AI 研究助手 NotebookLM 正式更名为 Gemini Notebook，全面整合进 Gemini 应用生态，实现跨应用数据同步与企业级安全算力支持，新增第三方应用集成能力。这是谷歌 AI 产品线品牌统一的关键战略动作。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/yuntongliangda/article/details/163021795" target="_blank">https://blog.csdn.net/yuntongliangda/article/details/163021795</a></li>
+</ul>
+<h3>5. OpenAI 推出 Codex Micro 编码智能体物理控制器</h3>
+<ul>
+<li><strong>来源：</strong> TechCrunch / OpenAI / CSDN博客</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> OpenAI 与 Work Louder 合作推出 Codex Micro 紧凑型物理控制器，作为编码智能体的专用硬件交互入口。开发者可通过实体按键快速触发、引导 AI 编码工作流，提升人机协同开发效率。专用硬件交互是 AI 智能体走向工业化应用的重要标志。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/yuntongliangda/article/details/163021795" target="_blank">https://blog.csdn.net/yuntongliangda/article/details/163021795</a></li>
+</ul>
+<h3>6. IDC 提出 DAA 日活智能体数指标，2026 年预计 7940 万个</h3>
+<ul>
+<li><strong>来源：</strong> IDC / CSDN博客</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> IDC 预发布《DAA 研究报告》，提出"日活智能体数（DAA）"产业度量指标。预计 2026 年全球活跃智能体达 7940 万个，2030 年增长至 22.16 亿个。指标侧重智能体在业务流程中的实际价值创造，AI 产业从模型比拼转向应用价值衡量。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/yuntongliangda/article/details/163021795" target="_blank">https://blog.csdn.net/yuntongliangda/article/details/163021795</a></li>
+</ul>
+<h3>7. 摩尔线程三大"AI 工厂"全景亮相 WAIC</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 摩尔线程 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 摩尔线程以"词元时代 万物智能"为主题参展 WAIC，提出"模型训练工厂""词元生产工厂"与"智能体生产工厂"三大 AI 工厂概念。基于自研 MUSA 架构的夸娥千卡智算集群展现突破性集群算力利用率，新一代消费级显卡实现图形渲染与 AI 计算深度融合。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>8. Rokid 发布全球首款智能眼镜原生操作系统 YodaOS</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / Rokid WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> Rokid 发布全球首款智能眼镜原生操作系统 YodaOS 及新一代 AR 空间计算设备。YodaOS 从架构层面围绕眼镜形态重构，2 字唤醒、0.2 秒响应，支持端边云协同与全天候感知。新一代 AR 眼镜搭载骁龙至尊空间计算平台，适配端侧大模型与虚幻引擎 5。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>9. 安谋科技发布"星辰 300"AIoT 平台与"周易"X3-Pro NPU</h3>
+<ul>
+<li><strong>来源：</strong> 安谋科技 WAIC 2026 / 今日头条</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 安谋科技推出"星辰 300"AIoT 原型平台，集成 STAR CPU 和 Ethos NPU。"周易"X3-Pro NPU 采用统一分层的场景化计算架构，"一次适配，多芯复用"。"玲珑"AI VPU 实现端到端视频编码优化。同时牵头发起"开源 AIOS 联盟"，推进 AIOS 在新兴智能终端落地。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7663966556238184995/" target="_blank">http://m.toutiao.com/group/7663966556238184995/</a></li>
+</ul>
+<h3>10. 智元精灵 G2 Max 工业机器人亮相，单臂负载 18kg 业内最强</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 智元机器人 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 智元机器人精灵 G2 Max 单臂负载 18kg、双臂标准负载 38kg、峰值负载 50kg，业内最强。配合 Genie Studio 2.0 智能作业平台，支持以"天"为单位的快速部署，直击仓储物流刚性需求。智元从工业切入具身智能赛道。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域</h2>
+<h3>1. WAIC 2026 具身智能展区超 200 家企业，300+ 台真机参展</h3>
+<ul>
+<li><strong>来源：</strong> 凤凰网 / 网通社</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> WAIC 2026 具身智能领域参展企业达 200 多家，展出 208 款终端产品及超 300 台真机。行业关注重点从基础动作能力转向连续作业、任务闭环执行及规模化落地能力。近 60 台人形机器人在会场实际工作，是国内大型展会首次大规模应用。</li>
+<li><strong>链接：</strong><a href="https://auto.ifeng.com/c/8utJ4ye6eoP" target="_blank">https://auto.ifeng.com/c/8utJ4ye6eoP</a></li>
+</ul>
+<h3>2. 小米人形机器人汽车工厂实训成果显著，多场景作业成功率 90%+</h3>
+<ul>
+<li><strong>来源：</strong> 凤凰网 / 小米机器人事业部</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 小米人形机器人在汽车工厂四个月实训：自攻螺母上件双侧作业成功率从 90.2% 提升至 98%，接近人工水平；新增中控台侧盖板排序和料箱折叠回收两个岗位，稳定成功率均达 90%。从单一工位扩展至多场景作业。</li>
+<li><strong>链接：</strong><a href="https://auto.ifeng.com/c/8utJ4ye6eoP" target="_blank">https://auto.ifeng.com/c/8utJ4ye6eoP</a></li>
+</ul>
+<h3>3. 均胜电子发布具身智能核心部件矩阵，覆盖灵巧手到电子皮肤</h3>
+<ul>
+<li><strong>来源：</strong> 凤凰网 / 均胜电子 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 均胜电子发布"灵犀"灵巧手（专业版 20 自由度）、第三代 AI 头部总成、具身智能体大脑（EAOS+EAPC，算力 40TOPS–2070TFLOPS）、电子皮肤及固液混合电池包等核心部件，已在工业场景和自动充电等领域部署应用。</li>
+<li><strong>链接：</strong><a href="https://auto.ifeng.com/c/8utJ4ye6eoP" target="_blank">https://auto.ifeng.com/c/8utJ4ye6eoP</a></li>
+</ul>
+<h3>4. 傲鲨 VIATRIX 动力外骨骼：25km 续航 + AI 步态自适应</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 傲鲨智能 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 傲鲨 VIATRIX 增程动力外骨骼搭载 Float360 浮动式髋关节架构，高度贴合人体运动轨迹。内置 AI 运动部署系统 4 秒内学习用户步态，智能动态调整助力。自研车规级动力系统，最高 25km 续航，支持户外复杂地形。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>5. 灵心巧手展示三大技术路线灵巧手，突破柔性操作难题</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 灵心巧手 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 灵心巧手是全球为数不多覆盖连杆、腱绳、直驱三大技术路线的灵巧手企业。现场展示水果抓取、塑料盖安装、笔袋收纳等复杂操作，通过触觉传感器感知接触状态实时调整力度，突破视觉失效场景下的精细操作难题。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>6. 欧莱雅成为 WAIC 首个全球美妆集团参展商，展示 AI+美妆全链路</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 欧莱雅 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 欧莱雅以"'美'一程，有你有 AI"为主题亮相 WAIC，打造"AI 探美""AI 创美""AI 致美"三大展区，呈现 AI 如何深度嵌入消费者旅程、赋能企业"研发-营销-运营"全链路。积极联动中外 AI 生态圈构建开放共生生态。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>7. 魏少军团队 14nm 近存计算 AI 芯片引轰动，"14nm≈4nm"出圈</h3>
+<ul>
+<li><strong>来源：</strong> 今日头条 / 芯核笔记</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 上海一家初创公司用 14nm 工艺造出 BF16 算力 520TFLOPS、访存带宽 6.4TB/s 的 AI 芯片。核心技术是软件定义和三维近存计算架构，通过架构创新绕开先进制程瓶颈。不依赖 EUV 和 HBM，全链条国产化，为国产高端算力开辟新路径。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7663966556238184995/" target="_blank">http://m.toutiao.com/group/7663966556238184995/</a></li>
+</ul>
+<h3>8. 博世美国首座半导体工厂启动样品生产，投资 75 亿美元</h3>
+<ul>
+<li><strong>来源：</strong> CFM闪存市场 / 博世官方</li>
+<li><strong>时间：</strong> 2026-07-16</li>
+<li><strong>核心要点：</strong> 博世美国首座半导体工厂启动样品生产，与美国商务部敲定 2.25 亿美元协议加强碳化硅芯片制造。博世计划到 2031 年投资 75 亿美元加强美国业务，碳化硅芯片可用于汽车和数据中心领域。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<h3>9. 我国算力硬件上半年进出口 5.13 万亿元，增长 56.6%</h3>
+<ul>
+<li><strong>来源：</strong> 国务院新闻办公室 / CFM闪存市场</li>
+<li><strong>时间：</strong> 2026-07-16</li>
+<li><strong>核心要点：</strong> 上半年我国电子元件、电脑零部件等算力硬件进出口 5.13 万亿元，增长 56.6%。AI 眼镜、AI 翻译器、机械外骨骼等智能产品快速迭代。人工智能产业发展动力强劲，进出口贸易规模持续扩大。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<h3>10. 印度批准 133 亿美元 Semicon 2.0 半导体计划</h3>
+<ul>
+<li><strong>来源：</strong> CFM闪存市场 / 印度政府</li>
+<li><strong>时间：</strong> 2026-07-15</li>
+<li><strong>核心要点：</strong> 印度政府批准 Semicon 2.0 半导体计划，投入超 12750 亿卢比（约 133 亿美元），加速本土芯片制造并降低对进口的依赖。印度希望打造为全球半导体产业重镇。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计</h2>
+<h3>1. 蓝芯算力 LX500：全球首款 RISC-V+AI 智通一体融合服务器芯片</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 蓝芯算力 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> LX500 为全球首款 RISC-V+AI 智通一体融合服务器芯片，48 核异构架构，片内集成 75TOPS INT8 专用 AI 算力引擎。革新传统"CPU+独立 AI 加速卡"分离架构，实现统一存储调度、数据零延迟流转。全精度覆盖大模型推理、云计算、数据中心等场景。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>2. 奕行智能 Epoch RISC-V AI 超节点：从芯片到万卡集群全栈自主</h3>
+<ul>
+<li><strong>来源：</strong> 智东西 / 奕行智能 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 奕行智能 Epoch 是国内第一颗 RISC-V AI 云端大算力芯片，率先支持分块量化 FP8 精度。下一代芯片将拓展 EXFP4、MXFP4 低位宽精度。超节点方案支持 32-128 卡全互联，正交无背板架构+液冷，可扩展至万卡级集群。EVACA 软件栈由 AI 智能体驱动算子开发。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7663851832048927258/" target="_blank">http://m.toutiao.com/group/7663851832048927258/</a></li>
+</ul>
+<h3>3. 摩尔线程夸娥千卡智算集群：支撑万亿参数模型训练</h3>
+<ul>
+<li><strong>来源：</strong> 文汇报 / 摩尔线程 WAIC 2026</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 摩尔线程基于自研 MUSA 架构的夸娥（Kua'e）千卡智算集群展现突破性集群算力利用率。新一代消费级显卡实现高性能图形渲染与 AI 计算深度融合。与多家大模型厂商、行业 ISV 联合打造垂直解决方案，覆盖科学计算、数字孪生、智能驾驶等高价值场景。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664082539711185408/" target="_blank">http://m.toutiao.com/group/7664082539711185408/</a></li>
+</ul>
+<h3>4. "朱婷"AI 芯片：动态稀疏张量引擎架构，2026 年底量产</h3>
+<ul>
+<li><strong>来源：</strong> 吉林大学 / 第三方实验室</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 自研 AI 芯片"朱婷"基于 5nm 工艺，典型 AI 推理场景下单卡算力突破 200TOPS，能效比提升超 2 倍。核心创新是"动态稀疏张量引擎"自研微架构，可根据算子特性动态调整计算单元使用率和数据精度。已完成 A0 样片验证，预计 Q3 小批量供货、年底规模量产。</li>
+<li><strong>链接：</strong><a href="https://isense.jlu.edu.cn/wikiX97U/Default.html" target="_blank">https://isense.jlu.edu.cn/wikiX97U/Default.html</a></li>
+</ul>
+<h3>5. 芯原股份：全球第二大数字 IP 提供商，车规芯片定制领先</h3>
+<ul>
+<li><strong>来源：</strong> 芯原股份 / CSDN博客</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> 芯原是全球第二大数字 IP 提供商、第四大全栈芯片定制方案提供商（最大中国内地企业）。拥有 GPU、NPU、VPU、DSP、ISP 六大类处理器 IP 及 1700 多个数模混合、射频 IP。车规 FSI 功能安全岛达 ASIL D 级，9.5 个月完成从开案到流片的 AI ISP 芯片定制。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/gdwhkj/article/details/161727862" target="_blank">https://blog.csdn.net/gdwhkj/article/details/161727862</a></li>
+</ul>
+<h3>6. 软件定义三维近存计算：14nm 工艺实现高端算力突破</h3>
+<ul>
+<li><strong>来源：</strong> 今日头条 / 芯核笔记</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 采用软件定义与三维近存计算架构的 AI 芯片，基于 14nm 制程实现 520TFLOPS BF16 算力和 6.4TB/s 访存带宽。通过架构创新缓解存储墙瓶颈，不依赖 EUV 光刻机和 HBM，全链条国产化，走出不依赖极致制程的高端算力路线。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7663966556238184995/" target="_blank">http://m.toutiao.com/group/7663966556238184995/</a></li>
+</ul>
+<h3>7. 英伟达 RTX Spark APU：Blackwell 架构下放 AI PC 市场</h3>
+<ul>
+<li><strong>来源：</strong> CSDN博客 / 英伟达</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 英伟达 RTX Spark 将 Blackwell 架构首次下放至消费级 APU，采用 ARM CPU 与 RTX GPU 异构集成。第五代 Tensor Core 和第四代 RT Core 首次进入 x86/Arm PC 平台。首发锁定本地大模型推理与 8K 游戏双赛道，下半年商用将冲击 AI PC 芯片竞争格局。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/gdwhkj/article/details/161727862" target="_blank">https://blog.csdn.net/gdwhkj/article/details/161727862</a></li>
+</ul>
+<h3>8. 沐曦 MXC600 大规模出货，曦景 S600 支持单柜 64 卡全互联</h3>
+<ul>
+<li><strong>来源：</strong> 沐曦股份 / CSDN博客</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 沐曦主力 MXC600 芯片大规模出货，部分订单排至明年。曦景 S600 单柜 64 卡全交换、全互联，跨柜可横向扩张至万卡甚至十万卡级别集群。研发副总裁黄向军表示单柜 64 卡将是未来市场需求较大的节点。</li>
+<li><strong>链接：</strong><a href="https://blog.csdn.net/gdwhkj/article/details/161727862" target="_blank">https://blog.csdn.net/gdwhkj/article/details/161727862</a></li>
+</ul>
+<h3>9. 燧原科技推理产品在腾讯场景规模化应用</h3>
+<ul>
+<li><strong>来源：</strong> CSDN博客 / 燧原科技</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 燧原高性能推理产品已在腾讯会议、社交、游戏 AI 等场景规模化应用，覆盖 Coding Agent、AI 搜索、多模态理解、视频生成等赛道。坚持"不做最大，但求最稳"思路，满足万卡级集群灵活扩展与稳定运营需求。</li>
+<li><strong>链接：</strong><a href="https://isense.jlu.edu.cn/wikiX97U/Default.html" target="_blank">https://isense.jlu.edu.cn/wikiX97U/Default.html</a></li>
+</ul>
+<h3>10. 曙光 8000 完成 300 余项重点应用深度优化</h3>
+<ul>
+<li><strong>来源：</strong> CSDN博客 / 中科曙光</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 曙光 8000 已完成 300 余项重点应用深度优化，其中 65 项适配半机规模、20 项适配整机规模、15 项达到戈登贝尔奖量级超大规模仿真标准。覆盖大模型、机器人、汽车研发、创新药、新材料、量子计算等 20 余个主流科研和工业赛道。</li>
+<li><strong>链接：</strong><a href="https://isense.jlu.edu.cn/wikiX97U/Default.html" target="_blank">https://isense.jlu.edu.cn/wikiX97U/Default.html</a></li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端/EDA/工艺</h2>
+<h3>1. 台积电 Q2 净利润激增 77.4%，毛利率 67.7% 创新高</h3>
+<ul>
+<li><strong>来源：</strong> 台积电 / CFM闪存市场</li>
+<li><strong>时间：</strong> 2026-07-16</li>
+<li><strong>核心要点：</strong> 台积电 2026 Q2 营收 1.27 万亿新台币（约 402 亿美元），同比增长 36.05%；归母净利润 7065.62 亿新台币，同比增长 77.41%。毛利率 67.7%，营业利润率 60.3%，净利润率 55.6%，均创历史新高。上半年累计营收 2.40 万亿新台币，同比增长 35.61%。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<h3>2. 台积电全年资本支出上调至 600-640 亿美元，重点投向先进封装</h3>
+<ul>
+<li><strong>来源：</strong> 台积电 / CFM闪存市场</li>
+<li><strong>时间：</strong> 2026-07-16</li>
+<li><strong>核心要点：</strong> 台积电大幅上调 2026 年资本支出至 600-640 亿美元（此前 520-560 亿美元高端）。重点投向台湾本土 2nm/3nm 先进产能扩建和 CoWoS 先进封装产线扩容，同时推进美国、日本等海外建厂。CoWoS 产能持续供不应求，英伟达等头部客户已锁定绝大部分产能。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<h3>3. 英特尔 18A 良率达 85%，EMIB-T 封装良率 98%</h3>
+<ul>
+<li><strong>来源：</strong> CFM闪存市场 / 英特尔</li>
+<li><strong>时间：</strong> 2026-07-16</li>
+<li><strong>核心要点：</strong> 英特尔 18A 工艺良率从上季度 65% 提升至 85%，仅次于台积电 N2 的 90%，远高于三星 SF2 的 50-60%。英特尔晶圆代工已与 AMD、英伟达、Marvell、微软、美光和 OpenAI 等达成合作。EMIB-T 先进封装良率提升至 98%。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<h3>4. 英特尔 EMIB-T 封装挑战 CoWoS，HBM4e 速率达 12Gb/s</h3>
+<ul>
+<li><strong>来源：</strong> 电子工程专辑 / IEEE ECTC 2026</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 英特尔在 IEEE ECTC 2026 展示下一代 EMIB-T 封装技术，通过硅通孔实现垂直供电，大幅缩短供电路径、提高供电密度。第一层互连凸点间距缩小至 25 微米，HBM4e 速率飙至 12Gb/s。EMIB-T 被视为挑战台积电 CoWoS 垄断的有力竞争者。</li>
+<li><strong>链接：</strong><a href="https://www.eet-china.com/mp/tags/72692" target="_blank">https://www.eet-china.com/mp/tags/72692</a></li>
+</ul>
+<h3>5. JEDEC 发布 SPHBM4 标准，引脚减少 75% 降低封装成本</h3>
+<ul>
+<li><strong>来源：</strong> JEDEC / 电子工程专辑</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> JEDEC 正式批准 SPHBM4 新标准（JESD330-4）。采用 HBM4 级别 DRAM 裸片堆叠，但配以标准封装形态和 512-bit 窄位宽接口（传统 HBM4 为 2048 位），引脚减少 75%。目标是降低 AI 算力芯片中 HBM 的封装成本。</li>
+<li><strong>链接：</strong><a href="https://www.eet-china.com/mp/tags/72692" target="_blank">https://www.eet-china.com/mp/tags/72692</a></li>
+</ul>
+<h3>6. 台积电 A14 工艺研发超前，SRAM 良率接近 90%</h3>
+<ul>
+<li><strong>来源：</strong> 台积电法说会 / CFM闪存市场</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 台积电 A14（1.4nm）工艺研发进度符合规划，内部测试芯片器件性能达目标值近 90%，256 兆位 SRAM 良率接近 90%。客户流片进度超前，预计 2027 年试产、2028 年大规模量产。A14 相比 N2 同功耗性能提升 10-15%，或同性能功耗降低 25-30%。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<h3>7. 长电科技 78 亿元投建上海临港高端封测基地</h3>
+<ul>
+<li><strong>来源：</strong> 36氪 / 长电科技</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 长电科技规划总投资 78 亿元落地上海临港高端封测基地，分两期建设，一期 2028 年下半年投产。重点布局 2.5D/3D 堆叠、HBM3E 多层存储堆叠、Chiplet 异构集成、CPO 光电共封装四大核心工艺。长电是大陆唯一实现 HBM3E 量产的封测企业。</li>
+<li><strong>链接：</strong><a href="https://36kr.com/p/3899029791623044" target="_blank">https://36kr.com/p/3899029791623044</a></li>
+</ul>
+<h3>8. 日月光史上最大规模扩产，CoWoS 产能 2027 年底目标 4-4.5 万片</h3>
+<ul>
+<li><strong>来源：</strong> 36氪 / 日月光</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 日月光全球六座新建封测厂区同步动工，扩张力度历年之最。CoWoS 月产能将从 2026 年底 2 万片爬坡至 2027 年底 4-4.5 万片。高雄仁武基地总投入超 1083 亿新台币。CPO 共封装光学业务 2026 年启动小规模试产。</li>
+<li><strong>链接：</strong><a href="https://36kr.com/p/3899029791623044" target="_blank">https://36kr.com/p/3899029791623044</a></li>
+</ul>
+<h3>9. 安靠与台积电签十年合作，布局美国本土先进封装供应链</h3>
+<ul>
+<li><strong>来源：</strong> 36氪 / 安靠</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 安靠与台积电签订十年长期合作协议，由台积电向安靠采购美国本土 CoWoS 封测产能。安靠全年资本开支约 25-30 亿美元，美国亚利桑那州为全球扩产核心阵地。韩国松岛 K5 厂区已搭建英特尔 EMIB 封装产线。</li>
+<li><strong>链接：</strong><a href="https://36kr.com/p/3899029791623044" target="_blank">https://36kr.com/p/3899029791623044</a></li>
+</ul>
+<h3>10. SK 海力士清州 P&T7 厂区投资 129 亿美元，覆盖 HBM 全流程</h3>
+<ul>
+<li><strong>来源：</strong> 36氪 / SK 海力士</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> SK 海力士在韩国清州投建 P&T7 一体化厂区，总投资 19 万亿韩元（约 129 亿美元），覆盖晶圆测试与 HBM 先进封装全流程。叠加利川产线及美国印第安纳州 38.7 亿美元 HBM 基地，形成利川、清州、美国西拉法叶三大全球先进封装中心。</li>
+<li><strong>链接：</strong><a href="https://36kr.com/p/3899029791623044" target="_blank">https://36kr.com/p/3899029791623044</a></li>
+</ul>
+<hr class="section-divider">
+<h2>五、CPU 5G 提频</h2>
+<h3>1. AMD EPYC Venice（Zen 6）即将发布：2nm 工艺 + 最高 256 核</h3>
+<ul>
+<li><strong>来源：</strong> AMD 官方 / 经济观察网</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> AMD 将于 7 月 22-23 日 Advancing AI 2026 大会正式发布 EPYC Venice 服务器处理器。全球首款采用台积电 2nm 工艺的服务器 CPU，最高 256 核/512 线程，AI 性能提升 1.7 倍。KeyBanc 将 AMD 目标价上调至 725 美元，核心逻辑是 AI 智能体驱动 CPU 需求爆发。</li>
+<li><strong>链接：</strong><a href="https://www.eeo.news/2026/0717/961344.shtml" target="_blank">https://www.eeo.news/2026/0717/961344.shtml</a></li>
+</ul>
+<h3>2. AMD Zen 6 "Medusa" 架构详解：AI 性能 1.7 倍 + SRSO 硬件修复</h3>
+<ul>
+<li><strong>来源：</strong> news.dftinfo.com.br / AMD QEMU patches</li>
+<li><strong>时间：</strong> 2026-07-18</li>
+<li><strong>核心要点：</strong> Zen 6（Medusa）采用台积电 N2（2nm）工艺。服务器端最高 256 核/512 线程（Turin 为 192 核）。AI 性能提升 1.7 倍，支持 FP8 和 INT4 低精度。SRSO 漏洞实现硬件级修复，减少软件 mitigation 性能损耗。移动端 Medusa Point 最高 16 核，Boost 频率 5.7-5.9GHz。</li>
+<li><strong>链接：</strong><a href="https://news.dftinfo.com.br/2026/07/18/amd-zen-6-redefine-o-mercado-de-cpus-o-que-esperar-da-arquit/" target="_blank">https://news.dftinfo.com.br/2026/07/18/amd-zen-6-redefine-o-mercado-de-cpus-o-que-esperar-da-arquit/</a></li>
+</ul>
+<h3>3. AMD ROCm 7.14 发布，全面支持 Ryzen AI Max PRO 400</h3>
+<ul>
+<li><strong>来源：</strong> Fanáticos del Hardware / AMD</li>
+<li><strong>时间：</strong> 2026-07-16</li>
+<li><strong>核心要点：</strong> AMD 发布 ROCm 7.14.0，全面支持 Ryzen AI Max PRO 400（Gorgon Halo）专业处理器。启用集成显卡用于 AI、高性能计算和创作工作负载。第二代 NPU 支持本地 Llama 3 和 Mistral 等大模型推理。</li>
+<li><strong>链接：</strong><a href="https://fanaticosdelhardware.com/category/procesadores/" target="_blank">https://fanaticosdelhardware.com/category/procesadores/</a></li>
+</ul>
+<h3>4. 英特尔 Nova Lake-S 分阶段发布，52 核旗舰 2027 年底上市</h3>
+<ul>
+<li><strong>来源：</strong> Fanáticos del Hardware / VideoCardz</li>
+<li><strong>时间：</strong> 2026-07-17</li>
+<li><strong>核心要点：</strong> 英特尔 Nova Lake-S（Core Ultra Series 400）将分阶段推出：2027 Q1 先推出最高 28 核型号，双 tile 52 核旗舰数月后推出。80%-90% 的计算 tile 由 Intel 18A 自有工厂生产，减少对台积电依赖。Nova Lake 将支持 AVX10.2 指令集。</li>
+<li><strong>链接：</strong><a href="https://fanaticosdelhardware.com/category/procesadores/" target="_blank">https://fanaticosdelhardware.com/category/procesadores/</a></li>
+</ul>
+<h3>5. 英特尔 Panther Lake 首发 High-NA EUV 量产</h3>
+<ul>
+<li><strong>来源：</strong> Fanáticos del Hardware / 英特尔</li>
+<li><strong>时间：</strong> 2026-07-15</li>
+<li><strong>核心要点：</strong> 英特尔已开始使用 ASML High-NA EUV 技术在 Intel 18A 节点制造 Core Ultra Series 3 Panther Lake 处理器。Panther Lake 成为首款采用 High-NA EUV 量产的逻辑芯片产品，标志 EUV 光刻进入高数值孔径时代。</li>
+<li><strong>链接：</strong><a href="https://fanaticosdelhardware.com/category/procesadores/" target="_blank">https://fanaticosdelhardware.com/category/procesadores/</a></li>
+</ul>
+<h3>6. 华为麒麟 2026 实锤：3D 逻辑堆叠 + 5.5G 基带，对标 A20</h3>
+<ul>
+<li><strong>来源：</strong> 今日头条 / 供应链消息</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> 麒麟 2026（麒麟 9050 Pro）采用国产 7nm DUV+3D 逻辑双层堆叠，晶体管密度 2.38 亿颗/平方毫米，等效对标台积电初代 3nm。泰山 1+4+4 三丛集，超大核 3.1GHz，Geekbench 6 单核 2120/多核 8360 分。内置 5.5G 全频段自研基带，支持一机四卡。NPU 算力翻倍，本地运行 7B 大模型。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664172797047882274/" target="_blank">http://m.toutiao.com/group/7664172797047882274/</a></li>
+</ul>
+<h3>7. 华为 Mate90 全系搭载麒麟 2026，综合实力首次全方位对标 iPhone 18</h3>
+<ul>
+<li><strong>来源：</strong> 今日头条 / 供应链实锤</li>
+<li><strong>时间：</strong> 2026-07-19</li>
+<li><strong>核心要点：</strong> Mate90 全系标配麒麟 2026，功耗较上代下降 41%。Pro Max/非凡大师搭载硫化物半固态电池（7500mAh）。预装鸿蒙 7，方舟引擎优化流畅度提升 15%。双卫星通话为独家功能。日常使用体验与 iPhone 18 对标，部分场景反超。</li>
+<li><strong>链接：</strong><a href="http://m.toutiao.com/group/7664172797047882274/" target="_blank">http://m.toutiao.com/group/7664172797047882274/</a></li>
+</ul>
+<h3>8. 苹果寻求收购 AI 服务器芯片公司，布局数据中心算力</h3>
+<ul>
+<li><strong>来源：</strong> CFM闪存市场 / 外媒报道</li>
+<li><strong>时间：</strong> 2026-07-16</li>
+<li><strong>核心要点：</strong> 苹果正寻求收购 AI 服务器芯片初创公司，增强 AI 服务服务器半导体竞争力。已与多家初创公司接触，并与投行探讨交易方案。苹果加速从终端芯片向数据中心算力芯片延伸，打造从端到云的全栈自研算力体系。</li>
+<li><strong>链接：</strong><a href="https://chinaflashmarket.com/newsflash/semi" target="_blank">https://chinaflashmarket.com/newsflash/semi</a></li>
+</ul>
+<h3>9. Google Tensor G6 首发台积电 2nm 工艺，Pixel 11 搭载</h3>
+<ul>
+<li><strong>来源：</strong> Fanáticos del Hardware / 供应链消息</li>
+<li><strong>时间：</strong> 2026-07-13</li>
+<li><strong>核心要点：</strong> 谷歌 Tensor G6 将成为首款采用台积电 2nm 工艺的移动 SoC，8 月 12 日随 Pixel 11 发布。Tensor G6 提前数周亮相 2nm 工艺节点。不过谷歌自研芯片性能仍与高通骁龙旗舰和苹果 A 系列存在差距。</li>
+<li><strong>链接：</strong><a href="https://fanaticosdelhardware.com/category/procesadores/" target="_blank">https://fanaticosdelhardware.com/category/procesadores/</a></li>
+</ul>
+<h3>10. 英特尔投资 50 亿欧元扩建爱尔兰工厂，推进 Intel 3 产能</h3>
+<ul>
+<li><strong>来源：</strong> GEEKNETIC / 英特尔</li>
+<li><strong>时间：</strong> 2026-07-13</li>
+<li><strong>核心要点：</strong> 英特尔向爱尔兰莱克斯利普园区投资 50 亿欧元（约 57 亿美元），扩大产能以交付基于 Intel 3 节点的至强 6 处理器和下一代至强处理器。加强欧洲半导体供应链，扩大现有产能并推进研发活动。</li>
+<li><strong>链接：</strong><a href="https://www.geeknetic.es/procesadores/noticias/" target="_blank">https://www.geeknetic.es/procesadores/noticias/</a></li>
+</ul>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
+  </div>
+</body>
+</html>

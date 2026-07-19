@@ -1,431 +1,250 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>历史归档 - Biao-技术洞察日报</title>
-<meta name="description" content="全部技术洞察日报归档">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>归档 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="index.html" class="logo-link">
-    <h1 class="logo">Biao-技术洞察日报</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片设计 · 芯片后端 · CPU 5G</p>
-</header>
-
-<main class="archive-page">
-  <h2 class="page-title">📚 历史归档（共 42 份报告）</h2>
-  <p class="page-desc">按月份分组的完整日报列表</p>
-  
-<section class="archive-month">
-  <h3 class="archive-month-title">2026 年 7 月</h3>
-  <div class="archive-list">
+  <div class="container">
+    <a href="index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">共 50 份报告，覆盖 2026-05-31 至 2026-07-19</div>
+    </div>
+    <div class="nav-tabs">
+      <a href="index.html" class="nav-tab">最新</a>
+      <a href="archive.html" class="nav-tab active">归档</a>
+    </div>
     
-<a href="daily/2026-07-11.html" class="archive-item">
-  <div class="archive-date">2026-07-11</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">OpenAI GPT-5.6 Sol/Terra/Luna正式全球上线，旗舰Sol开启递归自我训练L...</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
+    <div class="month-group">
+      <div class="month-title">2026年07月（19 份）</div>
+      <div class="report-list">
+        <a href="daily/2026-07-19.html" class="report-item"><div class="date">07-19</div></a>
+<a href="daily/2026-07-18.html" class="report-item"><div class="date">07-18</div></a>
+<a href="daily/2026-07-17.html" class="report-item"><div class="date">07-17</div></a>
+<a href="daily/2026-07-16.html" class="report-item"><div class="date">07-16</div></a>
+<a href="daily/2026-07-15.html" class="report-item"><div class="date">07-15</div></a>
+<a href="daily/2026-07-14.html" class="report-item"><div class="date">07-14</div></a>
+<a href="daily/2026-07-13.html" class="report-item"><div class="date">07-13</div></a>
+<a href="daily/2026-07-12.html" class="report-item"><div class="date">07-12</div></a>
+<a href="daily/2026-07-11.html" class="report-item"><div class="date">07-11</div></a>
+<a href="daily/2026-07-10.html" class="report-item"><div class="date">07-10</div></a>
+<a href="daily/2026-07-09.html" class="report-item"><div class="date">07-09</div></a>
+<a href="daily/2026-07-08.html" class="report-item"><div class="date">07-08</div></a>
+<a href="daily/2026-07-07.html" class="report-item"><div class="date">07-07</div></a>
+<a href="daily/2026-07-06.html" class="report-item"><div class="date">07-06</div></a>
+<a href="daily/2026-07-05.html" class="report-item"><div class="date">07-05</div></a>
+<a href="daily/2026-07-04.html" class="report-item"><div class="date">07-04</div></a>
+<a href="daily/2026-07-03.html" class="report-item"><div class="date">07-03</div></a>
+<a href="daily/2026-07-02.html" class="report-item"><div class="date">07-02</div></a>
+<a href="daily/2026-07-01.html" class="report-item"><div class="date">07-01</div></a>
 
-<a href="daily/2026-07-10.html" class="archive-item">
-  <div class="archive-date">2026-07-10</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">OpenAI推出GPT-5.6系列模型——Sol/Terra/Luna三档，ChatGPT Work...</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
+      </div>
+    </div>
+    <div class="month-group">
+      <div class="month-title">2026年06月（30 份）</div>
+      <div class="report-list">
+        <a href="daily/2026-06-30.html" class="report-item"><div class="date">06-30</div></a>
+<a href="daily/2026-06-29.html" class="report-item"><div class="date">06-29</div></a>
+<a href="daily/2026-06-28.html" class="report-item"><div class="date">06-28</div></a>
+<a href="daily/2026-06-27.html" class="report-item"><div class="date">06-27</div></a>
+<a href="daily/2026-06-26.html" class="report-item"><div class="date">06-26</div></a>
+<a href="daily/2026-06-25.html" class="report-item"><div class="date">06-25</div></a>
+<a href="daily/2026-06-24.html" class="report-item"><div class="date">06-24</div></a>
+<a href="daily/2026-06-23.html" class="report-item"><div class="date">06-23</div></a>
+<a href="daily/2026-06-22.html" class="report-item"><div class="date">06-22</div></a>
+<a href="daily/2026-06-21.html" class="report-item"><div class="date">06-21</div></a>
+<a href="daily/2026-06-20.html" class="report-item"><div class="date">06-20</div></a>
+<a href="daily/2026-06-19.html" class="report-item"><div class="date">06-19</div></a>
+<a href="daily/2026-06-18.html" class="report-item"><div class="date">06-18</div></a>
+<a href="daily/2026-06-17.html" class="report-item"><div class="date">06-17</div></a>
+<a href="daily/2026-06-16.html" class="report-item"><div class="date">06-16</div></a>
+<a href="daily/2026-06-15.html" class="report-item"><div class="date">06-15</div></a>
+<a href="daily/2026-06-14.html" class="report-item"><div class="date">06-14</div></a>
+<a href="daily/2026-06-13.html" class="report-item"><div class="date">06-13</div></a>
+<a href="daily/2026-06-12.html" class="report-item"><div class="date">06-12</div></a>
+<a href="daily/2026-06-11.html" class="report-item"><div class="date">06-11</div></a>
+<a href="daily/2026-06-10.html" class="report-item"><div class="date">06-10</div></a>
+<a href="daily/2026-06-09.html" class="report-item"><div class="date">06-09</div></a>
+<a href="daily/2026-06-08.html" class="report-item"><div class="date">06-08</div></a>
+<a href="daily/2026-06-07.html" class="report-item"><div class="date">06-07</div></a>
+<a href="daily/2026-06-06.html" class="report-item"><div class="date">06-06</div></a>
+<a href="daily/2026-06-05.html" class="report-item"><div class="date">06-05</div></a>
+<a href="daily/2026-06-04.html" class="report-item"><div class="date">06-04</div></a>
+<a href="daily/2026-06-03.html" class="report-item"><div class="date">06-03</div></a>
+<a href="daily/2026-06-02.html" class="report-item"><div class="date">06-02</div></a>
+<a href="daily/2026-06-01.html" class="report-item"><div class="date">06-01</div></a>
 
-<a href="daily/2026-07-09.html" class="archive-item">
-  <div class="archive-date">2026-07-09</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">GPT-5.6: Frontier intelligence that scales with yo...</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
+      </div>
+    </div>
+    <div class="month-group">
+      <div class="month-title">2026年05月（1 份）</div>
+      <div class="report-list">
+        <a href="daily/2026-05-31.html" class="report-item"><div class="date">05-31</div></a>
 
-<a href="daily/2026-07-08.html" class="archive-item">
-  <div class="archive-date">2026-07-08</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">OpenAI GPT-5.6 Sol/Terra/Luna 三款模型明日发布</div>
+      </div>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-07-07.html" class="archive-item">
-  <div class="archive-date">2026-07-07</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">OpenAI 正式发布 GPT-5.6 系列，旗舰版仅向少数合作伙伴开放</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-07-06.html" class="archive-item">
-  <div class="archive-date">2026-07-06</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">OpenAI GPT-5.6 三体模型（Sol/Terra/Luna）7 月 7 日发布</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-07-05.html" class="archive-item">
-  <div class="archive-date">2026-07-05</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">美国白宫与多家 AI 企业洽谈自愿性行业标准，最快下周公布</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-07-04.html" class="archive-item">
-  <div class="archive-date">2026-07-04</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">华为发布韬定律 V2 完整版论文，麒麟 2026 实测数据首公开</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-07-03.html" class="archive-item">
-  <div class="archive-date">2026-07-03</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">Meta对外出售AI算力，挑战云计算巨头</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-07-02.html" class="archive-item">
-  <div class="archive-date">2026-07-02</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">Fable 5 Is Fully Restored — Export controls lifted...</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-07-01.html" class="archive-item">
-  <div class="archive-date">2026-07-01</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">美团开源 1.6 万亿 MoE 大模型 LongCat-2.0，5 万张国产加速器全流程跑通</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-  </div>
-</section>
-
-<section class="archive-month">
-  <h3 class="archive-month-title">2026 年 6 月</h3>
-  <div class="archive-list">
-    
-<a href="daily/2026-06-30.html" class="archive-item">
-  <div class="archive-date">2026-06-30</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">美团 LongCat-2.0 万亿大模型全栈自主发布</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-29.html" class="archive-item">
-  <div class="archive-date">2026-06-29</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">OpenAI 与 Anthropic 价格战升温，GPT-5.6 Sol 受特朗普政府限制</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-28.html" class="archive-item">
-  <div class="archive-date">2026-06-28</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">OpenAI GPT-5.6 三箭齐发，Sol/Terra/Luna 全谱系覆盖</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-27.html" class="archive-item">
-  <div class="archive-date">2026-06-27</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">OpenAI 发布 GPT-5.6 三剑客：Sol / Terra / Luna，旗舰版屠榜 Ter...</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-26.html" class="archive-item">
-  <div class="archive-date">2026-06-26</div>
-  <div class="archive-info">
-    <div class="archive-stats">50 条要闻</div>
-    <div class="archive-preview">Previewing GPT-5.6 Sol：新一代模型，编码/科学/网络安全能力跃升</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-25.html" class="archive-item">
-  <div class="archive-date">2026-06-25</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">OpenAI × 博通发布定制 AI 推理芯片 Jalapeño，9 个月极速流片</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-24.html" class="archive-item">
-  <div class="archive-date">2026-06-24</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">Claude Tag 发布：Anthropic定义LLM第三次变革</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-23.html" class="archive-item">
-  <div class="archive-date">2026-06-23</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">OpenAI GPT-5.6 系列正式发布</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-22.html" class="archive-item">
-  <div class="archive-date">2026-06-22</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">OpenAI GPT-5.6 系列下周发布，Pro 版已开启灰度测试</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-21.html" class="archive-item">
-  <div class="archive-date">2026-06-21</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">智谱AI开源旗舰大模型GLM-5.2，Code Arena全球可用模型第一</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-20.html" class="archive-item">
-  <div class="archive-date">2026-06-20</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">智谱唐杰对话马斯克：GLM-5.2 开源登顶，Compress Arena 盲测全球第一</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-19.html" class="archive-item">
-  <div class="archive-date">2026-06-19</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">阿里 ATH-Token Foundry 联合人大高瓴开源 AI4Science 基础模型 LOGO...</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-18.html" class="archive-item">
-  <div class="archive-date">2026-06-18</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">智谱 GLM-5.2 正式开源（744B MoE，百万 Token 上下文，MIT 协议）</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-17.html" class="archive-item">
-  <div class="archive-date">2026-06-17</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">智谱开源旗舰大模型 GLM-5.2，全栈适配国产算力</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-16.html" class="archive-item">
-  <div class="archive-date">2026-06-16</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">Apple WWDC26：全新 Siri 基于 Google Gemini 1.2T 参数模型</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-15.html" class="archive-item">
-  <div class="archive-date">2026-06-15</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">Microsoft Build 2026：7 款 MAI 模型全栈自研、零 OpenAI 蒸馏</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-14.html" class="archive-item">
-  <div class="archive-date">2026-06-14</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">智谱 GLM-5.2 全量开放，正面回应 Anthropic Fable 5 被禁事件</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-13.html" class="archive-item">
-  <div class="archive-date">2026-06-13</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">Anthropic 秘密提交 IPO 申请，估值约 9650 亿美元</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-12.html" class="archive-item">
-  <div class="archive-date">2026-06-12</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">谷歌开源 DiffusionGemma：4 倍速文本扩散大模型</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-11.html" class="archive-item">
-  <div class="archive-date">2026-06-11</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">Google 发布 DiffusionGemma：26B MoE 文本扩散开源模型</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-10.html" class="archive-item">
-  <div class="archive-date">2026-06-10</div>
-  <div class="archive-info">
-    <div class="archive-stats">18 条要闻</div>
-    <div class="archive-preview">工信部+国资委联合启动人形机器人实景实训专项行动</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-09.html" class="archive-item">
-  <div class="archive-date">2026-06-09</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">小米 MiMo-V2.5-Pro-UltraSpeed 推理速度突破 1000 tokens/s</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-08.html" class="archive-item">
-  <div class="archive-date">2026-06-08</div>
-  <div class="archive-info">
-    <div class="archive-stats">37 条要闻</div>
-    <div class="archive-preview">Microsoft 发布 7 个 MAI 自研模型，挑战 OpenAI 依赖</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-07.html" class="archive-item">
-  <div class="archive-date">2026-06-07</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">OpenAI 启动 ChatGPT 史上最大改版：从聊天机器人转向“超级应用”智能体平台</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-06.html" class="archive-item">
-  <div class="archive-date">2026-06-06</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">标题</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-05.html" class="archive-item">
-  <div class="archive-date">2026-06-05</div>
-  <div class="archive-info">
-    <div class="archive-stats">38 条要闻</div>
-    <div class="archive-preview">英伟达发布Cosmos 3：全球首款全模态物理AI基础模型</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-04.html" class="archive-item">
-  <div class="archive-date">2026-06-04</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">NVIDIA Cosmos 3</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-03.html" class="archive-item">
-  <div class="archive-date">2026-06-03</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">OpenAI 在&quot;Intelligence at Work&quot;发布会宣布 Codex 整合进 Chat...</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-02.html" class="archive-item">
-  <div class="archive-date">2026-06-02</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">【MiniMax M3发布】</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-<a href="daily/2026-06-01.html" class="archive-item">
-  <div class="archive-date">2026-06-01</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">英伟达 GTC Taipei 2026：黄仁勋发布重磅新品，智能体 AI 时代全面到来</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-  </div>
-</section>
-
-<section class="archive-month">
-  <h3 class="archive-month-title">2026 年 5 月</h3>
-  <div class="archive-list">
-    
-<a href="daily/2026-05-31.html" class="archive-item">
-  <div class="archive-date">2026-05-31</div>
-  <div class="archive-info">
-    <div class="archive-stats">40 条要闻</div>
-    <div class="archive-preview">Anthropic完成650亿美元H轮融资，估值9650亿美元成全球最高</div>
-  </div>
-  <div class="archive-arrow">→</div>
-</a>
-
-  </div>
-</section>
-
-  <div class="back-link">
-    <a href="index.html" class="cta-btn">← 返回主页</a>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

@@ -1,518 +1,498 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-06-16 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-06-16 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-06-16 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-06-16</h2>
-    <p class="daily-stats">共 4 个板块 · 40 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-06-16</div>
+    </div>
+    <div class="card">
+      <p>
+<callout emoji="📌">
+<strong>今日技术洞察 · 2026-06-16（周二）</strong>
+覆盖最近 24 小时（2026-06-15 \~ 2026-06-16）四大板块：AI、电子科技全领域、芯片设计、芯片后端/EDA/工艺。每板块 TOP10 条目，含来源、时间、核心要点与原文链接。
+</callout>
+</p>
+<hr class="section-divider">
+<h2>一、人工智能 AI 领域（TOP10）</h2>
+<p>
+本节聚焦大模型/基础模型、AI Agent、AI4Science、具身智能、机器学习新方法、推理能力突破、开源模型发布、AI 安全与对齐、AI 芯片/硬件、行业应用落地。
+</p>
+<h2>1. Apple WWDC26：全新 Siri 基于 Google Gemini 1.2T 参数模型</h2>
+<p>
+<strong>来源：</strong>InfoQ  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://www.infoq.cn/article/LSwQ3hQpZ1INX40icTSE" target="_blank">https://www.infoq.cn/article/LSwQ3hQpZ1INX40icTSE</a>
+</p>
+<p>
+<strong>核心要点：</strong>Apple 在 WWDC 2026 上正式推出基于 Google 定制 1.2 万亿参数 Gemini 模型的全新 Siri，深度集成 Apple Foundation Models（AFM Cloud / AFM Cloud Pro / AFM Fusion）。每年向 Google 支付约 10 亿美元模型费用，推理仍在 Apple Private Cloud Compute 基础设施上运行。Siri 引入屏幕感知、跨 App 上下文理解、专属 Siri App 并通过 iCloud 同步对话历史，宣告 Apple 在前沿基础模型上的"战略性妥协"。
+</p>
+<h2>2. Anthropic 公开 Claude Fable 5，首款面世的 Mythos 级模型</h2>
+<p>
+<strong>来源：</strong>CNBC / Anthropic  ·  <strong>时间：</strong>2026-06-09（上线后 72 小时因出口管制下线）  ·  <strong>链接：</strong><a href="https://chainarticles.com/ai-rivalries-cyberthreats-and-ipo-fever-define-this-week-in-tech/?amp=1" target="_blank">https://chainarticles.com/ai-rivalries-cyberthreats-and-ipo-fever-define-this-week-in-tech</a>
+</p>
+<p>
+<strong>核心要点：</strong>Anthropic 公开 Claude Fable 5，支持 1M token 上下文，编程基准 SWE-bench Verified 提升至 95%。Anthropic 同时提出建立"全球暂停开发"机制，警告前沿模型已具备"递归自我改进"能力。6 月 12 日美国商务部以出口管制为由要求切断 Fable 5/Mythos 5 的境外访问，72 小时内下线，事件引发巨大反响。
+</p>
+<h2>3. OpenAI 秘密递交 S-1 招股书，估值约 8520 亿美元</h2>
+<p>
+<strong>来源：</strong>今日头条 / 路透社  ·  <strong>时间：</strong>2026-06-08  ·  <strong>链接：</strong><a href="http://m.toutiao.com/group/7651415338705289779/" target="_blank">http://m.toutiao.com/group/7651415338705289779/</a>
+</p>
+<p>
+<strong>核心要点：</strong>OpenAI 正式向 SEC 秘密提交 S-1 招股书草案，估值约 8520 亿美元，由 Goldman Sachs 和 Morgan Stanley 担任主承销商，目标 9 月至 Q4 之间挂牌。这是继 Anthropic 6 月 1 日秘密递表之后，第二家在 AI 浪潮中冲击公开市场的顶级 AI 公司。资本市场正在为"AI 上市潮"定价。
+</p>
+<h2>4. Anthropic 呼吁全球暂停 AI 开发，应对"递归自我改进"风险</h2>
+<p>
+<strong>来源：</strong>Wall Street Journal  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://chainarticles.com/ai-rivalries-cyberthreats-and-ipo-fever-define-this-week-in-tech/?amp=1" target="_blank">https://chainarticles.com/ai-rivalries-cyberthreats-and-ipo-fever-define-this-week-in-tech</a>
+</p>
+<p>
+<strong>核心要点：</strong>Anthropic 公开呼吁建立全球性 AI 开发暂停机制，警告前沿模型正以"递归自我改进"方式进化，可能脱离人类直接控制。公司同时披露 Claude 已能编写其绝大部分生产代码，生产力提升约 8 倍。该提案与全球 AI 安全治理议程形成新焦点，可能影响监管节奏。
+</p>
+<h2>5. Z.ai 发布 GLM-5.2：744B 参数 MoE + 1M token 上下文</h2>
+<p>
+<strong>来源：</strong>MarkTechPost / Artiverse  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://www.artiverse.ca/the-race-for-1-million-token-ai-models-and-what-it-means/" target="_blank">https://www.artiverse.ca/the-race-for-1-million-token-ai-models-and-what-it-means/</a>
+</p>
+<p>
+<strong>核心要点：</strong>Z.ai 推出 GLM-5.2，采用 744B 参数 Mixture-of-Experts 架构（每 token 激活 40B 参数），支持 1M token 上下文，单次最大输出 131,072 token，提供"标准"与"Max"两种思考档位。模型聚焦编程场景，目前尚未公开基准数据，强调与现有工具链兼容。
+</p>
+<h2>6. GPT-5 早期开发者测试：推理与代码能力显著跃迁</h2>
+<p>
+<strong>来源：</strong>enmnews.com  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://enmnews.com/2026/06/15/inside-first-gpt-5-demos-what-top-developers-saw" target="_blank">https://enmnews.com/2026/06/15/inside-first-gpt-5-demos-what-top-developers-saw</a>
+</p>
+<p>
+<strong>核心要点：</strong>OpenAI 向部分顶级开发者开放 GPT-5 早期访问。反馈显示 GPT-5 在长上下文编程任务、调试优化与歧义请求处理上较前代显著进步；具备"主动追问"与多路径求解能力，响应速度亦大幅提升。完整公开发布与定价仍未敲定，OpenAI 仍以"安全验证优先"为节奏管控策略。
+</p>
+<h2>7. ChatGPT 默认模型切换至 GPT-5.5 Instant</h2>
+<p>
+<strong>来源：</strong>Frontier News  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://www.frontiernews.ai/news/article/chatgpts-2026-upgrade-what-actually-changed-vs-wha-492707fc" target="_blank">https://www.frontiernews.ai/news/article/chatgpts-2026-upgrade-what-actually-changed-vs-wha-492707fc</a>
+</p>
+<p>
+<strong>核心要点：</strong>OpenAI 5 月底将 ChatGPT 默认模型切换至 GPT-5.5 Instant，事实性错误显著减少、回答更简洁。同时上线：会话内生成柱状/折线/饼图、可编辑的"用户记忆摘要"、语速/语调个性化设置。已退役的 Canvas 侧边栏被写作/代码块 + 全屏模式取代。备受关注的"超级应用"集成仍仅在公告中，未对普通用户开放。
+</p>
+<h2>8. AI Summit London 2026：第十届聚焦 Agentic AI 与企业落地</h2>
+<p>
+<strong>来源：</strong>London Business School  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://www.london.edu/news/ai-summit-london-2026-focuses-on-enterprise-transformation-and-responsible-ai" target="_blank">https://www.london.edu/news/ai-summit-london-2026-focuses-on-enterprise-transformation-and-responsible-ai</a>
+</p>
+<p>
+<strong>核心要点：</strong>第十届 AI Summit London（London Tech Week 2026 主活动）在 Tobacco Dock 召开，吸引 5000 名代表、300 位演讲嘉宾。本届主题从 PoC 转向企业级 Agentic AI 落地，英国 AI 与在线安全部长 Kanishka Narayan 提出"AI 主权"框架，强调公共信任与设计卓越并重。LBS 教授 Michael Jacobides 等学界专家参与"Agentic AI 领导力"专题讨论。
+</p>
+<h2>9. 腾讯云 ADP 4.0 发布：Claw 模式降低 Agent 构建门槛</h2>
+<p>
+<strong>来源：</strong>AIbase / 腾讯云  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://www.aibase.com/search/AI Industrial Applications&type=0" target="_blank">https://www.aibase.com/search/AI%20Industrial%20Applications&type=0</a>
+</p>
+<p>
+<strong>核心要点：</strong>腾讯云在 2026 AI 工业应用大会上发布 ADP 4.0 平台，定位企业级 AgentOps。Claw 模式支持 Agentic Loop 闭环，通过 Connector、Skills、Knowledge Base、MCP、Agent Portal 五大组件串联 Agent 的构建、连接、分发与治理，目标把企业级 Agent 部署的工程门槛降低一个数量级。
+</p>
+<h2>10. 微信 AI 团队论文获 ICASSP 2026 最佳工业论文奖</h2>
+<p>
+<strong>来源：</strong>AIbase  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://www.aibase.com/search/AI Industrial Applications&type=0" target="_blank">https://www.aibase.com/search/AI%20Industrial%20Applications&type=0</a>
+</p>
+<p>
+<strong>核心要点：</strong>微信 AI 团队凭借面向视障人士步行辅助的创新模型论文，斩获 ICASSP 2026 最佳工业论文奖（Best Industrial Paper Award），这是中国企业团队自奖项设立以来首次获得该荣誉，打破了海外科技巨头的长期垄断。论文展示了大模型在无障碍科技中的可落地范式。
+</p>
+<hr class="section-divider">
+<h2>二、电子科技·全领域（TOP10）</h2>
+<p>
+本节覆盖计算机体系结构、机器人、脑机接口、量子计算、自动驾驶、XR/AR/VR、网络通信、光电、半导体材料等泛电子科技领域最新动态，重点关注重大技术突破、新产品发布、学术/产业里程碑。
+</p>
+<h2>1. NVIDIA SCADA 架构：2.9PB PCIe 6.0 存储破解 AI 数据瓶颈</h2>
+<p>
+<strong>来源：</strong>Computex 2026 / Wiwynn  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://cms.gizstreet.com/nvidias-scada-architecture-solving-the-ai-data-bottleneck-with-2-9pb-pcie-6-0-storage/" target="_blank">https://cms.gizstreet.com/nvidias-scada-architecture-solving-the-ai-data-bottleneck-with-2-9pb-pcie-6-0-storage/</a>
+</p>
+<p>
+<strong>核心要点：</strong>Wiwynn 在 Computex 2026 推出首批 NVIDIA SCADA（SCaled Accelerated Data Access）服务器，6RU 机箱内集成 96 颗液冷 E3.S SSD（满配 Micron 9650 Pro 30.72TB，总容量 2.949PB），搭配 4 颗 RTX Pro 6000 Blackwell GPU、4 颗 ConnectX-9 SuperNIC 与 4 颗 PCIe 6.x 交换机，4K 随机读 5.28 亿 IOPS。SCADA 把存储控制面移交给 GPU，专为 RAG、向量搜索、KV-Cache 这类高并发随机访问场景设计，总功耗约 9kW，整机液冷。
+</p>
+<h2>2. Apple 获充气传感器专利：头戴设备光学模组安全校准</h2>
+<p>
+<strong>来源：</strong>USPTO  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank">https://m.moji.com/aqi/wiki/tgvf2kc8.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Apple 获得一项与头戴显示设备相关的充气传感器专利，可在装配环节对光学模组进行安全距离与压力校准，解决 Vision Pro 系列长期存在的"光学模组对位公差"痛点。该专利预示 Apple 头戴设备在产线装配良率与佩戴舒适度上将取得新突破。
+</p>
+<h2>3. Neuralink 公布下一代手术机器人 + Optimus 全脑控制</h2>
+<p>
+<strong>来源：</strong>Neuralink  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank">https://m.moji.com/aqi/wiki/tgvf2kc8.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Neuralink 同步发布多项重大进展：下一代手术机器人将单根电极线植入时间从 17 秒缩短至 1.5 秒（11 倍提速），兼容 99% 颅型，植入深度可达皮层下 50mm；用户校准从数小时缩短到 15 分钟；现场演示中，截瘫患者 Alex 通过 Neuralink 信号实时同步控制 Tesla Optimus 机器人手部动作。马斯克称未来用户可"以意念栖身于"整个 Optimus 机器人。
+</p>
+<h2>4. Meta Quest v2.5 PTC：图库支持自动 3D 观看</h2>
+<p>
+<strong>来源：</strong>Meta  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank">https://m.moji.com/aqi/wiki/tgvf2kc8.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Meta 发布 Quest v2.5 PTC（Public Test Channel）更新，原生图库支持自动 3D 观看模式，无需开发者专门制作 3D 内容。结合 Spaces 与 Horizon Worlds 的更新，Meta 正在把"存量 2D 内容自动 3D 化"作为 XR 普及的关键路径。
+</p>
+<h2>5. 高通预热新一代 XR 骁龙芯片</h2>
+<p>
+<strong>来源：</strong>Qualcomm  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank">https://m.moji.com/aqi/wiki/tgvf2kc8.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>高通在官方渠道预热"新事物即将到来"，行业普遍解读为新一代 XR 骁龙芯片即将发布。该芯片将延续骁龙 XR 系列在空间计算、感知融合与端侧 NPU 上的领先优势，对标 Apple M-series 在 Vision Pro 上的硬件基础。
+</p>
+<h2>6. 三星 × 雅 Abbott 推出 Galaxy XR 沉浸式献血体验</h2>
+<p>
+<strong>来源：</strong>Samsung / Abbott  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank">https://m.moji.com/aqi/wiki/tgvf2kc8.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>三星联合医疗巨头雅 Abbott 推出基于 Galaxy XR 头显的沉浸式献血体验方案，利用 XR 技术降低献血者的焦虑感、提升采血流程效率。这是消费电子厂商与医疗器械企业首次在 XR 场景中展开深度合作的标志性案例。
+</p>
+<h2>7. 首款 EUV 双束激光 2µm 照射方案，转换效率提升 40%</h2>
+<p>
+<strong>来源：</strong>Semiconductor Engineering  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank">https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook</a>
+</p>
+<p>
+<strong>核心要点：</strong>最新研究通过 2µm 双束激光照射方案，将 EUV 光源的转换效率提升 40%。同时，另一项辐射流体力学模拟研究进一步优化了 EUV 输出。墙插效率与占地面积的双重改善，将直接降低先进节点（2nm/14Å）的单晶圆成本与吞吐量，支撑更激进的产能扩张计划。
+</p>
+<h2>8. Georgia Tech 铁电 NAND 抗辐射能力达传统 NAND 30 倍</h2>
+<p>
+<strong>来源：</strong>Nano Letters / Georgia Tech  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://semiengineering.com/research-bits-june-15/" target="_blank">https://semiengineering.com/research-bits-june-15/</a>
+</p>
+<p>
+<strong>核心要点：</strong>Georgia Tech 与 Penn State 联合开发的铁电 NAND Flash 存储芯片，可承受 100 万 rad 辐射剂量（传统 NAND 的 30 倍），达到深空任务辐射耐受门槛。铁电 NAND 通过极化存储数据，规避了辐射对浮置栅电荷的破坏。技术适用于近地轨道与深空航天器的高可靠存储场景。
+</p>
+<h2>9. Polytechnique Montréal 在硅上集成二阶非线性光子功能</h2>
+<p>
+<strong>来源：</strong>Science Advances / Polytechnique Montréal  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://semiengineering.com/research-bits-june-15/" target="_blank">https://semiengineering.com/research-bits-june-15/</a>
+</p>
+<p>
+<strong>核心要点：</strong>研究团队通过真空蒸发法将 TPA-QCN 分子沉积在硅基板上，材料自发形成具有取向的薄膜，赋予硅光子芯片此前不具备的二阶光学非线性能力。已演示片上将电信红外光直接转换为可见红光的集成器件。该突破有望简化硅光子系统的波长转换链路、降低发热。
+</p>
+<h2>10. UCLA 启动 1.25 亿美元半导体 R&D 枢纽</h2>
+<p>
+<strong>来源：</strong>UCLA  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank">https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook</a>
+</p>
+<p>
+<strong>核心要点：</strong>UCLA 宣布 1.25 亿美元半导体 R&D 枢纽，明确聚焦"高影响"而非渐进式研究，优先利用 AI 手段突破芯片瓶颈（涵盖架构、工艺、设计自动化）。该枢纽是美国学术界近期少有的"大额 + AI for Chip"双轮驱动 R&D 节点，有望缩短从实验室到晶圆厂的成果转化周期。
+</p>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计（TOP10）</h2>
+<p>
+本节聚焦集成电路设计/芯片实现领域最新进展，重点关注 ISSCC、VLSI Symposium、IEDM 三大顶会，JSSC、TVLSI 期刊最新论文；关注方向：先进制程、存算一体、Chiplet/异构集成、RISC-V、AI 芯片、芯片架构创新。
+</p>
+<h2>1. ISSCC 2026 最佳芯片奖：KibaNet AI 推理芯片</h2>
+<p>
+<strong>来源：</strong>太平洋科技  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://g.pconline.com.cn/ai/wiki/1fcramwxr2ni/" target="_blank">https://g.pconline.com.cn/ai/wiki/1fcramwxr2ni/</a>
+</p>
+<p>
+<strong>核心要点：</strong>在旧金山举行的 IEEE ISSCC 2026 上，Kiba 公司 KibaNet AI 推理芯片从全球 217 项入围作品中脱颖而出，荣获"最佳芯片奖"（Best Chip Award），系中国 AI 芯片企业首次获得此项殊荣。芯片基于台积电 5nm 工艺，集成超 800 亿晶体管，自研"天枢"异构计算架构（脉动阵列 + 稀疏计算），INT8 算力 1200 TOPS、能效比 23 TOPS/W，性能密度 14.6 TOPS/mm²，较同期竞品高约 35%。
+</p>
+<h2>2. JSSC 2026：128-Gb/s PAM-4 发射机（28nm CMOS）</h2>
+<p>
+<strong>来源：</strong>IEEE JSSC  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/22/6047.html" target="_blank">https://dblp.org/pid/22/6047.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Hongzhi Wu 团队在 JSSC 2026（61(1): 293-304）发表 128-Gb/s PAM-4 发射机，提出 Edge-Boosting 脉冲发生器与预加重非对称分数间隔 FFE 技术，在 28nm CMOS 上实现超高速 SerDes 性能。该方案对数据中心 1.6T/3.2T 光模块与芯片间互连具有重要参考价值。
+</p>
+<h2>3. JSSC 2026：4×CF 连续可调转换比 SCVR</h2>
+<p>
+<strong>来源：</strong>IEEE JSSC  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/272/8915.html" target="_blank">https://dblp.org/pid/272/8915.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Yuanfei Wang / Zhiyuan Zhang / Fuyao Zhang / Yihan Zhang / Rui Paulo Martins / Mo Huang 在 JSSC 2026（61(3): 951-962）发表混合 SCVR 拓扑，通过 4×CF 连续可调转换比开关电容级，在 28nm CMOS 上实现高功率密度、宽输入范围的电压调节，适用于 AI 加速卡与 SoC 片上电源管理。
+</p>
+<h2>4. TVLSI 2026：2×80 Gb/s PAM-4 接收机前端（28nm CMOS）</h2>
+<p>
+<strong>来源：</strong>IEEE Trans. Circuits Syst. I  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/22/6047.html" target="_blank">https://dblp.org/pid/22/6047.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Yangyi Zhang / Liping Zhong / Taiyang Fan / Xiongshi Luo / Hongzhi Wu / Xuxu Cheng 等人在 TVLSI 2026（73(1): 126-139）发表 2×80 Gb/s 单端 TAS-TIS PAM-4 接收机前端，集成串扰消除与信号复用技术，在 28nm CMOS 上实现 160Gb/s 聚合速率。面向 Chiplet 与高带宽存储接口。
+</p>
+<h2>5. ISSCC 2026：72Gb/s/pin Chiplet 单端双向收发机</h2>
+<p>
+<strong>来源：</strong>IEEE ISSCC 2026  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/22/6047.html" target="_blank">https://dblp.org/pid/22/6047.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Xuxu Cheng / Hongzhi Wu 等在 ISSCC 2026（pp. 150-152）发表 72Gb/s/pin 单端同时双向（Simultaneous Bi-Directional）收发机，采用 C-Peaking 泄漏消除与双环混合阻抗校准技术，专为 Chiplet 短距互连设计。同期 ISSCC 2026 论文（pp. 624-626）推出 72Gb/s/pin 单端驱动协同编码 PAM3 收发机，为 Chiplet 与存储接口提供能效更优的备选方案。
+</p>
+<h2>6. ISSCC 2026：耦合 OSC 转换器，1.82W/mm² 功率密度</h2>
+<p>
+<strong>来源：</strong>IEEE ISSCC 2026  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/272/8915.html" target="_blank">https://dblp.org/pid/272/8915.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Jianxin Yang / Fuyao Zhang / Rui Paulo Martins / Mo Huang 在 ISSCC 2026（pp. 446-448）发表耦合振荡器（Coupled-OSC）转换器，61MHz 峰值效率 89.5%、360MHz 功率密度 1.82W/mm²，并天然支持偶相交错（Even Phase Interleaving）。面向高频率、高密度 PMIC 应用。
+</p>
+<h2>7. ISCAS 2026 杰出青年作者奖：Cool-3D 微流冷却 3DIC 早期 DSE 框架</h2>
+<p>
+<strong>来源：</strong>上海交通大学  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://news.sjtu.edu.cn/zhxw/20260615/223803.html" target="_blank">https://news.sjtu.edu.cn/zhxw/20260615/223803.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>上海交通大学 iCAS Lab 博士生王润曦（通讯作者：郭鑫斐教授）的论文《Cool-3D》获 IEEE 电路与系统协会杰出青年作者奖（每年全球仅 1 篇）。该工作提出端到端热感知框架，在 Pre-RTL 阶段对微流冷却 3DIC 进行早期设计空间探索，弥补了现有 EDA 工具在 3DIC 散热约束建模上的空白。
+</p>
+<h2>8. JSSC 2026：2×112 Gb/s/pin 31-dB 损耗补偿收发机</h2>
+<p>
+<strong>来源：</strong>IEEE JSSC  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/22/6047.html" target="_blank">https://dblp.org/pid/22/6047.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Liping Zhong / Hongzhi Wu 等在 JSSC（60(7): 2632-2644）发表 2×112 Gb/s/pin 单端串扰消除收发机，28nm CMOS 实现 31-dB 信道损耗补偿。该架构为长距存储接口与高损耗通道提供了更优的均衡能力，对 DDR6/PCIe 6 等下一代接口研发具有重要参考价值。
+</p>
+<h2>9. AAAI 2026：Oblivionis 联邦大模型轻量化学习/遗忘框架</h2>
+<p>
+<strong>来源：</strong>AAAI 2026  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/272/8915.html" target="_blank">https://dblp.org/pid/272/8915.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Fuyao Zhang / Xinyu Yan / Tiantong Wu 等在 AAAI 2026（pp. 28185-28193）发表 Oblivionis 框架，将联邦大模型的学习与遗忘（unlearning）流程统一为轻量化操作。该方向在 GDPR/各国数据保护法规日益严格背景下，对端云协同大模型训练具有重要意义。
+</p>
+<h2>10. RISC-V 峰会欧洲：RISC-V 全面挺进数据中心 / 边缘 / 航天</h2>
+<p>
+<strong>来源：</strong>RISC-V International / RISC-V Summit Europe  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank">https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook</a>
+</p>
+<p>
+<strong>核心要点：</strong>RISC-V International 在欧洲峰会上明确把 RISC-V 定位为覆盖数据中心、边缘 AI、航天应用的通用 ISA。开源生态逐步成熟，对 x86 与 Arm 在定制芯片项目中的话语权构成实质挑战；为垂直集成玩家在 AI、网络、航空航天 SoC 上定制核心提供新空间。
+</p>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端/EDA/工艺（TOP10）</h2>
+<p>
+本节聚焦芯片物理设计后端、EDA 工具、先进封装、工艺制造领域最新进展，重点关注 DAC、ICCAD、DATE、ISPD 四大顶会，TCAD 期刊最新进展；关注方向：先进节点物理设计（3nm/2nm/1nm）、光刻/工艺创新、先进封装（CoWoS、SoIC、HBM 等）、PCB/封装级设计、良率/可靠性、国产 EDA 突破、开源 EDA 工具。
+</p>
+<h2>1. DAC 2026 定档 7 月 25-29 日：AI 主导 EDA 流程成为核心议题</h2>
+<p>
+<strong>来源：</strong>Design Automation Conference 2026  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://m.11467.com/product/d49597055.htm" target="_blank">https://m.11467.com/product/d49597055.htm</a>
+</p>
+<p>
+<strong>核心要点：</strong>Design Automation Conference 2026（DAC 2026）将于 7 月 25-29 日在美国加利福尼亚州举办。本届 DAC 核心信号：AI 正在全面进入芯片设计流程（自动布局布线、设计空间探索、功耗/性能预测）；系统级设计（SoC、Chiplet、异构集成）成为重点；先进节点带来的功耗、信号完整性、验证挑战成为关键议题。
+</p>
+<h2>2. TCAD 2026：RegPlace 全系统 DNN 加速器布局</h2>
+<p>
+<strong>来源：</strong>IEEE Trans. Comput. Aided Des.  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/173/0246-1.html" target="_blank">https://dblp.org/pid/173/0246-1.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Jiaxi Jiang / Yuan Pu / Mingjun Li / Yuxuan Zhao / Peiyu Liao / Zuodong Zhang / Yibo Lin / Bei Yu 在 TCAD 2026（45(2): 686-690）发表 RegPlace 论文，提出"规则性感知"（Regularity-Aware）布局方法，面向全系统 DNN 加速器物理实现。该方法在大规模 AI 加速器芯片的 PPA 收敛上具有显著优势。
+</p>
+<h2>3. TCAD 2026：PPD 跨平台 DNN 任务调度系统</h2>
+<p>
+<strong>来源：</strong>ACM Trans. Design Autom. Electr. Syst.  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/173/0246-1.html" target="_blank">https://dblp.org/pid/173/0246-1.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Wendong Xu / Yuhao Ji / Yang Bai / Yueting Li / Yuxuan Zhao / Zhengwu Liu / Bei Yu / Ngai Wong 在 TODAES 31(2): 20:1-20:24 发表 PPD（Portable and Highly Parallel Dispatching）系统，构建可移植、高并行的深度学习任务调度框架，跨硬件后端高效执行 DNN 推理/训练任务。
+</p>
+<h2>4. ASP-DAC 2026：DPO-3D 面向 F2F 3D IC 的可微 PDN 优化</h2>
+<p>
+<strong>来源：</strong>ASP-DAC 2026  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/173/0246-1.html" target="_blank">https://dblp.org/pid/173/0246-1.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Zhen Zhuang / Zheng Yang / Yuxuan Zhao / Jiawei Hu / Bei Yu / Sung Kyu Lim / Tsung-Yi Ho 在 ASP-DAC 2026（pp. 1273-1279）发表 DPO-3D，针对 Face-to-Face 3D IC 电源分配网络（PDN）提出可微优化方法，灵活建模可布线性与 IR-drop 的权衡。面向先进 3D 封装与 Chiplet 集成。
+</p>
+<h2>5. TCAD 2026：3D-F2F 堆叠 IC 混合键合布线感知终端分配</h2>
+<p>
+<strong>来源：</strong>ACM Trans. Design Autom. Electr. Syst.  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/160/2171-10.html" target="_blank">https://dblp.org/pid/160/2171-10.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Siting Liu / Jieya Zhou / Jiaxi Jiang / Zhuolun He / Ziyi Wang / Yibo Lin / Bei Yu / Martin D. F. Wong 在 TODAES 31(3): 48:1-48:20 发表 Routing-aware Legal Hybrid Bonding Terminal Assignment 论文，针对 3D F2F 堆叠 IC 混合键合互连，在合法化阶段即考虑布线约束，提升最终布通率与时序收敛性。
+</p>
+<h2>6. ASP-DAC 2026：DCLOG 基于 GNN 预训练的逻辑优化</h2>
+<p>
+<strong>来源：</strong>ASP-DAC 2026  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://dblp.org/pid/160/2171-10.html" target="_blank">https://dblp.org/pid/160/2171-10.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>Rongliang Fu / Libo Shen / Ziyi Wang / Zhengxing Lei / Zixiao Wang / Junying Huang / Bei Yu / Tsung-Yi Ho 在 ASP-DAC 2026（pp. 793-799）发表 DCLOG，将 Don't-Cares 引入逻辑优化流程，并基于预训练图神经网络（GNN）实现高质量解空间搜索。代表 "AI-Native EDA" 方向上逻辑综合阶段的前沿进展。
+</p>
+<h2>7. DAC 2026（已收）：Arithmetic Packing on FPGA DSP 宽整型数据通路</h2>
+<p>
+<strong>来源：</strong>arXiv / DAC '26  ·  <strong>时间：</strong>2026-06-10  ·  <strong>链接：</strong><a href="https://arxiv.org/abs/2606.11065" target="_blank">https://arxiv.org/abs/2606.11065</a>
+</p>
+<p>
+<strong>核心要点：</strong>Jiechen Huang / Hector R. Rodriguez / Dingcheng Yang / Zuochang Ye / Yibo Lin / Wenjian Yu 的论文被 DAC '26 接收，研究现代 FPGA DSP 原语中宽整型数据通路上的算子打包（Arithmetic Packing）方法，可显著提升 FPGA 上高吞吐算子的资源利用率与能效，对 EDA 后端综合与 FPGA 工具链有直接参考意义。
+</p>
+<h2>8. DAC 2026 / DSN 2026：ScaleDisturb DRAM 读干扰放大攻击</h2>
+<p>
+<strong>来源：</strong>arXiv / DSN 2026  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://arxiv.org/abs/2606.07761" target="_blank">https://arxiv.org/abs/2606.07761</a>
+</p>
+<p>
+<strong>核心要点：</strong>Jikun Wang / Haocong Luo / Ataberk Olgun / İsmail Emir Yüksel 等的论文 ScaleDisturb 被 DSN 2026 接收。该工作利用"时间不对称性"放大现代 DRAM 芯片的读干扰（Read Disturb）效应，揭示出新的硬件安全威胁，对 DRAM 物理设计可靠性与 EDA 验证流程提出更高要求。
+</p>
+<h2>9. TSMC 2nm 量产筹备：首年月产能或达 14 万片</h2>
+<p>
+<strong>来源：</strong>Tom's Hardware  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://m.moji.com/aqi/wikimZ0Umit.html" target="_blank">https://m.moji.com/aqi/wikimZ0Umit.html</a>
+</p>
+<p>
+<strong>核心要点：</strong>TSMC 3nm 产能持续吃紧，难以满足 AI 客户需求；按当前进度，2nm 节点首年月产能或达 14 万片，有望超越 3nm 的市场表现。同时，Samsung 平泽 P4/P5/P6 工厂建设提速，SK Hynix 将在清州 M15X 引入 HBM 与 1c DRAM 产线，Micron 收购台湾 PSMC P5 晶圆厂。整体 DRAM/NAND 资本开支将在 2026-2027 进一步抬升。
+</p>
+<h2>10. UCLA 半导体枢纽 1.25 亿美元 / NoPo HiPco CNT 量产 sub-2nm 芯片</h2>
+<p>
+<strong>来源：</strong>UCLA / NoPo Nanotechnologies  ·  <strong>时间：</strong>2026-06-15  ·  <strong>链接：</strong><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank">https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook</a>
+</p>
+<p>
+<strong>核心要点：</strong>UCLA 启动 1.25 亿美元半导体 R&D 枢纽，聚焦"AI 驱动芯片设计自动化"高影响研究；同期 NoPo Nanotechnologies 量产 HiPco 单壁碳纳米管（CNT），目标用于 sub-2nm 芯片互连与电池负极。Ricursive 等初创公司探索"端到端 AI 芯片设计模型"，预示 EDA 工具链正从"点工具"向"AI 编排的设计流"演进。
+</p>
+<hr class="section-divider">
+<p>
+<callout emoji="✅">
+<strong>报告说明</strong>
+</p>
+<ul>
+<li>本报告由 AI 助手自动聚合最近 24 小时公开信息源整理而成，仅作内部信息洞察参考。</li>
+<li>所有条目均标注来源、时间与原文链接，权威性以官方发布会、顶会官网、官方期刊与权威媒体为准。</li>
+<li>信息内容仅供学术与产业趋势研究，不构成投资或商业决策建议。</li>
+</ul>
+<p>
+</callout>
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> Apple WWDC26：全新 Siri 基于 Google Gemini 1.2T 参数模型</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 InfoQ  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Apple 在 WWDC 2026 上正式推出基于 Google 定制 1.2 万亿参数 Gemini 模型的全新 Siri，深度集成 Apple Foundation Models（AFM Cloud / AFM Cloud Pro / AFM Fusion）。每年向 Google 支付约 10 亿美元模型费用，推理仍在 Apple Private Cloud Compute 基础设施上运行。Siri 引入屏幕感知、跨 App 上下文理解、专属 Siri App 并通过 iCloud 同步对话历史，宣告 Apple 在前沿基础模型上的&quot;战略性妥协&quot;。</div>
-  <div class="insight-links"><a href="https://www.infoq.cn/article/LSwQ3hQpZ1INX40icTSE" target="_blank" rel="noopener" class="link-btn">🔗 infoq.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> Anthropic 公开 Claude Fable 5，首款面世的 Mythos 级模型</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 CNBC / Anthropic  ·  **时间：**2026-06-09（上线后 72 小时因出口管制下线）  ·</span>
-    <span class="meta-tag">🕐 2026-06-09（上线后 72 小时因出口管制下线）  ·</span>
-  </div>
-  <div class="insight-points">Anthropic 公开 Claude Fable 5，支持 1M token 上下文，编程基准 SWE-bench Verified 提升至 95%。Anthropic 同时提出建立&quot;全球暂停开发&quot;机制，警告前沿模型已具备&quot;递归自我改进&quot;能力。6 月 12 日美国商务部以出口管制为由要求切断 Fable 5/Mythos 5 的境外访问，72 小时内下线，事件引发巨大反响。</div>
-  <div class="insight-links"><a href="https://chainarticles.com/ai-rivalries-cyberthreats-and-ipo-fever-define-this-week-in-tech/?amp=1" target="_blank" rel="noopener" class="link-btn">🔗 chainarticles.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> OpenAI 秘密递交 S-1 招股书，估值约 8520 亿美元</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 今日头条 / 路透社  ·  **时间：**2026-06-08  ·</span>
-    <span class="meta-tag">🕐 2026-06-08  ·</span>
-  </div>
-  <div class="insight-points">OpenAI 正式向 SEC 秘密提交 S-1 招股书草案，估值约 8520 亿美元，由 Goldman Sachs 和 Morgan Stanley 担任主承销商，目标 9 月至 Q4 之间挂牌。这是继 Anthropic 6 月 1 日秘密递表之后，第二家在 AI 浪潮中冲击公开市场的顶级 AI 公司。资本市场正在为&quot;AI 上市潮&quot;定价。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7651415338705289779/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> Anthropic 呼吁全球暂停 AI 开发，应对&quot;递归自我改进&quot;风险</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Wall Street Journal  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Anthropic 公开呼吁建立全球性 AI 开发暂停机制，警告前沿模型正以&quot;递归自我改进&quot;方式进化，可能脱离人类直接控制。公司同时披露 Claude 已能编写其绝大部分生产代码，生产力提升约 8 倍。该提案与全球 AI 安全治理议程形成新焦点，可能影响监管节奏。</div>
-  <div class="insight-links"><a href="https://chainarticles.com/ai-rivalries-cyberthreats-and-ipo-fever-define-this-week-in-tech/?amp=1" target="_blank" rel="noopener" class="link-btn">🔗 chainarticles.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> Z.ai 发布 GLM-5.2：744B 参数 MoE + 1M token 上下文</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 MarkTechPost / Artiverse  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Z.ai 推出 GLM-5.2，采用 744B 参数 Mixture-of-Experts 架构（每 token 激活 40B 参数），支持 1M token 上下文，单次最大输出 131,072 token，提供&quot;标准&quot;与&quot;Max&quot;两种思考档位。模型聚焦编程场景，目前尚未公开基准数据，强调与现有工具链兼容。</div>
-  <div class="insight-links"><a href="https://www.artiverse.ca/the-race-for-1-million-token-ai-models-and-what-it-means/" target="_blank" rel="noopener" class="link-btn">🔗 artiverse.ca</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> GPT-5 早期开发者测试：推理与代码能力显著跃迁</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 enmnews.com  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">OpenAI 向部分顶级开发者开放 GPT-5 早期访问。反馈显示 GPT-5 在长上下文编程任务、调试优化与歧义请求处理上较前代显著进步；具备&quot;主动追问&quot;与多路径求解能力，响应速度亦大幅提升。完整公开发布与定价仍未敲定，OpenAI 仍以&quot;安全验证优先&quot;为节奏管控策略。</div>
-  <div class="insight-links"><a href="https://enmnews.com/2026/06/15/inside-first-gpt-5-demos-what-top-developers-saw" target="_blank" rel="noopener" class="link-btn">🔗 enmnews.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> ChatGPT 默认模型切换至 GPT-5.5 Instant</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Frontier News  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">OpenAI 5 月底将 ChatGPT 默认模型切换至 GPT-5.5 Instant，事实性错误显著减少、回答更简洁。同时上线：会话内生成柱状/折线/饼图、可编辑的&quot;用户记忆摘要&quot;、语速/语调个性化设置。已退役的 Canvas 侧边栏被写作/代码块 + 全屏模式取代。备受关注的&quot;超级应用&quot;集成仍仅在公告中，未对普通用户开放。</div>
-  <div class="insight-links"><a href="https://www.frontiernews.ai/news/article/chatgpts-2026-upgrade-what-actually-changed-vs-wha-492707fc" target="_blank" rel="noopener" class="link-btn">🔗 frontiernews.ai</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> AI Summit London 2026：第十届聚焦 Agentic AI 与企业落地</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 London Business School  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">第十届 AI Summit London（London Tech Week 2026 主活动）在 Tobacco Dock 召开，吸引 5000 名代表、300 位演讲嘉宾。本届主题从 PoC 转向企业级 Agentic AI 落地，英国 AI 与在线安全部长 Kanishka Narayan 提出&quot;AI 主权&quot;框架，强调公共信任与设计卓越并重。LBS 教授 Michael Jacobides 等学界专家参与&quot;Agentic AI 领导力&quot;专题讨论。</div>
-  <div class="insight-links"><a href="https://www.london.edu/news/ai-summit-london-2026-focuses-on-enterprise-transformation-and-responsible-ai" target="_blank" rel="noopener" class="link-btn">🔗 london.edu</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> 腾讯云 ADP 4.0 发布：Claw 模式降低 Agent 构建门槛</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AIbase / 腾讯云  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">腾讯云在 2026 AI 工业应用大会上发布 ADP 4.0 平台，定位企业级 AgentOps。Claw 模式支持 Agentic Loop 闭环，通过 Connector、Skills、Knowledge Base、MCP、Agent Portal 五大组件串联 Agent 的构建、连接、分发与治理，目标把企业级 Agent 部署的工程门槛降低一个数量级。</div>
-  <div class="insight-links"><a href="https://www.aibase.com/search/AI Industrial Applications&amp;type=0" target="_blank" rel="noopener" class="link-btn">🔗 aibase.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> 微信 AI 团队论文获 ICASSP 2026 最佳工业论文奖</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AIbase  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">微信 AI 团队凭借面向视障人士步行辅助的创新模型论文，斩获 ICASSP 2026 最佳工业论文奖（Best Industrial Paper Award），这是中国企业团队自奖项设立以来首次获得该荣誉，打破了海外科技巨头的长期垄断。论文展示了大模型在无障碍科技中的可落地范式。</div>
-  <div class="insight-links"><a href="https://www.aibase.com/search/AI Industrial Applications&amp;type=0" target="_blank" rel="noopener" class="link-btn">🔗 aibase.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> NVIDIA SCADA 架构：2.9PB PCIe 6.0 存储破解 AI 数据瓶颈</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Computex 2026 / Wiwynn  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Wiwynn 在 Computex 2026 推出首批 NVIDIA SCADA（SCaled Accelerated Data Access）服务器，6RU 机箱内集成 96 颗液冷 E3.S SSD（满配 Micron 9650 Pro 30.72TB，总容量 2.949PB），搭配 4 颗 RTX Pro 6000 Blackwell GPU、4 颗 ConnectX-9 SuperNIC 与 4 颗 PCIe 6.x 交换机，4K 随机读 5.28 亿 IOPS。SCADA 把存储控制面移交给 GPU，专为 RAG、向量搜索、KV-Cache 这类高并发随机访问场景设计，总功耗约 9kW，整机液冷。</div>
-  <div class="insight-links"><a href="https://cms.gizstreet.com/nvidias-scada-architecture-solving-the-ai-data-bottleneck-with-2-9pb-pcie-6-0-storage/" target="_blank" rel="noopener" class="link-btn">🔗 cms.gizstreet.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> Apple 获充气传感器专利：头戴设备光学模组安全校准</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 USPTO  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Apple 获得一项与头戴显示设备相关的充气传感器专利，可在装配环节对光学模组进行安全距离与压力校准，解决 Vision Pro 系列长期存在的&quot;光学模组对位公差&quot;痛点。该专利预示 Apple 头戴设备在产线装配良率与佩戴舒适度上将取得新突破。</div>
-  <div class="insight-links"><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank" rel="noopener" class="link-btn">🔗 m.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> Neuralink 公布下一代手术机器人 + Optimus 全脑控制</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Neuralink  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Neuralink 同步发布多项重大进展：下一代手术机器人将单根电极线植入时间从 17 秒缩短至 1.5 秒（11 倍提速），兼容 99% 颅型，植入深度可达皮层下 50mm；用户校准从数小时缩短到 15 分钟；现场演示中，截瘫患者 Alex 通过 Neuralink 信号实时同步控制 Tesla Optimus 机器人手部动作。马斯克称未来用户可&quot;以意念栖身于&quot;整个 Optimus 机器人。</div>
-  <div class="insight-links"><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank" rel="noopener" class="link-btn">🔗 m.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> Meta Quest v2.5 PTC：图库支持自动 3D 观看</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Meta  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Meta 发布 Quest v2.5 PTC（Public Test Channel）更新，原生图库支持自动 3D 观看模式，无需开发者专门制作 3D 内容。结合 Spaces 与 Horizon Worlds 的更新，Meta 正在把&quot;存量 2D 内容自动 3D 化&quot;作为 XR 普及的关键路径。</div>
-  <div class="insight-links"><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank" rel="noopener" class="link-btn">🔗 m.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 高通预热新一代 XR 骁龙芯片</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Qualcomm  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">高通在官方渠道预热&quot;新事物即将到来&quot;，行业普遍解读为新一代 XR 骁龙芯片即将发布。该芯片将延续骁龙 XR 系列在空间计算、感知融合与端侧 NPU 上的领先优势，对标 Apple M-series 在 Vision Pro 上的硬件基础。</div>
-  <div class="insight-links"><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank" rel="noopener" class="link-btn">🔗 m.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> 三星 × 雅 Abbott 推出 Galaxy XR 沉浸式献血体验</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Samsung / Abbott  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">三星联合医疗巨头雅 Abbott 推出基于 Galaxy XR 头显的沉浸式献血体验方案，利用 XR 技术降低献血者的焦虑感、提升采血流程效率。这是消费电子厂商与医疗器械企业首次在 XR 场景中展开深度合作的标志性案例。</div>
-  <div class="insight-links"><a href="https://m.moji.com/aqi/wiki/tgvf2kc8.html" target="_blank" rel="noopener" class="link-btn">🔗 m.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> 首款 EUV 双束激光 2µm 照射方案，转换效率提升 40%</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Semiconductor Engineering  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">最新研究通过 2µm 双束激光照射方案，将 EUV 光源的转换效率提升 40%。同时，另一项辐射流体力学模拟研究进一步优化了 EUV 输出。墙插效率与占地面积的双重改善，将直接降低先进节点（2nm/14Å）的单晶圆成本与吞吐量，支撑更激进的产能扩张计划。</div>
-  <div class="insight-links"><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank" rel="noopener" class="link-btn">🔗 theartofcto.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> Georgia Tech 铁电 NAND 抗辐射能力达传统 NAND 30 倍</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Nano Letters / Georgia Tech  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Georgia Tech 与 Penn State 联合开发的铁电 NAND Flash 存储芯片，可承受 100 万 rad 辐射剂量（传统 NAND 的 30 倍），达到深空任务辐射耐受门槛。铁电 NAND 通过极化存储数据，规避了辐射对浮置栅电荷的破坏。技术适用于近地轨道与深空航天器的高可靠存储场景。</div>
-  <div class="insight-links"><a href="https://semiengineering.com/research-bits-june-15/" target="_blank" rel="noopener" class="link-btn">🔗 semiengineering.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> Polytechnique Montréal 在硅上集成二阶非线性光子功能</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Science Advances / Polytechnique Montréal  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">研究团队通过真空蒸发法将 TPA-QCN 分子沉积在硅基板上，材料自发形成具有取向的薄膜，赋予硅光子芯片此前不具备的二阶光学非线性能力。已演示片上将电信红外光直接转换为可见红光的集成器件。该突破有望简化硅光子系统的波长转换链路、降低发热。</div>
-  <div class="insight-links"><a href="https://semiengineering.com/research-bits-june-15/" target="_blank" rel="noopener" class="link-btn">🔗 semiengineering.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> UCLA 启动 1.25 亿美元半导体 R&amp;D 枢纽</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 UCLA  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">UCLA 宣布 1.25 亿美元半导体 R&amp;D 枢纽，明确聚焦&quot;高影响&quot;而非渐进式研究，优先利用 AI 手段突破芯片瓶颈（涵盖架构、工艺、设计自动化）。该枢纽是美国学术界近期少有的&quot;大额 + AI for Chip&quot;双轮驱动 R&amp;D 节点，有望缩短从实验室到晶圆厂的成果转化周期。</div>
-  <div class="insight-links"><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank" rel="noopener" class="link-btn">🔗 theartofcto.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> ISSCC 2026 最佳芯片奖：KibaNet AI 推理芯片</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 太平洋科技  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">在旧金山举行的 IEEE ISSCC 2026 上，Kiba 公司 KibaNet AI 推理芯片从全球 217 项入围作品中脱颖而出，荣获&quot;最佳芯片奖&quot;（Best Chip Award），系中国 AI 芯片企业首次获得此项殊荣。芯片基于台积电 5nm 工艺，集成超 800 亿晶体管，自研&quot;天枢&quot;异构计算架构（脉动阵列 + 稀疏计算），INT8 算力 1200 TOPS、能效比 23 TOPS/W，性能密度 14.6 TOPS/mm²，较同期竞品高约 35%。</div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/wiki/1fcramwxr2ni/" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> JSSC 2026：128-Gb/s PAM-4 发射机（28nm CMOS）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IEEE JSSC  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Hongzhi Wu 团队在 JSSC 2026（61(1): 293-304）发表 128-Gb/s PAM-4 发射机，提出 Edge-Boosting 脉冲发生器与预加重非对称分数间隔 FFE 技术，在 28nm CMOS 上实现超高速 SerDes 性能。该方案对数据中心 1.6T/3.2T 光模块与芯片间互连具有重要参考价值。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/22/6047.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> JSSC 2026：4×CF 连续可调转换比 SCVR</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IEEE JSSC  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Yuanfei Wang / Zhiyuan Zhang / Fuyao Zhang / Yihan Zhang / Rui Paulo Martins / Mo Huang 在 JSSC 2026（61(3): 951-962）发表混合 SCVR 拓扑，通过 4×CF 连续可调转换比开关电容级，在 28nm CMOS 上实现高功率密度、宽输入范围的电压调节，适用于 AI 加速卡与 SoC 片上电源管理。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/272/8915.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> TVLSI 2026：2×80 Gb/s PAM-4 接收机前端（28nm CMOS）</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IEEE Trans. Circuits Syst. I  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Yangyi Zhang / Liping Zhong / Taiyang Fan / Xiongshi Luo / Hongzhi Wu / Xuxu Cheng 等人在 TVLSI 2026（73(1): 126-139）发表 2×80 Gb/s 单端 TAS-TIS PAM-4 接收机前端，集成串扰消除与信号复用技术，在 28nm CMOS 上实现 160Gb/s 聚合速率。面向 Chiplet 与高带宽存储接口。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/22/6047.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> ISSCC 2026：72Gb/s/pin Chiplet 单端双向收发机</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IEEE ISSCC 2026  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Xuxu Cheng / Hongzhi Wu 等在 ISSCC 2026（pp. 150-152）发表 72Gb/s/pin 单端同时双向（Simultaneous Bi-Directional）收发机，采用 C-Peaking 泄漏消除与双环混合阻抗校准技术，专为 Chiplet 短距互连设计。同期 ISSCC 2026 论文（pp. 624-626）推出 72Gb/s/pin 单端驱动协同编码 PAM3 收发机，为 Chiplet 与存储接口提供能效更优的备选方案。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/22/6047.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> ISSCC 2026：耦合 OSC 转换器，1.82W/mm² 功率密度</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IEEE ISSCC 2026  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Jianxin Yang / Fuyao Zhang / Rui Paulo Martins / Mo Huang 在 ISSCC 2026（pp. 446-448）发表耦合振荡器（Coupled-OSC）转换器，61MHz 峰值效率 89.5%、360MHz 功率密度 1.82W/mm²，并天然支持偶相交错（Even Phase Interleaving）。面向高频率、高密度 PMIC 应用。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/272/8915.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> ISCAS 2026 杰出青年作者奖：Cool-3D 微流冷却 3DIC 早期 DSE 框架</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 上海交通大学  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">上海交通大学 iCAS Lab 博士生王润曦（通讯作者：郭鑫斐教授）的论文《Cool-3D》获 IEEE 电路与系统协会杰出青年作者奖（每年全球仅 1 篇）。该工作提出端到端热感知框架，在 Pre-RTL 阶段对微流冷却 3DIC 进行早期设计空间探索，弥补了现有 EDA 工具在 3DIC 散热约束建模上的空白。</div>
-  <div class="insight-links"><a href="https://news.sjtu.edu.cn/zhxw/20260615/223803.html" target="_blank" rel="noopener" class="link-btn">🔗 news.sjtu.edu.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> JSSC 2026：2×112 Gb/s/pin 31-dB 损耗补偿收发机</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IEEE JSSC  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Liping Zhong / Hongzhi Wu 等在 JSSC（60(7): 2632-2644）发表 2×112 Gb/s/pin 单端串扰消除收发机，28nm CMOS 实现 31-dB 信道损耗补偿。该架构为长距存储接口与高损耗通道提供了更优的均衡能力，对 DDR6/PCIe 6 等下一代接口研发具有重要参考价值。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/22/6047.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> AAAI 2026：Oblivionis 联邦大模型轻量化学习/遗忘框架</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 AAAI 2026  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Fuyao Zhang / Xinyu Yan / Tiantong Wu 等在 AAAI 2026（pp. 28185-28193）发表 Oblivionis 框架，将联邦大模型的学习与遗忘（unlearning）流程统一为轻量化操作。该方向在 GDPR/各国数据保护法规日益严格背景下，对端云协同大模型训练具有重要意义。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/272/8915.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> RISC-V 峰会欧洲：RISC-V 全面挺进数据中心 / 边缘 / 航天</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 RISC-V International / RISC-V Summit Europe  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">RISC-V International 在欧洲峰会上明确把 RISC-V 定位为覆盖数据中心、边缘 AI、航天应用的通用 ISA。开源生态逐步成熟，对 x86 与 Arm 在定制芯片项目中的话语权构成实质挑战；为垂直集成玩家在 AI、网络、航空航天 SoC 上定制核心提供新空间。</div>
-  <div class="insight-links"><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank" rel="noopener" class="link-btn">🔗 theartofcto.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> DAC 2026 定档 7 月 25-29 日：AI 主导 EDA 流程成为核心议题</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Design Automation Conference 2026  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Design Automation Conference 2026（DAC 2026）将于 7 月 25-29 日在美国加利福尼亚州举办。本届 DAC 核心信号：AI 正在全面进入芯片设计流程（自动布局布线、设计空间探索、功耗/性能预测）；系统级设计（SoC、Chiplet、异构集成）成为重点；先进节点带来的功耗、信号完整性、验证挑战成为关键议题。</div>
-  <div class="insight-links"><a href="https://m.11467.com/product/d49597055.htm" target="_blank" rel="noopener" class="link-btn">🔗 m.11467.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> TCAD 2026：RegPlace 全系统 DNN 加速器布局</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 IEEE Trans. Comput. Aided Des.  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Jiaxi Jiang / Yuan Pu / Mingjun Li / Yuxuan Zhao / Peiyu Liao / Zuodong Zhang / Yibo Lin / Bei Yu 在 TCAD 2026（45(2): 686-690）发表 RegPlace 论文，提出&quot;规则性感知&quot;（Regularity-Aware）布局方法，面向全系统 DNN 加速器物理实现。该方法在大规模 AI 加速器芯片的 PPA 收敛上具有显著优势。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/173/0246-1.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> TCAD 2026：PPD 跨平台 DNN 任务调度系统</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 ACM Trans. Design Autom. Electr. Syst.  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Wendong Xu / Yuhao Ji / Yang Bai / Yueting Li / Yuxuan Zhao / Zhengwu Liu / Bei Yu / Ngai Wong 在 TODAES 31(2): 20:1-20:24 发表 PPD（Portable and Highly Parallel Dispatching）系统，构建可移植、高并行的深度学习任务调度框架，跨硬件后端高效执行 DNN 推理/训练任务。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/173/0246-1.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> ASP-DAC 2026：DPO-3D 面向 F2F 3D IC 的可微 PDN 优化</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 ASP-DAC 2026  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Zhen Zhuang / Zheng Yang / Yuxuan Zhao / Jiawei Hu / Bei Yu / Sung Kyu Lim / Tsung-Yi Ho 在 ASP-DAC 2026（pp. 1273-1279）发表 DPO-3D，针对 Face-to-Face 3D IC 电源分配网络（PDN）提出可微优化方法，灵活建模可布线性与 IR-drop 的权衡。面向先进 3D 封装与 Chiplet 集成。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/173/0246-1.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> TCAD 2026：3D-F2F 堆叠 IC 混合键合布线感知终端分配</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 ACM Trans. Design Autom. Electr. Syst.  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Siting Liu / Jieya Zhou / Jiaxi Jiang / Zhuolun He / Ziyi Wang / Yibo Lin / Bei Yu / Martin D. F. Wong 在 TODAES 31(3): 48:1-48:20 发表 Routing-aware Legal Hybrid Bonding Terminal Assignment 论文，针对 3D F2F 堆叠 IC 混合键合互连，在合法化阶段即考虑布线约束，提升最终布通率与时序收敛性。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/160/2171-10.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> ASP-DAC 2026：DCLOG 基于 GNN 预训练的逻辑优化</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 ASP-DAC 2026  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Rongliang Fu / Libo Shen / Ziyi Wang / Zhengxing Lei / Zixiao Wang / Junying Huang / Bei Yu / Tsung-Yi Ho 在 ASP-DAC 2026（pp. 793-799）发表 DCLOG，将 Don't-Cares 引入逻辑优化流程，并基于预训练图神经网络（GNN）实现高质量解空间搜索。代表 &quot;AI-Native EDA&quot; 方向上逻辑综合阶段的前沿进展。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/160/2171-10.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> DAC 2026（已收）：Arithmetic Packing on FPGA DSP 宽整型数据通路</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 arXiv / DAC '26  ·  **时间：**2026-06-10  ·</span>
-    <span class="meta-tag">🕐 2026-06-10  ·</span>
-  </div>
-  <div class="insight-points">Jiechen Huang / Hector R. Rodriguez / Dingcheng Yang / Zuochang Ye / Yibo Lin / Wenjian Yu 的论文被 DAC '26 接收，研究现代 FPGA DSP 原语中宽整型数据通路上的算子打包（Arithmetic Packing）方法，可显著提升 FPGA 上高吞吐算子的资源利用率与能效，对 EDA 后端综合与 FPGA 工具链有直接参考意义。</div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2606.11065" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> DAC 2026 / DSN 2026：ScaleDisturb DRAM 读干扰放大攻击</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 arXiv / DSN 2026  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">Jikun Wang / Haocong Luo / Ataberk Olgun / İsmail Emir Yüksel 等的论文 ScaleDisturb 被 DSN 2026 接收。该工作利用&quot;时间不对称性&quot;放大现代 DRAM 芯片的读干扰（Read Disturb）效应，揭示出新的硬件安全威胁，对 DRAM 物理设计可靠性与 EDA 验证流程提出更高要求。</div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2606.07761" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> TSMC 2nm 量产筹备：首年月产能或达 14 万片</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 Tom's Hardware  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">TSMC 3nm 产能持续吃紧，难以满足 AI 客户需求；按当前进度，2nm 节点首年月产能或达 14 万片，有望超越 3nm 的市场表现。同时，Samsung 平泽 P4/P5/P6 工厂建设提速，SK Hynix 将在清州 M15X 引入 HBM 与 1c DRAM 产线，Micron 收购台湾 PSMC P5 晶圆厂。整体 DRAM/NAND 资本开支将在 2026-2027 进一步抬升。</div>
-  <div class="insight-links"><a href="https://m.moji.com/aqi/wikimZ0Umit.html" target="_blank" rel="noopener" class="link-btn">🔗 m.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> UCLA 半导体枢纽 1.25 亿美元 / NoPo HiPco CNT 量产 sub-2nm 芯片</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 UCLA / NoPo Nanotechnologies  ·  **时间：**2026-06-15  ·</span>
-    <span class="meta-tag">🕐 2026-06-15  ·</span>
-  </div>
-  <div class="insight-points">UCLA 启动 1.25 亿美元半导体 R&amp;D 枢纽，聚焦&quot;AI 驱动芯片设计自动化&quot;高影响研究；同期 NoPo Nanotechnologies 量产 HiPco 单壁碳纳米管（CNT），目标用于 sub-2nm 芯片互连与电池负极。Ricursive 等初创公司探索&quot;端到端 AI 芯片设计模型&quot;，预示 EDA 工具链正从&quot;点工具&quot;向&quot;AI 编排的设计流&quot;演进。</div>
-  <div class="insight-links"><a href="https://theartofcto.com/industry-outlook/2026-w25-hardware-industry-outlook" target="_blank" rel="noopener" class="link-btn">🔗 theartofcto.com</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-06-15.html" class="day-nav-btn">← 上一篇 2026-06-15</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-06-17.html" class="day-nav-btn">下一篇 2026-06-17 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

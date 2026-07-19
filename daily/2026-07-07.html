@@ -1,638 +1,575 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-07-07 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-07-07 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-07-07 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-07-07</h2>
-    <p class="daily-stats">共 5 个板块 · 50 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-07-07</div>
+    </div>
+    <div class="card">
+      <h2>技术洞察日报 · 2026-07-07</h2>
+<p>
+> 覆盖时间窗口：2026-07-06 \~ 2026-07-07（24\~48小时内），按板块整理当日权威发布与顶会最新动态。
+</p>
+<hr class="section-divider">
+<h2>一、人工智能 AI 领域（TOP10）</h2>
+<p>
+本板块覆盖大模型/基础模型、AI Agent、AI4Science、具身智能、AI 芯片、AI 安全与对齐、行业落地等方向。
+</p>
+<h3>1. OpenAI 正式发布 GPT-5.6 系列，旗舰版仅向少数合作伙伴开放</h3>
+<ul>
+<li><strong>来源</strong>：今日头条 / 尔英科技周报 2026.7.6</li>
+<li><strong>时间</strong>：2026-07-06</li>
+<li><strong>核心要点</strong>：OpenAI 发布 GPT-5.6，旗舰版仅向少数合作伙伴开放；同期谷歌因算力紧张限制 Meta 对 Gemini 大模型的使用，倒逼 Meta 内部多个人工智能项目调整节奏。"算力是 AI 时代最硬的通货"。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659320072486126080/</li>
+</ul>
+<h3>2. Anthropic 联手三星探索自研 AI 芯片</h3>
+<ul>
+<li><strong>来源</strong>：TechCrunch / 尔英科技周报</li>
+<li><strong>时间</strong>：2026-07-03</li>
+<li><strong>核心要点</strong>：Anthropic 已被曝与三星接洽自研 AI 芯片合作。继 OpenAI 推出首颗自研推理芯片后，两大 AI 巨头几乎同时把手伸向芯片，标志 AI 产业从"买算力"转向"定义算力"。</li>
+<li><strong>链接</strong>：https://techcrunch.com/</li>
+</ul>
+<h3>3. 美光 93 亿美元扩建日本广岛 HBM 产线</h3>
+<ul>
+<li><strong>来源</strong>：综合外媒 / 尔英科技周报</li>
+<li><strong>时间</strong>：2026-07-04</li>
+<li><strong>核心要点</strong>：美光科技在日本广岛正式启动晶圆厂扩建工程，总投资约 1.5 万亿日元（约 93 亿美元），用于生产 HBM 等先进存储芯片，主要服务 AI 处理器需求。日本政府提供最高约 5000 亿日元补贴。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659320072486126080/</li>
+</ul>
+<h3>4. 特斯拉 Optimus 量产产线落地弗里蒙特工厂</h3>
+<ul>
+<li><strong>来源</strong>：今日头条 / 尔英科技周报</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：马斯克确认参观 Optimus 机器人生产线。特斯拉 Optimus 人形机器人首条量产产线已落地弗里蒙特工厂，模块化设计开启规模化制造新阶段。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659320072486126080/</li>
+</ul>
+<h3>5. 2026 AI Agent 框架终极指南：10 大框架五大范式全解</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / Tom 行业分析</li>
+<li><strong>时间</strong>：2026-07-03</li>
+<li><strong>核心要点</strong>：Agent 框架赛道经过 2024 年寒武纪大爆发后，2026 年 3 月迎来优胜劣汰，10 个主力玩家各自占据清晰生态位。MCP 协议标准化已成趋势，10 大主流框架中至少 8 个原生支持 MCP。代表：LangGraph（少抽象多控制）、CrewAI（角色驱动）、LlamaIndex/AgentScope（事件驱动）、OpenAI Agents SDK/PydanticAI（SDK 封装）、Dify（低代码）。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/qq_40672115/article/details/159565215</li>
+</ul>
+<h3>6. IBM 发布 0.7 纳米芯片技术</h3>
+<ul>
+<li><strong>来源</strong>：芯微坊 / 今日半导体行业新闻汇总</li>
+<li><strong>时间</strong>：2026-07-05（综合 6 月披露）</li>
+<li><strong>核心要点</strong>：IBM 推出全球首款 0.7 纳米（7 埃）芯片，采用三维"纳米叠层"晶体管架构，指甲盖大小面积集成近 1000 亿个晶体管，密度约为 2nm 芯片两倍。性能提升 50% 或能耗降低 70%，片上内存密度提升 40%。AI 算力从 1500 TOPS 跃升至 7000 TOPS，大模型训练周期可从 3 个月压缩至两周。配套量产预计 5 年后。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659672833148092947/</li>
+</ul>
+<h3>7. AI 安全 2026：Prompt 注入与间接注入成为最危险攻击面</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / 安全研究综合</li>
+<li><strong>时间</strong>：2026-07-06</li>
+<li><strong>核心要点</strong>：2026 年大模型安全从"选修课"变成"必修课"。三类典型攻击：直接 Prompt 注入、间接注入（隐藏在 AI 主动读取的网页/邮件/文档中，2026 年最危险）、多模态注入（图片中嵌入指令）。防御方案：输入净化 + 指令优先级、Guardrails 框架（NVIDIA NeMo Guardrails）、权限隔离。三星已因员工将源代码粘贴 ChatGPT 导致泄露而禁止员工使用外部 AI 工具。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/qq_56999332/article/details/161400538</li>
+</ul>
+<h3>8. 华为联合发布"梦启 1000"二维半导体微处理器</h3>
+<ul>
+<li><strong>来源</strong>：Nature Electronics / 芯微坊综合</li>
+<li><strong>时间</strong>：2026 年 6 月发表</li>
+<li><strong>核心要点</strong>：南京大学联手华为、苏州国家实验室发布全球首款二维半导体多位并行微处理器"梦启 1000"，成果登《Nature Electronics》。采用 0.6nm 厚二维材料作为导电沟道，晶体管密度 9336 个/mm²（为国际现有二维芯片记录 14 倍），且无需 EUV 光刻机，可适配国内成熟 0.5μm 产线，为国产芯片绕过先进制程瓶颈提供新路径。</li>
+<li><strong>链接</strong>：https://www.nature.com/electronics</li>
+</ul>
+<h3>9. 具身智能单臂协作机器人"操作时代"到来</h3>
+<ul>
+<li><strong>来源</strong>：新京报 / 数字经济大会首发首秀</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：2026 全球数字经济大会在北京国家会议中心开幕，云迹科技正式发布具身智能单臂协作机器人。该产品采用 VLA（视觉-语言-动作）端到端统一架构，集成感知内嵌推演、常识认知推理、长任务在线自适应、双路线动作生成、agent 调度总线五大核心技术，宣告服务机器人从"移动智能"跃迁到"操作智能"。</li>
+<li><strong>链接</strong>：https://m.bjnews.com.cn/detail/1783397805129221.html</li>
+</ul>
+<h3>10. 上海脑机接口集群 51 家企业入驻</h3>
+<ul>
+<li><strong>来源</strong>：综合外媒 / Shanghai Neuro Space</li>
+<li><strong>时间</strong>：2026-06-27</li>
+<li><strong>核心要点</strong>：上海"脑空间"作为城市专设 BCI 产业集群，一周年吸引 51 家创新企业入驻。该里程碑在虹桥国际医疗中心会议上公布。同时中科院沈阳自动化所褚亚奇团队发表 BANet 模型（融合桥接结构 + 注意力机制），用于运动想象脑电解码，发表在 Neurocomputing 期刊。</li>
+<li><strong>链接</strong>：https://m.bjnews.com.cn/detail/1783397805129221.html</li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域（TOP10）</h2>
+<p>
+覆盖计算机体系结构、机器人、脑机接口、量子计算、自动驾驶、XR/AR/VR、网络通信、光电、半导体材料等。
+</p>
+<h3>1. 2026 全球数字经济大会聚焦世界模型、人形机器人、全栈仿真</h3>
+<ul>
+<li><strong>来源</strong>：新京报</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：大会推出"首发首秀"发布平台，围绕人工智能大模型、机器人、智能制造等重点领域，集中发布世界模型、人形机器人、全栈自研仿真技术等一批国内外新技术新产品。具身智能、人形机器人被纳入"十五五"规划前瞻布局范畴，2026 上半年国内一级市场投向该赛道资金约 460 亿元。</li>
+<li><strong>链接</strong>：https://m.bjnews.com.cn/detail/1783397805129221.html</li>
+</ul>
+<h3>2. 中国 L2 组合驾驶辅助强制性国家标准 GB 47955-2026 正式发布</h3>
+<ul>
+<li><strong>来源</strong>：凤凰网 / 引望</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：6 月 27 日发布的 GB 47955-2026《智能网联汽车 组合驾驶辅助系统安全要求》是国内首部 L2 组合驾驶辅助系统强制性国家标准。2026 年我国搭载组合驾驶辅助功能乘用车新车渗透率达 70%，领航驾驶辅助车型渗透率超 30%。华为乾崑智驾 ADS 安全水平可达中国市场平均值的 4.92 倍，搭载车辆超 190 万辆。</li>
+<li><strong>链接</strong>：https://news.ifeng.com/c/8uZNBUmRMLv</li>
+</ul>
+<h3>3. Forterra 在俄乌战场规模化部署自主系统</h3>
+<ul>
+<li><strong>来源</strong>：Forterra 官网</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：Forterra 公开披露已快速制造并向乌克兰大规模部署自主系统；同日宣布与 Oshkosh Defense 共同获得美国海军陆战队 ROGUE-Fires Block 2 生产合同，金额 9200 万美元。AGV（自主地面车辆）正在改变布雷与地形塑造的战争形态。</li>
+<li><strong>链接</strong>：https://www.forterra.com/news</li>
+</ul>
+<h3>4. 2026 中国智驾半年考：L3 国标公示，L4 商业化爆发</h3>
+<ul>
+<li><strong>来源</strong>：36 氪</li>
+<li><strong>时间</strong>：2026-07-03</li>
+<li><strong>核心要点</strong>：工信部 4 月公示《智能网联汽车组合驾驶辅助系统安全要求》强制性国家标准，2027 年 1 月 1 日实施。L3 商业化：北京高速 L3 商用认证由华为 ADS 4.0 拿下，国内首个 L3 责任框架落地。Momenta 6 月 23 日通过港交所上市聆讯，拟募资至少 10 亿美元，估值超千亿。FSD 入华倒逼中国智驾从"功能竞赛"转向"体验竞赛"。</li>
+<li><strong>链接</strong>：https://36kr.com/p/3877924297797894</li>
+</ul>
+<h3>5. 三星 Galaxy Glasses 完整交互细节曝光</h3>
+<ul>
+<li><strong>来源</strong>：93913 虚拟现实 / 微博爆料</li>
+<li><strong>时间</strong>：2026-07-03</li>
+<li><strong>核心要点</strong>：爆料渠道 SammyGuru 与 evowizz 完整曝光三星联合谷歌、Warby Parker、Gentle Monster 打造的首款 Android XR 智能眼镜 Galaxy Glasses。搭载 Android XR + One UI XR 双底层，内置 Gemini AI 助手。镜腿触控 + 实体拍摄键 + 双 LED 隐私灯。Galaxy Watch / Galaxy Ring 全生态联动。预计 7 月 22 日伦敦 Galaxy Unpacked 发布会亮相。</li>
+<li><strong>链接</strong>：https://m.weibo.cn/detail/5316531296929148</li>
+</ul>
+<h3>6. Qualcomm 发布 Snapdragon Reality Elite AR 芯片</h3>
+<ul>
+<li><strong>来源</strong>：Glass Almanac / Reuters</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：6 月 16 日 Qualcomm 发布 Snapdragon Reality Elite，目标将显著 AR 工作负载放到端侧运行，电池续航提升约 20%。Snap 同步推出消费级 Specs，定价 2,195 美元，作为"智能手机后继者"进行高端市场试水。Xreal 宣布 Android XR Aura 眼镜将于 2026 年秋季上市。</li>
+<li><strong>链接</strong>：https://glassalmanac.com/7-augmented-reality-developments-in-2026-that-could-upend-phones-and-messaging/</li>
+</ul>
+<h3>7. Valve Steam Frame VR 头显即将公布价格与发布日</h3>
+<ul>
+<li><strong>来源</strong>：MIXED Reality News</li>
+<li><strong>时间</strong>：2026-07-05</li>
+<li><strong>核心要点</strong>：Valve 在最新驱动更新中暗示 Steam Frame 接近正式发布。研发代号"Deckard"已超 6 年研发，2160×2160/眼 pancake 透镜，高通骁龙 8 Gen3 芯片，16GB RAM，最高 1TB 存储，6GHz 无线串流，售价预期约 1200 美元，年产量 40-60 万台。</li>
+<li><strong>链接</strong>：https://mixed-news.com/en/</li>
+</ul>
+<h3>8. 影目科技 B2 轮融资超 1.5 亿元，AI 眼镜"双料冠军"</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / IDC</li>
+<li><strong>时间</strong>：2026-07-03</li>
+<li><strong>核心要点</strong>：影目科技宣布完成超 1.5 亿元 B2 轮融资，由普华资本、梁溪产发集团、神骐资本联合投资。IDC 报告：2024 年影目以 47.6% 出货量份额、39.7% 销售额份额位列中国 AR 眼镜市场双料冠军。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/tmt_xq/article/details/149282669</li>
+</ul>
+<h3>9. 半导体产业链 7 月 1 日集体涨价（年内第二轮）</h3>
+<ul>
+<li><strong>来源</strong>：芯微坊</li>
+<li><strong>时间</strong>：2026-07-05</li>
+<li><strong>核心要点</strong>：近 20 家半导体企业同步启动年内第二轮提价，覆盖功率半导体（士兰微/扬杰/斯达涨幅 ≥15%，英飞凌/德州仪器 10-25%）、存储芯片（聚辰 Nor Flash 调 25%）、晶圆代工（台积电通知 3nm 及以下调涨 5-10%）。涨价原因：铜锡钯封装贵金属、硅片、电子特气价格上涨，AI 算力需求爆发，8 英寸产能收缩。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659672833148092947/</li>
+</ul>
+<h3>10. 华为发布"韬定律"V2：τ 缩微取代几何缩微</h3>
+<ul>
+<li><strong>来源</strong>：36 氪 / ChinaXiv</li>
+<li><strong>时间</strong>：2026-07-06</li>
+<li><strong>核心要点</strong>：华为董事、半导体业务部总裁何庭波署名论文《多层电子系统的时间缩微理论（atimescalingtheoryformulti-layerelectronicsystems）》V2 修订版在 ChinaXiv 公开发表。核心：把"时间"本身而非晶体管面积作为衡量进步的首要指标。已在 381 颗量产芯片验证。移动 SoC 逻辑折叠实现 55% 晶体管密度阶跃 + 41% 等效性能功耗降低。</li>
+<li><strong>链接</strong>：https://36kr.com/p/3883431712370691</li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计（TOP10）</h2>
+<p>
+聚焦集成电路设计/芯片实现领域。覆盖 ISSCC/VLSI/IEDM/JSSC/TVLSI 顶会期刊，先进制程、存算一体、Chiplet/异构集成、RISC-V/开源芯片、AI 芯片等。
+</p>
+<h3>1. ISSCC 2026 五大领域核心 Session 文章梳理</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / 行业整理</li>
+<li><strong>时间</strong>：2026-07-05</li>
+<li><strong>核心要点</strong>：ISSCC 2026 五大领域核心论文：</li>
+</ul>
+<ul>
+<li><strong>Session 2 Processors</strong>：AMD Instinct MI350 Series GPU（CDNA 4 架构、3D 堆叠 3nm XCD + 6nm IOD）、IBM Spyre 推理优化 AI 加速器、Quad-Chiplet AI SoC（16Gbps UCIe-Advanced D2D 接口）</li>
+<li><strong>Session 13 AI 电路</strong>：Google TPU v6 Pulse Array 创新、Analog SRAM Compute-in-Memory 边缘 AI 推理</li>
+<li><strong>Session 31 AI 加速器</strong>：28nm 推测解码 LLM 处理器（105-685μs/Token，10 亿参数模型）、51.6μJ/Token 子空间旋转双量化 LLM 加速器、VARSA 视觉自回归生成加速器</li>
+<li><strong>Session 8 高速互连</strong>：47.0Tb/s/mm 112Gb/s/pin PAM4 收发器、2.5D 封装 800Gbps D2D 互连、640Gbps 低功耗 D2D 收发器</li>
+<li><strong>链接</strong>：https://blog.csdn.net/qq_41360172/article/details/159571548</li>
+</ul>
+<h3>2. VLSI Symposium 2026 - 山东大学陈杰智团队铁电存储器突破</h3>
+<ul>
+<li><strong>来源</strong>：山东大学新闻网</li>
+<li><strong>时间</strong>：2026-07-02</li>
+<li><strong>核心要点</strong>：第 46 届 IEEE Symposium on VLSI Technology and Circuits 在美国夏威夷召开。陈杰智教授团队两篇论文发表：①基于 ALD-TiN 电极取向工程的超薄 HZO 铁电性能增强，3nm HZO 三维铁电电容器在 0.5V 工作电压下 2Pr 超过 38 μC/cm²，0.4V 低电压下 2Pr 超过 28 μC/cm²；②超薄 HZO 铁电薄膜极限缩放策略。</li>
+<li><strong>链接</strong>：https://www.view.sdu.edu.cn/info/1101/213201.htm</li>
+</ul>
+<h3>3. 台积电 VLSI 2026 异构集成全栈报告</h3>
+<ul>
+<li><strong>来源</strong>：电子工程专辑</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：TSMC 先进集成研发负责人 Chih Hang TUNG 博士 58 页报告：完整拆解 2.5D CoWoS（S/R/L）、3D SoIC 堆叠、COUPE 共封装光学、SoW 晶圆级全套技术。互连密度量化：传统 2D 基板 36-120 路/mm²、2.5D CoW 0.3K-1.6K 路/mm²、3D SoIC 12K-49K 路/mm²，单比特传输能耗低至 0.05pJ，相比板级互连功耗下降 40 倍。COUPE 硅光引擎：7nm 电子 IC + 65nm 硅光 PIC 垂直键合，功耗降低 10 倍，延迟压缩至 1/20。</li>
+<li><strong>链接</strong>：https://www.eet-china.com/mp/a507871.html</li>
+</ul>
+<h3>4. Tenstorrent 展示 Ascalon RISC-V 处理器家族</h3>
+<ul>
+<li><strong>来源</strong>：行业综合 / Tenstorrent 官方</li>
+<li><strong>时间</strong>：2026-07-07 前后</li>
+<li><strong>核心要点</strong>：TT-Ascalon S 以旗舰核心 Ascalon X 一半面积实现 70% 性能，单位面积性能提升 1.4 倍。Galaxy Blackhole"超级集群"在 Kimi K2.6 上达 900 Token/s/user（GPU 的 3 倍），DeepSeek-R1-0528 671B 达 400+ Token/s/user，LTX 2.3 Fast 6 秒 24fps 视频生成速度为 GPU 的 4 倍。</li>
+<li><strong>链接</strong>：https://www.tenstorrent.com/</li>
+</ul>
+<h3>5. 进迭时空 K3 全球首颗 RVA23 标准芯片</h3>
+<ul>
+<li><strong>来源</strong>：红商网 / 行业报告</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：进迭时空（SpacemiT）K3 芯片：8×X100 大核 + 8×A100 AI 核，60 TOPS AI 算力，130K DMIPS 通用算力，能效比 4.0 TOPS/W。RISC-V 同构融合计算技术，CPU 与 AI 核共享统一指令集。X200 核已研发完成，2027 年量产，单核性能 >16 分/GHz SPECINT2006，对标 ARM N2。</li>
+<li><strong>链接</strong>：http://www.redsh.com/a/20260701/044218.shtml</li>
+</ul>
+<h3>6. SiFive + NVIDIA NVLink Fusion - RISC-V 直连 GPU 进 AI 机房</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / 行业分析</li>
+<li><strong>时间</strong>：2026-07-04</li>
+<li><strong>核心要点</strong>：2026 年 1 月 SiFive 宣布与 NVIDIA 战略合作，将高性能数据中心级 RISC-V CPU 通过 NVLink Fusion 直接连到 NVIDIA GPU，实现缓存一致性 + 高带宽互连。黄仁勋原话："把可定制的 RISC-V CPU 与 NVIDIA 加速器结合"。同期 SpacemiT VitalStone V100 服务器处理器 64 核 12nm，INT8 矩阵乘法比标准 SIMD 提升 20 倍。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/weixin_43618242/article/details/159512640</li>
+</ul>
+<h3>7. 2026 RISC-V 汽车功能安全突破 - Quintauris RT-Europa</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / 行业分析</li>
+<li><strong>时间</strong>：2026-07-04</li>
+<li><strong>核心要点</strong>：Quintauris（博世、英飞凌、恩智浦、高通等联合）CES 2026 展示基于 RT-Europa 平台的参考架构，与 Synopsys ARC-V RHX-110-FS 处理器 IP 集成，成功运行符合功能安全的汽车实时软件。ISO 26262 不再是 RISC-V 进车规的门槛。欧盟 DARE、eProcessor、SiPearl 等项目投 2.4 亿欧元。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/weixin_43618242/article/details/159512640</li>
+</ul>
+<h3>8. AMD 确认 2nm Ryzen Threadripper "Mustang Peak"</h3>
+<ul>
+<li><strong>来源</strong>：cnBeta / AMD</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：AMD 正式确认下一代 Ryzen Threadripper 产品线 Mustang Peak，采用全新 TR6 平台，搭载基于 2nm 工艺的 Zen 6 核心架构，引入 PCIe 6.0 等新一代 I/O。接替 3nm Zen 5 Shimada Peak 9000 系列。同时 Computex 2026 上承诺 AM5 插槽服役至 2029 年。</li>
+<li><strong>链接</strong>：https://www.cnbeta.com.tw/topics/42.htm</li>
+</ul>
+<h3>9. AMD Zen 6 7GHz 加速频率 + Zen 7 288 核 Florence</h3>
+<ul>
+<li><strong>来源</strong>：cnBeta / Moore's Law Is Dead</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：AMD Zen 6 架构代号 Olympic Ridge，至少一款锐龙桌面 CPU 加速频率将达 7GHz。Zen 7 EPYC 旗舰代号 Florence，单颗处理器 288 核（8 个 36 核 Steamboat CCD），预计 2028 年底登场。Zen 6 7 种不同配置，冲击 24 核心。</li>
+<li><strong>链接</strong>：https://www.cnbeta.com.tw/topics/42.htm</li>
+</ul>
+<h3>10. AMD FSR 4.1 推送，RDNA 3 性能"明显回落"</h3>
+<ul>
+<li><strong>来源</strong>：cnBeta</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：AMD 近期为 RDNA 3 架构显卡正式推送 FSR 4.1，相比 FSR 3.1 出现明显性能回落。前 FSR 开发负责人 Colin Riley 回应：一张表情包（"我最好别说话，说了会有大麻烦"）。FSR 4 至今不支持 RDNA 2 和 RDNA 3 老显卡的争议仍在持续。</li>
+<li><strong>链接</strong>：https://www.cnbeta.com.tw/topics/42.htm</li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端/EDA/工艺（TOP10）</h2>
+<p>
+聚焦芯片物理设计后端、EDA 工具、先进封装、工艺制造。覆盖 DAC/ICCAD/DATE/ISPD/TCAD，先进节点、CoWoS/SoIC/HBM、良率可靠性、国产 EDA 突破。
+</p>
+<h3>1. DAC 2026 即将开幕：Easy-Logic 发布 EasyAI ECO Suite</h3>
+<ul>
+<li><strong>来源</strong>：SemiWiki</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：Easy-Logic 将于 7 月 27-29 日在洛杉矶 DAC 2026 展示 EasyAI ECO Suite——AI 驱动的工程变更订单（ECO）解决方案。三大核心智能引擎：①Auto Partition（补丁规模降低 20%，最高 90%）；②Learning/I-Learning（补丁规模降低 20%，部分超 50%）；③Smart Caching（多轮迭代运行时间降低高达 80%）。覆盖 SYN ECO / DFT ECO / PR ECO 全流程。</li>
+<li><strong>链接</strong>：https://semiwiki.com/eda/easy-logic/370861-demonstrating-the-easyai-eco-suite-at-dac-2026/</li>
+</ul>
+<h3>2. 日月光 7 月 1 日宣布封装涨价超 20%</h3>
+<ul>
+<li><strong>来源</strong>：韭研公社 / 行业综合</li>
+<li><strong>时间</strong>：2026-07-02</li>
+<li><strong>核心要点</strong>：日月光宣布封装报价上调超 20%，涵盖 CoWoS 与 FoCoS 等先进工艺。CEO 吴田玉表示涨价反映原材料价格上涨与资本开支增加。2026 年全球先进封装市场规模预计达 581-587 亿美元，同比增长近 97%。台积电 CoWoS 产能缺口超 30%，供应不足预计持续至 2027 年下半年。国内封测三强（长电/通富/华天）2026 资本开支合计超 230 亿元。</li>
+<li><strong>链接</strong>：https://www.jiuyangongshe.com/h5/article/119fqersycv</li>
+</ul>
+<h3>3. ICCAD 2026：芯源科技"智能缓存写入"技术破解缓存一致性难题</h3>
+<ul>
+<li><strong>来源</strong>：格隆汇</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：2026 年 5 月 ICCAD（上海），芯源科技发布"智能缓存写入"架构方案，通过硬件级重试逻辑 + 预测性写入策略，将缓存写入失败率降低至 0.001% 以下，多核协议优化后缓存写入成功率达 99.999%，为处理器与存储系统数据一致性提供新路径。</li>
+<li><strong>链接</strong>：https://m.gelonghui.com/wikicmzhU7/article/</li>
+</ul>
+<h3>4. 概伦电子"韬定律" - 模型与仿真底座支撑跨层 τ 优化</h3>
+<ul>
+<li><strong>来源</strong>：芯微坊 / 概伦电子</li>
+<li><strong>时间</strong>：2026-07-05</li>
+<li><strong>核心要点</strong>：韬定律是华为何庭波 5 月 25 日在 ISCAS 2026 提出的半导体新原则（用时间维度缩微替代空间维度缩微）。概伦电子希望以建模与仿真关键技术作为"模型与仿真底座"，支撑先进工艺基础上的协同创新。逻辑折叠引入了更复杂的垂直互连、局部热点、电源完整性、信号完整性和跨 Die 工艺差异，先进工艺、DTCO、EDA 与韬定律之间是递进支撑关系。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659672833148092947/</li>
+</ul>
+<h3>5. 国产 EDA 突破：从单点到全栈自主可控</h3>
+<ul>
+<li><strong>来源</strong>：CSDN 国产科技全景解析</li>
+<li><strong>时间</strong>：2026-07-06</li>
+<li><strong>核心要点</strong>：2026 年国产 EDA 逐步覆盖数字/物理设计。工信部 5 月 14 日发布《芯片技术规范》，从指令集架构、互联协议、功耗管理到安全模块提出系统性标准化要求，由全国集成电路标准化技术委员会牵头，联合华为海思、中芯国际、龙芯中科等 20 余家单位历时 18 个月编制。视为中国高性能计算芯片从分散研发走向统一生态的关键转折。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/u014411348/article/details/159510494</li>
+</ul>
+<h3>6. arXiv 论文：SABLE 模拟电路 LLM 闭环优化框架</h3>
+<ul>
+<li><strong>来源</strong>：arXiv</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：Xunqi Li、Chris H. Kim 提交 SABLE：An NDA-Safe Closed-Loop LLM Framework for Analog Circuit Optimization in Industrial EDA Flows。针对工业 EDA 流程中模拟电路优化的 NDA 安全闭环 LLM 框架。</li>
+<li><strong>链接</strong>：https://arxiv.org/list/cs.AR/recent</li>
+</ul>
+<h3>7. arXiv 论文：FAPlace - 2.5D 系统芯粒放置与中介层联合优化</h3>
+<ul>
+<li><strong>来源</strong>：arXiv / Great Lakes Symposium on VLSI 2026</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：Yubo Hou 等提出 FAPlace：2.5D 系统中芯粒放置与中介层布局的联合优化，已被 Great Lakes Symposium on VLSI 2026 接收。</li>
+<li><strong>链接</strong>：https://arxiv.org/abs/2607.02608</li>
+</ul>
+<h3>8. arXiv 论文：Weave 验证网表到原理图转换的分层图布局</h3>
+<ul>
+<li><strong>来源</strong>：arXiv</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：Senol Gulgonul 提出 Weave：Verified Netlist-to-Schematic Conversion via Layered Graph Layout，6 页 5 图 2 表，附代码与基准。</li>
+<li><strong>链接</strong>：https://arxiv.org/list/cs.AR/recent</li>
+</ul>
+<h3>9. IBM 0.7nm + 华为梦启 1000 - 工艺创新两条互补路线</h3>
+<ul>
+<li><strong>来源</strong>：芯微坊</li>
+<li><strong>时间</strong>：2026-07-05</li>
+<li><strong>核心要点</strong>：IBM 0.7 纳米用三层堆叠纳米片沟道 + 超薄介质键合，实现 42nm 栅极间距（RBC 直接垂直连接结构，跳过传统中继光学系统）。三星 A16 埃米级 CMOS 计划 2026 Q4 量产，1.4 纳米工艺 2029 量产。imec 预测 2026-2027 年出现垂直供电技术，IVR 集成到电路板内部。两条路线（平面堆叠 vs 二维材料）实为高度互补。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659672833148092947/</li>
+</ul>
+<h3>10. 半导体行业首破万亿美元 - 涨价潮持续</h3>
+<ul>
+<li><strong>来源</strong>：芯微坊 / WSTS</li>
+<li><strong>时间</strong>：2026-07-05</li>
+<li><strong>核心要点</strong>：WSTS 预测 2026 年全球半导体市场规模将首次突破 1 万亿美元（达 1.511 万亿美元），同比增长近 90%。其中存储芯片 8039 亿美元，逻辑芯片 4113 亿美元。2027 年预计继续增长至 1.9136 万亿美元（同比 27%）。AI 服务器相关半导体需求至少在 2028 年前不会减退。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7659672833148092947/</li>
+</ul>
+<hr class="section-divider">
+<h2>五、CPU 5G 提频（TOP10）</h2>
+<p>
+聚焦 CPU 与 5G 协同提频、CPU 主频/睿频/能效调度、5G 蜂窝连接下的 CPU 加速全谱系技术。覆盖 Hot Chips、ISSCC 通信 Session、Microprocessor Report、AnandTech、IEEE HPCA、ISCA、MICRO、Linley Group、SemiAnalysis 等。
+</p>
+<h3>1. 高通骁龙 8 Elite Gen 6 官宣：首款 2nm 移动旗舰，9 月夏威夷发布</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / 行业综合</li>
+<li><strong>时间</strong>：2026-07-06</li>
+<li><strong>核心要点</strong>：高通官方官宣 2026 骁龙峰会 9 月 22-24 日夏威夷茂宜岛举行，核心发布骁龙 8 Elite Gen 6 系列（8E6）。采用第三代 Oryon 2+3+3 三丛集八核架构，标配 16MB 共享二级缓存。Pro 版（SM8975）配备 Adreno 850 显卡 + 18MB 独立图形缓存，独家支持 LPDDR6 内存；标准版（SM8950）Adreno 845 + 12MB 显存，兼容 LPDDR5X。小米首发方案已敲定。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/zhidingkeji/article/details/160867623</li>
+</ul>
+<h3>2. 骁龙 6 Gen 5 Geekbench 跑分曝光，Honor X80 Pro Max 首发</h3>
+<ul>
+<li><strong>来源</strong>：Viva Gadget / Qualcomm</li>
+<li><strong>时间</strong>：2026-07-02</li>
+<li><strong>核心要点</strong>：骁龙 6 Gen 5 在 Honor X80 Pro Max（型号 BSN-AN00）跑分：单核 1,095 分，多核 3,355 分，相比 6 Gen 4（1,112/3,124）多核有提升、单核略低。CPU Kryo 主频最高 2.6GHz，搭载 Adreno 812 GPU（图形性能提升 20%），Adaptive Performance Engine 4.0 动态调频，调制解调器 5G 体验优化，连接更稳定、功耗更低。RAM 8GB + Android 16。</li>
+<li><strong>链接</strong>：https://gadget.viva.co.id/gadget/51653-snapdragon-6-gen-5-muncul-di-geekbench-honor-x80-pro-max-ungkap-performa</li>
+</ul>
+<h3>3. 移动 CPU 突破 4.2GHz - NPU 算力达 150 TOPS</h3>
+<ul>
+<li><strong>来源</strong>：商丘网 / 行业综合</li>
+<li><strong>时间</strong>：2026-07-02</li>
+<li><strong>核心要点</strong>：旗舰移动平台采用台积电 N4P 工艺，CPU 部分 1+4+3 三丛集架构：1×Cortex-X5 超大核 @4.2GHz，4×A725 大核 @3.5GHz，3×A520 小核 @2.2GHz。GPU 全新 Adreno 8 系（硬件级光追 + VRS + Frame Motion Engine 2.0），内存 LPDDR5X-6000，存储 UFS 4.1。NPU 算力 150 TOPS INT8（较上代提升 40%），可本地运行 70 亿参数 LLM，响应延迟 < 10ms。集成骁龙 X80 5G 调制解调器支持 Sub-6GHz + 毫米波。下一代 3nm 平台已流片，CPU 频率冲击 4.5GHz，NPU 突破 200 TOPS。</li>
+<li><strong>链接</strong>：https://m.sqrb.com.cn/wyva7ydKE9H/article/details/759914/</li>
+</ul>
+<h3>4. 麒麟 2026：Mate 90 系列首发，逻辑折叠实现 41% 功耗降低</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / 36 氪</li>
+<li><strong>时间</strong>：2026-07-06</li>
+<li><strong>核心要点</strong>：麒麟 2026 完成流片、封装测试，首发机型为 9 月上市的华为 Mate 90 系列，搭配全新鸿蒙 7 系统。晶体管密度提升 53.5%，芯片体积缩小 37.5%。等效性能下功耗降低 41%，跑《原神》60 帧模式平均功耗降低 28%。通过韬定律逻辑折叠（logicfolding）将 2D 平面长关键路径折叠为更短垂直路径。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/zhidingkeji/article/details/160867623</li>
+</ul>
+<h3>5. 中兴 6686 5G 基站芯片：能效比提升 40%，CPU 频率策略调整</h3>
+<ul>
+<li><strong>来源</strong>：杭州日报 / 行业综合</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：2026 年 5 月 23 日深圳 5G 技术论坛，中兴通讯发布新一代 5G 基站芯片 6686。采用 7nm 制程，集成 NPU 加速单元，可实时优化波束赋形算法。单芯片支持 64 个天线端口、256 个流数，能效比提升 40%，功耗降低 30%，完整覆盖 Sub-6GHz 商用频段。密集城区吞吐量提升 35%。支持 5G-Advanced AI 原生特性，端侧推理实现动态频谱调度和自愈网络。</li>
+<li><strong>链接</strong>：https://m.moji.com/aqi/wikiNB53Xe/Default.html</li>
+</ul>
+<h3>6. 国产 5G 智能基带：12 TOPS NPU、5nm 制程、Sub-6 + 毫米波</h3>
+<ul>
+<li><strong>来源</strong>：行业综合</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：新一代 5G 智能基带采用 5nm 制程，自研"天枢"核心架构：8 个高性能 CPU 核心 + 4 个专用 DSP + NPU（12 TOPS AI 算力，支持 FP16/INT8）。5G NR 调制解调器：下行峰值 10Gbps，上行 3.5Gbps，Sub-6GHz + 毫米波双频段，兼容 4G/3G/2G 全球漫游。DVFS + 智能休眠能效提升 40%，5G 下行场景整机功耗降低 30%。集成 TSN 时间敏感网络单元（工业自动化场景），硬件级安全隔离单元。率先支持 3GPP Release 18 多连接增强。已获 20+ 客户设计导入，预计全年出货超 5000 万片。</li>
+<li><strong>链接</strong>：https://www.moji.com/article/wikiHNPmyuW0.html</li>
+</ul>
+<h3>7. 三大旗舰 5G Modem 路线分化：高通 X85 / MTK M90 / 麒麟 9030 Pro</h3>
+<ul>
+<li><strong>来源</strong>：CSDN / 行业复盘</li>
+<li><strong>时间</strong>：2026-07-02</li>
+<li><strong>核心要点</strong>：2026 年 5G Modem 重心从手机转向车联网/FWA。①高通 X85：6CC@400MHz，1024QAM，8Rx，毫米波，12.5Gbps 峰值，R18 协议，Modem AI 体系，激进 UL/DSDA 策略。②MTK M90：定位 5G Modem IP，落点 MT2739（车载）+ T930（FWA），R17，256QAM。③华为麒麟 9030 Pro：先 FWA（CPE Ultra 6）再手机（Mate 80）。5G 体验 = 稳定性 × 持续性 × 场景适配能力。Modem-on-Chip、Modem-RF 集成的 CPU 子系统频率升级成为关键。</li>
+<li><strong>链接</strong>：https://havis-wang.blog.csdn.net/article/details/156492683</li>
+</ul>
+<h3>8. AMD Zen 6 桌面 CPU 取消核显转向内置 NPU，强化本地 AI</h3>
+<ul>
+<li><strong>来源</strong>：cnBeta</li>
+<li><strong>时间</strong>：2026-07-01</li>
+<li><strong>核心要点</strong>：AMD Morpheus 处理器（2026 年底或 2027 年初）台式机平台架构调整：取消核显，转向内置 NPU 以强化本地 AI 计算。同步推出 OpenClaw 框架 + 两套硬件参考配置（RyzenClaw + RadeonClaw），让开发者和早期尝鲜者在本地 PC 上运行 LLM 和多智能体工作流。苏姿丰强调"Agentic AI 时代，单个计算节点中 CPU 与 GPU 数量正从一对多逐步逼近一比一，未来甚至 CPU 多于 GPU"。</li>
+<li><strong>链接</strong>：https://www.cnbeta.com.tw/topics/42.htm</li>
+</ul>
+<h3>9. Intel Nova Lake 重拾 AVX-512 - Core Ultra 400 关键升级</h3>
+<ul>
+<li><strong>来源</strong>：Fanáticos del Hardware / TechPowerUp</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：Intel 下一代客户端处理器 Core Ultra Series 4 "Nova Lake"（P-cores Coyote Cove + E-cores Arctic Wolf）将恢复 AVX-512 支持，两类核心共享统一 ISA，避免线程迁移时 ISA 不兼容问题。该 ISA 自 Rocket Lake（11 代）后被弃用。AVX-512 在 AI 推理、压缩、加密、模拟、向量计算等场景能提供显著加速。同时 Nova Lake 将配 Xe3 iGPU、大缓存 bLLC 变体等。</li>
+<li><strong>链接</strong>：https://fanaticosdelhardware.com/intel-nova-lake-recuperaria-avx-512-en-los-core-ultra-400-con-p-cores-y-e-cores-compatibles/</li>
+</ul>
+<h3>10. AMD EXPO ULL 超低延迟技术 + Atos BullSequana 服务器新品</h3>
+<ul>
+<li><strong>来源</strong>：cnBeta / Global Security Mag</li>
+<li><strong>时间</strong>：2026-07-07</li>
+<li><strong>核心要点</strong>：Computex 2026 上 AMD 推出 EXPO ULL（Ultra Low Latency）内存超频技术，进一步压低 DDR5 内存时序，为 Ryzen 平台提供更高游戏帧率。Atos 同日发布 BullSequana SH 混合服务器（基于第 4 代 Intel Xeon Scalable，可扩展至 32 插槽）、BullSequana EXR/EXD 边缘服务器（支持 5G 与连接性、MEC、5G 核心、vRAN 负载），全部内置 Atos Root of Trust + Chain-of-Custody 安全。</li>
+<li><strong>链接</strong>：https://www.globalsecuritymag.com/Atos-devoile-le-BullSequana-SH.html</li>
+</ul>
+<hr class="section-divider">
+<h2>编辑说明</h2>
+<ul>
+<li><strong>覆盖时间窗口</strong>：2026-07-06 \~ 2026-07-07（24-48 小时内）</li>
+<li><strong>数据来源</strong>：CSDN/今日头条/36 氪/凤凰网/电子工程专辑/Redsh/cnBeta/官方原文/arXiv/IBM Nature/Forterra 等</li>
+<li><strong>筛选标准</strong>：权威优先（顶会官网、官方发布、权威媒体）；同一事件多来源只保留最权威一条</li>
+<li><strong>不足之处</strong>：受 24-48 小时窗口限制，部分板块当日顶级内容有限，已尽量放宽覆盖范围</li>
+</ul>
+<p>
+> 💡 建议在 0-7 点低谷时段生成此类报告，检索与文档写入会更顺畅。
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a><a href="#CPU 5G" class="section-nav-link" style="--accent: #6bcf7f">CPU 5G 提频</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> OpenAI 正式发布 GPT-5.6 系列，旗舰版仅向少数合作伙伴开放</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659320072486126080/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> Anthropic 联手三星探索自研 AI 芯片</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://techcrunch.com/" target="_blank" rel="noopener" class="link-btn">🔗 techcrunch.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> 美光 93 亿美元扩建日本广岛 HBM 产线</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659320072486126080/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> 特斯拉 Optimus 量产产线落地弗里蒙特工厂</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659320072486126080/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> 2026 AI Agent 框架终极指南：10 大框架五大范式全解</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_40672115/article/details/159565215" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> IBM 发布 0.7 纳米芯片技术</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659672833148092947/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> AI 安全 2026：Prompt 注入与间接注入成为最危险攻击面</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_56999332/article/details/161400538" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> 华为联合发布&quot;梦启 1000&quot;二维半导体微处理器</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.nature.com/electronics" target="_blank" rel="noopener" class="link-btn">🔗 nature.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> 具身智能单臂协作机器人&quot;操作时代&quot;到来</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.bjnews.com.cn/detail/1783397805129221.html" target="_blank" rel="noopener" class="link-btn">🔗 m.bjnews.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> 上海脑机接口集群 51 家企业入驻</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.bjnews.com.cn/detail/1783397805129221.html" target="_blank" rel="noopener" class="link-btn">🔗 m.bjnews.com.cn</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> 2026 全球数字经济大会聚焦世界模型、人形机器人、全栈仿真</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.bjnews.com.cn/detail/1783397805129221.html" target="_blank" rel="noopener" class="link-btn">🔗 m.bjnews.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> 中国 L2 组合驾驶辅助强制性国家标准 GB 47955-2026 正式发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://news.ifeng.com/c/8uZNBUmRMLv" target="_blank" rel="noopener" class="link-btn">🔗 news.ifeng.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> Forterra 在俄乌战场规模化部署自主系统</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.forterra.com/news" target="_blank" rel="noopener" class="link-btn">🔗 forterra.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 2026 中国智驾半年考：L3 国标公示，L4 商业化爆发</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://36kr.com/p/3877924297797894" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 三星 Galaxy Glasses 完整交互细节曝光</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.weibo.cn/detail/5316531296929148" target="_blank" rel="noopener" class="link-btn">🔗 m.weibo.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> Qualcomm 发布 Snapdragon Reality Elite AR 芯片</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://glassalmanac.com/7-augmented-reality-developments-in-2026-that-could-upend-phones-and-messaging/" target="_blank" rel="noopener" class="link-btn">🔗 glassalmanac.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> Valve Steam Frame VR 头显即将公布价格与发布日</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://mixed-news.com/en/" target="_blank" rel="noopener" class="link-btn">🔗 mixed-news.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> 影目科技 B2 轮融资超 1.5 亿元，AI 眼镜&quot;双料冠军&quot;</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/tmt_xq/article/details/149282669" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> 半导体产业链 7 月 1 日集体涨价（年内第二轮）</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659672833148092947/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> 华为发布&quot;韬定律&quot;V2：τ 缩微取代几何缩微</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://36kr.com/p/3883431712370691" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> ISSCC 2026 五大领域核心 Session 文章梳理</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_41360172/article/details/159571548" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> VLSI Symposium 2026 - 山东大学陈杰智团队铁电存储器突破</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.view.sdu.edu.cn/info/1101/213201.htm" target="_blank" rel="noopener" class="link-btn">🔗 view.sdu.edu.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> 台积电 VLSI 2026 异构集成全栈报告</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.eet-china.com/mp/a507871.html" target="_blank" rel="noopener" class="link-btn">🔗 eet-china.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> Tenstorrent 展示 Ascalon RISC-V 处理器家族</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.tenstorrent.com/" target="_blank" rel="noopener" class="link-btn">🔗 tenstorrent.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 进迭时空 K3 全球首颗 RVA23 标准芯片</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://www.redsh.com/a/20260701/044218.shtml" target="_blank" rel="noopener" class="link-btn">🔗 redsh.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> SiFive + NVIDIA NVLink Fusion - RISC-V 直连 GPU 进 AI 机房</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/weixin_43618242/article/details/159512640" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> 2026 RISC-V 汽车功能安全突破 - Quintauris RT-Europa</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/weixin_43618242/article/details/159512640" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> AMD 确认 2nm Ryzen Threadripper &quot;Mustang Peak&quot;</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.cnbeta.com.tw/topics/42.htm" target="_blank" rel="noopener" class="link-btn">🔗 cnbeta.com.tw</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> AMD Zen 6 7GHz 加速频率 + Zen 7 288 核 Florence</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.cnbeta.com.tw/topics/42.htm" target="_blank" rel="noopener" class="link-btn">🔗 cnbeta.com.tw</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> AMD FSR 4.1 推送，RDNA 3 性能&quot;明显回落&quot;</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.cnbeta.com.tw/topics/42.htm" target="_blank" rel="noopener" class="link-btn">🔗 cnbeta.com.tw</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> DAC 2026 即将开幕：Easy-Logic 发布 EasyAI ECO Suite</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://semiwiki.com/eda/easy-logic/370861-demonstrating-the-easyai-eco-suite-at-dac-2026/" target="_blank" rel="noopener" class="link-btn">🔗 semiwiki.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> 日月光 7 月 1 日宣布封装涨价超 20%</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.jiuyangongshe.com/h5/article/119fqersycv" target="_blank" rel="noopener" class="link-btn">🔗 jiuyangongshe.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> ICCAD 2026：芯源科技&quot;智能缓存写入&quot;技术破解缓存一致性难题</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.gelonghui.com/wikicmzhU7/article/" target="_blank" rel="noopener" class="link-btn">🔗 m.gelonghui.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> 概伦电子&quot;韬定律&quot; - 模型与仿真底座支撑跨层 τ 优化</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659672833148092947/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 国产 EDA 突破：从单点到全栈自主可控</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/u014411348/article/details/159510494" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> arXiv 论文：SABLE 模拟电路 LLM 闭环优化框架</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://arxiv.org/list/cs.AR/recent" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> arXiv 论文：FAPlace - 2.5D 系统芯粒放置与中介层联合优化</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2607.02608" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> arXiv 论文：Weave 验证网表到原理图转换的分层图布局</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://arxiv.org/list/cs.AR/recent" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> IBM 0.7nm + 华为梦启 1000 - 工艺创新两条互补路线</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659672833148092947/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> 半导体行业首破万亿美元 - 涨价潮持续</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7659672833148092947/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="CPU 5G" style="--accent: #6bcf7f">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #6bcf7f"></span>
-    CPU 5G
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">1</span> 高通骁龙 8 Elite Gen 6 官宣：首款 2nm 移动旗舰，9 月夏威夷发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/zhidingkeji/article/details/160867623" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">2</span> 骁龙 6 Gen 5 Geekbench 跑分曝光，Honor X80 Pro Max 首发</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://gadget.viva.co.id/gadget/51653-snapdragon-6-gen-5-muncul-di-geekbench-honor-x80-pro-max-ungkap-performa" target="_blank" rel="noopener" class="link-btn">🔗 gadget.viva.co.id</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">3</span> 移动 CPU 突破 4.2GHz - NPU 算力达 150 TOPS</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.sqrb.com.cn/wyva7ydKE9H/article/details/759914/" target="_blank" rel="noopener" class="link-btn">🔗 m.sqrb.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">4</span> 麒麟 2026：Mate 90 系列首发，逻辑折叠实现 41% 功耗降低</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/zhidingkeji/article/details/160867623" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">5</span> 中兴 6686 5G 基站芯片：能效比提升 40%，CPU 频率策略调整</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.moji.com/aqi/wikiNB53Xe/Default.html" target="_blank" rel="noopener" class="link-btn">🔗 m.moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">6</span> 国产 5G 智能基带：12 TOPS NPU、5nm 制程、Sub-6 + 毫米波</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.moji.com/article/wikiHNPmyuW0.html" target="_blank" rel="noopener" class="link-btn">🔗 moji.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">7</span> 三大旗舰 5G Modem 路线分化：高通 X85 / MTK M90 / 麒麟 9030 Pro</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://havis-wang.blog.csdn.net/article/details/156492683" target="_blank" rel="noopener" class="link-btn">🔗 havis-wang.blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">8</span> AMD Zen 6 桌面 CPU 取消核显转向内置 NPU，强化本地 AI</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.cnbeta.com.tw/topics/42.htm" target="_blank" rel="noopener" class="link-btn">🔗 cnbeta.com.tw</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">9</span> Intel Nova Lake 重拾 AVX-512 - Core Ultra 400 关键升级</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://fanaticosdelhardware.com/intel-nova-lake-recuperaria-avx-512-en-los-core-ultra-400-con-p-cores-y-e-cores-compatibles/" target="_blank" rel="noopener" class="link-btn">🔗 fanaticosdelhardware.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #6bcf7f">
-  <h3 class="insight-title"><span class="insight-num">10</span> AMD EXPO ULL 超低延迟技术 + Atos BullSequana 服务器新品</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.globalsecuritymag.com/Atos-devoile-le-BullSequana-SH.html" target="_blank" rel="noopener" class="link-btn">🔗 globalsecuritymag.com</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-07-06.html" class="day-nav-btn">← 上一篇 2026-07-06</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-07-08.html" class="day-nav-btn">下一篇 2026-07-08 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

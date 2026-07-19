@@ -1,518 +1,493 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-06-15 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-06-15 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-06-15 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-06-15</h2>
-    <p class="daily-stats">共 4 个板块 · 40 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-06-15</div>
+    </div>
+    <div class="card">
+      <h2>【技术洞察】2026-06-15</h2>
+<p>
+> 报告覆盖时间窗口：2026-06-14（最近 24 小时），部分条目放宽至近 48 小时。
+> 编排方式：4 大板块，各取 TOP 10，权威来源优先。链接为原文出处。
+</p>
+<hr class="section-divider">
+<h2>一、人工智能 AI 领域（TOP 10）</h2>
+<p>
+> 今日 AI 领域最重磅的线索集中在"模型生态多元化 + 安全治理收紧"：一方面 Microsoft 推出 7 款自研 MAI 模型、智谱 GLM-5.2 以 MIT 协议全面开源、Claude Fable 5 发布后被美国政府 72 小时内下架；另一方面 NSPM-11 AI 国家安全指令、Anthropic 入白宫会谈、DeepMind 1000 万美元多智能体安全资助都在为前沿 AI 划定新边界。
+</p>
+<h3>1. Microsoft Build 2026：7 款 MAI 模型全栈自研、零 OpenAI 蒸馏</h3>
+<ul>
+<li><strong>来源</strong>：AI2.Work</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Microsoft 在 Build 大会上一次性发布 7 款 MAI 系列模型，覆盖推理、编码、图像、语音、转录；旗舰 MAI-Thinking-1 采用稀疏 MoE（35B 激活 / 约 1T 总参），256K 上下文；声称在 SWE-Bench Pro 上对标 Claude Opus 4.6，成本号称比 Claude Sonnet 4.6 低 10 倍；全部商业授权数据训练，零 OpenAI 蒸馏。</li>
+<li><strong>链接</strong>：https://ai2.work/blog/inside-microsoft-s-foundry-push-7-models-built-without-openai</li>
+</ul>
+<h3>2. 智谱 GLM-5.2 以 MIT 协议完全开源 100 万 Token 上下文</h3>
+<ul>
+<li><strong>来源</strong>：Digital Phablet / 今日头条</li>
+<li><strong>时间</strong>：2026-06-13 深夜 / 6-14</li>
+<li><strong>核心要点</strong>：智谱（Zhigu）以最宽松的 MIT 协议开源 GLM-5.2；100 万 token 上下文、131K 最大输出、两种思考力度等级；面向 Lite/Pro/Max/Team 全部用户开放；SWE-bench 开源第一；4 小时 / 17 万 token 项目可端到端自主完成。</li>
+<li><strong>链接</strong>：https://digitalphablet.com/ai/fable-5-removed-glm-5-2-fully-released/</li>
+</ul>
+<h3>3. Claude Fable 5 上市 72 小时被美国政府下令下架</h3>
+<ul>
+<li><strong>来源</strong>：AI2.Work</li>
+<li><strong>时间</strong>：2026-06-09 发布 / 6-12 下架</li>
+<li><strong>核心要点</strong>：Anthropic 把 Mythos 级能力以 Fable 5 推给公众（$10/$50 per M tokens）；内置安全分类器在网安、生物、模型蒸馏场景将 <5% 会话路由到 Claude Opus 4.8；6-12 17:21 ET 收到美国商务部出口管制指令后被强制下线，被称为"头部实验室首次在联邦压力下撤下已发布的公开模型"。</li>
+<li><strong>链接</strong>：https://ai2.work/blog/inside-claude-fable-5-anthropic-s-most-powerful-public-model</li>
+</ul>
+<h3>4. Google Gemini 2.5 Flash-Lite 进入 GA</h3>
+<ul>
+<li><strong>来源</strong>：AI D-A-M-N</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Gemini 2.5 Flash-Lite 正式 GA；原生 100 万 token 上下文、输入 \$0.10 / 输出 \$0.40 每百万 token；音频输入价格比 preview 再降 40%；在编码、数学、推理、多模态四项任务上全面超越 Gemini 2.0；预览版别名将于 8-25 终止。</li>
+<li><strong>链接</strong>：https://ai-damn.com/google-launches-gemini-2-5-flash-lite-for-ai-efficiency-1753312829718</li>
+</ul>
+<h3>5. NVIDIA SpatialClaw：把代码当空间推理 Agent 的动作接口</h3>
+<ul>
+<li><strong>来源</strong>：NVIDIA Research / AI/TLDR</li>
+<li><strong>时间</strong>：2026-06-12</li>
+<li><strong>核心要点</strong>：NVIDIA 论文提出 SpatialClaw 框架，在有状态 kernel 中让 agent 写 Python 直接调用感知工具；20 个空间基准上平均 59.9%，比此前 SOTA 高 11.2 个百分点；在 6 个 VLM backbone 上无需逐模型调参即可生效。</li>
+<li><strong>链接</strong>：https://ai-tldr.dev/</li>
+</ul>
+<h3>6. Google DeepMind DiffusionGemma 26B-A4B：开放扩散语言模型</h3>
+<ul>
+<li><strong>来源</strong>：Nerova.ai</li>
+<li><strong>时间</strong>：2026-06-10 发布 / 6-14 评测</li>
+<li><strong>核心要点</strong>：DiffusionGemma 26B-A4B 是 Apache 2.0 开放权重的实验性扩散语言模型；26B 总参 / 3.8B 激活、256 token 画布并行去噪；H100 1000+ tokens/s、RTX 5090 700+ tokens/s；MMLU Pro 77.6%、GPQA Diamond 73.2%、LiveCodeBench v6 69.1%；vLLM 首发当日即支持。</li>
+<li><strong>链接</strong>：https://nerova.ai/news/google-diffusiongemma-26b-a4b-local-text-generation-june-10-2026</li>
+</ul>
+<h3>7. Moonshot Kimi K2.7-Code：1T 开源权重编码 Agent</h3>
+<ul>
+<li><strong>来源</strong>：WOWHOW</li>
+<li><strong>时间</strong>：2026-06-12</li>
+<li><strong>核心要点</strong>：Kimi K2.7-Code 是 1 万亿参数的 MoE 开源权重编码模型；MCPMark Verified 上 81.1%，超过 Claude Opus 4.8（76.4%）；Moonshot API \$0.95 / \$4.00 每百万 token（OpenRouter \$0.75 / \$3.50，缓存输入 \$0.19）；支持 vLLM、SGLang、KTransformers 三种推理引擎。</li>
+<li><strong>链接</strong>：https://wowhow.cloud/blogs/kimi-k2-7-code-moonshot-open-weight-developer-guide-2026</li>
+</ul>
+<h3>8. DeepMind 联合资助 1000 万美元多智能体 AI 安全研究</h3>
+<ul>
+<li><strong>来源</strong>：Noah News</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Google DeepMind 与 Schmidt Sciences、Cooperative AI Foundation、ARIA、Google.org 共同发起最多 1000 万美元资助计划；聚焦 4 个方向：沙箱与测试床、智能体网络科学、身份/认证/溯源基础设施、监督与干预；单个项目最高 100 万美元。</li>
+<li><strong>链接</strong>：https://noah-news.com/deepminds-10-million-push-into-multi-agent-ai-safety-signals-a-shift-towards-int/</li>
+</ul>
+<h3>9. Anthropic 与白宫高层会谈 AI 安全合作</h3>
+<ul>
+<li><strong>来源</strong>：CNNBC</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Anthropic 将参与白宫高层会谈，议题集中在管理前沿风险、推进安全护栏、塑造未来 AI 政策；讨论涉及跨大西洋标准互操作、出口管制协调；Anthropic 已成为联邦 AI 治理对话的关键参与者。</li>
+<li><strong>链接</strong>：https://cnnbc.com/anthropic-set-for-high-level-talks-at-white-house-on-ai-safety-and-cooperation</li>
+</ul>
+<h3>10. Trump 签 NSPM-11 AI 国家安全备忘录、剔除不配合厂商</h3>
+<ul>
+<li><strong>来源</strong>：High Country Advocate</li>
+<li><strong>时间</strong>：2026-06-05 签署 / 6-12 强化 / 6-14 解读</li>
+<li><strong>核心要点</strong>：NSPM-11 围绕四大支柱推进国安 AI 采用：多供应商采用、商业+开源改造、不可在联邦未批准下禁用或修改、禁止用于审查/偏见/未授权监控；违反厂商将被终止合同；Anthropic 因拒绝取消监控/自主武器限制已被国防部列入供应链风险，DoD 已与 8 家厂商签订 IL6/IL7 涉密合同。</li>
+<li><strong>链接</strong>：https://highcountryadvocate.org/trump-signs-ai-national-security-directive/</li>
+</ul>
+<hr class="section-divider">
+<h2>二、电子科技·全领域（TOP 10）</h2>
+<p>
+> 今日全领域焦点在"具身智能 + 脑机接口 + 6G 推进"三线并进：欧洲 NEURA Robotics 拿下 14 亿美元创纪录融资，Boston Dynamics Atlas 走出实验室进入工厂，中国 NEO 脑机接口全球首个商业化获批；同时 UAE 公布 6G 路线图、中国开放 6GHz 频段为 6G 互认测试铺路。
+</p>
+<h3>1. NEURA Robotics 拿下 14 亿美元创欧洲人形机器人最大单轮融资</h3>
+<ul>
+<li><strong>来源</strong>：AI2.Work</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：NEURA Robotics 完成至多 14 亿美元 C 轮，估值约 70 亿美元，Tether 领投，Nvidia / Amazon / Qualcomm / Bosch / Schaeffler / 欧洲投资银行 / imec.xpand 跟投；订单簿已超 10 亿美元，目标 2030 年量产"数百万台"认知机器人；旗舰 4NE-1 1.8 米、100 kg 举升、采用 Nvidia GR00T + Thor 处理器。</li>
+<li><strong>链接</strong>：https://ai2.work/blog/neura-robotics-lands-record-1-4b-for-cognitive-humanoids</li>
+</ul>
+<h3>2. Boston Dynamics Atlas 在 Hyundai 工厂首次走出实验室</h3>
+<ul>
+<li><strong>来源</strong>：CBS News 60 Minutes</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Atlas 5'9" / 200 磅 / 全电动 / Nvidia 芯片驱动；通过监督学习 + 演示学习 + 仿真训练在 Hyundai 乔治亚州工厂做真实工作；工程师 VR 头显采集动作，4000 个数字孪生并行仿真 6 小时；最新版本今年夏天开始在工厂训练；Goldman Sachs 预测人形机器人十年内达 380 亿美元市场。</li>
+<li><strong>链接</strong>：https://www.cbsnews.com/news/boston-dynamics-ai-powered-humanoid-robot-learning-factory-work-60-minutes-transcript/</li>
+</ul>
+<h3>3. 优必选 U1 人形机器人 10 天揽 3800 台订单</h3>
+<ul>
+<li><strong>来源</strong>：今日头条</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：优必选旗下优世界 U1 消费级人形机器人 6 月 2 日开启预售，10 天累计订单 3800 台，定金总额破千万；对比 2025 年优必选全年人形机器人销量 1079 台；U1 直接打开 C 端民用市场，被定义为"机器人伴侣"。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7651178452602618410/</li>
+</ul>
+<h3>4. 中国 NEO 脑机接口获批全球首个商业化</h3>
+<ul>
+<li><strong>来源</strong>：PressReleaseCloud</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：清华 + Neuracle Technology 联合研发的 NEO 脑机接口植入物获中国国家监管批准商业化；采用"贴附硬脑膜外"非侵入式设计，8 个传感器紧贴硬脑膜采集信号；36 名脊髓损伤患者临床试验显示运动与神经控制能力恢复；Neuralink 仍在美 FDA 临床试验阶段。</li>
+<li><strong>链接</strong>：https://pressreleasecloud.io/technology/china-debuts-worlds-first-commercial-brain-chip-outpacing-elon-musks-jesus-level-tech/</li>
+</ul>
+<h3>5. 华为 × 比亚迪联合发布"奥运星河"智驾平台</h3>
+<ul>
+<li><strong>来源</strong>：太平洋科技</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：2026 广州车展期间华为与比亚迪签署战略合作，联合发布"奥运星河"智能驾驶平台；整合华为昇腾 AI 芯片 + 比亚迪 e 平台 3.0，实现百毫秒级响应；目标支撑 2044 奥运会大规模人流与城市路网的全场景全无人出行。</li>
+<li><strong>链接</strong>：https://www.pconline.com.cn/ai/wiki_2998973.html</li>
+</ul>
+<h3>6. UAE 公布 6G 路线图、目标 2030 年前商用</h3>
+<ul>
+<li><strong>来源</strong>：WAM Emirates News</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：UAE TDRA 发布 6G 路线图，Khalifa University 牵头委员会与制造商、运营商、TDRA 共同制定标准与频谱；6G 路线图涵盖 AI、原生感知、网络虚拟化、覆盖扩展、感官数字传输（视听味触嗅）等能力；目标 2030 年前推出 6G 服务。</li>
+<li><strong>链接</strong>：https://www.wam.ae/en/article/bymym8g-samsung-begin-hbm4-production-next-month-plans</li>
+</ul>
+<h3>7. 中国工信部批准 6GHz 频段用于 6G 关键技术试验</h3>
+<ul>
+<li><strong>来源</strong>：qishuai-cn.com</li>
+<li><strong>时间</strong>：2026-06-14（事件 6-4）</li>
+<li><strong>核心要点</strong>：工信部批准 5925-6425 MHz 频段用于 6G 关键技术试验及国内外互认测试；测试范围覆盖 IEEE P3151、3GPP Rel-20、ETSI EN 303 658；海外系统集成商和运营商可据此启动预认证采购，缩短 6G 基站设备进口与入网流程。</li>
+<li><strong>链接</strong>：https://www.qishuai-cn.com/news/Telecom_6G/6G_Massive_MIMO_Base_Stations/China_Opens_6GHz_Band_for_6G_Mutual_Recognition_Tests.html</li>
+</ul>
+<h3>8. Arkeon 获 59.4 万欧元种子轮，做超导量子芯片后制造调谐</h3>
+<ul>
+<li><strong>来源</strong>：Quantum Zeitgeist</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：瑞典哥德堡 Arkeon Technologies 完成 €594,200 种子轮（Chalmers Ventures / Navigare Ventures / Almi Invest）；用电流脉冲串在结势垒调谐电阻，做超导量子比特频率后制造微调，避免产线微差异导致的整芯片重设计；目前已收到约 30 份意向订单。</li>
+<li><strong>链接</strong>：https://quantumzeitgeist.com/superconducting-quantum-chips-arkeon-5942k/</li>
+</ul>
+<h3>9. Waymo 圣安东尼奥/达拉斯/休斯顿同步上线</h3>
+<ul>
+<li><strong>来源</strong>：The Texas Tribune</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Waymo 在奥斯汀枪击事件后扩张至圣安东尼奥、达拉斯、休斯顿三大得州城市；事件中 Waymo 车辆阻挡救护车 2 分钟被警员移开，引发对自动驾驶应急响应的监管讨论；得州 5 月新规即将生效。</li>
+<li><strong>链接</strong>：https://www.texastribune.org/text/223342/</li>
+</ul>
+<h3>10. 问界 M9 2026 款搭载华为乾崑 ADS 4 智驾系统</h3>
+<ul>
+<li><strong>来源</strong>：太平洋科技</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：2026 款问界 M9 搭载华为乾崑智驾 ADS 4 + 舱内激光雷达 + 27 个高精度传感器；途灵智能底盘配空气悬架 + CDC 可变阻尼 + 预判式底盘调节（前置摄像头扫描 150 m）；-15℃ 严寒实测续航达成率 70.8%，优于行业 60-70%。</li>
+<li><strong>链接</strong>：https://www.pconline.com.cn/ai/wiki/dbcrygp7/</li>
+</ul>
+<hr class="section-divider">
+<h2>三、电子科技·芯片设计（TOP 10）</h2>
+<p>
+> 今日芯片设计重点是"先进制程 / Chiplet / AI 加速 / NPU 全栈下沉到端侧"：Google Icefish TPU 拆单 Samsung 2nm + TSMC 1.4nm，Intel Xeon 6+ 首发 Intel 18A，AMD Ryzen AI 300 集成 50 TOPS NPU；HBM 战场 Samsung、SK Hynix 在 HBM4E 样品交付节奏上贴身比拼。
+</p>
+<h3>1. Google Icefish TPU（10 代）拆单 Samsung 2nm + TSMC 1.4nm</h3>
+<ul>
+<li><strong>来源</strong>：Tech Times</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Google 正与 Samsung 谈判，让其代工 10 代 TPU（代号 Icefish）的内存 I/O die，2nm 制程；TSMC 仍负责 1.4nm 计算 die；与 MediaTek 联合设计，2028 年量产；这是旗舰 AI 芯片首次在同一产品里横跨两家代工两个节点；Samsung 同时拿下 Tesla AI6 \$16.5B 大单。</li>
+<li><strong>链接</strong>：https://www.techtimes.com/articles/318307/20260614/samsung-could-make-part-google-icefish-tpu-hyperscalers-hedge-against-tsmc.htm</li>
+</ul>
+<h3>2. Intel Xeon 6+ Clearwater Forest 首发 Intel 18A</h3>
+<ul>
+<li><strong>来源</strong>：bluehorizon.network</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Intel 推出 Xeon 6+（Clearwater Forest）服务器 CPU，旗舰 6990E+ 配 288 个 Darkmont E-Core（无超线程），L3 576MB，12 通道 DDR5-8000，96 条 PCIe 5.0；首发 Intel 18A 节点（RibbonFET + PowerVIA + Foveros Direct 3D），12 颗 18A 计算 die + 3 颗 Intel 3 base die + 2 颗 Intel 7 I/O die；新增 Intel AET 应用级能耗遥测。</li>
+<li><strong>链接</strong>：https://bluehorizon.network/intel-xeon-6-processors-up-to-288-e-core-processors-under-intel-18a-lithography/</li>
+</ul>
+<h3>3. AMD Ryzen AI 300：50 TOPS NPU + 128GB 统一内存</h3>
+<ul>
+<li><strong>来源</strong>：ustechautomations</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Ryzen AI 300 集成 Zen 5 CPU + RDNA 3.5 iGPU + 50 TOPS XDNA 2 NPU + 共享系统内存；旗舰 AI 9 HX 370（12 核 / 5.1 GHz），Llama 3 8B 实测 45 tokens/s；Strix Halo 顶配 128GB LPDDR5X（96GB 可用做 VRAM），支持本地 70B Q4 模型；Ryzen AI Max+ 395 mini-PC 起 \$3,999。</li>
+<li><strong>链接</strong>：https://ustechautomations.com/resources/blog/ryzen-ai-300-explained-what-it-changes</li>
+</ul>
+<h3>4. ISSCC 2026 中国"千亿软件"核心技术亮相</h3>
+<ul>
+<li><strong>来源</strong>：太平洋科技</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：千亿规模软件 APP 核心技术登上 ISSCC 2026 舞台，驱动高性能计算基础设施革新；议题覆盖 Chiplet 互连、3D 堆叠、存内计算等关键方向；中国创新力量持续扩大在 ISSCC 的论文占比。</li>
+<li><strong>链接</strong>：https://g.pconline.com.cn/ai/wikivDawe/article/details/787927.html</li>
+</ul>
+<h3>5. 小米 XRING O3 旗舰 SoC 确认 3nm 制程、8 月发布</h3>
+<ul>
+<li><strong>来源</strong>：NotebookCheck</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：小米第二代自研旗舰 SoC 命名为 XRING O3，TSMC 3nm 制造，将与 Snapdragon 8 Elite Gen 5 同代竞争；相比 XRING O1 重点提升能效与中低频性能；将搭载于小米更多手机与可能的部分 EV；时间表 8 月。</li>
+<li><strong>链接</strong>：https://www.notebookcheck.net/XRING-O3-More-details-of-Xiaomi-s-next-gen-flagship-chipset-revealed.1321515.0.html</li>
+</ul>
+<h3>6. 华为乾崑 ADS 4 + 27 颗传感器定义 2026 旗舰智驾</h3>
+<ul>
+<li><strong>来源</strong>：太平洋科技</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：华为乾崑智驾 ADS 4 配合舱内激光雷达 + 27 个高精度传感器；在逆光、暗光下对小目标识别显著提升；城区覆盖拥堵跟车、无保护转弯、窄路会车；高速支持智能变道、上下匝道。</li>
+<li><strong>链接</strong>：https://www.pconline.com.cn/ai/wiki/dbcrygp7/</li>
+</ul>
+<h3>7. Microsoft Research Skala：DFT 深度学习突破</h3>
+<ul>
+<li><strong>来源</strong>：AI D-A-M-N</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：Microsoft Research 发布 Skala，一种新的深度学习交换-相关（XC）泛函；W4-17 MAE 1.06 kcal/mol、single-reference 子集 0.85 kcal/mol、GMTKN55 WTMAD-2 3.89 kcal/mol；达到 hybrid 级别精度但保持 semi-local 效率；预训练用 B3LYP 密度提取 XC 标签，SCF 内 fine-tune。</li>
+<li><strong>链接</strong>：https://ai-damn.com/microsoft-research-unveils-skala-a-breakthrough-in-deep-learning-for-dft-1760137378932</li>
+</ul>
+<h3>8. aoa 旗舰 SoC 3nm + 第三代 NPU、能效提升 40%</h3>
+<ul>
+<li><strong>来源</strong>：太平洋科技</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：aoa 国际版活动旗舰 SoC 采用 3nm 制程，集成 500 亿+ 晶体管，搭载星云科技自研第三代神经网络加速架构；BF16 精度算力峰值 1024 TFLOPS；典型负载能效比上一代提升 40%；支持千亿参数 LLM 毫秒级推理。</li>
+<li><strong>链接</strong>：https://g.pconline.com.cn/ai/wiki/dbcrygp7/</li>
+</ul>
+<h3>9. 三星 12 层 HBM4E 16Gbps 48GB 样品送测</h3>
+<ul>
+<li><strong>来源</strong>：AInvest / GMT EIGHT</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：三星率先交付全球首批 12 层 48GB HBM4E 样品，针脚速率 16 Gbps；股价当日上涨 6.51%；下半年产能之争进入客户认证冲刺；SK Hynix 跟进，样品交付可能提前至 6 月；目标 NVIDIA Rubin Ultra 平台。</li>
+<li><strong>链接</strong>：https://www.ainvest.com/news/samsung-48gb-hbm4e-push-cuts-ai-gap-yield-real-repricing-lever-2606/</li>
+</ul>
+<h3>10. NVIDIA Nemotron 3 Ultra 开源旗舰发布</h3>
+<ul>
+<li><strong>来源</strong>：Two Minute Papers / AI/TLDR</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：NVIDIA 发布 Nemotron 3 Ultra 开源权重旗舰；2 Minute Papers 视频深度解读，附论文与免费渲染课程；定位下一代大模型训练与推理的开放基座。</li>
+<li><strong>链接</strong>：https://ai-tldr.dev/</li>
+</ul>
+<hr class="section-divider">
+<h2>四、电子科技·芯片后端 / EDA / 工艺（TOP 10）</h2>
+<p>
+> 后端与工艺方向最热的叙事是"2nm 大扩产 + 先进封装 + 硅光 + HBM4E 量产竞速"：台积电 2nm 5 座晶圆厂齐发，2026-2028 复合增速 70%；三星 / SK 海力士在 HBM4E 样品节奏上贴身比拼；硅光端 IQE + Tower 锁定 InP 外延片供应，GlobalFoundries SCALE 平台 1.6T/3.2T 量产。
+</p>
+<h3>1. TSMC 2nm 五厂齐发、2026-2028 复合增速 70%</h3>
+<ul>
+<li><strong>来源</strong>：网易 / wtguru</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：台积电 2nm 家族今年同时 5 座晶圆厂量产（新竹 2 座 + 高雄 3 座），2026-2028 产能年复合增速 70%；预计 2029 年 2nm 家族月产能达数十万片；3nm 同期年复合增速 25%；CoWoS 产能 2022-2027 年复合增速 >80%，SoIC >90%；同步公布 A13 节点，瞄准 2029 年量产。</li>
+<li><strong>链接</strong>：http://m.163.com/dy/article/KVDBTKGN0511838M.html</li>
+</ul>
+<h3>2. 三星 HBM4E 12 层 48GB 16Gbps 样品送测</h3>
+<ul>
+<li><strong>来源</strong>：AInvest</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：三星宣布 12 层 48GB HBM4E 样品向主要客户出货，针脚速率 16 Gbps、带宽 4 TB/s；股价单日上涨 6.51%；客户认证是真正决定 2026H2 HBM 份额的关键变量；H2 2024 良率维持 85% 是估值重估关键。</li>
+<li><strong>链接</strong>：https://www.ainvest.com/news/samsung-48gb-hbm4e-push-cuts-ai-gap-yield-real-repricing-lever-2606/</li>
+</ul>
+<h3>3. SK 海力士 HBM4E 样品交付有望提前到 6 月</h3>
+<ul>
+<li><strong>来源</strong>：GMT EIGHT</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：SK 海力士 HBM4E 样品供应有望从原计划 2H 提前到 6 月或最迟 7 月；将用于 NVIDIA 2027 年 Rubin Ultra 平台；SK 海力士 HBM4E 核心芯片采用 1c nm 工艺，base wafer 由 TSMC 3nm 工艺制造；与三星 HBM 供应战 2H2026 进一步升级。</li>
+<li><strong>链接</strong>：https://gmteight.com/content/detail/400573</li>
+</ul>
+<h3>4. 2026 先进封装与半导体耗材/设备全景报告发布</h3>
+<ul>
+<li><strong>来源</strong>：电子工程专辑</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：37 页深度报告聚焦先进封装、耗材与设备赛道；AI 算力推动 2.5D/3D、Chiplet、CoWoS 大规模扩产，但晶圆翘曲、键合缺陷、散热不良制约良率；面板级 CoPoS 2026H2 量产；特种气体、CMP 材料成为核心增量；国产替代浪潮加速。</li>
+<li><strong>链接</strong>：https://www.eet-china.com/mp/a502518.html</li>
+</ul>
+<h3>5. IQE + Tower 签多年 InP 外延片供应协议、覆盖硅光 AI 数据中心</h3>
+<ul>
+<li><strong>来源</strong>：Public / Tower Semiconductor</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：IQE 与 Tower Semiconductor 签多年 InP（磷化铟）外延片供应协议；用于 Tower 硅光平台生产 200Gb/s/lane 可插拔光模块、400Gb/s/lane 调制器原型及光路交换；同步解决双方此前所有 IP 诉讼；IQE 获 Tower 多孔硅专利免版税全球许可。</li>
+<li><strong>链接</strong>：https://www.publicnow.com/view/B5B92229C319C876A6353594849B33A99E932497</li>
+</ul>
+<h3>6. 三星 7 月量产 HBM4 供 NVIDIA Vera Rubin</h3>
+<ul>
+<li><strong>来源</strong>：WAM Emirates News</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：三星电子 HBM4 将于 7 月量产，已完成 NVIDIA 质量验证并获得初期采购订单；目标 Vera Rubin AI 平台；这意味着三星在 HBM4 量产时点上与 SK 海力士的差距进一步缩小。</li>
+<li><strong>链接</strong>：https://www.wam.ae/en/article/bymym8g-samsung-begin-hbm4-production-next-month-plans</li>
+</ul>
+<h3>7. PTSF · Zero-Knowledge SAT 验证引擎发布</h3>
+<ul>
+<li><strong>来源</strong>：Vuink</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：PTSF 在 SAT 相变点发现 6.36σ 的通用可分性信号，n=15 到 n=500、SATLIB 50-100 benchmark 验证；可对 SAT 实例做"调用求解器前"预分区，硬相变实例上减少 57% 求解器调用；工业实例（n>500）可与现有 EDA 预处理流水线结合。</li>
+<li><strong>链接</strong>：https://vuink.com/post/ptsf-engine-d-dvercel-d-dapp</li>
+</ul>
+<h3>8. 台积电 2nm 2029 年月产能将达数十万片</h3>
+<ul>
+<li><strong>来源</strong>：网易</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：台积电 2nm 产能扩张计划进入加速期；2nm 第一年晶圆产出较 2023 年 3nm 第一年增加 45%；5 座 2nm 晶圆厂同步放量能降低单一厂区风险（新竹+高雄双区位）；预计 2029 年 2nm 家族月产能将达数十万片。</li>
+<li><strong>链接</strong>：http://m.163.com/dy/article/KVDBTKGN0511838M.html</li>
+</ul>
+<h3>9. Netlist 新专利瞄准 Micron HBM4</h3>
+<ul>
+<li><strong>来源</strong>：InvestorsHub</li>
+<li><strong>时间</strong>：时间区间内</li>
+<li><strong>核心要点</strong>：Netlist 2025-05 取得 U.S. Patent No. 12,308,087，覆盖堆叠存储芯片电气负载管理设计；起诉 Micron 12H 36GB 与 48GB 16H HBM4 涉嫌侵权；HBM4E 战 2H2026 进一步白热化；Yole 预测 2030 年全球 HBM 市场 \$98B、33% CAGR。</li>
+<li><strong>链接</strong>：https://investorshub.advfn.com/NetList-Inc-NLST-9273</li>
+</ul>
+<h3>10. GlobalFoundries SCALE 硅光平台 1.6T/3.2T 量产就绪</h3>
+<ul>
+<li><strong>来源</strong>：InvestorsHub</li>
+<li><strong>时间</strong>：2026-06-14</li>
+<li><strong>核心要点</strong>：GlobalFoundries 5 月发布的 SCALE 是其首个 OCI MSA 兼容的共封装光学（CPO）平台；采用 300mm SOI、12nm CMOS 兼容工艺、8/16 通道 DWDM；与 LWLG 合作基于 Perkinamine 聚合物槽调制器，单通道 200 Gb/s，可扩展至 400 Gb/s+；支持 1.6T/3.2T 双向光引擎。</li>
+<li><strong>链接</strong>：https://investorshub.advfn.com/Lightwave-Logic-Inc-LWLG-7937</li>
+</ul>
+<hr class="section-divider">
+<p>
+> <strong>报告说明</strong>
+>
+> 1. 全部条目时间窗为 2026-06-14 前后 24 小时，少量放宽至 48 小时；
+> 2. 同一事件多来源时仅保留最权威的 1 个；
+> 3. 部分中文条目存在转载链路，已优先取一手发布或权威媒体；
+> 4. 链接为原文出处，来源平台若需登录请在浏览器中打开。
+</p>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> Microsoft Build 2026：7 款 MAI 模型全栈自研、零 OpenAI 蒸馏</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ai2.work/blog/inside-microsoft-s-foundry-push-7-models-built-without-openai" target="_blank" rel="noopener" class="link-btn">🔗 ai2.work</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> 智谱 GLM-5.2 以 MIT 协议完全开源 100 万 Token 上下文</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://digitalphablet.com/ai/fable-5-removed-glm-5-2-fully-released/" target="_blank" rel="noopener" class="link-btn">🔗 digitalphablet.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> Claude Fable 5 上市 72 小时被美国政府下令下架</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ai2.work/blog/inside-claude-fable-5-anthropic-s-most-powerful-public-model" target="_blank" rel="noopener" class="link-btn">🔗 ai2.work</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> Google Gemini 2.5 Flash-Lite 进入 GA</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ai-damn.com/google-launches-gemini-2-5-flash-lite-for-ai-efficiency-1753312829718" target="_blank" rel="noopener" class="link-btn">🔗 ai-damn.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> NVIDIA SpatialClaw：把代码当空间推理 Agent 的动作接口</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ai-tldr.dev/" target="_blank" rel="noopener" class="link-btn">🔗 ai-tldr.dev</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> Google DeepMind DiffusionGemma 26B-A4B：开放扩散语言模型</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://nerova.ai/news/google-diffusiongemma-26b-a4b-local-text-generation-june-10-2026" target="_blank" rel="noopener" class="link-btn">🔗 nerova.ai</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> Moonshot Kimi K2.7-Code：1T 开源权重编码 Agent</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://wowhow.cloud/blogs/kimi-k2-7-code-moonshot-open-weight-developer-guide-2026" target="_blank" rel="noopener" class="link-btn">🔗 wowhow.cloud</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> DeepMind 联合资助 1000 万美元多智能体 AI 安全研究</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://noah-news.com/deepminds-10-million-push-into-multi-agent-ai-safety-signals-a-shift-towards-int/" target="_blank" rel="noopener" class="link-btn">🔗 noah-news.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> Anthropic 与白宫高层会谈 AI 安全合作</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://cnnbc.com/anthropic-set-for-high-level-talks-at-white-house-on-ai-safety-and-cooperation" target="_blank" rel="noopener" class="link-btn">🔗 cnnbc.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> Trump 签 NSPM-11 AI 国家安全备忘录、剔除不配合厂商</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://highcountryadvocate.org/trump-signs-ai-national-security-directive/" target="_blank" rel="noopener" class="link-btn">🔗 highcountryadvocate.org</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> NEURA Robotics 拿下 14 亿美元创欧洲人形机器人最大单轮融资</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ai2.work/blog/neura-robotics-lands-record-1-4b-for-cognitive-humanoids" target="_blank" rel="noopener" class="link-btn">🔗 ai2.work</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> Boston Dynamics Atlas 在 Hyundai 工厂首次走出实验室</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.cbsnews.com/news/boston-dynamics-ai-powered-humanoid-robot-learning-factory-work-60-minutes-transcript/" target="_blank" rel="noopener" class="link-btn">🔗 cbsnews.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> 优必选 U1 人形机器人 10 天揽 3800 台订单</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7651178452602618410/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 中国 NEO 脑机接口获批全球首个商业化</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://pressreleasecloud.io/technology/china-debuts-worlds-first-commercial-brain-chip-outpacing-elon-musks-jesus-level-tech/" target="_blank" rel="noopener" class="link-btn">🔗 pressreleasecloud.io</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 华为 × 比亚迪联合发布&quot;奥运星河&quot;智驾平台</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki_2998973.html" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> UAE 公布 6G 路线图、目标 2030 年前商用</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.wam.ae/en/article/bymym8g-samsung-begin-hbm4-production-next-month-plans" target="_blank" rel="noopener" class="link-btn">🔗 wam.ae</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> 中国工信部批准 6GHz 频段用于 6G 关键技术试验</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.qishuai-cn.com/news/Telecom_6G/6G_Massive_MIMO_Base_Stations/China_Opens_6GHz_Band_for_6G_Mutual_Recognition_Tests.html" target="_blank" rel="noopener" class="link-btn">🔗 qishuai-cn.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> Arkeon 获 59.4 万欧元种子轮，做超导量子芯片后制造调谐</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://quantumzeitgeist.com/superconducting-quantum-chips-arkeon-5942k/" target="_blank" rel="noopener" class="link-btn">🔗 quantumzeitgeist.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> Waymo 圣安东尼奥/达拉斯/休斯顿同步上线</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.texastribune.org/text/223342/" target="_blank" rel="noopener" class="link-btn">🔗 texastribune.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> 问界 M9 2026 款搭载华为乾崑 ADS 4 智驾系统</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki/dbcrygp7/" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1</span> Google Icefish TPU（10 代）拆单 Samsung 2nm + TSMC 1.4nm</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.techtimes.com/articles/318307/20260614/samsung-could-make-part-google-icefish-tpu-hyperscalers-hedge-against-tsmc.htm" target="_blank" rel="noopener" class="link-btn">🔗 techtimes.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">2</span> Intel Xeon 6+ Clearwater Forest 首发 Intel 18A</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://bluehorizon.network/intel-xeon-6-processors-up-to-288-e-core-processors-under-intel-18a-lithography/" target="_blank" rel="noopener" class="link-btn">🔗 bluehorizon.network</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">3</span> AMD Ryzen AI 300：50 TOPS NPU + 128GB 统一内存</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ustechautomations.com/resources/blog/ryzen-ai-300-explained-what-it-changes" target="_blank" rel="noopener" class="link-btn">🔗 ustechautomations.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">4</span> ISSCC 2026 中国&quot;千亿软件&quot;核心技术亮相</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/wikivDawe/article/details/787927.html" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 小米 XRING O3 旗舰 SoC 确认 3nm 制程、8 月发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.notebookcheck.net/XRING-O3-More-details-of-Xiaomi-s-next-gen-flagship-chipset-revealed.1321515.0.html" target="_blank" rel="noopener" class="link-btn">🔗 notebookcheck.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">6</span> 华为乾崑 ADS 4 + 27 颗传感器定义 2026 旗舰智驾</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.pconline.com.cn/ai/wiki/dbcrygp7/" target="_blank" rel="noopener" class="link-btn">🔗 pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">7</span> Microsoft Research Skala：DFT 深度学习突破</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ai-damn.com/microsoft-research-unveils-skala-a-breakthrough-in-deep-learning-for-dft-1760137378932" target="_blank" rel="noopener" class="link-btn">🔗 ai-damn.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">8</span> aoa 旗舰 SoC 3nm + 第三代 NPU、能效提升 40%</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://g.pconline.com.cn/ai/wiki/dbcrygp7/" target="_blank" rel="noopener" class="link-btn">🔗 g.pconline.com.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">9</span> 三星 12 层 HBM4E 16Gbps 48GB 样品送测</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.ainvest.com/news/samsung-48gb-hbm4e-push-cuts-ai-gap-yield-real-repricing-lever-2606/" target="_blank" rel="noopener" class="link-btn">🔗 ainvest.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">10</span> NVIDIA Nemotron 3 Ultra 开源旗舰发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://ai-tldr.dev/" target="_blank" rel="noopener" class="link-btn">🔗 ai-tldr.dev</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> TSMC 2nm 五厂齐发、2026-2028 复合增速 70%</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.163.com/dy/article/KVDBTKGN0511838M.html" target="_blank" rel="noopener" class="link-btn">🔗 m.163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2</span> 三星 HBM4E 12 层 48GB 16Gbps 样品送测</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.ainvest.com/news/samsung-48gb-hbm4e-push-cuts-ai-gap-yield-real-repricing-lever-2606/" target="_blank" rel="noopener" class="link-btn">🔗 ainvest.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> SK 海力士 HBM4E 样品交付有望提前到 6 月</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://gmteight.com/content/detail/400573" target="_blank" rel="noopener" class="link-btn">🔗 gmteight.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">4</span> 2026 先进封装与半导体耗材/设备全景报告发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.eet-china.com/mp/a502518.html" target="_blank" rel="noopener" class="link-btn">🔗 eet-china.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> IQE + Tower 签多年 InP 外延片供应协议、覆盖硅光 AI 数据中心</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.publicnow.com/view/B5B92229C319C876A6353594849B33A99E932497" target="_blank" rel="noopener" class="link-btn">🔗 publicnow.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">6</span> 三星 7 月量产 HBM4 供 NVIDIA Vera Rubin</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://www.wam.ae/en/article/bymym8g-samsung-begin-hbm4-production-next-month-plans" target="_blank" rel="noopener" class="link-btn">🔗 wam.ae</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">7</span> PTSF · Zero-Knowledge SAT 验证引擎发布</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://vuink.com/post/ptsf-engine-d-dvercel-d-dapp" target="_blank" rel="noopener" class="link-btn">🔗 vuink.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">8</span> 台积电 2nm 2029 年月产能将达数十万片</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.163.com/dy/article/KVDBTKGN0511838M.html" target="_blank" rel="noopener" class="link-btn">🔗 m.163.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">9</span> Netlist 新专利瞄准 Micron HBM4</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://investorshub.advfn.com/NetList-Inc-NLST-9273" target="_blank" rel="noopener" class="link-btn">🔗 investorshub.advfn.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">10</span> GlobalFoundries SCALE 硅光平台 1.6T/3.2T 量产就绪</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://investorshub.advfn.com/Lightwave-Logic-Inc-LWLG-7937" target="_blank" rel="noopener" class="link-btn">🔗 investorshub.advfn.com</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-06-14.html" class="day-nav-btn">← 上一篇 2026-06-14</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-06-16.html" class="day-nav-btn">下一篇 2026-06-16 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>

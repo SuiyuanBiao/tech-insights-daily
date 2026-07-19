@@ -1,496 +1,423 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>技术洞察日报 2026-06-05 - 每日技术洞察</title>
-<meta name="description" content="【技术洞察】2026-06-05 - 5 板块 50 条 TOP 级技术动态">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【技术洞察】2026-06-05 - Biao-技术洞察日报</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: #0a0e17;
+  color: #e0e6ed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 48px; }
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F8EF7 0%, #7c5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  color: #8892a6;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+.header .stats {
+  color: #4F8EF7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: #4F8EF7;
+  transform: translateY(-2px);
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #4F8EF7;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.card h3 {
+  font-size: 1rem;
+  color: #c8d1e0;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+.card p, .card li {
+  color: #a8b3c7;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.card ul { padding-left: 20px; margin: 8px 0; }
+.card li { margin-bottom: 4px; }
+.card a {
+  color: #4F8EF7;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.card strong { color: #d0d8e6; }
+.back-link {
+  display: inline-block;
+  color: #4F8EF7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.month-group { margin-bottom: 32px; }
+.month-title {
+  font-size: 1.2rem;
+  color: #7c5cff;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a42;
+  font-weight: 600;
+}
+.report-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.report-item {
+  background: #131a2a;
+  border: 1px solid #1e2a42;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: #a8b3c7;
+  font-size: 0.85rem;
+}
+.report-item:hover {
+  border-color: #4F8EF7;
+  color: #4F8EF7;
+  transform: translateY(-1px);
+}
+.report-item .date { font-weight: 600; color: #c8d1e0; }
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #1e2a42;
+  color: #5a6478;
+  font-size: 0.8rem;
+}
+.latest-card {
+  background: linear-gradient(135deg, #131a2a 0%, #0f1624 100%);
+  border: 1px solid #4F8EF7;
+}
+.latest-card .badge {
+  display: inline-block;
+  background: #4F8EF7;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #1e2a42;
+  margin: 20px 0;
+}
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.nav-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #8892a6;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.nav-tab.active {
+  background: #4F8EF7;
+  color: #fff;
+}
+.nav-tab:hover:not(.active) {
+  background: #1e2a42;
+  color: #c8d1e0;
+}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a href="../index.html" class="logo-link">
-    <h1 class="logo">每日技术洞察</h1>
-  </a>
-  <p class="tagline">AI · 电子科技 · 芯片 · 半导体 · 5G/CPU</p>
-</header>
-
-<main class="daily-page">
-  <div class="daily-header">
-    <h2 class="daily-date">📅 2026-06-05</h2>
-    <p class="daily-stats">共 4 个板块 · 38 条要闻</p>
+  <div class="container">
+    <a href="../index.html" class="back-link">← 返回主页</a>
+    <div class="header">
+      <h1>Biao-技术洞察日报</h1>
+      <div class="subtitle">AI / 电子 / 芯片 / CPU 5G</div>
+      <div class="stats">2026-06-05</div>
+    </div>
+    <div class="card">
+      <h2>【技术洞察】2026-06-05</h2>
+<p>
+> 本文档由 <a href="https://aily.feishu.cn/?&open-from=feishu_doc" target="_blank">飞书 aily</a> 创建
+</p>
+<p>
+<callout emoji="💡">
+<strong>2026年6月5日技术洞察总览</strong>今日，<strong>AI基础模型</strong>与<strong>企业级Agent</strong>的规模化部署成为核心焦点，英伟达发布全球首款开源全模态物理AI基础模型<strong>Cosmos 3</strong>，中科闻歌推出<strong>Decitron决策大模型</strong>，企业AI Agent部署率已达<strong>54%</strong>。<strong>电子科技全领域</strong>在脑机接口和人形机器人方向取得关键进展，湖南“IMIE智能视网膜”完成首例临床植入，优必选全尺寸超仿生人形机器人开启预售，特斯拉<strong>Optimus Gen3</strong>实现量产。<strong>芯片设计</strong>领域，ISSCC等顶会论文聚焦安全引擎、神经接口SoC及LLM辅助设计，<strong>北大吴子涵</strong>获ISSCC KC Smith博士成就奖。<strong>芯片后端与工艺</strong>方面，<strong>台积电</strong>确认购入High-NA EUV光刻机备战2nm，<strong>华为</strong>提出“韬（τ）定律”转向时间缩微，<strong>先进封装</strong>产能已排至2027年，半导体玻璃基板进入商业化元年。
+</callout>
+</p>
+<h2>一、人工智能 AI 领域（TOP10）</h2>
+<p>
+今日AI领域呈现“基础模型开源化”与“企业Agent规模化”两大主线。英伟达开源<strong>Cosmos 3</strong>全模态物理AI模型，为具身智能提供新基座；企业AI Agent部署率突破<strong>54%</strong>，MCP与A2A协议推动标准化与多智能体协作。
+</p>
+<p>
+1. <strong>英伟达发布Cosmos 3：全球首款全模态物理AI基础模型</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：今日头条/立氢报道</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：英伟达在GTC大会发布<strong>Cosmos 3</strong>，全球首款完全开放的全模态物理AI基础模型。采用双Transformer架构，可同时理解文本、图像、视频、3D场景、机器人动作及传感器数据，并能预测“动作-结果”，支持机器人在数字孪生中训练后迁移至物理世界。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647880890038616610/</li>
+</ul>
+<p>
+2. <strong>中科闻歌发布Decitron决策机：通用决策大模型</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：北京日报</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：发布通用决策大模型<strong>Decitron决策机</strong>，定位为分析推演系统，核心技术包括世界模型、多智能体推演模拟博弈及博弈求解结合因果推断，已实现2000+场景求解方法量化算子化。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647887055855075859/</li>
+</ul>
+<p>
+3. <strong>阿里QoderWork内置企查查MCP，头部AI开始拼数据硬实力</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：信网/今日头条</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：阿里桌面智能体工作台<strong>QoderWork</strong>将企查查MCP正式接入内置Connector，标志头部智能体产品进入“模型+数据”硬实力比拼阶段。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647763500860703274/</li>
+</ul>
+<p>
+4. <strong>2026年企业AI Agent部署突破3000家：54%企业已规模化</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：51CTO博客</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：<strong>54%</strong> 的企业已部署AI Agent，金融行业达<strong>67%</strong>。多步骤Agent工作流ROI中位数达<strong>127%</strong>。MCP协议已有200+企业接入；A2A协议实现多智能体协作（如JPMorgan代码审查周期缩短40%）。</li>
+<li><strong>链接</strong>：https://blog.51cto.com/u_16099166/14660867</li>
+</ul>
+<p>
+5. <strong>AI资讯日报：2026年6月5日 全球行业动态精选</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：CSDN</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：覆盖OpenAI GPT系列、Anthropic Claude、Google Gemini及国内腾讯混元、百度文心、阿里通义、字节豆包、DeepSeek的竞争格局；同时汇总英伟达、AMD、Google、华为等自研AI芯片动态，以及AI投融资与企业Copilot落地情况。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/nndsb/article/details/161709253</li>
+</ul>
+<p>
+6. <strong>每日AI新闻：英伟达Cosmos 3开源+深圳国创具身专利+星海图双足机器人+比亚迪入局</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：CSDN/中关村在线</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：星海图发布首款1.4米双足机器人“行客”；比亚迪正式宣布入局人形机器人；小鹏IRON计划三季度亮相；星尘智能B轮融资超10亿元；OpenAI正式成立Robotics部门。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/nndsb/article/details/161709485</li>
+</ul>
+<p>
+7. <strong>杭州全城具身智能机器人训练场启用：广东6家分训练场授牌</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：今日头条</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：广东首批6家分训练场授牌，分别聚焦仓储分拣、城市服务、工业制造、生物医药与应急救援等场景。广东人工智能与机器人企业已超<strong>3700家</strong>。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647880890038616610/</li>
+</ul>
+<p>
+8. <strong>MCP（模型上下文协议）：大模型世界“USB-C”标准化革命</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：CSDN技术博客</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：MCP由Anthropic发布，标准化大模型与外部工具/数据源交互，支持工具动态发现、丰富的资源类型及多模型复用，被比喻为统一USB-C接口。</li>
+<li><strong>链接</strong>：https://blog.csdn.net/qq_33526859/article/details/161688486</li>
+</ul>
+<p>
+9. <strong>黄仁勋：AI推理需求将爆发至今日1万倍</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：今日头条</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：黄仁勋在Computex表示，AI推理需求正迎来爆发式增长，未来需求将是今天的<strong>10000倍</strong>，行业经历“词元循环”范式转移。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647880890038616610/</li>
+</ul>
+<p>
+10. <strong>蔚来李斌：智能座舱核心体验全面Agent化，进入认知座舱时代</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：今日头条</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：蔚来创始人李斌指出，AI正在重构下一代座舱体验，进入认知座舱时代。中国汽车工程学会副秘书长郑亚莉表示，AI Agent规模化上车成为新车型核心吸引力。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647880890038616610/</li>
+</ul>
+<h2>二、电子科技·全领域（TOP10）</h2>
+<p>
+脑机接口临床转化与人形机器人消费级落地是今日两大亮点。湖南完成<strong>256通道</strong>柔性电极脑机接口首例植入，优必选发布<strong>183cm</strong>全尺寸仿生机器人，特斯拉<strong>Optimus Gen3</strong>以2.5万美元定价进入量产，标志着关键技术的实用化突破。
+</p>
+<p>
+1. <strong>湖南“IMIE智能视网膜”侵入式脑机接口：失明患者重见字符</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：长沙晚报/今日头条</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：中南大学湘雅医院团队“IMIE智能视网膜”完成首例临床植入。采用<strong>256通道</strong>柔性电极（国外多为60通道），植入后患者能识别字符并独立室内行走。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647870365896655412/</li>
+</ul>
+<p>
+2. <strong>天津发布脑机接口五年行动计划（2026-2030年）</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：搜狐网</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：天津市政府印发行动计划，目标到2030年形成国家战略科技力量集群，非侵入式产品至少10种实现大规模临床应用，引育1-2家上市企业，产业基金总规模超<strong>100亿元</strong>。</li>
+<li><strong>链接</strong>：https://m.sohu.com/a/1032307923_122301840/</li>
+</ul>
+<p>
+3. <strong>脑机接口每日简报：全球首个侵入式BCI在中国获批+Neuralink量产</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：金飞鹰药械注册/今日头条</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：2026年3月博睿康与清华联合开发的NEO侵入式脑机接口获国家药监局注册批准（全球首个）。马斯克宣布Neuralink 2026年大规模量产。2026年前5个月中国脑机接口融资超<strong>46亿元</strong>。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647770216889434660/</li>
+</ul>
+<p>
+4. <strong>优必选优世界：全球首款全尺寸超仿生人形机器人开启预售</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：封面新闻/今日头条</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：优必选消费级品牌“优世界”开启预售，男款<strong>183cm/42kg</strong>，女款168cm/35.2kg，搭载<strong>88个自由度</strong>及大语言模型+情感计算系统，定价3000元定金。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647831939696624128/</li>
+</ul>
+<p>
+5. <strong>入门级售价不足万元：人形机器人加速进家门</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：北京日报</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：优必选、松延动力、宇树科技密集发布新品或降价，松延“小月”首拍11.079万元，小布米跌破万元至<strong>9998元</strong>。伺服电机等核心部件国产化率突破<strong>90%</strong>。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647726813233349135/</li>
+</ul>
+<p>
+6. <strong>Optimus Gen3人形机器人实现大规模生产：定价2.5万美元/订单10万台</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：搜狐网</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：特斯拉<strong>Optimus Gen3</strong>成为全球实现商业化量产的通用型人形机器人，采用最新一代神经网络架构，工厂测试效率达熟练工人<strong>90%</strong>。</li>
+<li><strong>链接</strong>：https://m.sohu.com/a/1032099330_122487616/</li>
+</ul>
+<p>
+7. <strong>韩国Quantinuum 6月4日纳斯达克挂牌：特朗普政府“战略性资本支撑”量子生态</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：BigNews</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：量子计算公司<strong>Quantinuum</strong>于6月4日正式在纳斯达克上市，由摩根大通/摩根士丹利联席主承销，标志全球量子计算商业化里程碑。</li>
+<li><strong>链接</strong>：https://news.sina.cn/bignews/insight/2026-06-05/detail-iniakfhq8369592.d.html</li>
+</ul>
+<p>
+8. <strong>6G研发关键突破：300多项核心技术+全球首个6G小规模试验网</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：财经综合</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：工信部宣布中国6G研发已取得<strong>300多项</strong>关键核心技术突破。中国移动构建全球首个6G小规模试验网；北大团队成果可提升6G信道速率<strong>30倍</strong>。</li>
+<li><strong>链接</strong>：相关综合报道</li>
+</ul>
+<p>
+9. <strong>韩国半导体板块2026-2030年：AI革命+后摩尔时代双重拐点</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：今日头条/小米出游</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：WSTS最新预测2026年全球半导体市场规模<strong>1.5112万亿美元</strong>（同比+89.9%）。存储芯片营收预计+249.5%达<strong>8039亿美元</strong>。<strong>SK海力士</strong>占据HBM <strong>57%</strong> 份额。</li>
+<li><strong>链接</strong>：http://m.toutiao.com/group/7647703790258258466/</li>
+</ul>
+<p>
+10. <strong>AI眼镜/脑机/具身智能跨界融合：PiEEG适配Meta Quest头显</strong>
+</p>
+<ul>
+<li><strong>来源</strong>：搜狐/财联社</li>
+<li><strong>时间</strong>：2026-06-05</li>
+<li><strong>核心要点</strong>：脑机接口初创企业PiEEG发布适配Meta Quest系列头显的<strong>PiEEG XR</strong>神经面部交互配件，可实现无手柄操控VR虚拟化身。中科创达自研TurboX AI眼镜在CES 2026展出。</li>
+<li><strong>链接</strong>：多源综合报道</li>
+</ul>
+<h2>三、电子科技·芯片设计（TOP10）</h2>
+<p>
+芯片设计顶会论文聚焦<strong>安全性</strong>、<strong>能效</strong>与<strong>AI辅助设计</strong>。ISSCC 2026上，清华团队展示了兼顾安全与能效的SHA-3引擎，北大<strong>吴子涵</strong>获KC Smith博士成就奖；多篇DAC论文探索LLM在RTL生成与验证中的应用。
+</p>
+<p>
+| 论文/技术名称 | 发布平台 | 时间 | 核心创新点 | 论文链接 |
+|-|-|-|-|-|
+| SHA-3安全引擎（论文25.6） | ISSCC 2026 | 2026-06-05 | 融合双轨预充逻辑与非对称掩码，在保持安全性同时实现<strong>17%面积</strong>、<strong>27%能耗</strong>开销。 | https://dblp.org/pid/76/3988-1.html |
+| 北大吴子涵获KC Smith博士成就奖 | ISSCC 2026 / 北大官网 | 2026-06-05 | 北京大学博士生<strong>吴子涵</strong>获ISSCC Kenneth C. Smith博士生成就奖，以第一作者发表ISSCC论文3篇、JSSC论文2篇。 | https://ic.pku.edu.cn/xsgz/xwgg/index.htm |
+| CNN加速器RTL级功耗优化 | MDPI Electronics | 2026-06-05 | 通过时钟门控与稀疏感知MAC抑制，在FPGA上实现总功耗降低<strong>32.99%</strong>，且不增加DSP/BRAM使用。 | https://www.mdpi.com/2079-9292/15/11/2492 |
+| 1024通道NISoC神经接口SoC | JSSC 2026 | 2026-06-05 | 65nm CMOS工艺，2×2mm²面积，<strong>1024通道</strong>记录/刺激，0.81μW/通道功耗，8.8μVrms输入参考噪声。 | https://www.mdpi.com/2079-9292/15/11/2492 |
+| 多芯片FPGA布线架构探索 | FPL 2026 (arXiv) | 2026-06-05 | 提出多芯片FPGA布线架构建模与优化方法，论文已被第36届FPL会议接收。 | https://arxiv.org/abs/2606.06421 |
+| Space-CIM热受限太空平台存内计算加速器 | ISLPED 2026 (arXiv) | 2026-06-05 | 针对太空平台散热受限场景，设计存内计算加速器架构，已被ACM/IEEE ISLPED '26接收。 | https://arxiv.org/abs/2606.05741 |
+| ZK-Flex零知识证明加速框架 | DAC 2026 (arXiv) | 2026-06-05 | 提出灵活可扩展的零知识证明硬件加速框架，已被第63届DAC 2026接收。 | https://arxiv.org/abs/2606.04221 |
+| CASS-RTL基于LLM的RTL生成正确性引导 | LAD 2026 (arXiv) | 2026-06-05 | 针对RTL生成提出“正确性感知子空间引导”方法，已被IEEE LLM-Aided Design会议接收。 | https://arxiv.org/abs/2606.05680 |
+| StepPRM-RTL逐步过程奖励引导的LLM微调 | DAC 2026 (arXiv) | 2026-06-05 | 提出针对RTL综合的LLM逐步过程奖励微调方法，已被DAC'2026接收。 | https://arxiv.org/abs/2606.05680 |
+| Intel Foundry EMIB-T先进封装 | ECTC 2026 | 2026-06-05 | <strong>EMIB-T</strong>技术将首层互连凸点间距缩至<strong>25μm</strong>，封装尺寸达120×120mm，单封装集成超9倍光罩内容。 | https://semiengineering.com/packaging-technologies-redefine-ai-and-hpc-scalability-limits-at-ectc-2026/ |
+</p>
+<h2>四、电子科技·芯片后端/EDA/工艺（TOP10）</h2>
+<p>
+后摩尔时代技术竞争白热化。<strong>台积电</strong>购入High-NA EUV备战2nm，3nm产能预订至2027；<strong>华为</strong>提出“韬定律”转向系统级时间优化；<strong>先进封装</strong>产能全线排满至2027年；半导体<strong>玻璃基板</strong>迎来商业化元年。
+</p>
+<p>
+| 技术/事件名称 | 发布平台 | 时间 | 核心创新点 | 链接 |
+|-|-|-|-|-|
+| 台积电已购ASML High-NA EUV光刻机 | 电子工程专辑/股东大会 | 2026-06-05 | 台积电董事长魏哲家证实已购入ASML最新<strong>High-NA EUV</strong>设备，用于备战后<strong>2nm</strong>制程。 | https://www.eet-china.com/mp/a499614.html |
+| 台积电3纳米黄金窗口期 | 新浪/手机新浪网 | 2026-06-05 | 3nm产能占2026 Q1晶圆销售<strong>25%</strong>，预订至2027；下半年3nm报价或再上调<strong>15%</strong>。3nm良率<strong>75-80%</strong>。 | https://news.sina.cn/bignews/insight/2026-06-05/detail-iniakfhq8369592.d.html |
+| 华为“韬（τ）定律” | 今日头条/华为技术 | 2026-06-05 | 放弃单纯几何缩微，转向系统性降低<strong>RC时间常数</strong>。2026秋季新麒麟芯片首发，密度<strong>238MTr/mm²</strong>，P核能效+<strong>41%</strong>。 | 多源报道 |
+| 半导体玻璃基板2026商业化元年 | 东方财富网 | 2026-06-05 | 2026年全球半导体玻璃基板市场规模<strong>15-20亿美元</strong>（商业化元年）。彩虹股份自主料方成本较进口低<strong>30%</strong>。 | https://caifuhao.eastmoney.com/news/20260605175609580159620 |
+| 十大先进封装龙头产能排至2027年 | 今日头条/静待菲涨 | 2026-06-05 | 2026年全球先进封装市场规模<strong>520亿美元</strong>，首次超越传统封装。国内外十大龙头订单全部排产至<strong>2027年</strong>。 | http://m.toutiao.com/group/7647600443123614260/ |
+| 联发科AI芯片从台积电CoWoS切换到英特尔EMIB-T | 今日头条/老孙不慌 | 2026-06-05 | 联发科下一代定制AI芯片封装路线因<strong>CoWoS产能紧张</strong>（70%被英伟达锁定）切换至英特尔<strong>EMIB-T</strong>。 | http://m.toutiao.com/group/7647751973160223241/ |
+| SK海力士iHBM技术 | 新浪/手机新浪网 | 2026-06-05 | 在HBM封装内部集成高导热硅基冷却元件（ICE），使热阻较传统方案降<strong>30%+</strong>。SK海力士占据HBM <strong>57%</strong> 份额。 | https://news.sina.cn/bignews/insight/2026-06-05/detail-iniaicva8736351.d.html |
+| 国产EDA获台积电OIP v5.2认证 | 行业研究报告 | 2026-06-05 | 台积电OIP v5.2发布，国产EDA工具<strong>华大九天</strong>、<strong>概伦电子</strong>获生产级PDK认证，标志对中国IC设计生态的锚定。 | T5系统检索结果综合 |
+| 韩国新型半导体超薄结构降低接触电阻1/50 | 36氪/科技日报 | 2026-06-05 | 重新设计碲晶体管金属-半导体接触结构，局部增厚关键区域，将器件接触电阻降低至原有水平的<strong>1/50</strong>。 | https://36kr.com/newsflashes/3839478138259977 |
+| 港科大Yao Lu团队EDA方向研究成果 | ASP-DAC 2026 / DAC 2025 | 2026-06-05 | 团队在ASP-DAC 2026及DAC 2025发表多篇论文，代表性工作包括多模态网表基础模型<strong>NetTAG</strong>及生成式网表功能推理<strong>GenEDA</strong>。 | https://dblp.org/pid/26/5662-31.html |
+</p>
+<h2>参考资料来源</h2>
+<p>
+本文内容综合整理自以下来源的公开报道、学术论文及行业分析，所有信息发布日期均围绕2026年6月5日：
+</p>
+<ul>
+<li>今日头条、北京日报、CSDN、51CTO、搜狐网、新浪财经、东方财富网等媒体平台。</li>
+<li>国际固态电路会议（ISSCC）、电子设计自动化会议（DAC）、电子元件与技术会议（ECTC）等顶级学术会议论文及预印本平台arXiv。</li>
+<li>行业研究机构WSTS、Yole/Omdia等的市场预测报告。</li>
+<li>台积电、英特尔、SK海力士、华为、优必选等企业的官方公告或公开演讲。</li>
+<li>北京大学、清华大学、韩国浦项科技大学等高校的学术成果发布。</li>
+</ul>
+    </div>
+    <div class="footer">
+      Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标
+    </div>
   </div>
-
-  <nav class="section-nav">
-    <a href="#AI" class="section-nav-link" style="--accent: #00d9ff">AI 领域</a><a href="#电子" class="section-nav-link" style="--accent: #7b2ff7">电子科技·全领域</a><a href="#芯片设计" class="section-nav-link" style="--accent: #ff6b9d">芯片设计</a><a href="#芯片后端" class="section-nav-link" style="--accent: #ffd93d">芯片后端/EDA/工艺</a>
-  </nav>
-
-  
-<section class="section" id="AI" style="--accent: #00d9ff">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #00d9ff"></span>
-    AI
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">1</span> 英伟达发布Cosmos 3：全球首款全模态物理AI基础模型</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647880890038616610/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">2</span> 中科闻歌发布Decitron决策机：通用决策大模型</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647887055855075859/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">3</span> 阿里QoderWork内置企查查MCP，头部AI开始拼数据硬实力</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647763500860703274/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">4</span> 2026年企业AI Agent部署突破3000家：54%企业已规模化</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.51cto.com/u_16099166/14660867" target="_blank" rel="noopener" class="link-btn">🔗 blog.51cto.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">5</span> AI资讯日报：2026年6月5日 全球行业动态精选</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/nndsb/article/details/161709253" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">6</span> 每日AI新闻：英伟达Cosmos 3开源+深圳国创具身专利+星海图双足机器人+比亚迪入局</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/nndsb/article/details/161709485" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">7</span> 杭州全城具身智能机器人训练场启用：广东6家分训练场授牌</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647880890038616610/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">8</span> MCP（模型上下文协议）：大模型世界“USB-C”标准化革命</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://blog.csdn.net/qq_33526859/article/details/161688486" target="_blank" rel="noopener" class="link-btn">🔗 blog.csdn.net</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">9</span> 黄仁勋：AI推理需求将爆发至今日1万倍</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647880890038616610/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #00d9ff">
-  <h3 class="insight-title"><span class="insight-num">10</span> 蔚来李斌：智能座舱核心体验全面Agent化，进入认知座舱时代</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647880890038616610/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="电子" style="--accent: #7b2ff7">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #7b2ff7"></span>
-    电子
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">1</span> 湖南“IMIE智能视网膜”侵入式脑机接口：失明患者重见字符</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647870365896655412/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">2</span> 天津发布脑机接口五年行动计划（2026-2030年）</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.sohu.com/a/1032307923_122301840/" target="_blank" rel="noopener" class="link-btn">🔗 m.sohu.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">3</span> 脑机接口每日简报：全球首个侵入式BCI在中国获批+Neuralink量产</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647770216889434660/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">4</span> 优必选优世界：全球首款全尺寸超仿生人形机器人开启预售</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647831939696624128/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">5</span> 入门级售价不足万元：人形机器人加速进家门</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647726813233349135/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">6</span> Optimus Gen3人形机器人实现大规模生产：定价2.5万美元/订单10万台</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://m.sohu.com/a/1032099330_122487616/" target="_blank" rel="noopener" class="link-btn">🔗 m.sohu.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">7</span> 韩国Quantinuum 6月4日纳斯达克挂牌：特朗普政府“战略性资本支撑”量子生态</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="https://news.sina.cn/bignews/insight/2026-06-05/detail-iniakfhq8369592.d.html" target="_blank" rel="noopener" class="link-btn">🔗 news.sina.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">8</span> 6G研发关键突破：300多项核心技术+全球首个6G小规模试验网</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">9</span> 韩国半导体板块2026-2030年：AI革命+后摩尔时代双重拐点</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647703790258258466/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #7b2ff7">
-  <h3 class="insight-title"><span class="insight-num">10</span> AI眼镜/脑机/具身智能跨界融合：PiEEG适配Meta Quest头显</h3>
-  <div class="insight-meta">
-    
-    
-  </div>
-  <div class="insight-points"><em>（暂无核心要点）</em></div>
-  <div class="insight-links"></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片设计" style="--accent: #ff6b9d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ff6b9d"></span>
-    芯片设计
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> ISSCC 2026 / 北大官网</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">北京大学博士生吴子涵获ISSCC Kenneth C. Smith博士生成就奖，以第一作者发表ISSCC论文3篇、JSSC论文2篇。</div>
-  <div class="insight-links"><a href="https://ic.pku.edu.cn/xsgz/xwgg/index.htm" target="_blank" rel="noopener" class="link-btn">🔗 ic.pku.edu.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> MDPI Electronics</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">通过时钟门控与稀疏感知MAC抑制，在FPGA上实现总功耗降低32.99%，且不增加DSP/BRAM使用。</div>
-  <div class="insight-links"><a href="https://www.mdpi.com/2079-9292/15/11/2492" target="_blank" rel="noopener" class="link-btn">🔗 mdpi.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">1024</span> JSSC 2026</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">65nm CMOS工艺，2×2mm²面积，1024通道记录/刺激，0.81μW/通道功耗，8.8μVrms输入参考噪声。</div>
-  <div class="insight-links"><a href="https://www.mdpi.com/2079-9292/15/11/2492" target="_blank" rel="noopener" class="link-btn">🔗 mdpi.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> FPL 2026 (arXiv)</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">提出多芯片FPGA布线架构建模与优化方法，论文已被第36届FPL会议接收。</div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2606.06421" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> ISLPED 2026 (arXiv)</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">针对太空平台散热受限场景，设计存内计算加速器架构，已被ACM/IEEE ISLPED '26接收。</div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2606.05741" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> DAC 2026 (arXiv)</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">提出灵活可扩展的零知识证明硬件加速框架，已被第63届DAC 2026接收。</div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2606.04221" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> LAD 2026 (arXiv)</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">针对RTL生成提出“正确性感知子空间引导”方法，已被IEEE LLM-Aided Design会议接收。</div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2606.05680" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> DAC 2026 (arXiv)</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">提出针对RTL综合的LLM逐步过程奖励微调方法，已被DAC'2026接收。</div>
-  <div class="insight-links"><a href="https://arxiv.org/abs/2606.05680" target="_blank" rel="noopener" class="link-btn">🔗 arxiv.org</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ff6b9d">
-  <h3 class="insight-title"><span class="insight-num">0</span> ECTC 2026</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">EMIB-T技术将首层互连凸点间距缩至25μm，封装尺寸达120×120mm，单封装集成超9倍光罩内容。</div>
-  <div class="insight-links"><a href="https://semiengineering.com/packaging-technologies-redefine-ai-and-hpc-scalability-limits-at-ectc-2026/" target="_blank" rel="noopener" class="link-btn">🔗 semiengineering.com</a></div>
-</article>
-
-  </div>
-</section>
-
-<section class="section" id="芯片后端" style="--accent: #ffd93d">
-  <h2 class="section-title">
-    <span class="section-badge" style="background: #ffd93d"></span>
-    芯片后端
-  </h2>
-  
-  <div class="items-list">
-    
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">3</span> 新浪/手机新浪网</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">3nm产能占2026 Q1晶圆销售25%，预订至2027；下半年3nm报价或再上调15%。3nm良率75-80%。</div>
-  <div class="insight-links"><a href="https://news.sina.cn/bignews/insight/2026-06-05/detail-iniakfhq8369592.d.html" target="_blank" rel="noopener" class="link-btn">🔗 news.sina.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">0</span> 今日头条/华为技术</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">放弃单纯几何缩微，转向系统性降低RC时间常数。2026秋季新麒麟芯片首发，密度238MTr/mm²，P核能效+41%。</div>
-  <div class="insight-links"></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2026</span> 东方财富网</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">2026年全球半导体玻璃基板市场规模15-20亿美元（商业化元年）。彩虹股份自主料方成本较进口低30%。</div>
-  <div class="insight-links"><a href="https://caifuhao.eastmoney.com/news/20260605175609580159620" target="_blank" rel="noopener" class="link-btn">🔗 caifuhao.eastmoney.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">2027</span> 今日头条/静待菲涨</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">2026年全球先进封装市场规模520亿美元，首次超越传统封装。国内外十大龙头订单全部排产至2027年。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647600443123614260/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">0</span> 今日头条/老孙不慌</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">联发科下一代定制AI芯片封装路线因CoWoS产能紧张（70%被英伟达锁定）切换至英特尔EMIB-T。</div>
-  <div class="insight-links"><a href="http://m.toutiao.com/group/7647751973160223241/" target="_blank" rel="noopener" class="link-btn">🔗 m.toutiao.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">0</span> 新浪/手机新浪网</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">在HBM封装内部集成高导热硅基冷却元件（ICE），使热阻较传统方案降30%+。SK海力士占据HBM 57% 份额。</div>
-  <div class="insight-links"><a href="https://news.sina.cn/bignews/insight/2026-06-05/detail-iniaicva8736351.d.html" target="_blank" rel="noopener" class="link-btn">🔗 news.sina.cn</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">5</span> 行业研究报告</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">台积电OIP v5.2发布，国产EDA工具华大九天、概伦电子获生产级PDK认证，标志对中国IC设计生态的锚定。</div>
-  <div class="insight-links"></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">1</span> 36氪/科技日报</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">重新设计碲晶体管金属-半导体接触结构，局部增厚关键区域，将器件接触电阻降低至原有水平的1/50。</div>
-  <div class="insight-links"><a href="https://36kr.com/newsflashes/3839478138259977" target="_blank" rel="noopener" class="link-btn">🔗 36kr.com</a></div>
-</article>
-
-
-<article class="insight-item" style="--accent: #ffd93d">
-  <h3 class="insight-title"><span class="insight-num">0</span> ASP-DAC 2026 / DAC 2025</h3>
-  <div class="insight-meta">
-    <span class="meta-tag">📰 2026-06-05</span>
-    
-  </div>
-  <div class="insight-points">团队在ASP-DAC 2026及DAC 2025发表多篇论文，代表性工作包括多模态网表基础模型NetTAG及生成式网表功能推理GenEDA。</div>
-  <div class="insight-links"><a href="https://dblp.org/pid/26/5662-31.html" target="_blank" rel="noopener" class="link-btn">🔗 dblp.org</a></div>
-</article>
-
-  </div>
-</section>
-
-
-  <div class="day-nav"><a href="2026-06-04.html" class="day-nav-btn">← 上一篇 2026-06-04</a><a href="../index.html" class="day-nav-btn home-btn">🏠 主页</a><a href="2026-06-06.html" class="day-nav-btn">下一篇 2026-06-06 →</a></div>
-</main>
-
-<footer class="site-footer">
-  <p>Biao-技术洞察日报 · 数据来源：飞书云文档 of 陈权标</p>
-  <p class="last-update">最后更新：2026-07-12 03:40</p>
-</footer>
 </body>
 </html>
